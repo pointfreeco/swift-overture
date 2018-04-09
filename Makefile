@@ -16,18 +16,18 @@ test-linux: linux-main
 	docker build --tag overture-testing . \
 		&& docker run --rm overture-testing
 
-test-macos: xcodeproj
+test-macos:
 	set -o pipefail && \
 	xcodebuild test \
 		-scheme Overture-Package \
 		-destination platform="macOS" \
 		| xcpretty
 
-test-ios: xcodeproj
+test-ios:
 	set -o pipefail && \
 	xcodebuild test \
 		-scheme Overture-Package \
-		-destination platform="iOS Simulator,name=iPhone 8,OS=11.2" \
+		-destination platform="iOS Simulator,name=iPhone 8,OS=11.3" \
 		| xcpretty
 
 test-swift:
