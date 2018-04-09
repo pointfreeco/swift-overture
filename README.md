@@ -1,5 +1,7 @@
 # 🎼 Overture
 
+macOS [![CircleCI](https://circleci.com/gh/pointfreeco/swift-overture.svg?style=svg)](https://circleci.com/gh/pointfreeco/swift-overture) Linux [![Build Status](https://travis-ci.org/pointfreeco/swift-overture.svg?branch=master)](https://travis-ci.org/pointfreeco/swift-overture)
+
 A library for function composition.
 
 ## Introduction
