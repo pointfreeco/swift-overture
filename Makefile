@@ -27,7 +27,7 @@ test-ios:
 	set -o pipefail && \
 	xcodebuild test \
 		-scheme Overture-Package \
-		-destination platform="iOS Simulator,name=iPhone 8,OS=11.3" \
+		-destination platform="iOS Simulator,name=iPhone,OS=11.3" \
 		| xcpretty
 
 test-swift:
