@@ -2,7 +2,7 @@
 
 macOS [![CircleCI](https://circleci.com/gh/pointfreeco/swift-overture.svg?style=svg)](https://circleci.com/gh/pointfreeco/swift-overture) Linux [![Build Status](https://travis-ci.org/pointfreeco/swift-overture.svg?branch=master)](https://travis-ci.org/pointfreeco/swift-overture)
 
-A library for function composition.
+A library for [function composition](https://www.pointfree.co/episodes/ep11-composition-without-operators).
 
 ## Introduction
 
@@ -145,7 +145,7 @@ let button = with(UIButton(type: .system), filledButtonStyle)
 
 ### `curry`, `flip`, and `zurry`
 
-These functions make up the Swiss army knife of composition. They give us the power to take existing functions and methods that don't compose (_e.g_, those that take zero or multiple arguments) and restore composition.
+These functions make up the [Swiss army knife](https://www.pointfree.co/episodes/ep5-higher-order-functions) of composition. They give us the power to take existing functions and methods that don't compose (_e.g_, those that take zero or multiple arguments) and restore composition.
 
 For example, let's transform a string initializer that takes multiple arguments into something that can compose with `pipe`.
 
@@ -211,7 +211,7 @@ let uppercased = zurry(flip(String.uppercased))
 
 ### `get`
 
-The `get` function produces getter functions from key paths.
+The `get` function produces [getter functions](https://www.pointfree.co/episodes/ep8-getters-and-key-paths) from key paths.
 
 ``` swift
 get(\String.count)
@@ -231,7 +231,7 @@ pipe(incr, square, String.init, get(\.count))
 
 ### `prop`
 
-The `prop` function produces setter functions from key paths.
+The `prop` function produces [setter functions](https://www.pointfree.co/episodes/ep7-setters-and-key-paths) from key paths.
 
 ``` swift
 let setUserName = prop(\User.name)
