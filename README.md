@@ -94,7 +94,7 @@ computeAndStringify(42)
 The `with` function is useful for applying functions to values. It restores the left-to-right readability we're used to from the method world.
 
 ``` swift
-with(42, pipe(incr, square, String.init)
+with(42, pipe(incr, square, String.init))
 // "1849"
 ```
 
