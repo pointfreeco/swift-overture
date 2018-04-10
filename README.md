@@ -185,7 +185,7 @@ String.capitalized
 // (String) -> (Locale?) -> String
 
 let capitalized = flip(String.capitalized)
-// (Locale?) -> (String) -> (String)
+// (Locale?) -> (String) -> String
 
 ["hello, world", "and good night"]
   .map(capitalized(Locale(identifier: "en")))
@@ -237,7 +237,7 @@ The `prop` function produces setter functions from key paths.
 let setUserName = prop(\User.name)
 ((String) -> String) -> (User) -> User
 
-let capitalizeUserName = setUserName(capitalize)
+let capitalizeUserName = setUserName(capitalized(Locale(identifier: "en")))
 // (User) -> User
 
 let setUserAge = prop(\User.age)
