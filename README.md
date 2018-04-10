@@ -235,7 +235,7 @@ The `prop` function produces setter functions from key paths.
 
 ``` swift
 let setUserName = prop(\User.name)
-((String) -> String) -> (User) -> User
+// ((String) -> String) -> (User) -> User
 
 let capitalizeUserName = setUserName(capitalized(Locale(identifier: "en")))
 // (User) -> User
