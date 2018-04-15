@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   A library for function composition.
   DESC
 
-  s.homepage = "https://github.com/stephencelis/swift-overture"
+  s.homepage = "https://github.com/pointfreeco/swift-overture"
 
   s.license = "MIT"
 
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.social_media_url = "https://twitter.com/pointfreeco"
 
   s.source = {
-    :git => "https://github.com/stephencelis/swift-overture.git",
+    :git => "https://github.com/pointfreeco/swift-overture.git",
     :branch => "master"
   }
 
