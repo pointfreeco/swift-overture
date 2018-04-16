@@ -29,7 +29,7 @@ final class ConcatTests: XCTestCase {
     XCTAssertEqual(82, x)
 
     x = 1
-    concat(incr, incr, square, square) { $0 += 1 }(&x)
+    concat(incr, incr, square, square) { (y: inout Int) in y += 1 }(&x)
     XCTAssertEqual(82, x)
   }
 }
