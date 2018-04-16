@@ -1,4 +1,4 @@
-// Generated using Sourcery 0.11.0 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import XCTest
@@ -7,15 +7,25 @@ import XCTest
 extension ChainTests {
   static var allTests: [(String, (ChainTests) -> () throws -> Void)] = [
     ("testOptionalChain2", testOptionalChain2),
+    ("testThrowingOptionalChain2", testThrowingOptionalChain2),
     ("testOptionalChain3", testOptionalChain3),
+    ("testThrowingOptionalChain3", testThrowingOptionalChain3),
     ("testOptionalChain4", testOptionalChain4),
+    ("testThrowingOptionalChain4", testThrowingOptionalChain4),
     ("testOptionalChain5", testOptionalChain5),
+    ("testThrowingOptionalChain5", testThrowingOptionalChain5),
     ("testOptionalChain6", testOptionalChain6),
+    ("testThrowingOptionalChain6", testThrowingOptionalChain6),
     ("testArrayChain2", testArrayChain2),
+    ("testThrowingArrayChain2", testThrowingArrayChain2),
     ("testArrayChain3", testArrayChain3),
+    ("testThrowingArrayChain3", testThrowingArrayChain3),
     ("testArrayChain4", testArrayChain4),
+    ("testThrowingArrayChain4", testThrowingArrayChain4),
     ("testArrayChain5", testArrayChain5),
-    ("testArrayChain6", testArrayChain6)
+    ("testThrowingArrayChain5", testThrowingArrayChain5),
+    ("testArrayChain6", testArrayChain6),
+    ("testThrowingArrayChain6", testThrowingArrayChain6)
   ]
 }
 extension ComposeTests {
