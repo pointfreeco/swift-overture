@@ -45,7 +45,9 @@ extension ComposeTests {
 extension ConcatTests {
   static var allTests: [(String, (ConcatTests) -> () throws -> Void)] = [
     ("testConcat", testConcat),
-    ("testInoutConcat", testInoutConcat)
+    ("testThrowingConcat", testThrowingConcat),
+    ("testInoutConcat", testInoutConcat),
+    ("testThrowingInoutConcat", testThrowingInoutConcat)
   ]
 }
 extension CurryTests {
