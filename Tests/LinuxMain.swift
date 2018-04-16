@@ -57,10 +57,15 @@ extension CurryTests {
 extension PipeTests {
   static var allTests: [(String, (PipeTests) -> () throws -> Void)] = [
     ("testPipe2", testPipe2),
+    ("testThrowingPipe2", testThrowingPipe2),
     ("testPipe3", testPipe3),
+    ("testThrowingPipe3", testThrowingPipe3),
     ("testPipe4", testPipe4),
+    ("testThrowingPipe4", testThrowingPipe4),
     ("testPipe5", testPipe5),
-    ("testPipe6", testPipe6)
+    ("testThrowingPipe5", testThrowingPipe5),
+    ("testPipe6", testPipe6),
+    ("testThrowingPipe6", testThrowingPipe6)
   ]
 }
 extension WithTests {
