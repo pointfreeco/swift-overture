@@ -8,6 +8,18 @@ final class ChainTests: XCTestCase {
     XCTAssertNil(chain(fail, incr)(2))
   }
 
+  func testThrowingOptionalChain2() {
+    XCTAssertEqual(.some(9), try chain(nonThrowing(incr), square)(2))
+    XCTAssertNil(try chain(nonThrowing(incr), fail)(2))
+    XCTAssertNil(try chain(nonThrowing(fail), incr)(2))
+    XCTAssertThrowsError(try chain(throwing(incr), square)(2))
+    XCTAssertThrowsError(try chain(throwing(incr), fail)(2))
+    XCTAssertThrowsError(try chain(throwing(fail), incr)(2))
+    XCTAssertThrowsError(try chain(incr, throwing(square))(2))
+    XCTAssertThrowsError(try chain(incr, throwing(fail))(2))
+    XCTAssertNil(try chain(fail, throwing(incr))(2))
+  }
+
   func testOptionalChain3() {
     XCTAssertEqual(.some(16), chain(incr, incr, square)(2))
     XCTAssertNil(chain(incr, incr, fail)(2))
@@ -86,4 +98,13 @@ private func twoPlusOne(_ x: Int) -> [Int] {
 
 private func zero(_ x: Int) -> [Int] {
   return []
+}
+
+private struct ExpectedError: Error {}
+private func throwing<A, B>(_: (A) -> B) -> (A) throws -> B {
+    return { _ in throw ExpectedError() }
+}
+
+private func nonThrowing<A, B>(_ f: @escaping (A) -> B) -> (A) throws -> B {
+    return f
 }
