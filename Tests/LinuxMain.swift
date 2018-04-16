@@ -31,10 +31,15 @@ extension ChainTests {
 extension ComposeTests {
   static var allTests: [(String, (ComposeTests) -> () throws -> Void)] = [
     ("testCompose2", testCompose2),
+    ("testThrowingCompose2", testThrowingCompose2),
     ("testCompose3", testCompose3),
+    ("testThrowingCompose3", testThrowingCompose3),
     ("testCompose4", testCompose4),
+    ("testThrowingCompose4", testThrowingCompose4),
     ("testCompose5", testCompose5),
-    ("testCompose6", testCompose6)
+    ("testThrowingCompose5", testThrowingCompose5),
+    ("testCompose6", testCompose6),
+    ("testThrowingCompose6", testThrowingCompose6)
   ]
 }
 extension ConcatTests {
