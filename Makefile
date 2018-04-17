@@ -33,4 +33,4 @@ test-ios:
 test-swift:
 	swift test
 
-test-all: test-linux test-mac test-ios
+test-all: test-linux test-macos test-ios

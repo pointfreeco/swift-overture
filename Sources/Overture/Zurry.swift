@@ -3,6 +3,6 @@
 ///
 /// - Parameter function: A function taking zero arguments.
 /// - Returns: The return value.
-public func zurry<A>(_ function: @escaping () -> A) -> A {
-  return function()
+public func zurry<A>(_ function: @escaping () throws -> A) rethrows -> A {
+  return try function()
 }
