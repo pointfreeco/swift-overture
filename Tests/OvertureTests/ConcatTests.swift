@@ -68,12 +68,15 @@ final class ConcatTests: XCTestCase {
 
     x = 1
     XCTAssertThrowsError(try concat(throwing(incr), incr, square, square, incr)(&x))
+    XCTAssertEqual(1, x)
 
     x = 1
     XCTAssertThrowsError(try concat(incr, incr, square, throwing(square)) { (y: inout Int) in y += 1 }(&x))
+    XCTAssertEqual(9, x)
 
     x = 1
     XCTAssertThrowsError(try concat(incr, incr, square, square, and: throwing(incr))(&x))
+    XCTAssertEqual(81, x)
   }
 }
 
