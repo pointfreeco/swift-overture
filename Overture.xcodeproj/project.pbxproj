@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		B210F43620879464008323F5 /* Uncurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B210F43520879464008323F5 /* Uncurry.swift */; };
+		B210F43820879479008323F5 /* UncurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B210F43720879479008323F5 /* UncurryTests.swift */; };
 		OBJ_39 /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Chain.swift */; };
 		OBJ_40 /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Compose.swift */; };
 		OBJ_41 /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Concat.swift */; };
@@ -60,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B210F43520879464008323F5 /* Uncurry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uncurry.swift; sourceTree = "<group>"; };
+		B210F43720879479008323F5 /* UncurryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UncurryTests.swift; sourceTree = "<group>"; };
 		OBJ_11 /* Chain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
 		OBJ_12 /* Compose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compose.swift; sourceTree = "<group>"; };
 		OBJ_13 /* Concat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concat.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 				OBJ_12 /* Compose.swift */,
 				OBJ_13 /* Concat.swift */,
 				OBJ_14 /* Curry.swift */,
+				B210F43520879464008323F5 /* Uncurry.swift */,
 				OBJ_15 /* Flip.swift */,
 				OBJ_16 /* KeyPath.swift */,
 				OBJ_17 /* Optional.swift */,
@@ -137,6 +142,7 @@
 				OBJ_25 /* ComposeTests.swift */,
 				OBJ_26 /* ConcatTests.swift */,
 				OBJ_27 /* CurryTests.swift */,
+				B210F43720879479008323F5 /* UncurryTests.swift */,
 				OBJ_28 /* PipeTests.swift */,
 				OBJ_29 /* WithTests.swift */,
 			);
@@ -153,7 +159,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -163,7 +169,6 @@
 				OBJ_30 /* Overture.xcworkspace */,
 				OBJ_31 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Configs */ = {
@@ -247,7 +252,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_31 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -273,6 +278,7 @@
 				OBJ_44 /* KeyPath.swift in Sources */,
 				OBJ_45 /* Optional.swift in Sources */,
 				OBJ_46 /* Pipe.swift in Sources */,
+				B210F43620879464008323F5 /* Uncurry.swift in Sources */,
 				OBJ_47 /* Sequence.swift in Sources */,
 				OBJ_48 /* With.swift in Sources */,
 				OBJ_49 /* Zurry.swift in Sources */,
@@ -291,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				B210F43820879479008323F5 /* UncurryTests.swift in Sources */,
 				OBJ_67 /* ChainTests.swift in Sources */,
 				OBJ_68 /* ComposeTests.swift in Sources */,
 				OBJ_69 /* ConcatTests.swift in Sources */,
