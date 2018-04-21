@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		82071043208B5F8800B2D4DC /* FlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82071042208B5F8800B2D4DC /* FlipTests.swift */; };
 		B210F43620879464008323F5 /* Uncurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B210F43520879464008323F5 /* Uncurry.swift */; };
 		B210F43820879479008323F5 /* UncurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B210F43720879479008323F5 /* UncurryTests.swift */; };
 		OBJ_39 /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Chain.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		82071042208B5F8800B2D4DC /* FlipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipTests.swift; sourceTree = "<group>"; };
 		B210F43520879464008323F5 /* Uncurry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uncurry.swift; sourceTree = "<group>"; };
 		B210F43720879479008323F5 /* UncurryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UncurryTests.swift; sourceTree = "<group>"; };
 		OBJ_11 /* Chain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				B210F43720879479008323F5 /* UncurryTests.swift */,
 				OBJ_28 /* PipeTests.swift */,
 				OBJ_29 /* WithTests.swift */,
+				82071042208B5F8800B2D4DC /* FlipTests.swift */,
 			);
 			name = OvertureTests;
 			path = Tests/OvertureTests;
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				82071043208B5F8800B2D4DC /* FlipTests.swift in Sources */,
 				B210F43820879479008323F5 /* UncurryTests.swift in Sources */,
 				OBJ_67 /* ChainTests.swift in Sources */,
 				OBJ_68 /* ComposeTests.swift in Sources */,
