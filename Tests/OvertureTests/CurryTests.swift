@@ -15,7 +15,7 @@ final class CurryTests: XCTestCase {
     let add11: (Int, Int, Int, Int, Int, Int, Int, Int, Int, Int, Int) -> Int = { $0 + $1 + $2 + $3 + $4 + $5 + $6 + $7 + $8 + $9 + $10}
     let f2 = curry(add2)
     let f3 = curry(add3)
-    let f4  = curry(add4)
+    let f4 = curry(add4)
     let f5 = curry(add5)
     let f6 = curry(add6)
     let f7 = curry(add7)
