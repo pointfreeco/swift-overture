@@ -7,6 +7,22 @@
 
 A library for function composition.
 
+## Table of Contents
+
+  - [Introduction](#introduction)
+  - [Examples](#examples)
+      - [`pipe`](#pipe)
+      - [`with`](#with)
+      - [`concat`](#concat)
+      - [`curry`, `flip` and `zurry`](#curry-flip-and-zurry)
+      - [`get`](#get)
+      - [`prop`](#prop)
+  - [FAQ](#faq)
+  - [Installation](#installation)
+  - [Prelude](#-prelude)
+  - [Interested in learning more?](#interested-in-learning-more)
+  - [License](#license)
+
 ## Introduction
 
 In Swift, functions are values, which gives us the power to explore function composition in a lot of interesting ways.
@@ -254,6 +270,25 @@ with(User(name: "blob", age: 1), concat(
 ))
 // User(name: "Blob", age: 2)
 ```
+
+## FAQ
+
+  - **Should I be worried about polluting the global namespace with free functions?**
+
+    Nope! Swift has several layers of scope to help you here.
+
+      - You can limit exposing highly-specific functions beyond a single file by using `fileprivate` and `private` scope.
+      - You can define functions as `static` members inside types.
+      - You can qualify functions with the module's scope. You can even autocomplete free functions using the module's name, so discoverability doesn't have to suffer!
+
+  - **Are free functions that common in Swift?**
+
+    It may not seem like it, but free functions are super common in Swift, making Overture super useful! A few examples
+
+      - Initializers, like `String.init`.
+      - Enum cases with associated values, like `Optional.some`.
+      - Ad hoc closures we pass to `map`, `filter`, and other higher-order methods.
+      - Top-level Standard Library functions like `max`, `min`, and `zip`.
 
 ## Installation
 
