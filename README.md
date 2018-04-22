@@ -289,7 +289,7 @@ dependencies: [
 
 Submodule, clone, or download Overture, and drag `Overture.xcodeproj` into your project.
 
-## Prelude
+## 🎶 Prelude
 
 This library was created as an alternative to [swift-prelude](https://www.github.com/pointfreeco/swift-prelude), which provides these tools (and more) using infix operators. For example, `pipe` is none other than the arrow composition operator `>>>`, which means the following are equivalent:
 
@@ -302,7 +302,13 @@ We know that many code bases are not going to be comfortable introducing operato
 
 ## Interested in learning more?
 
-These concepts (and more) are explored thoroughly in [Point-Free](https://www.pointfree.co).
+These concepts (and more) are explored thoroughly in [Point-Free](https://www.pointfree.co), a video series exploring functional programming and Swift hosted by [Brandon Williams](https://github.com/mbrandonw) and [Stephen Celis](https://github.com/stephencelis).
+
+Composition without operators was explored in [Episode #11](https://www.pointfree.co/episodes/ep11-composition-without-operators):
+
+<a href="https://www.pointfree.co/episodes/ep11-composition-without-operators">
+  <img alt="video poster image" src="https://d1hf1soyumxcgv.cloudfront.net/0011-composition-without-operators/0011-poster.jpg" width="480">
+</a>
 
 ## License
 
