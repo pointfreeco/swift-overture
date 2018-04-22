@@ -19,7 +19,7 @@ A library for function composition.
       - [`prop`](#prop)
   - [FAQ](#faq)
   - [Installation](#installation)
-  - [Prelude](#-prelude)
+  - [🎶 Prelude](#-prelude)
   - [Interested in learning more?](#interested-in-learning-more)
   - [License](#license)
 
@@ -96,7 +96,7 @@ The function is the smallest building block of code. Function composition gives 
 
 ### `pipe`
 
-The most basic building block in Overture. It takes existing functions and smooshes them together.
+The most basic building block in Overture. It takes existing functions and smooshes them together. That is, given a function `(A) -> B` and a function `(B) -> C`, `pipe` will return a brand new `(A) -> C` function.
 
 ``` swift
 let computeAndStringify = pipe(incr, square, String.init)
@@ -110,14 +110,7 @@ computeAndStringify(42)
 
 ### `with`
 
-The `with` function is useful for applying functions to values. It restores the left-to-right readability we're used to from the method world.
-
-``` swift
-with(42, pipe(incr, square, String.init))
-// "1849"
-```
-
-It plays nicely with the `inout` and mutable object worlds, wrapping imperative configuration in an expression.
+The `with` function is useful for applying functions to values. It plays nicely with the `inout` and mutable object worlds, wrapping imperative configuration in an expression.
 
 ``` swift
 class MyViewController: UIViewController {
@@ -126,6 +119,13 @@ class MyViewController: UIViewController {
     $0.textColor = .red
   }
 }
+```
+
+And it restores the left-to-right readability we're used to from the method world.
+
+``` swift
+with(42, pipe(incr, square, String.init))
+// "1849"
 ```
 
 ### `concat`
@@ -180,14 +180,14 @@ curry(String.init(data:encoding:)
 // (Data) -> (String.Encoding) -> String?
 ```
 
-And we use `flip` to fix the order of arguments. Multi-argument functions and methods take data first and configuration second, but we can generally apply configuration before we have data.
+And we use `flip` to flip the order of arguments. Multi-argument functions and methods typically take data first and configuration second, but we can generally apply configuration before we have data, and `flip` allows us to do just that.
 
 ``` swift
 flip(curry(String.init(data:encoding:)
 // (String.Encoding) -> (Data) -> String?
 ```
 
-Now we can build reusable, composable pieces and put them to work in our pipelines.
+Now we have a highly-reusable, composable building block that we can use to build pipelines.
 
 ``` swift
 let stringWithEncoding = flip(curry(String.init(data:encoding:)))
@@ -197,7 +197,7 @@ let utf8String = stringWithEncoding(.utf8)
 // (Data) -> String?
 ```
 
-We can also take existing methods and extract functions from their already-curried, static versions.
+Swift also exposes methods as static, unbound functions. These functions are already in curried form. All we need to do is `flip` them to make them more useful!
 
 ``` swift
 String.capitalized
@@ -286,6 +286,7 @@ with(User(name: "blob", age: 1), concat(
     It may not seem like it, but free functions are everywhere in Swift, making Overture extremely useful! A few examples:
 
       - Initializers, like `String.init`.
+      - Unbound methods, like `String.uppercased`.
       - Enum cases with associated values, like `Optional.some`.
       - Ad hoc closures we pass to `map`, `filter`, and other higher-order methods.
       - Top-level Standard Library functions like `max`, `min`, and `zip`.
