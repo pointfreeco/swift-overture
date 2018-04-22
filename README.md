@@ -14,7 +14,7 @@ A library for function composition.
       - [`pipe`](#pipe)
       - [`with`](#with)
       - [`concat`](#concat)
-      - [`curry`, `flip` and `zurry`](#curry-flip-and-zurry)
+      - [`curry`, `flip`, and `zurry`](#curry-flip-and-zurry)
       - [`get`](#get)
       - [`prop`](#prop)
   - [FAQ](#faq)
