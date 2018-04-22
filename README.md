@@ -25,9 +25,7 @@ A library for function composition.
 
 ## Motivation
 
-In Swift, functions are values, which gives us the power to explore function composition in a lot of interesting ways.
-
-We're used to working with higher-order methods like `map` on arrays:
+We're used to working with functions when we use higher-order methods like `map` on arrays:
 
 ``` swift
 [1, 2, 3].map { $0 + 1 }
@@ -88,7 +86,7 @@ computeAndStringify(42)
 // "1849"
 ```
 
-The function is the smallest building block of code. Function composition gives us the ability to fit these blocks together and build entire apps out of small, reusable, understandable units. Overture is a toolset for function composition in Swift.
+The function is the smallest building block of code. Function composition gives us the ability to fit these blocks together and build entire apps out of small, reusable, understandable units.
 
 ## Examples
 
