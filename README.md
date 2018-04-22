@@ -25,7 +25,9 @@ A library for function composition.
 
 ## Motivation
 
-We're used to working with functions when we use higher-order methods like `map` on arrays:
+We work with functions all the time, but function composition is hiding in plain sight!
+
+For instance, we work with functions when we use higher-order methods, like `map` on arrays:
 
 ``` swift
 [1, 2, 3].map { $0 + 1 }
