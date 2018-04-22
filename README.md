@@ -62,7 +62,7 @@ With these functions defined, we can pass them directly to `map`!
 // [4, 9, 16]
 ```
 
-This refactor reads much better, but it's less performant: we're mapping over the array twice! How can we get the best of both worlds? Function composition to the rescue!
+This refactor reads much better, but it's less performant: we're mapping over the array twice and creating an intermediate copy along the way! How can we get the best of both worlds? Function composition to the rescue!
 
 ``` swift
 [1, 2, 3].map(pipe(incr, square))
