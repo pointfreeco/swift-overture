@@ -279,7 +279,7 @@ with(User(name: "blob", age: 1), concat(
 
       - You can limit exposing highly-specific functions beyond a single file by using `fileprivate` and `private` scope.
       - You can define functions as `static` members inside types.
-      - You can qualify functions with the module's scope. You can even autocomplete free functions using the module's name, so discoverability doesn't have to suffer!
+      - You can qualify functions with the module's name (_e.g._, `Overture.pipe(f, g)`). You can even autocomplete free functions from the module's name, so discoverability doesn't have to suffer!
 
   - **Are free functions that common in Swift?**
 
