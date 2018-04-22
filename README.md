@@ -9,7 +9,7 @@ A library for function composition.
 
 ## Table of Contents
 
-  - [Introduction](#introduction)
+  - [Motivation](#motivation)
   - [Examples](#examples)
       - [`pipe`](#pipe)
       - [`with`](#with)
@@ -23,7 +23,7 @@ A library for function composition.
   - [Interested in learning more?](#interested-in-learning-more)
   - [License](#license)
 
-## Introduction
+## Motivation
 
 In Swift, functions are values, which gives us the power to explore function composition in a lot of interesting ways.
 
@@ -62,23 +62,21 @@ With these functions defined, we can pass them directly to `map`!
 // [4, 9, 16]
 ```
 
-This refactor reads much better, but it's less performant: we're mapping over the array twice and creating an intermediate copy along the way! How can we get the best of both worlds? Function composition to the rescue!
+This refactor reads much better, but it's less performant: we're mapping over the array twice and creating an intermediate copy along the way! While we could use `lazy` to fuse these calls together, let's take a more general approach: function composition!
 
 ``` swift
 [1, 2, 3].map(pipe(incr, square))
 // [4, 9, 16]
 ```
 
-The `pipe` function glues functions together! We can even change the type along the way.
+The `pipe` function glues other functions together! It can take more than two argumenta and even change the type along the way!
 
 ``` swift
 [1, 2, 3].map(pipe(incr, square, String.init))
 // ["4", "9", "16"]
 ```
 
-We took a function that comes with Swift and tacked it onto the end of our pipeline!
-
-Function composition produces brand new functions that we can extract and reuse.
+Function composition lets us build new functions from smaller pieces, giving us the ability to extract and reuse logic in other contexts.
 
 ``` swift
 let computeAndStringify = pipe(incr, square, String.init)
