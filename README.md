@@ -283,7 +283,7 @@ with(User(name: "blob", age: 1), concat(
 
   - **Are free functions that common in Swift?**
 
-    It may not seem like it, but free functions are super common in Swift, making Overture super useful! A few examples
+    It may not seem like it, but free functions are everywhere in Swift, making Overture extremely useful! A few examples:
 
       - Initializers, like `String.init`.
       - Enum cases with associated values, like `Optional.some`.
