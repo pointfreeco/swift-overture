@@ -2,7 +2,7 @@
 
 macOS [![CircleCI](https://circleci.com/gh/pointfreeco/swift-overture.svg?style=svg)](https://circleci.com/gh/pointfreeco/swift-overture) Linux [![Build Status](https://travis-ci.org/pointfreeco/swift-overture.svg?branch=master)](https://travis-ci.org/pointfreeco/swift-overture)
 
-A library for [function composition](https://www.pointfree.co/episodes/ep11-composition-without-operators).
+A library for function composition.
 
 ## Introduction
 
@@ -299,7 +299,13 @@ We know that many code bases are not going to be comfortable introducing operato
 
 ## Interested in learning more?
 
-These concepts (and more) are explored thoroughly in [Point-Free](https://www.pointfree.co).
+These concepts (and more) are explored thoroughly in [Point-Free](https://www.pointfree.co), a video series exploring functional programming and Swift hosted by [Brandon Williams](https://github.com/mbrandonw) and [Stephen Celis](https://github.com/stephencelis).
+
+The ideas in this episode were first explored in [Episode #11](https://www.pointfree.co/episodes/ep11-composition-without-operators):
+
+<a href="https://www.pointfree.co/episodes/ep11-composition-without-operators">
+  <img alt="video poster image" src="https://d1hf1soyumxcgv.cloudfront.net/0011-composition-without-operators/0011-poster.jpg" width="480">
+</a>
 
 ## License
 
