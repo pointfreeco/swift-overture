@@ -9,11 +9,11 @@
 /* Begin PBXAggregateTarget section */
 		"Overture::OverturePackageTests::ProductTarget" /* OverturePackageTests */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_58 /* Build configuration list for PBXAggregateTarget "OverturePackageTests" */;
+			buildConfigurationList = OBJ_62 /* Build configuration list for PBXAggregateTarget "OverturePackageTests" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_61 /* PBXTargetDependency */,
+				OBJ_65 /* PBXTargetDependency */,
 			);
 			name = OverturePackageTests;
 			productName = OverturePackageTests;
@@ -21,36 +21,39 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		OBJ_39 /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Chain.swift */; };
-		OBJ_40 /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Compose.swift */; };
-		OBJ_41 /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Concat.swift */; };
-		OBJ_42 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Curry.swift */; };
-		OBJ_43 /* Flip.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Flip.swift */; };
-		OBJ_44 /* KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* KeyPath.swift */; };
-		OBJ_45 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Optional.swift */; };
-		OBJ_46 /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Pipe.swift */; };
-		OBJ_47 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* Sequence.swift */; };
-		OBJ_48 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* With.swift */; };
-		OBJ_49 /* Zurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* Zurry.swift */; };
-		OBJ_56 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_67 /* ChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* ChainTests.swift */; };
-		OBJ_68 /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* ComposeTests.swift */; };
-		OBJ_69 /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* ConcatTests.swift */; };
-		OBJ_70 /* CurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* CurryTests.swift */; };
-		OBJ_71 /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* PipeTests.swift */; };
-		OBJ_72 /* WithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* WithTests.swift */; };
-		OBJ_74 /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Overture::Overture::Product" /* Overture.framework */; };
+		OBJ_42 /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Chain.swift */; };
+		OBJ_43 /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Compose.swift */; };
+		OBJ_44 /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Concat.swift */; };
+		OBJ_45 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Curry.swift */; };
+		OBJ_46 /* Flip.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Flip.swift */; };
+		OBJ_47 /* KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* KeyPath.swift */; };
+		OBJ_48 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Optional.swift */; };
+		OBJ_49 /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Pipe.swift */; };
+		OBJ_50 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* Sequence.swift */; };
+		OBJ_51 /* Uncurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Uncurry.swift */; };
+		OBJ_52 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* With.swift */; };
+		OBJ_53 /* Zurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Zurry.swift */; };
+		OBJ_60 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_71 /* ChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* ChainTests.swift */; };
+		OBJ_72 /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* ComposeTests.swift */; };
+		OBJ_73 /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* ConcatTests.swift */; };
+		OBJ_74 /* CurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* CurryTests.swift */; };
+		OBJ_75 /* FlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* FlipTests.swift */; };
+		OBJ_76 /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* PipeTests.swift */; };
+		OBJ_77 /* UncurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* UncurryTests.swift */; };
+		OBJ_78 /* WithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* WithTests.swift */; };
+		OBJ_80 /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Overture::Overture::Product" /* Overture.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DC25ED00207ABC410088AF74 /* PBXContainerItemProxy */ = {
+		DCF8CF9A208B90CC00E79107 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Overture::Overture";
 			remoteInfo = Overture;
 		};
-		DC25ED01207ABC410088AF74 /* PBXContainerItemProxy */ = {
+		DCF8CF9B208B90CC00E79107 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -69,15 +72,18 @@
 		OBJ_17 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		OBJ_18 /* Pipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipe.swift; sourceTree = "<group>"; };
 		OBJ_19 /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
-		OBJ_20 /* With.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
-		OBJ_21 /* Zurry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zurry.swift; sourceTree = "<group>"; };
-		OBJ_24 /* ChainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainTests.swift; sourceTree = "<group>"; };
-		OBJ_25 /* ComposeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeTests.swift; sourceTree = "<group>"; };
-		OBJ_26 /* ConcatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcatTests.swift; sourceTree = "<group>"; };
-		OBJ_27 /* CurryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurryTests.swift; sourceTree = "<group>"; };
-		OBJ_28 /* PipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeTests.swift; sourceTree = "<group>"; };
-		OBJ_29 /* WithTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithTests.swift; sourceTree = "<group>"; };
-		OBJ_30 /* Overture.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = Overture.xcworkspace; sourceTree = SOURCE_ROOT; };
+		OBJ_20 /* Uncurry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uncurry.swift; sourceTree = "<group>"; };
+		OBJ_21 /* With.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
+		OBJ_22 /* Zurry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zurry.swift; sourceTree = "<group>"; };
+		OBJ_25 /* ChainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainTests.swift; sourceTree = "<group>"; };
+		OBJ_26 /* ComposeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeTests.swift; sourceTree = "<group>"; };
+		OBJ_27 /* ConcatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcatTests.swift; sourceTree = "<group>"; };
+		OBJ_28 /* CurryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurryTests.swift; sourceTree = "<group>"; };
+		OBJ_29 /* FlipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipTests.swift; sourceTree = "<group>"; };
+		OBJ_30 /* PipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeTests.swift; sourceTree = "<group>"; };
+		OBJ_31 /* UncurryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UncurryTests.swift; sourceTree = "<group>"; };
+		OBJ_32 /* WithTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithTests.swift; sourceTree = "<group>"; };
+		OBJ_33 /* Overture.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = Overture.xcworkspace; sourceTree = SOURCE_ROOT; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_8 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		"Overture::Overture::Product" /* Overture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Overture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,18 +91,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_50 /* Frameworks */ = {
+		OBJ_54 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_73 /* Frameworks */ = {
+		OBJ_79 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_74 /* Overture.framework in Frameworks */,
+				OBJ_80 /* Overture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,36 +121,39 @@
 				OBJ_17 /* Optional.swift */,
 				OBJ_18 /* Pipe.swift */,
 				OBJ_19 /* Sequence.swift */,
-				OBJ_20 /* With.swift */,
-				OBJ_21 /* Zurry.swift */,
+				OBJ_20 /* Uncurry.swift */,
+				OBJ_21 /* With.swift */,
+				OBJ_22 /* Zurry.swift */,
 			);
 			name = Overture;
 			path = Sources/Overture;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_22 /* Tests */ = {
+		OBJ_23 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_23 /* OvertureTests */,
+				OBJ_24 /* OvertureTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_23 /* OvertureTests */ = {
+		OBJ_24 /* OvertureTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_24 /* ChainTests.swift */,
-				OBJ_25 /* ComposeTests.swift */,
-				OBJ_26 /* ConcatTests.swift */,
-				OBJ_27 /* CurryTests.swift */,
-				OBJ_28 /* PipeTests.swift */,
-				OBJ_29 /* WithTests.swift */,
+				OBJ_25 /* ChainTests.swift */,
+				OBJ_26 /* ComposeTests.swift */,
+				OBJ_27 /* ConcatTests.swift */,
+				OBJ_28 /* CurryTests.swift */,
+				OBJ_29 /* FlipTests.swift */,
+				OBJ_30 /* PipeTests.swift */,
+				OBJ_31 /* UncurryTests.swift */,
+				OBJ_32 /* WithTests.swift */,
 			);
 			name = OvertureTests;
 			path = Tests/OvertureTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_31 /* Products */ = {
+		OBJ_34 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				"Overture::OvertureTests::Product" /* OvertureTests.xctest */,
@@ -159,9 +168,9 @@
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Configs */,
 				OBJ_9 /* Sources */,
-				OBJ_22 /* Tests */,
-				OBJ_30 /* Overture.xcworkspace */,
-				OBJ_31 /* Products */,
+				OBJ_23 /* Tests */,
+				OBJ_33 /* Overture.xcworkspace */,
+				OBJ_34 /* Products */,
 			);
 			name = "";
 			sourceTree = "<group>";
@@ -187,10 +196,10 @@
 /* Begin PBXNativeTarget section */
 		"Overture::Overture" /* Overture */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_35 /* Build configuration list for PBXNativeTarget "Overture" */;
+			buildConfigurationList = OBJ_38 /* Build configuration list for PBXNativeTarget "Overture" */;
 			buildPhases = (
-				OBJ_38 /* Sources */,
-				OBJ_50 /* Frameworks */,
+				OBJ_41 /* Sources */,
+				OBJ_54 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -203,15 +212,15 @@
 		};
 		"Overture::OvertureTests" /* OvertureTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_63 /* Build configuration list for PBXNativeTarget "OvertureTests" */;
+			buildConfigurationList = OBJ_67 /* Build configuration list for PBXNativeTarget "OvertureTests" */;
 			buildPhases = (
-				OBJ_66 /* Sources */,
-				OBJ_73 /* Frameworks */,
+				OBJ_70 /* Sources */,
+				OBJ_79 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_75 /* PBXTargetDependency */,
+				OBJ_81 /* PBXTargetDependency */,
 			);
 			name = OvertureTests;
 			productName = OvertureTests;
@@ -220,9 +229,9 @@
 		};
 		"Overture::SwiftPMPackageDescription" /* OverturePackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_52 /* Build configuration list for PBXNativeTarget "OverturePackageDescription" */;
+			buildConfigurationList = OBJ_56 /* Build configuration list for PBXNativeTarget "OverturePackageDescription" */;
 			buildPhases = (
-				OBJ_55 /* Sources */,
+				OBJ_59 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -248,7 +257,7 @@
 				en,
 			);
 			mainGroup = OBJ_5 /*  */;
-			productRefGroup = OBJ_31 /* Products */;
+			productRefGroup = OBJ_34 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -261,57 +270,60 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_38 /* Sources */ = {
+		OBJ_41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_39 /* Chain.swift in Sources */,
-				OBJ_40 /* Compose.swift in Sources */,
-				OBJ_41 /* Concat.swift in Sources */,
-				OBJ_42 /* Curry.swift in Sources */,
-				OBJ_43 /* Flip.swift in Sources */,
-				OBJ_44 /* KeyPath.swift in Sources */,
-				OBJ_45 /* Optional.swift in Sources */,
-				OBJ_46 /* Pipe.swift in Sources */,
-				OBJ_47 /* Sequence.swift in Sources */,
-				OBJ_48 /* With.swift in Sources */,
-				OBJ_49 /* Zurry.swift in Sources */,
+				OBJ_42 /* Chain.swift in Sources */,
+				OBJ_43 /* Compose.swift in Sources */,
+				OBJ_44 /* Concat.swift in Sources */,
+				OBJ_45 /* Curry.swift in Sources */,
+				OBJ_46 /* Flip.swift in Sources */,
+				OBJ_47 /* KeyPath.swift in Sources */,
+				OBJ_48 /* Optional.swift in Sources */,
+				OBJ_49 /* Pipe.swift in Sources */,
+				OBJ_50 /* Sequence.swift in Sources */,
+				OBJ_51 /* Uncurry.swift in Sources */,
+				OBJ_52 /* With.swift in Sources */,
+				OBJ_53 /* Zurry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_55 /* Sources */ = {
+		OBJ_59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_56 /* Package.swift in Sources */,
+				OBJ_60 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_66 /* Sources */ = {
+		OBJ_70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_67 /* ChainTests.swift in Sources */,
-				OBJ_68 /* ComposeTests.swift in Sources */,
-				OBJ_69 /* ConcatTests.swift in Sources */,
-				OBJ_70 /* CurryTests.swift in Sources */,
-				OBJ_71 /* PipeTests.swift in Sources */,
-				OBJ_72 /* WithTests.swift in Sources */,
+				OBJ_71 /* ChainTests.swift in Sources */,
+				OBJ_72 /* ComposeTests.swift in Sources */,
+				OBJ_73 /* ConcatTests.swift in Sources */,
+				OBJ_74 /* CurryTests.swift in Sources */,
+				OBJ_75 /* FlipTests.swift in Sources */,
+				OBJ_76 /* PipeTests.swift in Sources */,
+				OBJ_77 /* UncurryTests.swift in Sources */,
+				OBJ_78 /* WithTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_61 /* PBXTargetDependency */ = {
+		OBJ_65 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Overture::OvertureTests" /* OvertureTests */;
-			targetProxy = DC25ED01207ABC410088AF74 /* PBXContainerItemProxy */;
+			targetProxy = DCF8CF9B208B90CC00E79107 /* PBXContainerItemProxy */;
 		};
-		OBJ_75 /* PBXTargetDependency */ = {
+		OBJ_81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Overture::Overture" /* Overture */;
-			targetProxy = DC25ED00207ABC410088AF74 /* PBXContainerItemProxy */;
+			targetProxy = DCF8CF9A208B90CC00E79107 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -338,7 +350,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_36 /* Debug */ = {
+		OBJ_39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = OBJ_8 /* Development.xcconfig */;
 			buildSettings = {
@@ -361,30 +373,6 @@
 				TARGET_NAME = Overture;
 			};
 			name = Debug;
-		};
-		OBJ_37 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Development.xcconfig */;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Overture.xcodeproj/Overture_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Overture;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = Overture;
-			};
-			name = Release;
 		};
 		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -406,7 +394,31 @@
 			};
 			name = Release;
 		};
-		OBJ_53 /* Debug */ = {
+		OBJ_40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* Development.xcconfig */;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Overture.xcodeproj/Overture_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Overture;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Overture;
+			};
+			name = Release;
+		};
+		OBJ_57 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -415,7 +427,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_54 /* Release */ = {
+		OBJ_58 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -424,19 +436,19 @@
 			};
 			name = Release;
 		};
-		OBJ_59 /* Debug */ = {
+		OBJ_63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		OBJ_60 /* Release */ = {
+		OBJ_64 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Release;
 		};
-		OBJ_64 /* Debug */ = {
+		OBJ_68 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = OBJ_8 /* Development.xcconfig */;
 			buildSettings = {
@@ -456,7 +468,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_65 /* Release */ = {
+		OBJ_69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = OBJ_8 /* Development.xcconfig */;
 			buildSettings = {
@@ -488,38 +500,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_35 /* Build configuration list for PBXNativeTarget "Overture" */ = {
+		OBJ_38 /* Build configuration list for PBXNativeTarget "Overture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_36 /* Debug */,
-				OBJ_37 /* Release */,
+				OBJ_39 /* Debug */,
+				OBJ_40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_52 /* Build configuration list for PBXNativeTarget "OverturePackageDescription" */ = {
+		OBJ_56 /* Build configuration list for PBXNativeTarget "OverturePackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_53 /* Debug */,
-				OBJ_54 /* Release */,
+				OBJ_57 /* Debug */,
+				OBJ_58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_58 /* Build configuration list for PBXAggregateTarget "OverturePackageTests" */ = {
+		OBJ_62 /* Build configuration list for PBXAggregateTarget "OverturePackageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_59 /* Debug */,
-				OBJ_60 /* Release */,
+				OBJ_63 /* Debug */,
+				OBJ_64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_63 /* Build configuration list for PBXNativeTarget "OvertureTests" */ = {
+		OBJ_67 /* Build configuration list for PBXNativeTarget "OvertureTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_64 /* Debug */,
-				OBJ_65 /* Release */,
+				OBJ_68 /* Debug */,
+				OBJ_69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

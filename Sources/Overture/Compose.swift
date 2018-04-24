@@ -72,3 +72,77 @@ public func compose<A, B, C, D, E, F, G>(
       f(g(h(i(j(k(a))))))
     }
 }
+
+/// Backward composition of throwing functions.
+///
+/// - Parameters:
+///   - f: A function that takes a value in `B` and returns a value in `C`.
+///   - b: An argument in `B`.
+///   - g: A function that takes a value in `A` and returns a value in `B`.
+///   - a: An argument in `A`.
+/// - Returns: A new function that takes a value in `A` and returns a value in `C`.
+/// - Note: This function is commonly seen in operator form as `<<<`.
+public func compose<A, B, C>(
+  _ f: @escaping (B) throws -> C,
+  _ g: @escaping (A) throws -> B
+  )
+  -> (A) throws -> C {
+
+    return { (a: A) throws -> C in
+      try f(g(a))
+    }
+}
+
+public func compose<A, B, C, D>(
+  _ f: @escaping (C) throws -> D,
+  _ g: @escaping (B) throws -> C,
+  _ h: @escaping (A) throws -> B
+  )
+  -> (A) throws -> D {
+
+    return { (a: A) throws -> D in
+      try f(g(h(a)))
+    }
+}
+
+public func compose<A, B, C, D, E>(
+  _ f: @escaping (D) throws -> E,
+  _ g: @escaping (C) throws -> D,
+  _ h: @escaping (B) throws -> C,
+  _ i: @escaping (A) throws -> B
+  )
+  -> (A) throws -> E {
+
+    return { (a: A) throws -> E in
+      try f(g(h(i(a))))
+    }
+}
+
+public func compose<A, B, C, D, E, F>(
+  _ f: @escaping (E) throws -> F,
+  _ g: @escaping (D) throws -> E,
+  _ h: @escaping (C) throws -> D,
+  _ i: @escaping (B) throws -> C,
+  _ j: @escaping (A) throws -> B
+  )
+  -> (A) throws -> F {
+
+    return { (a: A) throws -> F in
+      try f(g(h(i(j(a)))))
+    }
+}
+
+public func compose<A, B, C, D, E, F, G>(
+  _ f: @escaping (F) throws -> G,
+  _ g: @escaping (E) throws -> F,
+  _ h: @escaping (D) throws -> E,
+  _ i: @escaping (C) throws -> D,
+  _ j: @escaping (B) throws -> C,
+  _ k: @escaping (A) throws -> B
+  )
+  -> (A) throws -> G {
+
+    return { (a: A) throws -> G in
+      try f(g(h(i(j(k(a))))))
+    }
+}
