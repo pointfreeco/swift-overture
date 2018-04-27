@@ -87,7 +87,7 @@ public func concat<A>(
 /// - Note: This function is commonly seen in operator form as `<>`.
 public func concat<A: AnyObject>(
   _ fs: ((A) -> Void)...,
-  and fz: @escaping (_ a: A) -> Void
+  and fz: @escaping (_ a: A) -> Void = { _ in }
   )
   -> (A) -> Void {
 
@@ -107,7 +107,7 @@ public func concat<A: AnyObject>(
 /// - Note: This function is commonly seen in operator form as `<>`.
 public func concat<A: AnyObject>(
   _ fs: ((A) throws -> Void)...,
-  and fz: @escaping (_ a: A) throws -> Void
+  and fz: @escaping (_ a: A) throws -> Void = { _ in }
   )
   -> (A) throws -> Void {
 
