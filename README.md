@@ -162,7 +162,7 @@ let button = with(UIButton(type: .system), filledButtonStyle)
 
 ### `curry`, `flip`, and `zurry`
 
-These functions make up the Swiss army knife of composition. They give us the power to take existing functions and methods that don't compose (_e.g_, those that take zero or multiple arguments) and restore composition.
+These functions make up the [Swiss army knife](https://www.pointfree.co/episodes/ep5-higher-order-functions) of composition. They give us the power to take existing functions and methods that don't compose (_e.g_, those that take zero or multiple arguments) and restore composition.
 
 For example, let's transform a string initializer that takes multiple arguments into something that can compose with `pipe`.
 
@@ -228,7 +228,7 @@ let uppercased = zurry(flip(String.uppercased))
 
 ### `get`
 
-The `get` function produces getter functions from key paths.
+The `get` function produces [getter functions](https://www.pointfree.co/episodes/ep8-getters-and-key-paths) from key paths.
 
 ``` swift
 get(\String.count)
@@ -248,7 +248,7 @@ pipe(incr, square, String.init, get(\.count))
 
 ### `prop`
 
-The `prop` function produces setter functions from key paths.
+The `prop` function produces [setter functions](https://www.pointfree.co/episodes/ep7-setters-and-key-paths) from key paths.
 
 ``` swift
 let setUserName = prop(\User.name)
@@ -338,7 +338,7 @@ We know that many code bases are not going to be comfortable introducing operato
 
 These concepts (and more) are explored thoroughly in [Point-Free](https://www.pointfree.co), a video series exploring functional programming and Swift hosted by [Brandon Williams](https://github.com/mbrandonw) and [Stephen Celis](https://github.com/stephencelis).
 
-Composition without operators was explored in [Episode #11](https://www.pointfree.co/episodes/ep11-composition-without-operators):
+The ideas in this episode were first explored in [Episode #11](https://www.pointfree.co/episodes/ep11-composition-without-operators):
 
 <a href="https://www.pointfree.co/episodes/ep11-composition-without-operators">
   <img alt="video poster image" src="https://d1hf1soyumxcgv.cloudfront.net/0011-composition-without-operators/0011-poster.jpg" width="480">
