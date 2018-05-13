@@ -1,14 +1,6 @@
 import Overture
 import UIKit
 
-let topBottom = concat(mut(\UIEdgeInsets.top), mut(\.bottom))
-let leftRight = concat(mut(\UIEdgeInsets.left), mut(\.right))
-let topBottomLeftRight = concat(topBottom, leftRight)
-
-with(.zero, topBottom(8))
-with(.zero, concat(topBottom(8), leftRight(12)))
-with(.zero, topBottomLeftRight(16))
-
 // Base Styles
 
 let autolayoutStyle = mut(\UIView.translatesAutoresizingMaskIntoConstraints, false)
@@ -40,7 +32,7 @@ func buttonTitleColor(_ color: UIColor, for state: UIControlState = .normal) -> 
 // App Styles
 
 let baseButtonStyle: (UIButton) -> Void = concat(
-  mver(\.contentEdgeInsets, concat(topBottom(12), leftRight(16))),
+  mut(\.contentEdgeInsets, .init(top: 12, left: 16, bottom: 12, right: 16)),
   buttonFont(.systemFont(ofSize: 16))
 )
 

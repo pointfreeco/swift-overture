@@ -6,7 +6,7 @@ let guaranteeHeaders = over(\URLRequest.allHTTPHeaderFields) { $0 ?? [:] }
 let setHeader = { name, value in
   concat(
     guaranteeHeaders,
-    set(compose(over(\.allHTTPHeaderFields), map, over(\.[name])), value)
+    set(compose(prop(\.allHTTPHeaderFields), map, prop(\.[name])), value)
   )
 }
 

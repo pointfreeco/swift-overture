@@ -29,21 +29,6 @@ public func set<S, T, A, B>(
     return over(setter) { _ in value }
 }
 
-/// Applies a value transformation to an immutable setter function.
-///
-/// - Parameters:
-///   - setter: An immutable setter function.
-///   - f: A value transform function.
-/// - Returns: A root transform function.
-public func set<S, T, A, B>(
-  _ setter: (@escaping (A) -> B) -> (S) -> T
-  )
-  -> (B)
-  -> (S) -> T {
-
-    return curry(set)(setter)
-}
-
 // MARK: - Mutation
 
 /// Applies a mutable value transformation to a mutable setter function.
@@ -91,15 +76,6 @@ public func mut<S, A>(
     return mver(setter) { $0 = value }
 }
 
-public func mut<S, A>(
-  _ setter: (@escaping (inout A) -> Void) -> (inout S) -> Void
-  )
-  -> (A)
-  -> (inout S) -> Void {
-
-    return curry(mut)(setter)
-}
-
 /// Applies a value to a reference-mutable setter function.
 ///
 /// - Parameters:
@@ -113,21 +89,4 @@ public func mut<S: AnyObject, A>(
   -> (S) -> Void {
 
     return mver(setter) { $0 = value }
-}
-
-public func mut<S: AnyObject, A>(
-  _ setter: (@escaping (inout A) -> Void) -> (S) -> Void
-  )
-  -> (A)
-  -> (S) -> Void {
-
-    return curry(mut)(setter)
-}
-
-/// Mutating `const`. Produces a constant setter function for a given value.
-///
-/// - Parameter a: The value that's always set.
-/// - Returns: A function that always mutates its argument to the provided value.
-public func monst<A>(_ a: A) -> (inout A) -> Void {
-  return { $0 = a }
 }

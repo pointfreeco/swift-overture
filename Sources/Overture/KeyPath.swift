@@ -14,7 +14,7 @@ public func get<Root, Value>(_ keyPath: KeyPath<Root, Value>) -> (Root) -> Value
 ///
 /// - Parameter keyPath: A key path.
 /// - Returns: A setter function.
-public func over<Root, Value>(
+public func prop<Root, Value>(
   _ keyPath: WritableKeyPath<Root, Value>
   )
   -> (@escaping (Value) -> Value)
@@ -41,18 +41,7 @@ public func over<Root, Value>(
   )
   -> (Root) -> Root {
 
-    return over(keyPath)(update)
-}
-
-/// Produces an immutable, constant setter function for a given key path.
-///
-/// - Parameter keyPath: A key path.
-/// - Returns: A setter function.
-public func set<Root, Value>(_ keyPath: WritableKeyPath<Root, Value>)
-  -> (Value)
-  -> (Root) -> Root {
-
-    return compose(over(keyPath), const)
+    return prop(keyPath)(update)
 }
 
 /// Produces an immutable setter function for a given key path and constant value.
@@ -67,7 +56,7 @@ public func set<Root, Value>(
   )
   -> (Root) -> Root {
 
-    return over(keyPath, const(value))
+    return over(keyPath) { _ in value }
 }
 
 // MARK: - Mutation
@@ -76,7 +65,7 @@ public func set<Root, Value>(
 ///
 /// - Parameter keyPath: A writable key path.
 /// - Returns: A mutable setter function.
-public func mver<Root, Value>(
+public func mprop<Root, Value>(
   _ keyPath: WritableKeyPath<Root, Value>
   )
   -> (@escaping (inout Value) -> Void)
@@ -101,14 +90,14 @@ public func mver<Root, Value>(
   )
   -> (inout Root) -> Void {
 
-    return mver(keyPath)(update)
+    return mprop(keyPath)(update)
 }
 
 /// Produces a reference-mutable setter function for a given key path to a reference. Useful for composing reference property changes efficiently.
 ///
 /// - Parameter keyPath: A reference-writable key path.
 /// - Returns: A reference-mutable setter function.
-public func mver<Root, Value>(
+public func mprop<Root, Value>(
   _ keyPath: ReferenceWritableKeyPath<Root, Value>
   )
   -> (@escaping (Value) -> Void)
@@ -133,14 +122,14 @@ public func mver<Root, Value>(
   )
   -> (Root) -> Void {
 
-    return mver(keyPath)(update)
+    return mprop(keyPath)(update)
 }
 
 /// Produces an reference-mutable setter function for a given key path to a value. Useful for composing reference property changes efficiently.
 ///
 /// - Parameter keyPath: A key path.
 /// - Returns: A setter function.
-public func mver<Root, Value>(
+public func mprop<Root, Value>(
   _ keyPath: ReferenceWritableKeyPath<Root, Value>
   )
   -> (@escaping (inout Value) -> Void)
@@ -165,18 +154,7 @@ public func mver<Root, Value>(
   )
   -> (Root) -> Void {
 
-    return mver(keyPath)(update)
-}
-
-/// Produces a reference-mutable setter function for a given key path.
-///
-/// - Parameter keyPath: A writable key path.
-/// - Returns: A value-mutable setter function.
-public func mut<Root, Value>(_ keyPath: WritableKeyPath<Root, Value>)
-  -> (Value)
-  -> (inout Root) -> Void {
-
-    return compose(mver(keyPath), monst)
+    return mprop(keyPath)(update)
 }
 
 /// Produces a value-mutable setter function for a given key path and new value.
@@ -191,18 +169,7 @@ public func mut<Root, Value>(
   )
   -> (inout Root) -> Void {
 
-    return mut(keyPath)(value)
-}
-
-/// Produces a reference-mutable setter function for a given key path.
-///
-/// - Parameter keyPath: A reference-writable key path.
-/// - Returns: A reference-mutable setter function.
-public func mut<Root, Value>(_ keyPath: ReferenceWritableKeyPath<Root, Value>)
-  -> (Value)
-  -> (Root) -> Void {
-
-    return compose(mver(keyPath), monst)
+    return mver(keyPath) { $0 = value }
 }
 
 /// Produces a reference-mutable setter function for a given key path and new value.
@@ -217,5 +184,5 @@ public func mut<Root, Value>(
   )
   -> (Root) -> Void {
 
-    return mut(keyPath)(value)
+    return mver(keyPath) { $0 = value }
 }
