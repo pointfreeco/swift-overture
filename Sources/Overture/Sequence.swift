@@ -22,3 +22,18 @@ public func map<S: Sequence, A>(
 
     return { try $0.map(transform) }
 }
+
+/// In-place collection mutation.
+///
+/// - Parameter transform: A transform function.
+public func mutEach<C: MutableCollection>(
+  _ transform: @escaping (inout C.Element) -> Void
+  )
+  -> (inout C) -> Void {
+
+    return {
+      for i in $0.indices {
+        transform(&$0[i])
+      }
+    }
+}

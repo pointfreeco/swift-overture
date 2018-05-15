@@ -269,6 +269,44 @@ with(User(name: "blob", age: 1), concat(
 // User(name: "Blob", age: 2)
 ```
 
+### `over` and `set`
+
+The `over` and `set` functions produce `(Root) -> Root` transform functions that work on a `Value` in a structure given a key path (or [setter function](https://www.pointfree.co/episodes/ep7-setters-and-key-paths)).
+
+The `over` function takes a `(Value) -> Value` transform function to modify an existing value.
+
+``` swift
+let celebrateBirthday = over(\User.age, incr)
+// (User) -> User
+```
+
+The `set` function replaces an existing value with a brand new one.
+
+```swift
+with(user, set(\.name, "Blob"))
+```
+
+### `mprop`, `mver`, and `mut`
+
+The `mprop`, `mver` and `mut` functions are _mutable_ variants of `prop`, `over` and `set`.
+
+```swift
+let guaranteeHeaders = mver(\URLRequest.allHTTPHeaderFields) { $0 = $0 ?? [:] }
+
+let setHeader = { name, value in
+  concat(
+    guaranteeHeaders,
+    { $0.allHTTPHeaderFields?[name] = value }
+  )
+}
+
+let request = with(URLRequest(url: url), concat(
+  mut(\.httpMethod, "POST"),
+  setHeader("Authorization", "Token " + token),
+  setHeader("Content-Type", "application/json; charset=utf-8")
+))
+```
+
 ## FAQ
 
   - **Should I be worried about polluting the global namespace with free functions?**
