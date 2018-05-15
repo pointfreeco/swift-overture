@@ -336,7 +336,7 @@ let request = with(URLRequest(url: url), concat(
 If you use [Carthage](https://github.com/Carthage/Carthage), you can add the following dependency to your `Cartfile`:
 
 ``` ruby
-github "pointfreeco/swift-overture" "~> 0.2.0"
+github "pointfreeco/swift-overture" ~> 0.2
 ```
 
 ### CocoaPods
@@ -344,7 +344,7 @@ github "pointfreeco/swift-overture" "~> 0.2.0"
 If your project uses [CocoaPods](https://cocoapods.org), just add the following to your `Podfile`:
 
 ``` ruby
-pod 'Overture', '~> 0.2.0'
+pod 'Overture', '~> 0.2'
 ```
 
 ### SwiftPM
@@ -353,9 +353,7 @@ If you want to use Overture in a project that uses [SwiftPM](https://swift.org/p
 
 ``` swift
 dependencies: [
-  .package(
-    url: "https://github.com/pointfreeco/swift-overture.git",
-    from: "0.2.0"),
+  .package(url: "https://github.com/pointfreeco/swift-overture.git", from: "0.2.0")
 ]
 ```
 
