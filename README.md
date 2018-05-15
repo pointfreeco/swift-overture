@@ -17,6 +17,8 @@ A library for function composition.
       - [`curry`, `flip`, and `zurry`](#curry-flip-and-zurry)
       - [`get`](#get)
       - [`prop`](#prop)
+      - [`over` and `set`](#over-and-set)
+      - [`mprop`, `mver`, and `mut`](#mprop-mver-and-mut)
   - [FAQ](#faq)
   - [Installation](#installation)
   - [🎶 Prelude](#-prelude)
@@ -334,7 +336,7 @@ let request = with(URLRequest(url: url), concat(
 If you use [Carthage](https://github.com/Carthage/Carthage), you can add the following dependency to your `Cartfile`:
 
 ``` ruby
-github "pointfreeco/swift-overture" "master"
+github "pointfreeco/swift-overture" "~> 0.2.0"
 ```
 
 ### CocoaPods
@@ -342,7 +344,7 @@ github "pointfreeco/swift-overture" "master"
 If your project uses [CocoaPods](https://cocoapods.org), just add the following to your `Podfile`:
 
 ``` ruby
-pod 'Overture', :git => 'https://github.com/pointfreeco/swift-overture.git'
+pod 'Overture', '~> 0.2.0'
 ```
 
 ### SwiftPM
@@ -353,7 +355,7 @@ If you want to use Overture in a project that uses [SwiftPM](https://swift.org/p
 dependencies: [
   .package(
     url: "https://github.com/pointfreeco/swift-overture.git",
-    .branch("master")),
+    from: "0.2.0"),
 ]
 ```
 
