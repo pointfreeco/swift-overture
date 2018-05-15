@@ -282,7 +282,7 @@ let celebrateBirthday = over(\User.age, incr)
 
 The `set` function replaces an existing value with a brand new one.
 
-```
+```swift
 with(user, set(\.name, "Blob"))
 ```
 
@@ -290,11 +290,14 @@ with(user, set(\.name, "Blob"))
 
 The `mprop`, `mver` and `mut` functions are _mutable_ variants of `prop`, `over` and `set`.
 
-```
+```swift
 let guaranteeHeaders = mver(\URLRequest.allHTTPHeaderFields) { $0 = $0 ?? [:] }
 
 let setHeader = { name, value in
-  concat(guaranteeHeaders) { $0.allHTTPHeaderFields?[name] = value }
+  concat(
+    guaranteeHeaders,
+    { $0.allHTTPHeaderFields?[name] = value }
+  )
 }
 
 let request = with(URLRequest(url: url), concat(
