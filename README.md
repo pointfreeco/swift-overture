@@ -176,14 +176,14 @@ String.init(data:encoding:)
 We use `curry` to transform multi-argument functions into functions that take a single input and return new functions to gather more inputs along the way.
 
 ``` swift
-curry(String.init(data:encoding:)
+curry(String.init(data:encoding:))
 // (Data) -> (String.Encoding) -> String?
 ```
 
 And we use `flip` to flip the order of arguments. Multi-argument functions and methods typically take data first and configuration second, but we can generally apply configuration before we have data, and `flip` allows us to do just that.
 
 ``` swift
-flip(curry(String.init(data:encoding:)
+flip(curry(String.init(data:encoding:)))
 // (String.Encoding) -> (Data) -> String?
 ```
 
