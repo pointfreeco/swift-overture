@@ -139,7 +139,7 @@ The `concat` function composes with single types. This includes composition of t
 With `concat`, we can build powerful configuration functions from small pieces.
 
 ``` swift
-let roundedStyle: (UIView) -> Void {
+let roundedStyle: (UIView) -> Void = {
   $0.clipsToBounds = true
   $0.layer.cornerRadius = 6
 }
