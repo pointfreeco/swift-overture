@@ -377,6 +377,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = OBJ_8 /* Development.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -401,7 +402,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = OBJ_8 /* Development.xcconfig */;
 			buildSettings = {
-				ENABLE_TESTABILITY = YES;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
