@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		DC5E715C21065C6900ED239B /* Zip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5E715B21065C6900ED239B /* Zip.swift */; };
 		OBJ_44 /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Chain.swift */; };
 		OBJ_45 /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Compose.swift */; };
 		OBJ_46 /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Concat.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC5E715B21065C6900ED239B /* Zip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zip.swift; sourceTree = "<group>"; };
 		OBJ_11 /* Chain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
 		OBJ_12 /* Compose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compose.swift; sourceTree = "<group>"; };
 		OBJ_13 /* Concat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concat.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				OBJ_21 /* Setters.swift */,
 				OBJ_22 /* Uncurry.swift */,
 				OBJ_23 /* With.swift */,
+				DC5E715B21065C6900ED239B /* Zip.swift */,
 				OBJ_24 /* Zurry.swift */,
 			);
 			name = Overture;
@@ -287,6 +290,7 @@
 				OBJ_53 /* Sequence.swift in Sources */,
 				OBJ_54 /* Setters.swift in Sources */,
 				OBJ_55 /* Uncurry.swift in Sources */,
+				DC5E715C21065C6900ED239B /* Zip.swift in Sources */,
 				OBJ_56 /* With.swift in Sources */,
 				OBJ_57 /* Zurry.swift in Sources */,
 			);
