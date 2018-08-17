@@ -312,7 +312,7 @@ let request = with(URLRequest(url: url), concat(
 
 ### `zip` and `zip(with:)`
 
-This is a function that Swift ships with! Unfortunately, it's limited to pairs of sequences. Overture defines `zip` on work with up to ten sequences at once, which makes working with several sets of related data a breeze.
+This is a function that Swift ships with! Unfortunately, it's limited to pairs of sequences. Overture defines `zip` to work with up to ten sequences at once, which makes combining several sets of related data a snap.
 
 ```swift
 let ids = [1, 2, 3]
