@@ -116,13 +116,25 @@ public func mprop<Root, Value>(
 ///   - keyPath: A reference-writable key path.
 ///   - update: An update function for a given value.
 /// - Returns: A reference-mutable setter function.
+//public func mver<Root, Value>(
+//  _ keyPath: ReferenceWritableKeyPath<Root, Value>,
+//  _ update: @escaping (Value) -> Void
+//  )
+//  -> (Root) -> Void {
+//
+//    return mprop(keyPath)(update)
+//}
+
 public func mver<Root, Value>(
-  _ keyPath: ReferenceWritableKeyPath<Root, Value>,
+  _ keyPath: KeyPath<Root, Value>,
   _ update: @escaping (Value) -> Void
   )
-  -> (Root) -> Void {
+  -> (Root) -> Void
+  where Root: AnyObject, Value: AnyObject {
 
-    return mprop(keyPath)(update)
+    return { root in
+      update(root[keyPath: keyPath])
+    }
 }
 
 /// Produces an reference-mutable setter function for a given key path to a value. Useful for composing reference property changes efficiently.

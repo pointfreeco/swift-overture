@@ -21,7 +21,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		DC5E715C21065C6900ED239B /* Zip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5E715B21065C6900ED239B /* Zip.swift */; };
+		DC5E715C21065C6900ED239B /* ZipOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5E715B21065C6900ED239B /* ZipOptional.swift */; };
+		DCF8237021267FD4000A7F94 /* ZipSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF8236F21267FD4000A7F94 /* ZipSequence.swift */; };
+		DCF82372212684BE000A7F94 /* ZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF82371212684BE000A7F94 /* ZipTests.swift */; };
 		OBJ_44 /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Chain.swift */; };
 		OBJ_45 /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Compose.swift */; };
 		OBJ_46 /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Concat.swift */; };
@@ -65,7 +67,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DC5E715B21065C6900ED239B /* Zip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zip.swift; sourceTree = "<group>"; };
+		DC5E715B21065C6900ED239B /* ZipOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipOptional.swift; sourceTree = "<group>"; };
+		DCF8236F21267FD4000A7F94 /* ZipSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipSequence.swift; sourceTree = "<group>"; };
+		DCF82371212684BE000A7F94 /* ZipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipTests.swift; sourceTree = "<group>"; };
 		OBJ_11 /* Chain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
 		OBJ_12 /* Compose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compose.swift; sourceTree = "<group>"; };
 		OBJ_13 /* Concat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concat.swift; sourceTree = "<group>"; };
@@ -128,7 +132,8 @@
 				OBJ_21 /* Setters.swift */,
 				OBJ_22 /* Uncurry.swift */,
 				OBJ_23 /* With.swift */,
-				DC5E715B21065C6900ED239B /* Zip.swift */,
+				DC5E715B21065C6900ED239B /* ZipOptional.swift */,
+				DCF8236F21267FD4000A7F94 /* ZipSequence.swift */,
 				OBJ_24 /* Zurry.swift */,
 			);
 			name = Overture;
@@ -154,6 +159,7 @@
 				OBJ_32 /* PipeTests.swift */,
 				OBJ_33 /* UncurryTests.swift */,
 				OBJ_34 /* WithTests.swift */,
+				DCF82371212684BE000A7F94 /* ZipTests.swift */,
 			);
 			name = OvertureTests;
 			path = Tests/OvertureTests;
@@ -280,6 +286,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_44 /* Chain.swift in Sources */,
+				DCF8237021267FD4000A7F94 /* ZipSequence.swift in Sources */,
 				OBJ_45 /* Compose.swift in Sources */,
 				OBJ_46 /* Concat.swift in Sources */,
 				OBJ_47 /* Curry.swift in Sources */,
@@ -290,7 +297,7 @@
 				OBJ_53 /* Sequence.swift in Sources */,
 				OBJ_54 /* Setters.swift in Sources */,
 				OBJ_55 /* Uncurry.swift in Sources */,
-				DC5E715C21065C6900ED239B /* Zip.swift in Sources */,
+				DC5E715C21065C6900ED239B /* ZipOptional.swift in Sources */,
 				OBJ_56 /* With.swift in Sources */,
 				OBJ_57 /* Zurry.swift in Sources */,
 			);
@@ -313,6 +320,7 @@
 				OBJ_77 /* ConcatTests.swift in Sources */,
 				OBJ_78 /* CurryTests.swift in Sources */,
 				OBJ_79 /* FlipTests.swift in Sources */,
+				DCF82372212684BE000A7F94 /* ZipTests.swift in Sources */,
 				OBJ_80 /* PipeTests.swift in Sources */,
 				OBJ_81 /* UncurryTests.swift in Sources */,
 				OBJ_82 /* WithTests.swift in Sources */,
