@@ -19,6 +19,7 @@ A library for function composition.
       - [`prop`](#prop)
       - [`over` and `set`](#over-and-set)
       - [`mprop`, `mver`, and `mut`](#mprop-mver-and-mut)
+      - [`zip`](#zip)
   - [FAQ](#faq)
   - [Installation](#installation)
   - [🎶 Prelude](#-prelude)
@@ -309,6 +310,79 @@ let request = with(URLRequest(url: url), concat(
 ))
 ```
 
+### `zip` and `zip(with:)`
+
+This is a function that Swift ships with! Unfortunately, it's limited to pairs of sequences. Overture defines `zip` to work with up to ten sequences at once, which makes combining several sets of related data a snap.
+
+```swift
+let ids = [1, 2, 3]
+let emails = ["blob@pointfree.co", "blob.jr@pointfree.co", "blob.sr@pointfree.co"]
+let names = ["Blob", "Blob Junior", "Blob Senior"]
+
+zip(ids, emails, names)
+// [
+//   (1, "blob@pointfree.co", "Blob"),
+//   (2, "blob.jr@pointfree.co", "Blob Junior"),
+//   (3, "blob.sr@pointfree.co", "Blob Senior")
+// ]
+```
+
+It's common to immediately `map` on zipped values.
+
+``` swift
+struct User {
+  let id: Int
+  let email: String
+  let name: String
+}
+
+zip(ids, emails, names).map(User.init)
+// [
+//   User(id: 1, email: "blob@pointfree.co", name: "Blob"),
+//   User(id: 2, email: "blob.jr@pointfree.co", name: "Blob Junior"),
+//   User(id: 3, email: "blob.sr@pointfree.co", name: "Blob Senior")
+// ]
+```
+
+Because of this, Overture provides a `zip(with:)` helper, which takes a tranform function up front and is curried, so it can be composed with other functions using `pipe`.
+
+``` swift
+zip(with: User.init)(ids, emails, names)
+```
+
+Overture also extends the notion of `zip` to work with optionals! It's an expressive way of combining multiple optionals together.
+
+``` swift
+let optionalId: Int? = 1
+let optionalEmail: String? = "blob@pointfree.co"
+let optionalName: String? = "Blob"
+
+zip(optionalId, optionalEmail, optionalName)
+// Optional<(Int, String, String)>.some((1, "blob@pointfree.co", "Blob"))
+```
+
+And `zip(with:)` lets us transform these tuples into other values.
+
+``` swift
+zip(with: User.init)(optionalId, optionalEmail, optionalName)
+// Optional<User>.some(User(id: 1, email: "blob@pointfree.co", name: "Blob"))
+```
+
+Using `zip` can be an expressive alternative to `let`-unwrapping!
+
+``` swift
+let optionalUser = zip(with: User.init)(optionalId, optionalEmail, optionalName)
+
+// vs.
+
+let optionalUser: User?
+if let id = optionalId, let email = optionalEmail, let name = optionalName {
+  optionalUser = User(id: id, email: email, name: name)
+} else {
+  optionalUser = nil
+}
+```
+
 ## FAQ
 
   - **Should I be worried about polluting the global namespace with free functions?**
@@ -336,7 +410,7 @@ let request = with(URLRequest(url: url), concat(
 If you use [Carthage](https://github.com/Carthage/Carthage), you can add the following dependency to your `Cartfile`:
 
 ``` ruby
-github "pointfreeco/swift-overture" ~> 0.2
+github "pointfreeco/swift-overture" ~> 0.3
 ```
 
 ### CocoaPods
@@ -344,7 +418,7 @@ github "pointfreeco/swift-overture" ~> 0.2
 If your project uses [CocoaPods](https://cocoapods.org), just add the following to your `Podfile`:
 
 ``` ruby
-pod 'Overture', '~> 0.2'
+pod 'Overture', '~> 0.3'
 ```
 
 ### SwiftPM
@@ -353,7 +427,7 @@ If you want to use Overture in a project that uses [SwiftPM](https://swift.org/p
 
 ``` swift
 dependencies: [
-  .package(url: "https://github.com/pointfreeco/swift-overture.git", from: "0.2.0")
+  .package(url: "https://github.com/pointfreeco/swift-overture.git", from: "0.3.0")
 ]
 ```
 
