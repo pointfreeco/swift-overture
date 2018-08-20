@@ -19,7 +19,7 @@ A library for function composition.
       - [`prop`](#prop)
       - [`over` and `set`](#over-and-set)
       - [`mprop`, `mver`, and `mut`](#mprop-mver-and-mut)
-      - [`zip`](#zip)
+      - [`zip`](#zip-and-zipwith)
   - [FAQ](#faq)
   - [Installation](#installation)
   - [🎶 Prelude](#-prelude)
