@@ -174,7 +174,7 @@ func zip<
     return { zip($0, $1, $2).map(f) }
 }
 
-func zip<
+public func zip<
   A: Sequence,
   B: Sequence,
   C: Sequence,
@@ -187,7 +187,7 @@ func zip<
     return { zip($0, $1, $2, $3).map(f) }
 }
 
-func zip<
+public func zip<
   A: Sequence,
   B: Sequence,
   C: Sequence,
@@ -201,7 +201,7 @@ func zip<
     return { zip($0, $1, $2, $3, $4).map(f) }
 }
 
-func zip<
+public func zip<
   A: Sequence,
   B: Sequence,
   C: Sequence,
@@ -216,7 +216,7 @@ func zip<
     return { zip($0, $1, $2, $3, $4, $5).map(f) }
 }
 
-func zip<
+public func zip<
   A: Sequence,
   B: Sequence,
   C: Sequence,
@@ -232,7 +232,7 @@ func zip<
     return { zip($0, $1, $2, $3, $4, $5, $6).map(f) }
 }
 
-func zip<
+public func zip<
   A: Sequence,
   B: Sequence,
   C: Sequence,
@@ -249,7 +249,7 @@ func zip<
     return { zip($0, $1, $2, $3, $4, $5, $6, $7).map(f) }
 }
 
-func zip<
+public func zip<
   A: Sequence,
   B: Sequence,
   C: Sequence,
@@ -267,7 +267,7 @@ func zip<
     return { zip($0, $1, $2, $3, $4, $5, $6, $7, $8).map(f) }
 }
 
-func zip<
+public func zip<
   A: Sequence,
   B: Sequence,
   C: Sequence,
