@@ -162,7 +162,18 @@ public struct Zip3Sequence<
   }
 }
 
-func zip<
+public func zip<
+  A: Sequence,
+  B: Sequence,
+  C
+  >(
+  with f: @escaping (A.Element, B.Element) -> C
+  )
+  -> (A, B) -> [C] {
+    return { zip($0, $1).map(f) }
+}
+
+public func zip<
   A: Sequence,
   B: Sequence,
   C: Sequence,
