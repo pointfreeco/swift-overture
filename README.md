@@ -427,7 +427,7 @@ If you want to use Overture in a project that uses [SwiftPM](https://swift.org/p
 
 ``` swift
 dependencies: [
-  .package(url: "https://github.com/pointfreeco/swift-overture.git", from: "0.3.0")
+  .package(url: "https://github.com/pointfreeco/swift-overture.git", from: "0.3.1")
 ]
 ```
 
