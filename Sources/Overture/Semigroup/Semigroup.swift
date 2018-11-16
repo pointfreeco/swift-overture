@@ -93,3 +93,9 @@ extension Semigroup {
     }
   }
 }
+
+extension Semigroup {
+  public var dual: Semigroup {
+    return Semigroup { self.combine($1, $0) }
+  }
+}

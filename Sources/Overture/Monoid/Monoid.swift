@@ -97,12 +97,18 @@ extension Monoid {
     return Monoid<B?>(empty: nil, semigroup: .last())
   }
   public static func first<B>() -> Monoid<B?> {
-    return Monoid<B?>(empty: nil, semigroup: .first())
+    return self.last().dual
   }
 }
 
 extension Monoid {
   public static func tuple2<B, C>(_ b: Monoid<B>, _ c: Monoid<C>) -> Monoid<(B, C)> {
     return Monoid<(B, C)>(empty: (b.empty, c.empty), semigroup: .tuple2(b.semigroup, c.semigroup))
+  }
+}
+
+extension Monoid {
+  public var dual: Monoid {
+    return Monoid(empty: self.empty, semigroup: self.semigroup.dual)
   }
 }
