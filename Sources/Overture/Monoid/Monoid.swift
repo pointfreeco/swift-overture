@@ -94,9 +94,15 @@ extension Monoid {
 
 extension Monoid {
   public static func last<B>() -> Monoid<B?> {
-    return Monoid<B?>.init(empty: nil, semigroup: .last())
+    return Monoid<B?>(empty: nil, semigroup: .last())
   }
   public static func first<B>() -> Monoid<B?> {
-    return Monoid<B?>.init(empty: nil, semigroup: .first())
+    return Monoid<B?>(empty: nil, semigroup: .first())
+  }
+}
+
+extension Monoid {
+  public static func tuple2<B, C>(_ b: Monoid<B>, _ c: Monoid<C>) -> Monoid<(B, C)> {
+    return Monoid<(B, C)>(empty: (b.empty, c.empty), semigroup: .tuple2(b.semigroup, c.semigroup))
   }
 }
