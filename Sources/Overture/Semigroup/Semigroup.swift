@@ -1,3 +1,4 @@
+// TODO: should the generic be S?
 public struct Semigroup<A> {
   public let combine: (A, A) -> A
   public let mcombine: (inout A, A) -> Void
@@ -45,11 +46,20 @@ extension Semigroup where A: Numeric {
   public static var sum: Semigroup {
     return Semigroup(+)
   }
+
+  public static var product: Semigroup {
+    return Semigroup(*)
+  }
+}
+
+extension Semigroup where A == Bool {
+  public static let any = Semigroup { $0 || $1 }
+  public static let all = Semigroup { $0 && $1 }
 }
 
 extension Semigroup {
-  public static var endo: Semigroup<(A) -> A> {
-    return Semigroup<(A) -> A> { lhs, rhs in
+  public static func endo<B>() -> Semigroup<(B) -> B> {
+    return Semigroup<(B) -> B> { lhs, rhs in
       return { a in rhs(lhs(a)) }
     }
   }
@@ -64,5 +74,14 @@ extension Semigroup where A: Comparable {
 extension Semigroup where A: Comparable {
   public static var min: Semigroup<A> {
     return Semigroup<A>(Swift.min)
+  }
+}
+
+extension Semigroup {
+  public static func last<B>() -> Semigroup<B?> {
+    return Semigroup<B?> { $1 ?? $0 }
+  }
+  public static func first<B>() -> Semigroup<B?> {
+    return Semigroup<B?> { $0 ?? $1 }
   }
 }

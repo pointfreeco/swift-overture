@@ -23,6 +23,7 @@
 /* Begin PBXBuildFile section */
 		CA88A232219F706400B17D15 /* Monoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA88A231219F706400B17D15 /* Monoid.swift */; };
 		CA88A234219F70AC00B17D15 /* Semigroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA88A233219F70AC00B17D15 /* Semigroup.swift */; };
+		CA88A236219F743600B17D15 /* Average.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA88A235219F743600B17D15 /* Average.swift */; };
 		DC5E715C21065C6900ED239B /* ZipOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5E715B21065C6900ED239B /* ZipOptional.swift */; };
 		DCF8237021267FD4000A7F94 /* ZipSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF8236F21267FD4000A7F94 /* ZipSequence.swift */; };
 		DCF82372212684BE000A7F94 /* ZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF82371212684BE000A7F94 /* ZipTests.swift */; };
@@ -71,6 +72,7 @@
 /* Begin PBXFileReference section */
 		CA88A231219F706400B17D15 /* Monoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monoid.swift; sourceTree = "<group>"; };
 		CA88A233219F70AC00B17D15 /* Semigroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semigroup.swift; sourceTree = "<group>"; };
+		CA88A235219F743600B17D15 /* Average.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Average.swift; sourceTree = "<group>"; };
 		DC5E715B21065C6900ED239B /* ZipOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipOptional.swift; sourceTree = "<group>"; };
 		DCF8236F21267FD4000A7F94 /* ZipSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipSequence.swift; sourceTree = "<group>"; };
 		DCF82371212684BE000A7F94 /* ZipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipTests.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				CA88A233219F70AC00B17D15 /* Semigroup.swift */,
+				CA88A235219F743600B17D15 /* Average.swift */,
 			);
 			path = Semigroup;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				OBJ_46 /* Concat.swift in Sources */,
 				OBJ_47 /* Curry.swift in Sources */,
 				OBJ_48 /* Flip.swift in Sources */,
+				CA88A236219F743600B17D15 /* Average.swift in Sources */,
 				OBJ_50 /* KeyPath.swift in Sources */,
 				OBJ_51 /* Optional.swift in Sources */,
 				OBJ_52 /* Pipe.swift in Sources */,
