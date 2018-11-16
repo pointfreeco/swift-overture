@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		CA88A232219F706400B17D15 /* Monoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA88A231219F706400B17D15 /* Monoid.swift */; };
+		CA88A234219F70AC00B17D15 /* Semigroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA88A233219F70AC00B17D15 /* Semigroup.swift */; };
 		DC5E715C21065C6900ED239B /* ZipOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5E715B21065C6900ED239B /* ZipOptional.swift */; };
 		DCF8237021267FD4000A7F94 /* ZipSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF8236F21267FD4000A7F94 /* ZipSequence.swift */; };
 		DCF82372212684BE000A7F94 /* ZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF82371212684BE000A7F94 /* ZipTests.swift */; };
@@ -67,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA88A231219F706400B17D15 /* Monoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monoid.swift; sourceTree = "<group>"; };
+		CA88A233219F70AC00B17D15 /* Semigroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semigroup.swift; sourceTree = "<group>"; };
 		DC5E715B21065C6900ED239B /* ZipOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipOptional.swift; sourceTree = "<group>"; };
 		DCF8236F21267FD4000A7F94 /* ZipSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipSequence.swift; sourceTree = "<group>"; };
 		DCF82371212684BE000A7F94 /* ZipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipTests.swift; sourceTree = "<group>"; };
@@ -117,9 +121,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA88A22F219F704700B17D15 /* Semigroup */ = {
+			isa = PBXGroup;
+			children = (
+				CA88A233219F70AC00B17D15 /* Semigroup.swift */,
+			);
+			path = Semigroup;
+			sourceTree = "<group>";
+		};
+		CA88A230219F705000B17D15 /* Monoid */ = {
+			isa = PBXGroup;
+			children = (
+				CA88A231219F706400B17D15 /* Monoid.swift */,
+			);
+			path = Monoid;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* Overture */ = {
 			isa = PBXGroup;
 			children = (
+				CA88A230219F705000B17D15 /* Monoid */,
+				CA88A22F219F704700B17D15 /* Semigroup */,
 				OBJ_11 /* Chain.swift */,
 				OBJ_12 /* Compose.swift */,
 				OBJ_13 /* Concat.swift */,
@@ -294,6 +316,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_44 /* Chain.swift in Sources */,
+				CA88A234219F70AC00B17D15 /* Semigroup.swift in Sources */,
 				DCF8237021267FD4000A7F94 /* ZipSequence.swift in Sources */,
 				OBJ_45 /* Compose.swift in Sources */,
 				OBJ_46 /* Concat.swift in Sources */,
@@ -306,6 +329,7 @@
 				OBJ_54 /* Setters.swift in Sources */,
 				OBJ_55 /* Uncurry.swift in Sources */,
 				DC5E715C21065C6900ED239B /* ZipOptional.swift in Sources */,
+				CA88A232219F706400B17D15 /* Monoid.swift in Sources */,
 				OBJ_56 /* With.swift in Sources */,
 				OBJ_57 /* Zurry.swift in Sources */,
 			);
