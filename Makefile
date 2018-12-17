@@ -2,7 +2,7 @@ imports = \
 	@testable import OvertureTests;
 
 xcodeproj:
-	swift package generate-xcodeproj --xcconfig-overrides=Development.xcconfig
+	xcodegen
 
 linux-main:
 	sourcery \
@@ -19,15 +19,15 @@ test-linux: linux-main
 test-macos:
 	set -o pipefail && \
 	xcodebuild test \
-		-scheme Overture-Package \
+		-scheme Overture_macOS \
 		-destination platform="macOS" \
 		| xcpretty
 
 test-ios:
 	set -o pipefail && \
 	xcodebuild test \
-		-scheme Overture-Package \
-		-destination platform="iOS Simulator,name=iPhone 8,OS=11.3" \
+		-scheme Overture_iOS \
+		-destination platform="iOS Simulator,name=iPhone XR,OS=12.1" \
 		| xcpretty
 
 test-swift:
