@@ -6,561 +6,1145 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		"Overture::OverturePackageTests::ProductTarget" /* OverturePackageTests */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_66 /* Build configuration list for PBXAggregateTarget "OverturePackageTests" */;
-			buildPhases = (
-			);
-			dependencies = (
-				OBJ_69 /* PBXTargetDependency */,
-			);
-			name = OverturePackageTests;
-			productName = OverturePackageTests;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		DC5E715C21065C6900ED239B /* ZipOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5E715B21065C6900ED239B /* ZipOptional.swift */; };
-		DCF8237021267FD4000A7F94 /* ZipSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF8236F21267FD4000A7F94 /* ZipSequence.swift */; };
-		DCF82372212684BE000A7F94 /* ZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF82371212684BE000A7F94 /* ZipTests.swift */; };
-		OBJ_44 /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Chain.swift */; };
-		OBJ_45 /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Compose.swift */; };
-		OBJ_46 /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Concat.swift */; };
-		OBJ_47 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Curry.swift */; };
-		OBJ_48 /* Flip.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Flip.swift */; };
-		OBJ_50 /* KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* KeyPath.swift */; };
-		OBJ_51 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Optional.swift */; };
-		OBJ_52 /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* Pipe.swift */; };
-		OBJ_53 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Sequence.swift */; };
-		OBJ_54 /* Setters.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* Setters.swift */; };
-		OBJ_55 /* Uncurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Uncurry.swift */; };
-		OBJ_56 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* With.swift */; };
-		OBJ_57 /* Zurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Zurry.swift */; };
-		OBJ_64 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_75 /* ChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* ChainTests.swift */; };
-		OBJ_76 /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* ComposeTests.swift */; };
-		OBJ_77 /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* ConcatTests.swift */; };
-		OBJ_78 /* CurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* CurryTests.swift */; };
-		OBJ_79 /* FlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* FlipTests.swift */; };
-		OBJ_80 /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* PipeTests.swift */; };
-		OBJ_81 /* UncurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* UncurryTests.swift */; };
-		OBJ_82 /* WithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* WithTests.swift */; };
-		OBJ_84 /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Overture::Overture::Product" /* Overture.framework */; };
+		BF_036CCC31AEB43A8840E80AB59C80C03B /* Flip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_40F0CB8AD68A516B6DFCE0B52294B90A /* Flip.swift */; };
+		BF_055B46070C29E2D0C065A0C17C52477B /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_59A44EA6FAD0A5B8E2EF8DE2AB4031A4 /* Optional.swift */; };
+		BF_06CD9D59D5DDD8EBA8A134A4EEF30773 /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_AA7E2B71688A3974A4073256E321E124 /* Compose.swift */; };
+		BF_09059C1CDD5211C33FA67403B41DDC66 /* CurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_642C61DF33B3FBDAB515FCAE2B7AFD7E /* CurryTests.swift */; };
+		BF_0988EAB8446B2A83EE467DBC06FA5F49 /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E570AB4EA943846E527E5DDD0D0A2BAA /* ConcatTests.swift */; };
+		BF_0B70976A5F16222266741EA9F8B0F894 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E6FFDCC4D5BAE48828BC8FFCD7071F55 /* Sequence.swift */; };
+		BF_1192CFC46FEB7D9A936A6616183CCFDA /* ZipSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_675785456D0006C2F399C66CA7A3B7A5 /* ZipSequence.swift */; };
+		BF_137C6CF8F03E2BB84F2E61ACD847A718 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E6FFDCC4D5BAE48828BC8FFCD7071F55 /* Sequence.swift */; };
+		BF_1749A44E96CC52A197B062D79F1F0A81 /* CurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_642C61DF33B3FBDAB515FCAE2B7AFD7E /* CurryTests.swift */; };
+		BF_176FFE655CEE7C7137793DF5DCFC9AA8 /* UncurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8CCF41C907508A12C07C9A17CFF59BFE /* UncurryTests.swift */; };
+		BF_1B68DFDBAEFDB22A0BAB577B0FC87ABC /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3428EF2F5FC60750C29A0277E5D0A24F /* ComposeTests.swift */; };
+		BF_1BCCEF798F0DE525994943DDBBF085D8 /* KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_CED83466089E7A243C8C1FCF71E17B9F /* KeyPath.swift */; };
+		BF_1C7D0EDE9443716C8798872ABBEA5F61 /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E570AB4EA943846E527E5DDD0D0A2BAA /* ConcatTests.swift */; };
+		BF_22059BB05E3C1CA4F2F2499C2457588B /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E570AB4EA943846E527E5DDD0D0A2BAA /* ConcatTests.swift */; };
+		BF_230F9B6FE8E082DB44BD5B319B5EC8A6 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_59A44EA6FAD0A5B8E2EF8DE2AB4031A4 /* Optional.swift */; };
+		BF_23E08DC7883D3F45E61CA14DBD5E5C65 /* Setters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_44939FAD205372570B5B330488CA0FCA /* Setters.swift */; };
+		BF_25DABD9A43C0A18D70D6948D4E19B3B8 /* Setters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_44939FAD205372570B5B330488CA0FCA /* Setters.swift */; };
+		BF_27190B2C2FE63C3EC797E0D43DE54251 /* Flip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_40F0CB8AD68A516B6DFCE0B52294B90A /* Flip.swift */; };
+		BF_2970219B3FC3D0AD835C16E55D071D50 /* Overture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_6F3FE2E50D3E47BB898203E4EBD149BF /* Overture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF_29B1493905E3862F8C7B1F509CFFA65C /* ZipSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_675785456D0006C2F399C66CA7A3B7A5 /* ZipSequence.swift */; };
+		BF_2BA7E2C18CD01F7432B63F3F8962C1FF /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_06406B14837AB1215EA9ABFB30C4EB34 /* Curry.swift */; };
+		BF_2D1981391FA63A0E37F655FA14CE92D2 /* CurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_642C61DF33B3FBDAB515FCAE2B7AFD7E /* CurryTests.swift */; };
+		BF_2D763D9662AF81F11CAE2237BB6B8C50 /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3D48C5ADF5E20B0266DF3B87F7C91BC0 /* Concat.swift */; };
+		BF_2DDE838E5D4285E52805305ED6340971 /* ZipOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_14522E713A1D406CA1D5652B3864A2B3 /* ZipOptional.swift */; };
+		BF_3090B5F45A7D6547D0AC745A5A2E5018 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_47E2890D65A828E6E9E5954BFAD0889A /* With.swift */; };
+		BF_34525EA6AF600AF6FBCA3FF0C7E78C2E /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BD43B719463485B52151D8B6B3B26321 /* Chain.swift */; };
+		BF_346F1FDD5E98442ECCF036FF7AE750FC /* Uncurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BE66E506058F0546B0DB3C896A4D2E78 /* Uncurry.swift */; };
+		BF_359571871BBAF81A15C26FAC40D3217A /* ChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3F2121B78AF24224872C75EE56D5F70F /* ChainTests.swift */; };
+		BF_35F492820F691EF4FF4A4819052C120C /* ZipSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_675785456D0006C2F399C66CA7A3B7A5 /* ZipSequence.swift */; };
+		BF_37EF932730C72613BE2E3C40AE1D47B5 /* Zurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_131760F06D66B7F830CFF834502AD05E /* Zurry.swift */; };
+		BF_38A07E7B05BE5F0CDBDE5C4D15432817 /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_ACAE1DD95EAB7CC17E032208F3990CB4 /* Pipe.swift */; };
+		BF_3CCDE4190708D683E1BCA6D54292F075 /* Flip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_40F0CB8AD68A516B6DFCE0B52294B90A /* Flip.swift */; };
+		BF_3E59E985F00D59C950F152A2A90D2627 /* ChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3F2121B78AF24224872C75EE56D5F70F /* ChainTests.swift */; };
+		BF_3EF00D831004B23BE518A6AB4A653D2C /* ZipOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_14522E713A1D406CA1D5652B3864A2B3 /* ZipOptional.swift */; };
+		BF_4173D4D3681C22A9FCB7DA4274133666 /* Flip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_40F0CB8AD68A516B6DFCE0B52294B90A /* Flip.swift */; };
+		BF_46E820317D1771B4F19B7F00A63DB1F7 /* Zurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_131760F06D66B7F830CFF834502AD05E /* Zurry.swift */; };
+		BF_49B72348CD0414A409FDBF67E7F89245 /* Uncurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BE66E506058F0546B0DB3C896A4D2E78 /* Uncurry.swift */; };
+		BF_4A3A246F730408C3BA0F754CF9C81B2B /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_ACAE1DD95EAB7CC17E032208F3990CB4 /* Pipe.swift */; };
+		BF_4B7C8A07213DF729684C042E081CE534 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_59A44EA6FAD0A5B8E2EF8DE2AB4031A4 /* Optional.swift */; };
+		BF_50D1CF126B54BB1D3B7B190A9CC91D6C /* FlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_F01714D7070EE93611B66C574DC8CB3B /* FlipTests.swift */; };
+		BF_5178D2BF2ED3C7FB6233F9625955420B /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_90F02BFDF494CDBE6C97DE492263A94B /* Overture.framework */; };
+		BF_53B58261492442DEEE4A649515F17677 /* Overture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_4E2B58BC7C1A52C7E6773DCE69061656 /* Overture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF_56663C22555FC1A9AD4A061E73D42A02 /* Uncurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BE66E506058F0546B0DB3C896A4D2E78 /* Uncurry.swift */; };
+		BF_56AE4D14225B7F3605C29B636146904A /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_894EF159C69BA0269E09F2FA70417454 /* PipeTests.swift */; };
+		BF_596F0027010738DAB00C8B67979DD273 /* ZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8303D2CCD787D78072A064EF35F7AD07 /* ZipTests.swift */; };
+		BF_59A4B2E49BBC5165FBA540F0380AE2D0 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_06406B14837AB1215EA9ABFB30C4EB34 /* Curry.swift */; };
+		BF_5FDC0CC9A849E042DB8BCE695E390AAE /* CurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_642C61DF33B3FBDAB515FCAE2B7AFD7E /* CurryTests.swift */; };
+		BF_665CCCEEB3949B1183C0A2961253961B /* ChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3F2121B78AF24224872C75EE56D5F70F /* ChainTests.swift */; };
+		BF_6E24BEDF11530A5444CFE72F6527CB52 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_47E2890D65A828E6E9E5954BFAD0889A /* With.swift */; };
+		BF_70435B60151C2D168584381AADE1A932 /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_ACAE1DD95EAB7CC17E032208F3990CB4 /* Pipe.swift */; };
+		BF_7055E9E532A64B9B25455BB1EA256ADA /* Uncurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BE66E506058F0546B0DB3C896A4D2E78 /* Uncurry.swift */; };
+		BF_70D8D1E4BF94B7819E2A89435C250B55 /* WithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_18D9A3C99EC2142EE3F085D6E7F3CD0D /* WithTests.swift */; };
+		BF_712EB1F808E2309DE1C48979810096C2 /* Setters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_44939FAD205372570B5B330488CA0FCA /* Setters.swift */; };
+		BF_7DC0A661822140B069850CA3FFB1A5AA /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_06406B14837AB1215EA9ABFB30C4EB34 /* Curry.swift */; };
+		BF_82BFB7E0BC285F47C29D03A8F9D7404A /* ZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8303D2CCD787D78072A064EF35F7AD07 /* ZipTests.swift */; };
+		BF_842B1BD199570421173717803C42F21D /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_894EF159C69BA0269E09F2FA70417454 /* PipeTests.swift */; };
+		BF_8A3088E80AA00A443FDBC84B0D5B560D /* UncurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8CCF41C907508A12C07C9A17CFF59BFE /* UncurryTests.swift */; };
+		BF_8B33C441D0B4437578A050002FB9B7B8 /* KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_CED83466089E7A243C8C1FCF71E17B9F /* KeyPath.swift */; };
+		BF_904BA29B44C375543D6D15542535EA44 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_06406B14837AB1215EA9ABFB30C4EB34 /* Curry.swift */; };
+		BF_921521576FF0DCBAC04FF81E0C35634C /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_894EF159C69BA0269E09F2FA70417454 /* PipeTests.swift */; };
+		BF_97E6624C8964DC16CA053706AD44593C /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BD43B719463485B52151D8B6B3B26321 /* Chain.swift */; };
+		BF_98EB1693A69DDB14C0032BB43370B41E /* FlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_F01714D7070EE93611B66C574DC8CB3B /* FlipTests.swift */; };
+		BF_99E891DF12DEC901ADD06EDF85DAEE01 /* KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_CED83466089E7A243C8C1FCF71E17B9F /* KeyPath.swift */; };
+		BF_9AF5B81DB328688E059101D4272F781B /* WithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_18D9A3C99EC2142EE3F085D6E7F3CD0D /* WithTests.swift */; };
+		BF_9B9A139FA3FA07ED07A1F39C9EA12AB7 /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_ACAE1DD95EAB7CC17E032208F3990CB4 /* Pipe.swift */; };
+		BF_9EB5E87F8E690B0CCE2B43CA29FF79D5 /* ZipOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_14522E713A1D406CA1D5652B3864A2B3 /* ZipOptional.swift */; };
+		BF_9FCED78B5D656A757171F622A020C8B1 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_59A44EA6FAD0A5B8E2EF8DE2AB4031A4 /* Optional.swift */; };
+		BF_A6F96D9755A044B1C7DD63AE6F8C0725 /* ChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3F2121B78AF24224872C75EE56D5F70F /* ChainTests.swift */; };
+		BF_AD269A8A40532DCB2C05F17F6F6D8298 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E6FFDCC4D5BAE48828BC8FFCD7071F55 /* Sequence.swift */; };
+		BF_B295462DBECE783BDCE057D2B8E7EEB0 /* ZipOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_14522E713A1D406CA1D5652B3864A2B3 /* ZipOptional.swift */; };
+		BF_B2FFA3F34E6949896DF737B0FADACACD /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3D48C5ADF5E20B0266DF3B87F7C91BC0 /* Concat.swift */; };
+		BF_B528B3562EC96F89D3636E0288F8CED9 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_47E2890D65A828E6E9E5954BFAD0889A /* With.swift */; };
+		BF_B70D252B076276576A68BF8B57AB99C4 /* FlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_F01714D7070EE93611B66C574DC8CB3B /* FlipTests.swift */; };
+		BF_B72E327228D972D3BF27D8C4360AE52E /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BD43B719463485B52151D8B6B3B26321 /* Chain.swift */; };
+		BF_BA406CAED1E2580826AE3DD93C9782FF /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_47E2890D65A828E6E9E5954BFAD0889A /* With.swift */; };
+		BF_BD94C39752478F332FC8B964D3D09E6E /* Overture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_90F02BFDF494CDBE6C97DE492263A94B /* Overture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF_C0CD29FD542F266D6084F875D426D7FE /* WithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_18D9A3C99EC2142EE3F085D6E7F3CD0D /* WithTests.swift */; };
+		BF_C185BBF408E02D23CFB8707C4243BA1F /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BD43B719463485B52151D8B6B3B26321 /* Chain.swift */; };
+		BF_C8BDB157B9EFF4D6A4CDC2A407A5CE42 /* UncurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8CCF41C907508A12C07C9A17CFF59BFE /* UncurryTests.swift */; };
+		BF_C9C6E7A1F446E22F300B28E43DCCAD12 /* Zurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_131760F06D66B7F830CFF834502AD05E /* Zurry.swift */; };
+		BF_C9E0218E7E989AFE30ED25E3A271E216 /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3D48C5ADF5E20B0266DF3B87F7C91BC0 /* Concat.swift */; };
+		BF_CC439A6FA9BCF39A40245D6322BC0357 /* Zurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_131760F06D66B7F830CFF834502AD05E /* Zurry.swift */; };
+		BF_CF2E37EAC29CF4A0360A91273E7E3483 /* KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_CED83466089E7A243C8C1FCF71E17B9F /* KeyPath.swift */; };
+		BF_D0DFDEC929DE90496D72C0D8EC2A6E7F /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3428EF2F5FC60750C29A0277E5D0A24F /* ComposeTests.swift */; };
+		BF_D4112F27DFD08D8049E69B81D0A72A87 /* FlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_F01714D7070EE93611B66C574DC8CB3B /* FlipTests.swift */; };
+		BF_D4258EA2478A90C51DC5B4F3B0B8F79C /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_6F3FE2E50D3E47BB898203E4EBD149BF /* Overture.framework */; };
+		BF_D75B5B389BB584D48DD3B74707AD1117 /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_AA7E2B71688A3974A4073256E321E124 /* Compose.swift */; };
+		BF_DB3369BBC5526504E35DB31AAB3BDA4F /* WithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_18D9A3C99EC2142EE3F085D6E7F3CD0D /* WithTests.swift */; };
+		BF_DD1ED9CDC558BF512F9E67D17EFB4BB7 /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3428EF2F5FC60750C29A0277E5D0A24F /* ComposeTests.swift */; };
+		BF_E17891411ABF13425EAEB0880365ECBF /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_AA7E2B71688A3974A4073256E321E124 /* Compose.swift */; };
+		BF_E283A25C25BAF326E3C9DB445B4405A2 /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_894EF159C69BA0269E09F2FA70417454 /* PipeTests.swift */; };
+		BF_E50701AACBF9A7A9B8D47BB59A3F668C /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_39D9F12A182E089A2B5F93163CD1EDF1 /* Overture.framework */; };
+		BF_E7D851F98C1DD5DAC4B662FB8EDA20A2 /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_AA7E2B71688A3974A4073256E321E124 /* Compose.swift */; };
+		BF_ED286662266F635BE27959D1F6A6C525 /* ZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8303D2CCD787D78072A064EF35F7AD07 /* ZipTests.swift */; };
+		BF_ED3F92BE2587005B3D3651D4EB001EE1 /* Setters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_44939FAD205372570B5B330488CA0FCA /* Setters.swift */; };
+		BF_EDCAC53E731A364D955148CBF7C01189 /* UncurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8CCF41C907508A12C07C9A17CFF59BFE /* UncurryTests.swift */; };
+		BF_EE01FEA596BA63D529AD6B7BFF9A9833 /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3428EF2F5FC60750C29A0277E5D0A24F /* ComposeTests.swift */; };
+		BF_F2E71F3ADB3E5E8276B25EB37F42E19F /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_4E2B58BC7C1A52C7E6773DCE69061656 /* Overture.framework */; };
+		BF_F33DBFB4B987C0047D090B142DE749E3 /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3D48C5ADF5E20B0266DF3B87F7C91BC0 /* Concat.swift */; };
+		BF_F35BE007A10306DDFDF6FE18A6FFBC8A /* Overture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_39D9F12A182E089A2B5F93163CD1EDF1 /* Overture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF_F477D6258C3EE370A7887DEEC9E7660B /* ZipSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_675785456D0006C2F399C66CA7A3B7A5 /* ZipSequence.swift */; };
+		BF_F504DA97111C9BD1A262367D4DE29AA0 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E6FFDCC4D5BAE48828BC8FFCD7071F55 /* Sequence.swift */; };
+		BF_F63217E0DE229F34241D7D228AD06469 /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E570AB4EA943846E527E5DDD0D0A2BAA /* ConcatTests.swift */; };
+		BF_F7D23547E8B67F5D980833039F2D5041 /* ZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8303D2CCD787D78072A064EF35F7AD07 /* ZipTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DCA3A77020939AB4000903A3 /* PBXContainerItemProxy */ = {
+		CIP_128782D8CB237AE821E2E63609F3FB2F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
+			containerPortal = P_62291E3156CC16BEA2310178AB28EDF9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "Overture::Overture";
-			remoteInfo = Overture;
+			remoteGlobalIDString = NT_8274405197546C7088976F7D3DDE8DF1;
+			remoteInfo = Overture_iOS;
 		};
-		DCA3A77120939AB4000903A3 /* PBXContainerItemProxy */ = {
+		CIP_62CB52BFC59C0EB722C96FD98D085D55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
+			containerPortal = P_62291E3156CC16BEA2310178AB28EDF9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "Overture::OvertureTests";
-			remoteInfo = OvertureTests;
+			remoteGlobalIDString = NT_BDD2A196AF72DBE19A7C7D4CC1536658;
+			remoteInfo = Overture_watchOS;
+		};
+		CIP_E30A9057759711CF0D7C08E6005F2C05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = P_62291E3156CC16BEA2310178AB28EDF9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = NT_10077D114ACEE363A2CEA6CF0B64E3F4;
+			remoteInfo = Overture_macOS;
+		};
+		CIP_EB9D7367BF23C566EE2187C63C4709AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = P_62291E3156CC16BEA2310178AB28EDF9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = NT_5E226C14A867E37F073B5173927AAC2F;
+			remoteInfo = Overture_tvOS;
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CFBP_A8D8850889CDA25BE1CACB1B4E77EC89 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BF_53B58261492442DEEE4A649515F17677 /* Overture.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFBP_A974D1A48E91FD7FC169654F91D02F2D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BF_F35BE007A10306DDFDF6FE18A6FFBC8A /* Overture.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFBP_E6697115E77B5CEAFDF40AD4F281CC2E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BF_BD94C39752478F332FC8B964D3D09E6E /* Overture.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFBP_EB9DFCF394EE6299CB6702C5B67DAF4F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BF_2970219B3FC3D0AD835C16E55D071D50 /* Overture.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		DC5E715B21065C6900ED239B /* ZipOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipOptional.swift; sourceTree = "<group>"; };
-		DCF8236F21267FD4000A7F94 /* ZipSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipSequence.swift; sourceTree = "<group>"; };
-		DCF82371212684BE000A7F94 /* ZipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipTests.swift; sourceTree = "<group>"; };
-		OBJ_11 /* Chain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
-		OBJ_12 /* Compose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compose.swift; sourceTree = "<group>"; };
-		OBJ_13 /* Concat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concat.swift; sourceTree = "<group>"; };
-		OBJ_14 /* Curry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
-		OBJ_15 /* Flip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flip.swift; sourceTree = "<group>"; };
-		OBJ_17 /* KeyPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPath.swift; sourceTree = "<group>"; };
-		OBJ_18 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
-		OBJ_19 /* Pipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipe.swift; sourceTree = "<group>"; };
-		OBJ_20 /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
-		OBJ_21 /* Setters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setters.swift; sourceTree = "<group>"; };
-		OBJ_22 /* Uncurry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uncurry.swift; sourceTree = "<group>"; };
-		OBJ_23 /* With.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
-		OBJ_24 /* Zurry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zurry.swift; sourceTree = "<group>"; };
-		OBJ_27 /* ChainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainTests.swift; sourceTree = "<group>"; };
-		OBJ_28 /* ComposeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeTests.swift; sourceTree = "<group>"; };
-		OBJ_29 /* ConcatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcatTests.swift; sourceTree = "<group>"; };
-		OBJ_30 /* CurryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurryTests.swift; sourceTree = "<group>"; };
-		OBJ_31 /* FlipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipTests.swift; sourceTree = "<group>"; };
-		OBJ_32 /* PipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeTests.swift; sourceTree = "<group>"; };
-		OBJ_33 /* UncurryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UncurryTests.swift; sourceTree = "<group>"; };
-		OBJ_34 /* WithTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithTests.swift; sourceTree = "<group>"; };
-		OBJ_35 /* Overture.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = Overture.xcworkspace; sourceTree = SOURCE_ROOT; };
-		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_8 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
-		"Overture::Overture::Product" /* Overture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Overture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"Overture::OvertureTests::Product" /* OvertureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = OvertureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_06406B14837AB1215EA9ABFB30C4EB34 /* Curry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
+		FR_131760F06D66B7F830CFF834502AD05E /* Zurry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zurry.swift; sourceTree = "<group>"; };
+		FR_14522E713A1D406CA1D5652B3864A2B3 /* ZipOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipOptional.swift; sourceTree = "<group>"; };
+		FR_18AE5FFA660D996665B03F2932B0BCB1 /* OvertureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OvertureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_18D9A3C99EC2142EE3F085D6E7F3CD0D /* WithTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithTests.swift; sourceTree = "<group>"; };
+		FR_3428EF2F5FC60750C29A0277E5D0A24F /* ComposeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeTests.swift; sourceTree = "<group>"; };
+		FR_39D9F12A182E089A2B5F93163CD1EDF1 /* Overture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Overture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_3D48C5ADF5E20B0266DF3B87F7C91BC0 /* Concat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concat.swift; sourceTree = "<group>"; };
+		FR_3F2121B78AF24224872C75EE56D5F70F /* ChainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainTests.swift; sourceTree = "<group>"; };
+		FR_40F0CB8AD68A516B6DFCE0B52294B90A /* Flip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flip.swift; sourceTree = "<group>"; };
+		FR_44939FAD205372570B5B330488CA0FCA /* Setters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setters.swift; sourceTree = "<group>"; };
+		FR_47E2890D65A828E6E9E5954BFAD0889A /* With.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
+		FR_4E2B58BC7C1A52C7E6773DCE69061656 /* Overture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Overture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_59A44EA6FAD0A5B8E2EF8DE2AB4031A4 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		FR_642C61DF33B3FBDAB515FCAE2B7AFD7E /* CurryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurryTests.swift; sourceTree = "<group>"; };
+		FR_675785456D0006C2F399C66CA7A3B7A5 /* ZipSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipSequence.swift; sourceTree = "<group>"; };
+		FR_6F3FE2E50D3E47BB898203E4EBD149BF /* Overture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Overture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_8303D2CCD787D78072A064EF35F7AD07 /* ZipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipTests.swift; sourceTree = "<group>"; };
+		FR_894EF159C69BA0269E09F2FA70417454 /* PipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeTests.swift; sourceTree = "<group>"; };
+		FR_8CCF41C907508A12C07C9A17CFF59BFE /* UncurryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UncurryTests.swift; sourceTree = "<group>"; };
+		FR_8F24ED5DE4EF63147E7242559B0B9E5F /* OvertureTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = OvertureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_90F02BFDF494CDBE6C97DE492263A94B /* Overture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Overture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_AA7E2B71688A3974A4073256E321E124 /* Compose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compose.swift; sourceTree = "<group>"; };
+		FR_ACAE1DD95EAB7CC17E032208F3990CB4 /* Pipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipe.swift; sourceTree = "<group>"; };
+		FR_BD43B719463485B52151D8B6B3B26321 /* Chain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
+		FR_BE66E506058F0546B0DB3C896A4D2E78 /* Uncurry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uncurry.swift; sourceTree = "<group>"; };
+		FR_BE9328BCAACE2D9489E911C397146797 /* OvertureTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = OvertureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_CED83466089E7A243C8C1FCF71E17B9F /* KeyPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPath.swift; sourceTree = "<group>"; };
+		FR_D135B53ACC43906DA49E7425C31A6565 /* OvertureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OvertureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_E570AB4EA943846E527E5DDD0D0A2BAA /* ConcatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcatTests.swift; sourceTree = "<group>"; };
+		FR_E6FFDCC4D5BAE48828BC8FFCD7071F55 /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
+		FR_F01714D7070EE93611B66C574DC8CB3B /* FlipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_58 /* Frameworks */ = {
+		FBP_1FBE797FD0E1BA26FE14DDA121F4BBF4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
+			buildActionMask = 2147483647;
 			files = (
+				BF_F2E71F3ADB3E5E8276B25EB37F42E19F /* Overture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_83 /* Frameworks */ = {
+		FBP_7D9954787D78471987C96577AC134FA2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
+			buildActionMask = 2147483647;
 			files = (
-				OBJ_84 /* Overture.framework in Frameworks */,
+				BF_E50701AACBF9A7A9B8D47BB59A3F668C /* Overture.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBP_82F81B21EF55982606EBA99DB2F87214 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF_D4258EA2478A90C51DC5B4F3B0B8F79C /* Overture.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBP_9A9690732E39F554341BA38C81AC5DBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF_5178D2BF2ED3C7FB6233F9625955420B /* Overture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_10 /* Overture */ = {
+		G_11F950B4B356DDB6913A5DB4C173E190 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_11 /* Chain.swift */,
-				OBJ_12 /* Compose.swift */,
-				OBJ_13 /* Concat.swift */,
-				OBJ_14 /* Curry.swift */,
-				OBJ_15 /* Flip.swift */,
-				OBJ_17 /* KeyPath.swift */,
-				OBJ_18 /* Optional.swift */,
-				OBJ_19 /* Pipe.swift */,
-				OBJ_20 /* Sequence.swift */,
-				OBJ_21 /* Setters.swift */,
-				OBJ_22 /* Uncurry.swift */,
-				OBJ_23 /* With.swift */,
-				DC5E715B21065C6900ED239B /* ZipOptional.swift */,
-				DCF8236F21267FD4000A7F94 /* ZipSequence.swift */,
-				OBJ_24 /* Zurry.swift */,
-			);
-			name = Overture;
-			path = Sources/Overture;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_25 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_26 /* OvertureTests */,
-			);
-			name = Tests;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_26 /* OvertureTests */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_27 /* ChainTests.swift */,
-				OBJ_28 /* ComposeTests.swift */,
-				OBJ_29 /* ConcatTests.swift */,
-				OBJ_30 /* CurryTests.swift */,
-				OBJ_31 /* FlipTests.swift */,
-				OBJ_32 /* PipeTests.swift */,
-				OBJ_33 /* UncurryTests.swift */,
-				OBJ_34 /* WithTests.swift */,
-				DCF82371212684BE000A7F94 /* ZipTests.swift */,
-			);
-			name = OvertureTests;
-			path = Tests/OvertureTests;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_36 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				"Overture::OvertureTests::Product" /* OvertureTests.xctest */,
-				"Overture::Overture::Product" /* Overture.framework */,
+				FR_4E2B58BC7C1A52C7E6773DCE69061656 /* Overture.framework */,
+				FR_90F02BFDF494CDBE6C97DE492263A94B /* Overture.framework */,
+				FR_6F3FE2E50D3E47BB898203E4EBD149BF /* Overture.framework */,
+				FR_39D9F12A182E089A2B5F93163CD1EDF1 /* Overture.framework */,
+				FR_8F24ED5DE4EF63147E7242559B0B9E5F /* OvertureTests.xctest */,
+				FR_18AE5FFA660D996665B03F2932B0BCB1 /* OvertureTests.xctest */,
+				FR_BE9328BCAACE2D9489E911C397146797 /* OvertureTests.xctest */,
+				FR_D135B53ACC43906DA49E7425C31A6565 /* OvertureTests.xctest */,
 			);
 			name = Products;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		OBJ_5 = {
-			isa = PBXGroup;
-			children = (
-				OBJ_6 /* Package.swift */,
-				OBJ_7 /* Configs */,
-				OBJ_9 /* Sources */,
-				OBJ_25 /* Tests */,
-				OBJ_35 /* Overture.xcworkspace */,
-				OBJ_36 /* Products */,
-			);
 			sourceTree = "<group>";
 		};
-		OBJ_7 /* Configs */ = {
+		G_1DBCDCC7F1DE2EF8554C292DCDDDE9F8 /* OvertureTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_8 /* Development.xcconfig */,
+				FR_3F2121B78AF24224872C75EE56D5F70F /* ChainTests.swift */,
+				FR_3428EF2F5FC60750C29A0277E5D0A24F /* ComposeTests.swift */,
+				FR_E570AB4EA943846E527E5DDD0D0A2BAA /* ConcatTests.swift */,
+				FR_642C61DF33B3FBDAB515FCAE2B7AFD7E /* CurryTests.swift */,
+				FR_F01714D7070EE93611B66C574DC8CB3B /* FlipTests.swift */,
+				FR_894EF159C69BA0269E09F2FA70417454 /* PipeTests.swift */,
+				FR_8CCF41C907508A12C07C9A17CFF59BFE /* UncurryTests.swift */,
+				FR_18D9A3C99EC2142EE3F085D6E7F3CD0D /* WithTests.swift */,
+				FR_8303D2CCD787D78072A064EF35F7AD07 /* ZipTests.swift */,
 			);
-			name = Configs;
+			path = OvertureTests;
 			sourceTree = "<group>";
 		};
-		OBJ_9 /* Sources */ = {
+		G_2F493082FD6CCC084102811B546CB480 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_10 /* Overture */,
+				G_7A6A4F06FDD1C2AA15ACCD2D0BFCEDF6 /* Overture */,
 			);
-			name = Sources;
-			sourceTree = SOURCE_ROOT;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		G_7A6A4F06FDD1C2AA15ACCD2D0BFCEDF6 /* Overture */ = {
+			isa = PBXGroup;
+			children = (
+				FR_BD43B719463485B52151D8B6B3B26321 /* Chain.swift */,
+				FR_AA7E2B71688A3974A4073256E321E124 /* Compose.swift */,
+				FR_3D48C5ADF5E20B0266DF3B87F7C91BC0 /* Concat.swift */,
+				FR_06406B14837AB1215EA9ABFB30C4EB34 /* Curry.swift */,
+				FR_40F0CB8AD68A516B6DFCE0B52294B90A /* Flip.swift */,
+				FR_CED83466089E7A243C8C1FCF71E17B9F /* KeyPath.swift */,
+				FR_59A44EA6FAD0A5B8E2EF8DE2AB4031A4 /* Optional.swift */,
+				FR_ACAE1DD95EAB7CC17E032208F3990CB4 /* Pipe.swift */,
+				FR_E6FFDCC4D5BAE48828BC8FFCD7071F55 /* Sequence.swift */,
+				FR_44939FAD205372570B5B330488CA0FCA /* Setters.swift */,
+				FR_BE66E506058F0546B0DB3C896A4D2E78 /* Uncurry.swift */,
+				FR_47E2890D65A828E6E9E5954BFAD0889A /* With.swift */,
+				FR_14522E713A1D406CA1D5652B3864A2B3 /* ZipOptional.swift */,
+				FR_675785456D0006C2F399C66CA7A3B7A5 /* ZipSequence.swift */,
+				FR_131760F06D66B7F830CFF834502AD05E /* Zurry.swift */,
+			);
+			path = Overture;
+			sourceTree = "<group>";
+		};
+		G_7E20BC0E5C840F07103A1626F6463993 = {
+			isa = PBXGroup;
+			children = (
+				G_2F493082FD6CCC084102811B546CB480 /* Sources */,
+				G_80A6216A1BA515FA0580BFC7546B9346 /* Tests */,
+				G_11F950B4B356DDB6913A5DB4C173E190 /* Products */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		G_80A6216A1BA515FA0580BFC7546B9346 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				G_1DBCDCC7F1DE2EF8554C292DCDDDE9F8 /* OvertureTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		"Overture::Overture" /* Overture */ = {
+		NT_10077D114ACEE363A2CEA6CF0B64E3F4 /* Overture_macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_40 /* Build configuration list for PBXNativeTarget "Overture" */;
+			buildConfigurationList = CL_50708CEE61F9E989C67EFF24892C0B69 /* Build configuration list for PBXNativeTarget "Overture_macOS" */;
 			buildPhases = (
-				OBJ_43 /* Sources */,
-				OBJ_58 /* Frameworks */,
+				SBP_A5E917F826F8629650ECE4E37A7662BB /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Overture;
-			productName = Overture;
-			productReference = "Overture::Overture::Product" /* Overture.framework */;
+			name = Overture_macOS;
+			productName = Overture_macOS;
+			productReference = FR_90F02BFDF494CDBE6C97DE492263A94B /* Overture.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		"Overture::OvertureTests" /* OvertureTests */ = {
+		NT_597175CE766F23764FEFFAF48905C32F /* OvertureTests_watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_71 /* Build configuration list for PBXNativeTarget "OvertureTests" */;
+			buildConfigurationList = CL_5AF1EA735F7B87EE01567A16A5CD29ED /* Build configuration list for PBXNativeTarget "OvertureTests_watchOS" */;
 			buildPhases = (
-				OBJ_74 /* Sources */,
-				OBJ_83 /* Frameworks */,
+				SBP_1BFD95156265F3DF310EEA71DA73CBDD /* Sources */,
+				FBP_7D9954787D78471987C96577AC134FA2 /* Frameworks */,
+				CFBP_A974D1A48E91FD7FC169654F91D02F2D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_85 /* PBXTargetDependency */,
+				TD_4A4A9360B8812BEB5DFB8004B2A0F59D /* PBXTargetDependency */,
 			);
-			name = OvertureTests;
-			productName = OvertureTests;
-			productReference = "Overture::OvertureTests::Product" /* OvertureTests.xctest */;
+			name = OvertureTests_watchOS;
+			productName = OvertureTests_watchOS;
+			productReference = FR_D135B53ACC43906DA49E7425C31A6565 /* OvertureTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		"Overture::SwiftPMPackageDescription" /* OverturePackageDescription */ = {
+		NT_5E226C14A867E37F073B5173927AAC2F /* Overture_tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_60 /* Build configuration list for PBXNativeTarget "OverturePackageDescription" */;
+			buildConfigurationList = CL_C071CFEEEF2FAABED0507FD49E15B4FC /* Build configuration list for PBXNativeTarget "Overture_tvOS" */;
 			buildPhases = (
-				OBJ_63 /* Sources */,
+				SBP_CF3E323D388A6F050659629DBBDE6909 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = OverturePackageDescription;
-			productName = OverturePackageDescription;
+			name = Overture_tvOS;
+			productName = Overture_tvOS;
+			productReference = FR_6F3FE2E50D3E47BB898203E4EBD149BF /* Overture.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		NT_8274405197546C7088976F7D3DDE8DF1 /* Overture_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL_BFA6DE45E0A9FAE143B3B768B544CBAE /* Build configuration list for PBXNativeTarget "Overture_iOS" */;
+			buildPhases = (
+				SBP_8076F252DD4250D65BA3B2B7D3268A6D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Overture_iOS;
+			productName = Overture_iOS;
+			productReference = FR_4E2B58BC7C1A52C7E6773DCE69061656 /* Overture.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		NT_A7EF3E9598E4FB2188DAD25389126465 /* OvertureTests_tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL_F7F5E12226EDDDA171D22414EF925B3D /* Build configuration list for PBXNativeTarget "OvertureTests_tvOS" */;
+			buildPhases = (
+				SBP_4E689FADA7F56E6B33A3A0D5E6EDF73B /* Sources */,
+				FBP_82F81B21EF55982606EBA99DB2F87214 /* Frameworks */,
+				CFBP_EB9DFCF394EE6299CB6702C5B67DAF4F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				TD_EEC75729A7FFDEBAEE92AEDA65904976 /* PBXTargetDependency */,
+			);
+			name = OvertureTests_tvOS;
+			productName = OvertureTests_tvOS;
+			productReference = FR_BE9328BCAACE2D9489E911C397146797 /* OvertureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		NT_B01ACAC5656934E5E3A34AF1BC07BFE1 /* OvertureTests_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL_0C0228A864C5B61039EBF1D1E2564883 /* Build configuration list for PBXNativeTarget "OvertureTests_macOS" */;
+			buildPhases = (
+				SBP_C62A8D702F229A12297A8231A1D289C3 /* Sources */,
+				FBP_9A9690732E39F554341BA38C81AC5DBD /* Frameworks */,
+				CFBP_E6697115E77B5CEAFDF40AD4F281CC2E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				TD_BBC670BCBD05373B5FC26337CE2C383F /* PBXTargetDependency */,
+			);
+			name = OvertureTests_macOS;
+			productName = OvertureTests_macOS;
+			productReference = FR_18AE5FFA660D996665B03F2932B0BCB1 /* OvertureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		NT_BDD2A196AF72DBE19A7C7D4CC1536658 /* Overture_watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL_2285EF382DEAC32B45BEE6FEAAD489AD /* Build configuration list for PBXNativeTarget "Overture_watchOS" */;
+			buildPhases = (
+				SBP_18A863E2774C6BB07D944D1C51B715BB /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Overture_watchOS;
+			productName = Overture_watchOS;
+			productReference = FR_39D9F12A182E089A2B5F93163CD1EDF1 /* Overture.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		NT_DFC257B304396EB2F8621A597832188B /* OvertureTests_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL_8F750B9C9B3C4590CCF1D64C2E267BD6 /* Build configuration list for PBXNativeTarget "OvertureTests_iOS" */;
+			buildPhases = (
+				SBP_BB4F42078C803C34991DEDBD4AF68F3F /* Sources */,
+				FBP_1FBE797FD0E1BA26FE14DDA121F4BBF4 /* Frameworks */,
+				CFBP_A8D8850889CDA25BE1CACB1B4E77EC89 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				TD_268DC8844C3B78F8D205B5E94C754E68 /* PBXTargetDependency */,
+			);
+			name = OvertureTests_iOS;
+			productName = OvertureTests_iOS;
+			productReference = FR_8F24ED5DE4EF63147E7242559B0B9E5F /* OvertureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		OBJ_1 /* Project object */ = {
+		P_62291E3156CC16BEA2310178AB28EDF9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 9999;
-				TargetAttributes = {
-					"Overture::Overture" = {
-						LastSwiftMigration = 1010;
-					};
-					"Overture::OvertureTests" = {
-						LastSwiftMigration = 1010;
-					};
-				};
+				LastUpgradeCheck = 1000;
 			};
-			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Overture" */;
+			buildConfigurationList = CL_A91273136B4A8C2B0655340790C26570 /* Build configuration list for PBXProject "Overture" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5;
-			productRefGroup = OBJ_36 /* Products */;
+			mainGroup = G_7E20BC0E5C840F07103A1626F6463993;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				"Overture::Overture" /* Overture */,
-				"Overture::SwiftPMPackageDescription" /* OverturePackageDescription */,
-				"Overture::OverturePackageTests::ProductTarget" /* OverturePackageTests */,
-				"Overture::OvertureTests" /* OvertureTests */,
+				NT_DFC257B304396EB2F8621A597832188B /* OvertureTests_iOS */,
+				NT_B01ACAC5656934E5E3A34AF1BC07BFE1 /* OvertureTests_macOS */,
+				NT_A7EF3E9598E4FB2188DAD25389126465 /* OvertureTests_tvOS */,
+				NT_597175CE766F23764FEFFAF48905C32F /* OvertureTests_watchOS */,
+				NT_8274405197546C7088976F7D3DDE8DF1 /* Overture_iOS */,
+				NT_10077D114ACEE363A2CEA6CF0B64E3F4 /* Overture_macOS */,
+				NT_5E226C14A867E37F073B5173927AAC2F /* Overture_tvOS */,
+				NT_BDD2A196AF72DBE19A7C7D4CC1536658 /* Overture_watchOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_43 /* Sources */ = {
+		SBP_18A863E2774C6BB07D944D1C51B715BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
+			buildActionMask = 2147483647;
 			files = (
-				OBJ_44 /* Chain.swift in Sources */,
-				DCF8237021267FD4000A7F94 /* ZipSequence.swift in Sources */,
-				OBJ_45 /* Compose.swift in Sources */,
-				OBJ_46 /* Concat.swift in Sources */,
-				OBJ_47 /* Curry.swift in Sources */,
-				OBJ_48 /* Flip.swift in Sources */,
-				OBJ_50 /* KeyPath.swift in Sources */,
-				OBJ_51 /* Optional.swift in Sources */,
-				OBJ_52 /* Pipe.swift in Sources */,
-				OBJ_53 /* Sequence.swift in Sources */,
-				OBJ_54 /* Setters.swift in Sources */,
-				OBJ_55 /* Uncurry.swift in Sources */,
-				DC5E715C21065C6900ED239B /* ZipOptional.swift in Sources */,
-				OBJ_56 /* With.swift in Sources */,
-				OBJ_57 /* Zurry.swift in Sources */,
+				BF_97E6624C8964DC16CA053706AD44593C /* Chain.swift in Sources */,
+				BF_D75B5B389BB584D48DD3B74707AD1117 /* Compose.swift in Sources */,
+				BF_2D763D9662AF81F11CAE2237BB6B8C50 /* Concat.swift in Sources */,
+				BF_2BA7E2C18CD01F7432B63F3F8962C1FF /* Curry.swift in Sources */,
+				BF_4173D4D3681C22A9FCB7DA4274133666 /* Flip.swift in Sources */,
+				BF_1BCCEF798F0DE525994943DDBBF085D8 /* KeyPath.swift in Sources */,
+				BF_055B46070C29E2D0C065A0C17C52477B /* Optional.swift in Sources */,
+				BF_38A07E7B05BE5F0CDBDE5C4D15432817 /* Pipe.swift in Sources */,
+				BF_0B70976A5F16222266741EA9F8B0F894 /* Sequence.swift in Sources */,
+				BF_712EB1F808E2309DE1C48979810096C2 /* Setters.swift in Sources */,
+				BF_49B72348CD0414A409FDBF67E7F89245 /* Uncurry.swift in Sources */,
+				BF_3090B5F45A7D6547D0AC745A5A2E5018 /* With.swift in Sources */,
+				BF_9EB5E87F8E690B0CCE2B43CA29FF79D5 /* ZipOptional.swift in Sources */,
+				BF_1192CFC46FEB7D9A936A6616183CCFDA /* ZipSequence.swift in Sources */,
+				BF_37EF932730C72613BE2E3C40AE1D47B5 /* Zurry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_63 /* Sources */ = {
+		SBP_1BFD95156265F3DF310EEA71DA73CBDD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
+			buildActionMask = 2147483647;
 			files = (
-				OBJ_64 /* Package.swift in Sources */,
+				BF_3E59E985F00D59C950F152A2A90D2627 /* ChainTests.swift in Sources */,
+				BF_EE01FEA596BA63D529AD6B7BFF9A9833 /* ComposeTests.swift in Sources */,
+				BF_22059BB05E3C1CA4F2F2499C2457588B /* ConcatTests.swift in Sources */,
+				BF_5FDC0CC9A849E042DB8BCE695E390AAE /* CurryTests.swift in Sources */,
+				BF_98EB1693A69DDB14C0032BB43370B41E /* FlipTests.swift in Sources */,
+				BF_921521576FF0DCBAC04FF81E0C35634C /* PipeTests.swift in Sources */,
+				BF_EDCAC53E731A364D955148CBF7C01189 /* UncurryTests.swift in Sources */,
+				BF_9AF5B81DB328688E059101D4272F781B /* WithTests.swift in Sources */,
+				BF_596F0027010738DAB00C8B67979DD273 /* ZipTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_74 /* Sources */ = {
+		SBP_4E689FADA7F56E6B33A3A0D5E6EDF73B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
+			buildActionMask = 2147483647;
 			files = (
-				OBJ_75 /* ChainTests.swift in Sources */,
-				OBJ_76 /* ComposeTests.swift in Sources */,
-				OBJ_77 /* ConcatTests.swift in Sources */,
-				OBJ_78 /* CurryTests.swift in Sources */,
-				OBJ_79 /* FlipTests.swift in Sources */,
-				DCF82372212684BE000A7F94 /* ZipTests.swift in Sources */,
-				OBJ_80 /* PipeTests.swift in Sources */,
-				OBJ_81 /* UncurryTests.swift in Sources */,
-				OBJ_82 /* WithTests.swift in Sources */,
+				BF_665CCCEEB3949B1183C0A2961253961B /* ChainTests.swift in Sources */,
+				BF_1B68DFDBAEFDB22A0BAB577B0FC87ABC /* ComposeTests.swift in Sources */,
+				BF_1C7D0EDE9443716C8798872ABBEA5F61 /* ConcatTests.swift in Sources */,
+				BF_09059C1CDD5211C33FA67403B41DDC66 /* CurryTests.swift in Sources */,
+				BF_B70D252B076276576A68BF8B57AB99C4 /* FlipTests.swift in Sources */,
+				BF_E283A25C25BAF326E3C9DB445B4405A2 /* PipeTests.swift in Sources */,
+				BF_176FFE655CEE7C7137793DF5DCFC9AA8 /* UncurryTests.swift in Sources */,
+				BF_70D8D1E4BF94B7819E2A89435C250B55 /* WithTests.swift in Sources */,
+				BF_F7D23547E8B67F5D980833039F2D5041 /* ZipTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		SBP_8076F252DD4250D65BA3B2B7D3268A6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF_C185BBF408E02D23CFB8707C4243BA1F /* Chain.swift in Sources */,
+				BF_06CD9D59D5DDD8EBA8A134A4EEF30773 /* Compose.swift in Sources */,
+				BF_B2FFA3F34E6949896DF737B0FADACACD /* Concat.swift in Sources */,
+				BF_904BA29B44C375543D6D15542535EA44 /* Curry.swift in Sources */,
+				BF_036CCC31AEB43A8840E80AB59C80C03B /* Flip.swift in Sources */,
+				BF_CF2E37EAC29CF4A0360A91273E7E3483 /* KeyPath.swift in Sources */,
+				BF_230F9B6FE8E082DB44BD5B319B5EC8A6 /* Optional.swift in Sources */,
+				BF_4A3A246F730408C3BA0F754CF9C81B2B /* Pipe.swift in Sources */,
+				BF_137C6CF8F03E2BB84F2E61ACD847A718 /* Sequence.swift in Sources */,
+				BF_25DABD9A43C0A18D70D6948D4E19B3B8 /* Setters.swift in Sources */,
+				BF_56663C22555FC1A9AD4A061E73D42A02 /* Uncurry.swift in Sources */,
+				BF_6E24BEDF11530A5444CFE72F6527CB52 /* With.swift in Sources */,
+				BF_B295462DBECE783BDCE057D2B8E7EEB0 /* ZipOptional.swift in Sources */,
+				BF_F477D6258C3EE370A7887DEEC9E7660B /* ZipSequence.swift in Sources */,
+				BF_46E820317D1771B4F19B7F00A63DB1F7 /* Zurry.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		SBP_A5E917F826F8629650ECE4E37A7662BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF_B72E327228D972D3BF27D8C4360AE52E /* Chain.swift in Sources */,
+				BF_E7D851F98C1DD5DAC4B662FB8EDA20A2 /* Compose.swift in Sources */,
+				BF_C9E0218E7E989AFE30ED25E3A271E216 /* Concat.swift in Sources */,
+				BF_7DC0A661822140B069850CA3FFB1A5AA /* Curry.swift in Sources */,
+				BF_27190B2C2FE63C3EC797E0D43DE54251 /* Flip.swift in Sources */,
+				BF_8B33C441D0B4437578A050002FB9B7B8 /* KeyPath.swift in Sources */,
+				BF_4B7C8A07213DF729684C042E081CE534 /* Optional.swift in Sources */,
+				BF_9B9A139FA3FA07ED07A1F39C9EA12AB7 /* Pipe.swift in Sources */,
+				BF_F504DA97111C9BD1A262367D4DE29AA0 /* Sequence.swift in Sources */,
+				BF_23E08DC7883D3F45E61CA14DBD5E5C65 /* Setters.swift in Sources */,
+				BF_346F1FDD5E98442ECCF036FF7AE750FC /* Uncurry.swift in Sources */,
+				BF_B528B3562EC96F89D3636E0288F8CED9 /* With.swift in Sources */,
+				BF_3EF00D831004B23BE518A6AB4A653D2C /* ZipOptional.swift in Sources */,
+				BF_29B1493905E3862F8C7B1F509CFFA65C /* ZipSequence.swift in Sources */,
+				BF_C9C6E7A1F446E22F300B28E43DCCAD12 /* Zurry.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		SBP_BB4F42078C803C34991DEDBD4AF68F3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF_A6F96D9755A044B1C7DD63AE6F8C0725 /* ChainTests.swift in Sources */,
+				BF_DD1ED9CDC558BF512F9E67D17EFB4BB7 /* ComposeTests.swift in Sources */,
+				BF_F63217E0DE229F34241D7D228AD06469 /* ConcatTests.swift in Sources */,
+				BF_1749A44E96CC52A197B062D79F1F0A81 /* CurryTests.swift in Sources */,
+				BF_50D1CF126B54BB1D3B7B190A9CC91D6C /* FlipTests.swift in Sources */,
+				BF_56AE4D14225B7F3605C29B636146904A /* PipeTests.swift in Sources */,
+				BF_C8BDB157B9EFF4D6A4CDC2A407A5CE42 /* UncurryTests.swift in Sources */,
+				BF_C0CD29FD542F266D6084F875D426D7FE /* WithTests.swift in Sources */,
+				BF_82BFB7E0BC285F47C29D03A8F9D7404A /* ZipTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		SBP_C62A8D702F229A12297A8231A1D289C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF_359571871BBAF81A15C26FAC40D3217A /* ChainTests.swift in Sources */,
+				BF_D0DFDEC929DE90496D72C0D8EC2A6E7F /* ComposeTests.swift in Sources */,
+				BF_0988EAB8446B2A83EE467DBC06FA5F49 /* ConcatTests.swift in Sources */,
+				BF_2D1981391FA63A0E37F655FA14CE92D2 /* CurryTests.swift in Sources */,
+				BF_D4112F27DFD08D8049E69B81D0A72A87 /* FlipTests.swift in Sources */,
+				BF_842B1BD199570421173717803C42F21D /* PipeTests.swift in Sources */,
+				BF_8A3088E80AA00A443FDBC84B0D5B560D /* UncurryTests.swift in Sources */,
+				BF_DB3369BBC5526504E35DB31AAB3BDA4F /* WithTests.swift in Sources */,
+				BF_ED286662266F635BE27959D1F6A6C525 /* ZipTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		SBP_CF3E323D388A6F050659629DBBDE6909 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF_34525EA6AF600AF6FBCA3FF0C7E78C2E /* Chain.swift in Sources */,
+				BF_E17891411ABF13425EAEB0880365ECBF /* Compose.swift in Sources */,
+				BF_F33DBFB4B987C0047D090B142DE749E3 /* Concat.swift in Sources */,
+				BF_59A4B2E49BBC5165FBA540F0380AE2D0 /* Curry.swift in Sources */,
+				BF_3CCDE4190708D683E1BCA6D54292F075 /* Flip.swift in Sources */,
+				BF_99E891DF12DEC901ADD06EDF85DAEE01 /* KeyPath.swift in Sources */,
+				BF_9FCED78B5D656A757171F622A020C8B1 /* Optional.swift in Sources */,
+				BF_70435B60151C2D168584381AADE1A932 /* Pipe.swift in Sources */,
+				BF_AD269A8A40532DCB2C05F17F6F6D8298 /* Sequence.swift in Sources */,
+				BF_ED3F92BE2587005B3D3651D4EB001EE1 /* Setters.swift in Sources */,
+				BF_7055E9E532A64B9B25455BB1EA256ADA /* Uncurry.swift in Sources */,
+				BF_BA406CAED1E2580826AE3DD93C9782FF /* With.swift in Sources */,
+				BF_2DDE838E5D4285E52805305ED6340971 /* ZipOptional.swift in Sources */,
+				BF_35F492820F691EF4FF4A4819052C120C /* ZipSequence.swift in Sources */,
+				BF_CC439A6FA9BCF39A40245D6322BC0357 /* Zurry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_69 /* PBXTargetDependency */ = {
+		TD_268DC8844C3B78F8D205B5E94C754E68 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "Overture::OvertureTests" /* OvertureTests */;
-			targetProxy = DCA3A77120939AB4000903A3 /* PBXContainerItemProxy */;
+			target = NT_8274405197546C7088976F7D3DDE8DF1 /* Overture_iOS */;
+			targetProxy = CIP_128782D8CB237AE821E2E63609F3FB2F /* PBXContainerItemProxy */;
 		};
-		OBJ_85 /* PBXTargetDependency */ = {
+		TD_4A4A9360B8812BEB5DFB8004B2A0F59D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "Overture::Overture" /* Overture */;
-			targetProxy = DCA3A77020939AB4000903A3 /* PBXContainerItemProxy */;
+			target = NT_BDD2A196AF72DBE19A7C7D4CC1536658 /* Overture_watchOS */;
+			targetProxy = CIP_62CB52BFC59C0EB722C96FD98D085D55 /* PBXContainerItemProxy */;
+		};
+		TD_BBC670BCBD05373B5FC26337CE2C383F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = NT_10077D114ACEE363A2CEA6CF0B64E3F4 /* Overture_macOS */;
+			targetProxy = CIP_E30A9057759711CF0D7C08E6005F2C05 /* PBXContainerItemProxy */;
+		};
+		TD_EEC75729A7FFDEBAEE92AEDA65904976 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = NT_5E226C14A867E37F073B5173927AAC2F /* Overture_tvOS */;
+			targetProxy = CIP_EB9D7367BF23C566EE2187C63C4709AB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_3 /* Debug */ = {
+		BC_22075C9152A9DFDCE86ECE53B0E36F61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.OvertureTests-watchOS";
+				PRODUCT_NAME = OvertureTests;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		BC_2CABDE184AC9986F5269201A8C6A203D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Overture-macOS";
+				PRODUCT_NAME = Overture;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		BC_315CA652144D474922237F965AB5DB3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Overture-watchOS";
+				PRODUCT_NAME = Overture;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		BC_42DF2B231ECC28FDC4C9421128F5572F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.OvertureTests-macOS";
+				PRODUCT_NAME = OvertureTests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BC_43DF38F44152CF63A0091BF8F906583F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.OvertureTests-iOS";
+				PRODUCT_NAME = OvertureTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC_5A23DBFC92DA1846D22A4D9FB08D13BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.OvertureTests-tvOS";
+				PRODUCT_NAME = OvertureTests;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		BC_7A0DEB9D1A0BCE70AED2789FA727D95C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_NS_ASSERTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_SWIFT_FLAGS = "-DXcode";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				USE_HEADERMAP = NO;
-			};
-			name = Debug;
-		};
-		OBJ_4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_OPTIMIZATION_LEVEL = s;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_SWIFT_FLAGS = "-DXcode";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				USE_HEADERMAP = NO;
-			};
-			name = Release;
-		};
-		OBJ_41 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Development.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"DEBUG=1",
 				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Overture.xcodeproj/Overture_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Overture;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		BC_7E920B099D88B4F4C83917BB441CDB46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.OvertureTests-iOS";
+				PRODUCT_NAME = OvertureTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BC_963191EF7773FAF0579236B9E36A7E69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.OvertureTests-macOS";
+				PRODUCT_NAME = OvertureTests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BC_9E0EA2068C03FEE9BA2DD84F670DA0A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.OvertureTests-tvOS";
+				PRODUCT_NAME = OvertureTests;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		BC_B19D89331BA82CFC5C151F9450FEE197 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Overture-macOS";
+				PRODUCT_NAME = Overture;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = Overture;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
-			name = Debug;
+			name = Release;
 		};
-		OBJ_42 /* Release */ = {
+		BC_B9A32C20F46D792FC02A3936012D0D88 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Development.xcconfig */;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Overture.xcodeproj/Overture_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Overture;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Overture-iOS";
+				PRODUCT_NAME = Overture;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = Overture;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
-		OBJ_61 /* Debug */ = {
+		BC_CB2E59FFCAB6553AAF144896D40785F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 4.0;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		BC_D3563621059DE7C3802259B090277819 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Overture-watchOS";
+				PRODUCT_NAME = Overture;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
-		OBJ_62 /* Release */ = {
+		BC_D57D19C6AEBC39ED7705AE33BE949BF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		OBJ_67 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		OBJ_68 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Release;
-		};
-		OBJ_72 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Development.xcconfig */;
-			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Overture.xcodeproj/OvertureTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = OvertureTests;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Overture-tvOS";
+				PRODUCT_NAME = Overture;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
-		OBJ_73 /* Release */ = {
+		BC_D92DE85EAB8EE6E9070DABF95CD9D154 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Development.xcconfig */;
 			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Overture.xcodeproj/OvertureTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
-				TARGET_NAME = OvertureTests;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.OvertureTests-watchOS";
+				PRODUCT_NAME = OvertureTests;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
 			};
 			name = Release;
+		};
+		BC_F32A4BDE3D7961651DA70F2D4BADC352 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Overture-tvOS";
+				PRODUCT_NAME = Overture;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		BC_F6EB5B73F9E580BC3F3E9CC61E6FECE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Overture-iOS";
+				PRODUCT_NAME = Overture;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_2 /* Build configuration list for PBXProject "Overture" */ = {
+		CL_0C0228A864C5B61039EBF1D1E2564883 /* Build configuration list for PBXNativeTarget "OvertureTests_macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_3 /* Debug */,
-				OBJ_4 /* Release */,
+				BC_963191EF7773FAF0579236B9E36A7E69 /* Debug */,
+				BC_42DF2B231ECC28FDC4C9421128F5572F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "";
 		};
-		OBJ_40 /* Build configuration list for PBXNativeTarget "Overture" */ = {
+		CL_2285EF382DEAC32B45BEE6FEAAD489AD /* Build configuration list for PBXNativeTarget "Overture_watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_41 /* Debug */,
-				OBJ_42 /* Release */,
+				BC_D3563621059DE7C3802259B090277819 /* Debug */,
+				BC_315CA652144D474922237F965AB5DB3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "";
 		};
-		OBJ_60 /* Build configuration list for PBXNativeTarget "OverturePackageDescription" */ = {
+		CL_50708CEE61F9E989C67EFF24892C0B69 /* Build configuration list for PBXNativeTarget "Overture_macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_61 /* Debug */,
-				OBJ_62 /* Release */,
+				BC_2CABDE184AC9986F5269201A8C6A203D /* Debug */,
+				BC_B19D89331BA82CFC5C151F9450FEE197 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "";
 		};
-		OBJ_66 /* Build configuration list for PBXAggregateTarget "OverturePackageTests" */ = {
+		CL_5AF1EA735F7B87EE01567A16A5CD29ED /* Build configuration list for PBXNativeTarget "OvertureTests_watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_67 /* Debug */,
-				OBJ_68 /* Release */,
+				BC_22075C9152A9DFDCE86ECE53B0E36F61 /* Debug */,
+				BC_D92DE85EAB8EE6E9070DABF95CD9D154 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "";
 		};
-		OBJ_71 /* Build configuration list for PBXNativeTarget "OvertureTests" */ = {
+		CL_8F750B9C9B3C4590CCF1D64C2E267BD6 /* Build configuration list for PBXNativeTarget "OvertureTests_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_72 /* Debug */,
-				OBJ_73 /* Release */,
+				BC_43DF38F44152CF63A0091BF8F906583F /* Debug */,
+				BC_7E920B099D88B4F4C83917BB441CDB46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "";
+		};
+		CL_A91273136B4A8C2B0655340790C26570 /* Build configuration list for PBXProject "Overture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC_7A0DEB9D1A0BCE70AED2789FA727D95C /* Debug */,
+				BC_CB2E59FFCAB6553AAF144896D40785F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CL_BFA6DE45E0A9FAE143B3B768B544CBAE /* Build configuration list for PBXNativeTarget "Overture_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC_F6EB5B73F9E580BC3F3E9CC61E6FECE3 /* Debug */,
+				BC_B9A32C20F46D792FC02A3936012D0D88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+		CL_C071CFEEEF2FAABED0507FD49E15B4FC /* Build configuration list for PBXNativeTarget "Overture_tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC_D57D19C6AEBC39ED7705AE33BE949BF9 /* Debug */,
+				BC_F32A4BDE3D7961651DA70F2D4BADC352 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+		CL_F7F5E12226EDDDA171D22414EF925B3D /* Build configuration list for PBXNativeTarget "OvertureTests_tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC_9E0EA2068C03FEE9BA2DD84F670DA0A9 /* Debug */,
+				BC_5A23DBFC92DA1846D22A4D9FB08D13BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = OBJ_1 /* Project object */;
+	rootObject = P_62291E3156CC16BEA2310178AB28EDF9 /* Project object */;
 }
