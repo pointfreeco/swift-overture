@@ -11,6 +11,8 @@ options:
   usesTabs: false
 targets:
   Overture:
+    info:
+      path: Sources/Info.plist
     platform: [macOS, iOS, tvOS, watchOS]
     scheme:
       testTargets: [OvertureTests_$platform]
