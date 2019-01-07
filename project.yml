@@ -12,7 +12,7 @@ options:
 targets:
   Overture:
     info:
-      path: Sources/Info.plist
+      path: Info.plist
     platform: [macOS, iOS, tvOS, watchOS]
     scheme:
       testTargets: [OvertureTests_$platform]
