@@ -11,6 +11,8 @@ options:
   usesTabs: false
 targets:
   Overture:
+    settings:
+      APPLICATION_EXTENSION_API_ONLY: true
     info:
       path: Info.plist
     platform: [macOS, iOS, tvOS, watchOS]
