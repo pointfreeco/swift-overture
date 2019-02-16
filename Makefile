@@ -21,6 +21,7 @@ test-macos:
 	xcodebuild test \
 		-scheme Overture_macOS \
 		-destination platform="macOS" \
+		-derivedDataPath ./.derivedData \
 		| xcpretty
 
 test-ios:
@@ -33,4 +34,13 @@ test-ios:
 test-swift:
 	swift test
 
-test-all: test-linux test-macos test-ios
+test-playgrounds: test-ios
+		find . \
+			-path '*.playground/*' \
+			-name '*.swift' \
+			-exec swift \
+				-F .derivedData/Build/Products/Debug/ \
+				-sdk $(xcrun --show-sdk-path --sdk iphoneos) \
+				-suppress-warnings {} +
+	
+	test-all: test-linux test-mac test-ios test-playgrounds
