@@ -3,188 +3,196 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF_036CCC31AEB43A8840E80AB59C80C03B /* Flip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_40F0CB8AD68A516B6DFCE0B52294B90A /* Flip.swift */; };
-		BF_055B46070C29E2D0C065A0C17C52477B /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_59A44EA6FAD0A5B8E2EF8DE2AB4031A4 /* Optional.swift */; };
-		BF_06CD9D59D5DDD8EBA8A134A4EEF30773 /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_AA7E2B71688A3974A4073256E321E124 /* Compose.swift */; };
-		BF_09059C1CDD5211C33FA67403B41DDC66 /* CurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_642C61DF33B3FBDAB515FCAE2B7AFD7E /* CurryTests.swift */; };
-		BF_0988EAB8446B2A83EE467DBC06FA5F49 /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E570AB4EA943846E527E5DDD0D0A2BAA /* ConcatTests.swift */; };
-		BF_0B70976A5F16222266741EA9F8B0F894 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E6FFDCC4D5BAE48828BC8FFCD7071F55 /* Sequence.swift */; };
-		BF_1192CFC46FEB7D9A936A6616183CCFDA /* ZipSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_675785456D0006C2F399C66CA7A3B7A5 /* ZipSequence.swift */; };
-		BF_137C6CF8F03E2BB84F2E61ACD847A718 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E6FFDCC4D5BAE48828BC8FFCD7071F55 /* Sequence.swift */; };
-		BF_1749A44E96CC52A197B062D79F1F0A81 /* CurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_642C61DF33B3FBDAB515FCAE2B7AFD7E /* CurryTests.swift */; };
-		BF_176FFE655CEE7C7137793DF5DCFC9AA8 /* UncurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8CCF41C907508A12C07C9A17CFF59BFE /* UncurryTests.swift */; };
-		BF_1B68DFDBAEFDB22A0BAB577B0FC87ABC /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3428EF2F5FC60750C29A0277E5D0A24F /* ComposeTests.swift */; };
-		BF_1BCCEF798F0DE525994943DDBBF085D8 /* KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_CED83466089E7A243C8C1FCF71E17B9F /* KeyPath.swift */; };
-		BF_1C7D0EDE9443716C8798872ABBEA5F61 /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E570AB4EA943846E527E5DDD0D0A2BAA /* ConcatTests.swift */; };
-		BF_22059BB05E3C1CA4F2F2499C2457588B /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E570AB4EA943846E527E5DDD0D0A2BAA /* ConcatTests.swift */; };
-		BF_230F9B6FE8E082DB44BD5B319B5EC8A6 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_59A44EA6FAD0A5B8E2EF8DE2AB4031A4 /* Optional.swift */; };
-		BF_23E08DC7883D3F45E61CA14DBD5E5C65 /* Setters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_44939FAD205372570B5B330488CA0FCA /* Setters.swift */; };
-		BF_25DABD9A43C0A18D70D6948D4E19B3B8 /* Setters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_44939FAD205372570B5B330488CA0FCA /* Setters.swift */; };
-		BF_27190B2C2FE63C3EC797E0D43DE54251 /* Flip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_40F0CB8AD68A516B6DFCE0B52294B90A /* Flip.swift */; };
-		BF_2970219B3FC3D0AD835C16E55D071D50 /* Overture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_6F3FE2E50D3E47BB898203E4EBD149BF /* Overture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BF_29B1493905E3862F8C7B1F509CFFA65C /* ZipSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_675785456D0006C2F399C66CA7A3B7A5 /* ZipSequence.swift */; };
-		BF_2BA7E2C18CD01F7432B63F3F8962C1FF /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_06406B14837AB1215EA9ABFB30C4EB34 /* Curry.swift */; };
-		BF_2D1981391FA63A0E37F655FA14CE92D2 /* CurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_642C61DF33B3FBDAB515FCAE2B7AFD7E /* CurryTests.swift */; };
-		BF_2D763D9662AF81F11CAE2237BB6B8C50 /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3D48C5ADF5E20B0266DF3B87F7C91BC0 /* Concat.swift */; };
-		BF_2DDE838E5D4285E52805305ED6340971 /* ZipOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_14522E713A1D406CA1D5652B3864A2B3 /* ZipOptional.swift */; };
-		BF_3090B5F45A7D6547D0AC745A5A2E5018 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_47E2890D65A828E6E9E5954BFAD0889A /* With.swift */; };
-		BF_34525EA6AF600AF6FBCA3FF0C7E78C2E /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BD43B719463485B52151D8B6B3B26321 /* Chain.swift */; };
-		BF_346F1FDD5E98442ECCF036FF7AE750FC /* Uncurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BE66E506058F0546B0DB3C896A4D2E78 /* Uncurry.swift */; };
-		BF_359571871BBAF81A15C26FAC40D3217A /* ChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3F2121B78AF24224872C75EE56D5F70F /* ChainTests.swift */; };
-		BF_35F492820F691EF4FF4A4819052C120C /* ZipSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_675785456D0006C2F399C66CA7A3B7A5 /* ZipSequence.swift */; };
-		BF_37EF932730C72613BE2E3C40AE1D47B5 /* Zurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_131760F06D66B7F830CFF834502AD05E /* Zurry.swift */; };
-		BF_38A07E7B05BE5F0CDBDE5C4D15432817 /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_ACAE1DD95EAB7CC17E032208F3990CB4 /* Pipe.swift */; };
-		BF_3CCDE4190708D683E1BCA6D54292F075 /* Flip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_40F0CB8AD68A516B6DFCE0B52294B90A /* Flip.swift */; };
-		BF_3E59E985F00D59C950F152A2A90D2627 /* ChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3F2121B78AF24224872C75EE56D5F70F /* ChainTests.swift */; };
-		BF_3EF00D831004B23BE518A6AB4A653D2C /* ZipOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_14522E713A1D406CA1D5652B3864A2B3 /* ZipOptional.swift */; };
-		BF_4173D4D3681C22A9FCB7DA4274133666 /* Flip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_40F0CB8AD68A516B6DFCE0B52294B90A /* Flip.swift */; };
-		BF_46E820317D1771B4F19B7F00A63DB1F7 /* Zurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_131760F06D66B7F830CFF834502AD05E /* Zurry.swift */; };
-		BF_49B72348CD0414A409FDBF67E7F89245 /* Uncurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BE66E506058F0546B0DB3C896A4D2E78 /* Uncurry.swift */; };
-		BF_4A3A246F730408C3BA0F754CF9C81B2B /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_ACAE1DD95EAB7CC17E032208F3990CB4 /* Pipe.swift */; };
-		BF_4B7C8A07213DF729684C042E081CE534 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_59A44EA6FAD0A5B8E2EF8DE2AB4031A4 /* Optional.swift */; };
-		BF_50D1CF126B54BB1D3B7B190A9CC91D6C /* FlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_F01714D7070EE93611B66C574DC8CB3B /* FlipTests.swift */; };
-		BF_5178D2BF2ED3C7FB6233F9625955420B /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_90F02BFDF494CDBE6C97DE492263A94B /* Overture.framework */; };
-		BF_53B58261492442DEEE4A649515F17677 /* Overture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_4E2B58BC7C1A52C7E6773DCE69061656 /* Overture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BF_56663C22555FC1A9AD4A061E73D42A02 /* Uncurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BE66E506058F0546B0DB3C896A4D2E78 /* Uncurry.swift */; };
-		BF_56AE4D14225B7F3605C29B636146904A /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_894EF159C69BA0269E09F2FA70417454 /* PipeTests.swift */; };
-		BF_596F0027010738DAB00C8B67979DD273 /* ZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8303D2CCD787D78072A064EF35F7AD07 /* ZipTests.swift */; };
-		BF_59A4B2E49BBC5165FBA540F0380AE2D0 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_06406B14837AB1215EA9ABFB30C4EB34 /* Curry.swift */; };
-		BF_5FDC0CC9A849E042DB8BCE695E390AAE /* CurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_642C61DF33B3FBDAB515FCAE2B7AFD7E /* CurryTests.swift */; };
-		BF_665CCCEEB3949B1183C0A2961253961B /* ChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3F2121B78AF24224872C75EE56D5F70F /* ChainTests.swift */; };
-		BF_6E24BEDF11530A5444CFE72F6527CB52 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_47E2890D65A828E6E9E5954BFAD0889A /* With.swift */; };
-		BF_70435B60151C2D168584381AADE1A932 /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_ACAE1DD95EAB7CC17E032208F3990CB4 /* Pipe.swift */; };
-		BF_7055E9E532A64B9B25455BB1EA256ADA /* Uncurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BE66E506058F0546B0DB3C896A4D2E78 /* Uncurry.swift */; };
-		BF_70D8D1E4BF94B7819E2A89435C250B55 /* WithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_18D9A3C99EC2142EE3F085D6E7F3CD0D /* WithTests.swift */; };
-		BF_712EB1F808E2309DE1C48979810096C2 /* Setters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_44939FAD205372570B5B330488CA0FCA /* Setters.swift */; };
-		BF_7DC0A661822140B069850CA3FFB1A5AA /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_06406B14837AB1215EA9ABFB30C4EB34 /* Curry.swift */; };
-		BF_82BFB7E0BC285F47C29D03A8F9D7404A /* ZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8303D2CCD787D78072A064EF35F7AD07 /* ZipTests.swift */; };
-		BF_842B1BD199570421173717803C42F21D /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_894EF159C69BA0269E09F2FA70417454 /* PipeTests.swift */; };
-		BF_8A3088E80AA00A443FDBC84B0D5B560D /* UncurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8CCF41C907508A12C07C9A17CFF59BFE /* UncurryTests.swift */; };
-		BF_8B33C441D0B4437578A050002FB9B7B8 /* KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_CED83466089E7A243C8C1FCF71E17B9F /* KeyPath.swift */; };
-		BF_904BA29B44C375543D6D15542535EA44 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_06406B14837AB1215EA9ABFB30C4EB34 /* Curry.swift */; };
-		BF_921521576FF0DCBAC04FF81E0C35634C /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_894EF159C69BA0269E09F2FA70417454 /* PipeTests.swift */; };
-		BF_97E6624C8964DC16CA053706AD44593C /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BD43B719463485B52151D8B6B3B26321 /* Chain.swift */; };
-		BF_98EB1693A69DDB14C0032BB43370B41E /* FlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_F01714D7070EE93611B66C574DC8CB3B /* FlipTests.swift */; };
-		BF_99E891DF12DEC901ADD06EDF85DAEE01 /* KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_CED83466089E7A243C8C1FCF71E17B9F /* KeyPath.swift */; };
-		BF_9AF5B81DB328688E059101D4272F781B /* WithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_18D9A3C99EC2142EE3F085D6E7F3CD0D /* WithTests.swift */; };
-		BF_9B9A139FA3FA07ED07A1F39C9EA12AB7 /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_ACAE1DD95EAB7CC17E032208F3990CB4 /* Pipe.swift */; };
-		BF_9EB5E87F8E690B0CCE2B43CA29FF79D5 /* ZipOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_14522E713A1D406CA1D5652B3864A2B3 /* ZipOptional.swift */; };
-		BF_9FCED78B5D656A757171F622A020C8B1 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_59A44EA6FAD0A5B8E2EF8DE2AB4031A4 /* Optional.swift */; };
-		BF_A6F96D9755A044B1C7DD63AE6F8C0725 /* ChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3F2121B78AF24224872C75EE56D5F70F /* ChainTests.swift */; };
-		BF_AD269A8A40532DCB2C05F17F6F6D8298 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E6FFDCC4D5BAE48828BC8FFCD7071F55 /* Sequence.swift */; };
-		BF_B295462DBECE783BDCE057D2B8E7EEB0 /* ZipOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_14522E713A1D406CA1D5652B3864A2B3 /* ZipOptional.swift */; };
-		BF_B2FFA3F34E6949896DF737B0FADACACD /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3D48C5ADF5E20B0266DF3B87F7C91BC0 /* Concat.swift */; };
-		BF_B528B3562EC96F89D3636E0288F8CED9 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_47E2890D65A828E6E9E5954BFAD0889A /* With.swift */; };
-		BF_B70D252B076276576A68BF8B57AB99C4 /* FlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_F01714D7070EE93611B66C574DC8CB3B /* FlipTests.swift */; };
-		BF_B72E327228D972D3BF27D8C4360AE52E /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BD43B719463485B52151D8B6B3B26321 /* Chain.swift */; };
-		BF_BA406CAED1E2580826AE3DD93C9782FF /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_47E2890D65A828E6E9E5954BFAD0889A /* With.swift */; };
-		BF_BD94C39752478F332FC8B964D3D09E6E /* Overture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_90F02BFDF494CDBE6C97DE492263A94B /* Overture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BF_C0CD29FD542F266D6084F875D426D7FE /* WithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_18D9A3C99EC2142EE3F085D6E7F3CD0D /* WithTests.swift */; };
-		BF_C185BBF408E02D23CFB8707C4243BA1F /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BD43B719463485B52151D8B6B3B26321 /* Chain.swift */; };
-		BF_C8BDB157B9EFF4D6A4CDC2A407A5CE42 /* UncurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8CCF41C907508A12C07C9A17CFF59BFE /* UncurryTests.swift */; };
-		BF_C9C6E7A1F446E22F300B28E43DCCAD12 /* Zurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_131760F06D66B7F830CFF834502AD05E /* Zurry.swift */; };
-		BF_C9E0218E7E989AFE30ED25E3A271E216 /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3D48C5ADF5E20B0266DF3B87F7C91BC0 /* Concat.swift */; };
-		BF_CC439A6FA9BCF39A40245D6322BC0357 /* Zurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_131760F06D66B7F830CFF834502AD05E /* Zurry.swift */; };
-		BF_CF2E37EAC29CF4A0360A91273E7E3483 /* KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_CED83466089E7A243C8C1FCF71E17B9F /* KeyPath.swift */; };
-		BF_D0DFDEC929DE90496D72C0D8EC2A6E7F /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3428EF2F5FC60750C29A0277E5D0A24F /* ComposeTests.swift */; };
-		BF_D4112F27DFD08D8049E69B81D0A72A87 /* FlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_F01714D7070EE93611B66C574DC8CB3B /* FlipTests.swift */; };
-		BF_D4258EA2478A90C51DC5B4F3B0B8F79C /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_6F3FE2E50D3E47BB898203E4EBD149BF /* Overture.framework */; };
-		BF_D75B5B389BB584D48DD3B74707AD1117 /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_AA7E2B71688A3974A4073256E321E124 /* Compose.swift */; };
-		BF_DB3369BBC5526504E35DB31AAB3BDA4F /* WithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_18D9A3C99EC2142EE3F085D6E7F3CD0D /* WithTests.swift */; };
-		BF_DD1ED9CDC558BF512F9E67D17EFB4BB7 /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3428EF2F5FC60750C29A0277E5D0A24F /* ComposeTests.swift */; };
-		BF_E17891411ABF13425EAEB0880365ECBF /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_AA7E2B71688A3974A4073256E321E124 /* Compose.swift */; };
-		BF_E283A25C25BAF326E3C9DB445B4405A2 /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_894EF159C69BA0269E09F2FA70417454 /* PipeTests.swift */; };
-		BF_E50701AACBF9A7A9B8D47BB59A3F668C /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_39D9F12A182E089A2B5F93163CD1EDF1 /* Overture.framework */; };
-		BF_E7D851F98C1DD5DAC4B662FB8EDA20A2 /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_AA7E2B71688A3974A4073256E321E124 /* Compose.swift */; };
-		BF_ED286662266F635BE27959D1F6A6C525 /* ZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8303D2CCD787D78072A064EF35F7AD07 /* ZipTests.swift */; };
-		BF_ED3F92BE2587005B3D3651D4EB001EE1 /* Setters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_44939FAD205372570B5B330488CA0FCA /* Setters.swift */; };
-		BF_EDCAC53E731A364D955148CBF7C01189 /* UncurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8CCF41C907508A12C07C9A17CFF59BFE /* UncurryTests.swift */; };
-		BF_EE01FEA596BA63D529AD6B7BFF9A9833 /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3428EF2F5FC60750C29A0277E5D0A24F /* ComposeTests.swift */; };
-		BF_F2E71F3ADB3E5E8276B25EB37F42E19F /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_4E2B58BC7C1A52C7E6773DCE69061656 /* Overture.framework */; };
-		BF_F33DBFB4B987C0047D090B142DE749E3 /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3D48C5ADF5E20B0266DF3B87F7C91BC0 /* Concat.swift */; };
-		BF_F35BE007A10306DDFDF6FE18A6FFBC8A /* Overture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_39D9F12A182E089A2B5F93163CD1EDF1 /* Overture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BF_F477D6258C3EE370A7887DEEC9E7660B /* ZipSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_675785456D0006C2F399C66CA7A3B7A5 /* ZipSequence.swift */; };
-		BF_F504DA97111C9BD1A262367D4DE29AA0 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E6FFDCC4D5BAE48828BC8FFCD7071F55 /* Sequence.swift */; };
-		BF_F63217E0DE229F34241D7D228AD06469 /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E570AB4EA943846E527E5DDD0D0A2BAA /* ConcatTests.swift */; };
-		BF_F7D23547E8B67F5D980833039F2D5041 /* ZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8303D2CCD787D78072A064EF35F7AD07 /* ZipTests.swift */; };
+		001F3396B104BF2702DBF781D489F7C5 /* CurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A7F4AFACC40C18C2448CF212C733D3 /* CurryTests.swift */; };
+		0409352AD8BB514115A8C60938C82745 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECE5EF0A8E8FCD025E8D0089CDC882 /* Optional.swift */; };
+		0642C01F381B66CBB4669D902723BF5F /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB40D88FBAA126DD9F00E79696700EC5 /* ConcatTests.swift */; };
+		080313085695A426F12510BB357A2C65 /* KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47732D91BE055254D925FF1F2C1E22A /* KeyPath.swift */; };
+		0BB1EBC78C02944ED43101B4CF3A2738 /* ZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204252DDDD513BECFC712F2D09EEB03 /* ZipTests.swift */; };
+		0EE9065DA8A609076E05AC14DF5F2A64 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECE5EF0A8E8FCD025E8D0089CDC882 /* Optional.swift */; };
+		107C891600865FF96DBE393412D3ABD5 /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B08B278D1B3FD676BFF193C27A0D79E /* Compose.swift */; };
+		11B22B559AAB82DBC744C0E83DA69D68 /* Setters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFD6736C2117E0882A8562EB492A645 /* Setters.swift */; };
+		1287B9450D4CDE3D1A32A5A01DCBA78B /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B08B278D1B3FD676BFF193C27A0D79E /* Compose.swift */; };
+		146BB17BA51BEE1761DBB2C738F5D23D /* SettersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7EBE545481EE4F89D536576AD97BA /* SettersTests.swift */; };
+		15C2F56220C4DB411F1FBE28685D2457 /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D090CCB03D0CF89F691A3BD80C2585 /* Concat.swift */; };
+		18AFBCEF8AAF2BBAE9A6F1FC78A91DCA /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAB21E096E7BD1D45A4C0F137322BFF /* Overture.framework */; };
+		1A788B5CB236F31F79E1A6B168D32880 /* Zurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B24FFD88524A68CB9897317AC19C4FB /* Zurry.swift */; };
+		2573EEFEFDFE02C3D03299F835328A6C /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D090CCB03D0CF89F691A3BD80C2585 /* Concat.swift */; };
+		2584827102FD30AD7A9600A42AAA7584 /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C2A8ED5445BAC81BB007C22B9AA01B /* ComposeTests.swift */; };
+		2BF95A77043702E566D1D0596EDEFB95 /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01BB18FF8A6F1EE602AFC79779E3507 /* Pipe.swift */; };
+		3235441DEEC5CE0DD0796F8D2383B22C /* ZipOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF47502A293AC317E475AA2235CBAF /* ZipOptional.swift */; };
+		335252B84189FF6A8B7D2FEF62FA7F1D /* KeyPathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D646A61FFC0338C9735111E4740D7 /* KeyPathTests.swift */; };
+		36BFD18F77E3BD1734F58B582E47B332 /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97BF073ECE738E187EE66178549C36A /* Chain.swift */; };
+		39A2FF6C060831A2B7DB6B0B680F2D5C /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECE5EF0A8E8FCD025E8D0089CDC882 /* Optional.swift */; };
+		3C2AA341B47C680902A4D9EA33662E08 /* ZipOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF47502A293AC317E475AA2235CBAF /* ZipOptional.swift */; };
+		3CD1B7128A88694504B5573963509BD9 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA94F97250242D8DFDCBC9A57AAE72F /* Curry.swift */; };
+		3DA5A0D52BCEA1D98E60E1B79F7657B7 /* SettersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7EBE545481EE4F89D536576AD97BA /* SettersTests.swift */; };
+		410160D08F01372B322767EEFAD782D8 /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97BF073ECE738E187EE66178549C36A /* Chain.swift */; };
+		416EE14184CE55BCE0DAF64AD364F383 /* Zurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B24FFD88524A68CB9897317AC19C4FB /* Zurry.swift */; };
+		436F0B0ECB9F450C8C0A4BB9CC2B8FE9 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA94F97250242D8DFDCBC9A57AAE72F /* Curry.swift */; };
+		43A11F7A1B4326AF4004893A57850040 /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B08B278D1B3FD676BFF193C27A0D79E /* Compose.swift */; };
+		46FA836E1EEE7A4941952D6C03B548FD /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3EB2C9AD5D65B3DF2E6C356598EC91 /* Sequence.swift */; };
+		470119044B7454EA3BCCB5E4B5C82998 /* Uncurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4650006197ED27DA2BC9B0C22D6B88F2 /* Uncurry.swift */; };
+		47FFECD33F68567D2A1B506A8D9A1191 /* Flip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D3FAFA02E6A888345E85CAC6AA040 /* Flip.swift */; };
+		4B5FA71536D98827F8434A1FD8440AF2 /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01BB18FF8A6F1EE602AFC79779E3507 /* Pipe.swift */; };
+		4C4DBA5B2C8F447CE75306F52B82BEF0 /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D090CCB03D0CF89F691A3BD80C2585 /* Concat.swift */; };
+		4E3805061EE63C0E06903677329DBE90 /* ChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F045FBF9701658818BFB0FEB227702 /* ChainTests.swift */; };
+		51E7B97CF3D70E8F380847AC25D10724 /* KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47732D91BE055254D925FF1F2C1E22A /* KeyPath.swift */; };
+		55CE50EF27C9943D253DF7C2CE197A54 /* WithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD222BF13D8B21E34284B1EF4A8DE9BC /* WithTests.swift */; };
+		56FAECD100E201D6C577196F79FA5F1D /* FlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053E123334CFD3F7CDD749299AB1037 /* FlipTests.swift */; };
+		5B983326EAFB3ACD23EDB75D759B6136 /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA94F97250242D8DFDCBC9A57AAE72F /* Curry.swift */; };
+		5BF99D80162BCF75F326D2A7110AB78D /* Uncurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4650006197ED27DA2BC9B0C22D6B88F2 /* Uncurry.swift */; };
+		5C47DCBBA2291B86B5A53DB3967BBDB9 /* Overture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAB21E096E7BD1D45A4C0F137322BFF /* Overture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		61474BADF6B660F819DC22624EB75269 /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343175C20AB7FDC34E806713E4CF2A0 /* PipeTests.swift */; };
+		61FBAB40E124E2B55B54A7DB6B6753FD /* KeyPathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D646A61FFC0338C9735111E4740D7 /* KeyPathTests.swift */; };
+		63EBE085108B0BFB19163A86BE066CAA /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343175C20AB7FDC34E806713E4CF2A0 /* PipeTests.swift */; };
+		69EB1EDEB5D2B358781FF922F98E50BF /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA94F97250242D8DFDCBC9A57AAE72F /* Curry.swift */; };
+		6A49C5899BD6161B859EC918C1B3DB9C /* Zurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B24FFD88524A68CB9897317AC19C4FB /* Zurry.swift */; };
+		6AE1E6B8888FC6D95539785674E8ED7A /* Flip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D3FAFA02E6A888345E85CAC6AA040 /* Flip.swift */; };
+		6B5BF089FF419D999B09DADA4B90F019 /* Setters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFD6736C2117E0882A8562EB492A645 /* Setters.swift */; };
+		6EBD0C9EBF49E00B67221787356154C7 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E843E081D5F78523FA418D6131714 /* With.swift */; };
+		7186BB57D5AAA941156C7BD31E9CDF90 /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97BF073ECE738E187EE66178549C36A /* Chain.swift */; };
+		7361B923155BA57151619BEF50008C8C /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E843E081D5F78523FA418D6131714 /* With.swift */; };
+		7937075297A0AD79943CCE04CDC89D31 /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01BB18FF8A6F1EE602AFC79779E3507 /* Pipe.swift */; };
+		7BC4CE020BAFB8A31C115F4297888268 /* Flip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D3FAFA02E6A888345E85CAC6AA040 /* Flip.swift */; };
+		7C72901F10AFF5566E9EDEC43B0233D7 /* Flip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D3FAFA02E6A888345E85CAC6AA040 /* Flip.swift */; };
+		7F7C81A20138045793B87F6EB69FD0AA /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2AD3F9756AF72C38F41E38EB661C26 /* Overture.framework */; };
+		81626D608656ABD84555DB58289D014F /* ZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204252DDDD513BECFC712F2D09EEB03 /* ZipTests.swift */; };
+		832034B8A787CD5DDFE1811A2D477CD4 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3EB2C9AD5D65B3DF2E6C356598EC91 /* Sequence.swift */; };
+		848829408C941E8AEB3E3263570B7207 /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B08B278D1B3FD676BFF193C27A0D79E /* Compose.swift */; };
+		8A6E4075BAD88AD418037EC23B28B6D3 /* SettersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7EBE545481EE4F89D536576AD97BA /* SettersTests.swift */; };
+		8AEF80A1B5F8C6FC5A4A649F878F2A50 /* SettersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7EBE545481EE4F89D536576AD97BA /* SettersTests.swift */; };
+		8B8412AF2AA936B2C42A18B66E078E36 /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343175C20AB7FDC34E806713E4CF2A0 /* PipeTests.swift */; };
+		9248ADC5C747D6616B1CCD74BFB3353C /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C2A8ED5445BAC81BB007C22B9AA01B /* ComposeTests.swift */; };
+		9290FC9E5A0990D7F39CF5CA20174A8E /* Uncurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4650006197ED27DA2BC9B0C22D6B88F2 /* Uncurry.swift */; };
+		92F07591B14D93DD393625AC92148CB8 /* Uncurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4650006197ED27DA2BC9B0C22D6B88F2 /* Uncurry.swift */; };
+		943AB10B901246B33C39A077FED467C0 /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB40D88FBAA126DD9F00E79696700EC5 /* ConcatTests.swift */; };
+		995258C292C2DC6D97A5F0A9827798B8 /* CurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A7F4AFACC40C18C2448CF212C733D3 /* CurryTests.swift */; };
+		99E025EB29ECA238E6EAB0FBD40651DB /* UncurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B76A26D46C8B5275228859A0DC45198 /* UncurryTests.swift */; };
+		9A17BBDFB4E9C2BD1D24311A4789D419 /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB40D88FBAA126DD9F00E79696700EC5 /* ConcatTests.swift */; };
+		9E60CD9E9F2B29E484D6340440EAAF05 /* ZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204252DDDD513BECFC712F2D09EEB03 /* ZipTests.swift */; };
+		A14893BF87AAED7A00A0E77B86CE05E5 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3EB2C9AD5D65B3DF2E6C356598EC91 /* Sequence.swift */; };
+		A179A3754879D45FB9291A9A5596F94E /* ChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F045FBF9701658818BFB0FEB227702 /* ChainTests.swift */; };
+		A1F22F4D635757EAB34C129F4B6C37C8 /* ChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F045FBF9701658818BFB0FEB227702 /* ChainTests.swift */; };
+		A2A3AA5A0E05B28B84151A09DF15BC30 /* Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97BF073ECE738E187EE66178549C36A /* Chain.swift */; };
+		A2EE8565D1D7133AC0CAFF50CB4C5C78 /* KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47732D91BE055254D925FF1F2C1E22A /* KeyPath.swift */; };
+		A2FFC2930E0AC00C21BC3F099BF9C4CB /* UncurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B76A26D46C8B5275228859A0DC45198 /* UncurryTests.swift */; };
+		A6C3BA3AAD20AE9A70D39349E576CD6D /* WithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD222BF13D8B21E34284B1EF4A8DE9BC /* WithTests.swift */; };
+		A73C862C52F80B61126A0F87EB368513 /* KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47732D91BE055254D925FF1F2C1E22A /* KeyPath.swift */; };
+		B04814104E012D3CF1F71811EF586642 /* UncurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B76A26D46C8B5275228859A0DC45198 /* UncurryTests.swift */; };
+		B18C19D5CD8829AA12F39CEF694AD8F4 /* ZipSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99DF0B49A44E7971D0BADB382224B9A /* ZipSequence.swift */; };
+		B1E664B7696FC45E8BE01A450125F082 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E843E081D5F78523FA418D6131714 /* With.swift */; };
+		B1E8A23199BBB6C6DF44CA9641E3B5F4 /* ZipOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF47502A293AC317E475AA2235CBAF /* ZipOptional.swift */; };
+		B3BB450E97D31A793A0B90F290783B62 /* FlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053E123334CFD3F7CDD749299AB1037 /* FlipTests.swift */; };
+		B41D01CDC2C32AAC7840EC4B352D5B3C /* CurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A7F4AFACC40C18C2448CF212C733D3 /* CurryTests.swift */; };
+		B696225167C506FE3185DFCC62EB3F09 /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9B56D39F0C2B11CEE1EC0F96A57E17 /* Overture.framework */; };
+		B7309E6215DE9490B54854786A40376A /* Overture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9790A29AE31A286882E1FCDEAE35F56 /* Overture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC2173C747D7DE695B351EFE60074789 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECE5EF0A8E8FCD025E8D0089CDC882 /* Optional.swift */; };
+		BCB21860FD45F0379E24CD1C376A3080 /* ChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F045FBF9701658818BFB0FEB227702 /* ChainTests.swift */; };
+		BCB9EFEF8252091B69DF312F282F0921 /* ZipSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99DF0B49A44E7971D0BADB382224B9A /* ZipSequence.swift */; };
+		BD9CEE1F438C12D2722FB7F55EFD8ED6 /* Setters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFD6736C2117E0882A8562EB492A645 /* Setters.swift */; };
+		BE5381DA16126AF79384FAADC234920F /* WithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD222BF13D8B21E34284B1EF4A8DE9BC /* WithTests.swift */; };
+		C14135EEAEEF88DD61564EB27E0EF73B /* ZipOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF47502A293AC317E475AA2235CBAF /* ZipOptional.swift */; };
+		C174BC5CD5FE0934EAC278AA7D91381D /* FlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053E123334CFD3F7CDD749299AB1037 /* FlipTests.swift */; };
+		C6776ECB98BA22E2777FBCF7C3C7AB88 /* UncurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B76A26D46C8B5275228859A0DC45198 /* UncurryTests.swift */; };
+		C9ABC9D58AEC50D3A680FA8EF1F12612 /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343175C20AB7FDC34E806713E4CF2A0 /* PipeTests.swift */; };
+		CB9FE386677EAF092DC85D8759301ED6 /* Concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D090CCB03D0CF89F691A3BD80C2585 /* Concat.swift */; };
+		CED29B4A00D122AFA98FA1EA6ADA4352 /* Zurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B24FFD88524A68CB9897317AC19C4FB /* Zurry.swift */; };
+		CF32FAF31549ACB2D5DEB4EDCDBEBDC6 /* ZipSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99DF0B49A44E7971D0BADB382224B9A /* ZipSequence.swift */; };
+		D5B4B5B601F4CE790C9B70E217122DB6 /* Overture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9B56D39F0C2B11CEE1EC0F96A57E17 /* Overture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D5C5DA244F9649501879F6F6E38E5801 /* WithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD222BF13D8B21E34284B1EF4A8DE9BC /* WithTests.swift */; };
+		DD57E0B404D83AAB9825F66B39C056B9 /* Setters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFD6736C2117E0882A8562EB492A645 /* Setters.swift */; };
+		DE65651117E08D149D4B84C1016F699D /* KeyPathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D646A61FFC0338C9735111E4740D7 /* KeyPathTests.swift */; };
+		DEF99F3F904897AEC809AA30EDCFFBCE /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C2A8ED5445BAC81BB007C22B9AA01B /* ComposeTests.swift */; };
+		E04493E6DF6CF66C1EABBB3A771FF2C5 /* Overture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2AD3F9756AF72C38F41E38EB661C26 /* Overture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E1BFBFBC763764A4715EE17FC80FD4ED /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01BB18FF8A6F1EE602AFC79779E3507 /* Pipe.swift */; };
+		E1C62A645FD6C18A4BAB62019F3C4C47 /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9790A29AE31A286882E1FCDEAE35F56 /* Overture.framework */; };
+		E3170BFF2003160511D1D9F79F5F558D /* KeyPathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201D646A61FFC0338C9735111E4740D7 /* KeyPathTests.swift */; };
+		E3396CA2B0860877D985D8A5D67CCC53 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3EB2C9AD5D65B3DF2E6C356598EC91 /* Sequence.swift */; };
+		E7A289EA534B5BA50BC41750773F4822 /* ComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C2A8ED5445BAC81BB007C22B9AA01B /* ComposeTests.swift */; };
+		E8220B8663F077A460AE81A02984A1F6 /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084E843E081D5F78523FA418D6131714 /* With.swift */; };
+		EFDB5DCEEF10D4033113ABAB0AA4C1A6 /* CurryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A7F4AFACC40C18C2448CF212C733D3 /* CurryTests.swift */; };
+		EFE7882FF7F88E2DA8D5E81A6D7C47AE /* ZipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204252DDDD513BECFC712F2D09EEB03 /* ZipTests.swift */; };
+		F38087EC794AD490083F04EDB57ECB82 /* ConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB40D88FBAA126DD9F00E79696700EC5 /* ConcatTests.swift */; };
+		FC4483CC8D46316C011ADC707E0E6384 /* FlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053E123334CFD3F7CDD749299AB1037 /* FlipTests.swift */; };
+		FF4A6C139CA4C5582D4FC44D9814BB81 /* ZipSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99DF0B49A44E7971D0BADB382224B9A /* ZipSequence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CIP_128782D8CB237AE821E2E63609F3FB2F /* PBXContainerItemProxy */ = {
+		16E695C987BCF60F9CC4824ADF7C8960 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = P_62291E3156CC16BEA2310178AB28EDF9 /* Project object */;
+			containerPortal = BCA18CFE588C3661CD98276FEAFD2ABF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = NT_8274405197546C7088976F7D3DDE8DF1;
-			remoteInfo = Overture_iOS;
-		};
-		CIP_62CB52BFC59C0EB722C96FD98D085D55 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = P_62291E3156CC16BEA2310178AB28EDF9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = NT_BDD2A196AF72DBE19A7C7D4CC1536658;
-			remoteInfo = Overture_watchOS;
-		};
-		CIP_E30A9057759711CF0D7C08E6005F2C05 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = P_62291E3156CC16BEA2310178AB28EDF9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = NT_10077D114ACEE363A2CEA6CF0B64E3F4;
+			remoteGlobalIDString = 1A9D4BE7E3ABBAE4B1CBB723464B111C;
 			remoteInfo = Overture_macOS;
 		};
-		CIP_EB9D7367BF23C566EE2187C63C4709AB /* PBXContainerItemProxy */ = {
+		6E05921A049C412B743A4A42E2ED5DFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = P_62291E3156CC16BEA2310178AB28EDF9 /* Project object */;
+			containerPortal = BCA18CFE588C3661CD98276FEAFD2ABF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = NT_5E226C14A867E37F073B5173927AAC2F;
+			remoteGlobalIDString = A5595549A81068462256743E32D7E36D;
 			remoteInfo = Overture_tvOS;
+		};
+		8E0E558526CE6BE49EDC10CB7DA3FEAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCA18CFE588C3661CD98276FEAFD2ABF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C986EA57938522DE23E8CA570CCC6C80;
+			remoteInfo = Overture_iOS;
+		};
+		ADDD87334EF1836FA6BC16FAAD93CAF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCA18CFE588C3661CD98276FEAFD2ABF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B0FD87BBE58097B4A4B4BB493ACE221;
+			remoteInfo = Overture_watchOS;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CFBP_A8D8850889CDA25BE1CACB1B4E77EC89 /* Embed Frameworks */ = {
+		03021432F783FCBA0A9F743BEB9D5257 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BF_53B58261492442DEEE4A649515F17677 /* Overture.framework in Embed Frameworks */,
+				E04493E6DF6CF66C1EABBB3A771FF2C5 /* Overture.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFBP_A974D1A48E91FD7FC169654F91D02F2D /* Embed Frameworks */ = {
+		20032052D7DFB0976A9FF91C09172184 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BF_F35BE007A10306DDFDF6FE18A6FFBC8A /* Overture.framework in Embed Frameworks */,
+				B7309E6215DE9490B54854786A40376A /* Overture.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFBP_E6697115E77B5CEAFDF40AD4F281CC2E /* Embed Frameworks */ = {
+		5624901174408EDE19339C06D898BAD7 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BF_BD94C39752478F332FC8B964D3D09E6E /* Overture.framework in Embed Frameworks */,
+				D5B4B5B601F4CE790C9B70E217122DB6 /* Overture.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFBP_EB9DFCF394EE6299CB6702C5B67DAF4F /* Embed Frameworks */ = {
+		FEC1F42078B07B9D3F7A79625478CFC4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BF_2970219B3FC3D0AD835C16E55D071D50 /* Overture.framework in Embed Frameworks */,
+				5C47DCBBA2291B86B5A53DB3967BBDB9 /* Overture.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,165 +200,169 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FR_06406B14837AB1215EA9ABFB30C4EB34 /* Curry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
-		FR_131760F06D66B7F830CFF834502AD05E /* Zurry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zurry.swift; sourceTree = "<group>"; };
-		FR_14522E713A1D406CA1D5652B3864A2B3 /* ZipOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipOptional.swift; sourceTree = "<group>"; };
-		FR_18AE5FFA660D996665B03F2932B0BCB1 /* OvertureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OvertureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FR_18D9A3C99EC2142EE3F085D6E7F3CD0D /* WithTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithTests.swift; sourceTree = "<group>"; };
-		FR_3428EF2F5FC60750C29A0277E5D0A24F /* ComposeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeTests.swift; sourceTree = "<group>"; };
-		FR_39D9F12A182E089A2B5F93163CD1EDF1 /* Overture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Overture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FR_3D48C5ADF5E20B0266DF3B87F7C91BC0 /* Concat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concat.swift; sourceTree = "<group>"; };
-		FR_3F2121B78AF24224872C75EE56D5F70F /* ChainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainTests.swift; sourceTree = "<group>"; };
-		FR_40F0CB8AD68A516B6DFCE0B52294B90A /* Flip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flip.swift; sourceTree = "<group>"; };
-		FR_44939FAD205372570B5B330488CA0FCA /* Setters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setters.swift; sourceTree = "<group>"; };
-		FR_47E2890D65A828E6E9E5954BFAD0889A /* With.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
-		FR_4E2B58BC7C1A52C7E6773DCE69061656 /* Overture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Overture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FR_59A44EA6FAD0A5B8E2EF8DE2AB4031A4 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
-		FR_642C61DF33B3FBDAB515FCAE2B7AFD7E /* CurryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurryTests.swift; sourceTree = "<group>"; };
-		FR_675785456D0006C2F399C66CA7A3B7A5 /* ZipSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipSequence.swift; sourceTree = "<group>"; };
-		FR_6F3FE2E50D3E47BB898203E4EBD149BF /* Overture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Overture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FR_8303D2CCD787D78072A064EF35F7AD07 /* ZipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipTests.swift; sourceTree = "<group>"; };
-		FR_894EF159C69BA0269E09F2FA70417454 /* PipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeTests.swift; sourceTree = "<group>"; };
-		FR_8CCF41C907508A12C07C9A17CFF59BFE /* UncurryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UncurryTests.swift; sourceTree = "<group>"; };
-		FR_8F24ED5DE4EF63147E7242559B0B9E5F /* OvertureTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = OvertureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FR_90F02BFDF494CDBE6C97DE492263A94B /* Overture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Overture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FR_AA7E2B71688A3974A4073256E321E124 /* Compose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compose.swift; sourceTree = "<group>"; };
-		FR_ACAE1DD95EAB7CC17E032208F3990CB4 /* Pipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipe.swift; sourceTree = "<group>"; };
-		FR_BD43B719463485B52151D8B6B3B26321 /* Chain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
-		FR_BE66E506058F0546B0DB3C896A4D2E78 /* Uncurry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uncurry.swift; sourceTree = "<group>"; };
-		FR_BE9328BCAACE2D9489E911C397146797 /* OvertureTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = OvertureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FR_CED83466089E7A243C8C1FCF71E17B9F /* KeyPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPath.swift; sourceTree = "<group>"; };
-		FR_D135B53ACC43906DA49E7425C31A6565 /* OvertureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OvertureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FR_E570AB4EA943846E527E5DDD0D0A2BAA /* ConcatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcatTests.swift; sourceTree = "<group>"; };
-		FR_E6FFDCC4D5BAE48828BC8FFCD7071F55 /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
-		FR_F01714D7070EE93611B66C574DC8CB3B /* FlipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipTests.swift; sourceTree = "<group>"; };
+		04FF47502A293AC317E475AA2235CBAF /* ZipOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipOptional.swift; sourceTree = "<group>"; };
+		084E843E081D5F78523FA418D6131714 /* With.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
+		1B24FFD88524A68CB9897317AC19C4FB /* Zurry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zurry.swift; sourceTree = "<group>"; };
+		1B76A26D46C8B5275228859A0DC45198 /* UncurryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UncurryTests.swift; sourceTree = "<group>"; };
+		1EA7EBE545481EE4F89D536576AD97BA /* SettersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettersTests.swift; sourceTree = "<group>"; };
+		201D646A61FFC0338C9735111E4740D7 /* KeyPathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPathTests.swift; sourceTree = "<group>"; };
+		2DFD6736C2117E0882A8562EB492A645 /* Setters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setters.swift; sourceTree = "<group>"; };
+		34A7F4AFACC40C18C2448CF212C733D3 /* CurryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurryTests.swift; sourceTree = "<group>"; };
+		3DAB21E096E7BD1D45A4C0F137322BFF /* Overture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Overture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F2AD3F9756AF72C38F41E38EB661C26 /* Overture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Overture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4650006197ED27DA2BC9B0C22D6B88F2 /* Uncurry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uncurry.swift; sourceTree = "<group>"; };
+		4BA0ECE4B36D518F79B6139DB4FCC7C5 /* OvertureTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = OvertureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5204252DDDD513BECFC712F2D09EEB03 /* ZipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipTests.swift; sourceTree = "<group>"; };
+		57C2A8ED5445BAC81BB007C22B9AA01B /* ComposeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeTests.swift; sourceTree = "<group>"; };
+		7B08B278D1B3FD676BFF193C27A0D79E /* Compose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compose.swift; sourceTree = "<group>"; };
+		7D9B56D39F0C2B11CEE1EC0F96A57E17 /* Overture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Overture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EA94F97250242D8DFDCBC9A57AAE72F /* Curry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
+		A0D090CCB03D0CF89F691A3BD80C2585 /* Concat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concat.swift; sourceTree = "<group>"; };
+		A81D3FAFA02E6A888345E85CAC6AA040 /* Flip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flip.swift; sourceTree = "<group>"; };
+		AD222BF13D8B21E34284B1EF4A8DE9BC /* WithTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithTests.swift; sourceTree = "<group>"; };
+		AFECE5EF0A8E8FCD025E8D0089CDC882 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		B053E123334CFD3F7CDD749299AB1037 /* FlipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipTests.swift; sourceTree = "<group>"; };
+		B6F045FBF9701658818BFB0FEB227702 /* ChainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainTests.swift; sourceTree = "<group>"; };
+		B9790A29AE31A286882E1FCDEAE35F56 /* Overture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Overture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D343175C20AB7FDC34E806713E4CF2A0 /* PipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeTests.swift; sourceTree = "<group>"; };
+		D97BF073ECE738E187EE66178549C36A /* Chain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chain.swift; sourceTree = "<group>"; };
+		E915B65EDF7FE8E867A81F9EAD908D66 /* OvertureTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = OvertureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E99DF0B49A44E7971D0BADB382224B9A /* ZipSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipSequence.swift; sourceTree = "<group>"; };
+		EC0C7C80C73382E609C4F010D7743431 /* OvertureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OvertureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE3EB2C9AD5D65B3DF2E6C356598EC91 /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
+		F01BB18FF8A6F1EE602AFC79779E3507 /* Pipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipe.swift; sourceTree = "<group>"; };
+		F47732D91BE055254D925FF1F2C1E22A /* KeyPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPath.swift; sourceTree = "<group>"; };
+		F9774B9D6F57BC01EAC6189691B5F809 /* OvertureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OvertureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB40D88FBAA126DD9F00E79696700EC5 /* ConcatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcatTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FBP_1FBE797FD0E1BA26FE14DDA121F4BBF4 /* Frameworks */ = {
+		1F5CDC16937E94D36B3079BA1DBC0F7E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF_F2E71F3ADB3E5E8276B25EB37F42E19F /* Overture.framework in Frameworks */,
+				7F7C81A20138045793B87F6EB69FD0AA /* Overture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FBP_7D9954787D78471987C96577AC134FA2 /* Frameworks */ = {
+		48FAEE643DC6569729F1E36B9E3927A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF_E50701AACBF9A7A9B8D47BB59A3F668C /* Overture.framework in Frameworks */,
+				E1C62A645FD6C18A4BAB62019F3C4C47 /* Overture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FBP_82F81B21EF55982606EBA99DB2F87214 /* Frameworks */ = {
+		F78D121EA755472CEE4494174A80FAC2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF_D4258EA2478A90C51DC5B4F3B0B8F79C /* Overture.framework in Frameworks */,
+				B696225167C506FE3185DFCC62EB3F09 /* Overture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FBP_9A9690732E39F554341BA38C81AC5DBD /* Frameworks */ = {
+		FFF84B61D22790239E5AB51060392B07 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF_5178D2BF2ED3C7FB6233F9625955420B /* Overture.framework in Frameworks */,
+				18AFBCEF8AAF2BBAE9A6F1FC78A91DCA /* Overture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		G_11F950B4B356DDB6913A5DB4C173E190 /* Products */ = {
+		299FAA84F86298ACB1022F9742B8E5A0 /* Overture */ = {
 			isa = PBXGroup;
 			children = (
-				FR_4E2B58BC7C1A52C7E6773DCE69061656 /* Overture.framework */,
-				FR_90F02BFDF494CDBE6C97DE492263A94B /* Overture.framework */,
-				FR_6F3FE2E50D3E47BB898203E4EBD149BF /* Overture.framework */,
-				FR_39D9F12A182E089A2B5F93163CD1EDF1 /* Overture.framework */,
-				FR_8F24ED5DE4EF63147E7242559B0B9E5F /* OvertureTests.xctest */,
-				FR_18AE5FFA660D996665B03F2932B0BCB1 /* OvertureTests.xctest */,
-				FR_BE9328BCAACE2D9489E911C397146797 /* OvertureTests.xctest */,
-				FR_D135B53ACC43906DA49E7425C31A6565 /* OvertureTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		G_1DBCDCC7F1DE2EF8554C292DCDDDE9F8 /* OvertureTests */ = {
-			isa = PBXGroup;
-			children = (
-				FR_3F2121B78AF24224872C75EE56D5F70F /* ChainTests.swift */,
-				FR_3428EF2F5FC60750C29A0277E5D0A24F /* ComposeTests.swift */,
-				FR_E570AB4EA943846E527E5DDD0D0A2BAA /* ConcatTests.swift */,
-				FR_642C61DF33B3FBDAB515FCAE2B7AFD7E /* CurryTests.swift */,
-				FR_F01714D7070EE93611B66C574DC8CB3B /* FlipTests.swift */,
-				FR_894EF159C69BA0269E09F2FA70417454 /* PipeTests.swift */,
-				FR_8CCF41C907508A12C07C9A17CFF59BFE /* UncurryTests.swift */,
-				FR_18D9A3C99EC2142EE3F085D6E7F3CD0D /* WithTests.swift */,
-				FR_8303D2CCD787D78072A064EF35F7AD07 /* ZipTests.swift */,
-			);
-			path = OvertureTests;
-			sourceTree = "<group>";
-		};
-		G_2F493082FD6CCC084102811B546CB480 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				G_7A6A4F06FDD1C2AA15ACCD2D0BFCEDF6 /* Overture */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		G_7A6A4F06FDD1C2AA15ACCD2D0BFCEDF6 /* Overture */ = {
-			isa = PBXGroup;
-			children = (
-				FR_BD43B719463485B52151D8B6B3B26321 /* Chain.swift */,
-				FR_AA7E2B71688A3974A4073256E321E124 /* Compose.swift */,
-				FR_3D48C5ADF5E20B0266DF3B87F7C91BC0 /* Concat.swift */,
-				FR_06406B14837AB1215EA9ABFB30C4EB34 /* Curry.swift */,
-				FR_40F0CB8AD68A516B6DFCE0B52294B90A /* Flip.swift */,
-				FR_CED83466089E7A243C8C1FCF71E17B9F /* KeyPath.swift */,
-				FR_59A44EA6FAD0A5B8E2EF8DE2AB4031A4 /* Optional.swift */,
-				FR_ACAE1DD95EAB7CC17E032208F3990CB4 /* Pipe.swift */,
-				FR_E6FFDCC4D5BAE48828BC8FFCD7071F55 /* Sequence.swift */,
-				FR_44939FAD205372570B5B330488CA0FCA /* Setters.swift */,
-				FR_BE66E506058F0546B0DB3C896A4D2E78 /* Uncurry.swift */,
-				FR_47E2890D65A828E6E9E5954BFAD0889A /* With.swift */,
-				FR_14522E713A1D406CA1D5652B3864A2B3 /* ZipOptional.swift */,
-				FR_675785456D0006C2F399C66CA7A3B7A5 /* ZipSequence.swift */,
-				FR_131760F06D66B7F830CFF834502AD05E /* Zurry.swift */,
+				D97BF073ECE738E187EE66178549C36A /* Chain.swift */,
+				7B08B278D1B3FD676BFF193C27A0D79E /* Compose.swift */,
+				A0D090CCB03D0CF89F691A3BD80C2585 /* Concat.swift */,
+				8EA94F97250242D8DFDCBC9A57AAE72F /* Curry.swift */,
+				A81D3FAFA02E6A888345E85CAC6AA040 /* Flip.swift */,
+				F47732D91BE055254D925FF1F2C1E22A /* KeyPath.swift */,
+				AFECE5EF0A8E8FCD025E8D0089CDC882 /* Optional.swift */,
+				F01BB18FF8A6F1EE602AFC79779E3507 /* Pipe.swift */,
+				EE3EB2C9AD5D65B3DF2E6C356598EC91 /* Sequence.swift */,
+				2DFD6736C2117E0882A8562EB492A645 /* Setters.swift */,
+				4650006197ED27DA2BC9B0C22D6B88F2 /* Uncurry.swift */,
+				084E843E081D5F78523FA418D6131714 /* With.swift */,
+				04FF47502A293AC317E475AA2235CBAF /* ZipOptional.swift */,
+				E99DF0B49A44E7971D0BADB382224B9A /* ZipSequence.swift */,
+				1B24FFD88524A68CB9897317AC19C4FB /* Zurry.swift */,
 			);
 			path = Overture;
 			sourceTree = "<group>";
 		};
-		G_7E20BC0E5C840F07103A1626F6463993 = {
+		2BE56D2D4CCAC42907146880445C78C9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				G_2F493082FD6CCC084102811B546CB480 /* Sources */,
-				G_80A6216A1BA515FA0580BFC7546B9346 /* Tests */,
-				G_11F950B4B356DDB6913A5DB4C173E190 /* Products */,
+				B9790A29AE31A286882E1FCDEAE35F56 /* Overture.framework */,
+				3DAB21E096E7BD1D45A4C0F137322BFF /* Overture.framework */,
+				3F2AD3F9756AF72C38F41E38EB661C26 /* Overture.framework */,
+				7D9B56D39F0C2B11CEE1EC0F96A57E17 /* Overture.framework */,
+				E915B65EDF7FE8E867A81F9EAD908D66 /* OvertureTests.xctest */,
+				EC0C7C80C73382E609C4F010D7743431 /* OvertureTests.xctest */,
+				4BA0ECE4B36D518F79B6139DB4FCC7C5 /* OvertureTests.xctest */,
+				F9774B9D6F57BC01EAC6189691B5F809 /* OvertureTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		384A7461D0D60B10BA8BA723338D4152 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				299FAA84F86298ACB1022F9742B8E5A0 /* Overture */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		760FACDF4A1B19C347D166DA8177F407 = {
+			isa = PBXGroup;
+			children = (
+				384A7461D0D60B10BA8BA723338D4152 /* Sources */,
+				CDE3275632DF368402510776B655D8B8 /* Tests */,
+				2BE56D2D4CCAC42907146880445C78C9 /* Products */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
 			tabWidth = 2;
 			usesTabs = 0;
 		};
-		G_80A6216A1BA515FA0580BFC7546B9346 /* Tests */ = {
+		CDE3275632DF368402510776B655D8B8 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				G_1DBCDCC7F1DE2EF8554C292DCDDDE9F8 /* OvertureTests */,
+				FB82A865293938AF6CA80864F5D94FB4 /* OvertureTests */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		FB82A865293938AF6CA80864F5D94FB4 /* OvertureTests */ = {
+			isa = PBXGroup;
+			children = (
+				B6F045FBF9701658818BFB0FEB227702 /* ChainTests.swift */,
+				57C2A8ED5445BAC81BB007C22B9AA01B /* ComposeTests.swift */,
+				FB40D88FBAA126DD9F00E79696700EC5 /* ConcatTests.swift */,
+				34A7F4AFACC40C18C2448CF212C733D3 /* CurryTests.swift */,
+				B053E123334CFD3F7CDD749299AB1037 /* FlipTests.swift */,
+				201D646A61FFC0338C9735111E4740D7 /* KeyPathTests.swift */,
+				D343175C20AB7FDC34E806713E4CF2A0 /* PipeTests.swift */,
+				1EA7EBE545481EE4F89D536576AD97BA /* SettersTests.swift */,
+				1B76A26D46C8B5275228859A0DC45198 /* UncurryTests.swift */,
+				AD222BF13D8B21E34284B1EF4A8DE9BC /* WithTests.swift */,
+				5204252DDDD513BECFC712F2D09EEB03 /* ZipTests.swift */,
+			);
+			path = OvertureTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		NT_10077D114ACEE363A2CEA6CF0B64E3F4 /* Overture_macOS */ = {
+		1A9D4BE7E3ABBAE4B1CBB723464B111C /* Overture_macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CL_50708CEE61F9E989C67EFF24892C0B69 /* Build configuration list for PBXNativeTarget "Overture_macOS" */;
+			buildConfigurationList = 0CDD93C9618F0FB41BFE8E5A72C9D5DD /* Build configuration list for PBXNativeTarget "Overture_macOS" */;
 			buildPhases = (
-				SBP_A5E917F826F8629650ECE4E37A7662BB /* Sources */,
+				161790E24C6D9DE7F33776E7FECF7163 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -358,98 +370,32 @@
 			);
 			name = Overture_macOS;
 			productName = Overture_macOS;
-			productReference = FR_90F02BFDF494CDBE6C97DE492263A94B /* Overture.framework */;
+			productReference = 3DAB21E096E7BD1D45A4C0F137322BFF /* Overture.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		NT_597175CE766F23764FEFFAF48905C32F /* OvertureTests_watchOS */ = {
+		32EB4906CEF837202537791A1D5496A8 /* OvertureTests_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CL_5AF1EA735F7B87EE01567A16A5CD29ED /* Build configuration list for PBXNativeTarget "OvertureTests_watchOS" */;
+			buildConfigurationList = 80546AE3835D64741E5D7002F26ED766 /* Build configuration list for PBXNativeTarget "OvertureTests_iOS" */;
 			buildPhases = (
-				SBP_1BFD95156265F3DF310EEA71DA73CBDD /* Sources */,
-				FBP_7D9954787D78471987C96577AC134FA2 /* Frameworks */,
-				CFBP_A974D1A48E91FD7FC169654F91D02F2D /* Embed Frameworks */,
+				5A3D827895BB09759BC3700FC10884EE /* Sources */,
+				48FAEE643DC6569729F1E36B9E3927A6 /* Frameworks */,
+				20032052D7DFB0976A9FF91C09172184 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				TD_4A4A9360B8812BEB5DFB8004B2A0F59D /* PBXTargetDependency */,
+				5EF9E39DF534FE33D8F1D98AC3D3C389 /* PBXTargetDependency */,
 			);
-			name = OvertureTests_watchOS;
-			productName = OvertureTests_watchOS;
-			productReference = FR_D135B53ACC43906DA49E7425C31A6565 /* OvertureTests.xctest */;
+			name = OvertureTests_iOS;
+			productName = OvertureTests_iOS;
+			productReference = E915B65EDF7FE8E867A81F9EAD908D66 /* OvertureTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		NT_5E226C14A867E37F073B5173927AAC2F /* Overture_tvOS */ = {
+		8B0FD87BBE58097B4A4B4BB493ACE221 /* Overture_watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CL_C071CFEEEF2FAABED0507FD49E15B4FC /* Build configuration list for PBXNativeTarget "Overture_tvOS" */;
+			buildConfigurationList = CCB3D84E8FD548CB3885803FD29E4034 /* Build configuration list for PBXNativeTarget "Overture_watchOS" */;
 			buildPhases = (
-				SBP_CF3E323D388A6F050659629DBBDE6909 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Overture_tvOS;
-			productName = Overture_tvOS;
-			productReference = FR_6F3FE2E50D3E47BB898203E4EBD149BF /* Overture.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		NT_8274405197546C7088976F7D3DDE8DF1 /* Overture_iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CL_BFA6DE45E0A9FAE143B3B768B544CBAE /* Build configuration list for PBXNativeTarget "Overture_iOS" */;
-			buildPhases = (
-				SBP_8076F252DD4250D65BA3B2B7D3268A6D /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Overture_iOS;
-			productName = Overture_iOS;
-			productReference = FR_4E2B58BC7C1A52C7E6773DCE69061656 /* Overture.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		NT_A7EF3E9598E4FB2188DAD25389126465 /* OvertureTests_tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CL_F7F5E12226EDDDA171D22414EF925B3D /* Build configuration list for PBXNativeTarget "OvertureTests_tvOS" */;
-			buildPhases = (
-				SBP_4E689FADA7F56E6B33A3A0D5E6EDF73B /* Sources */,
-				FBP_82F81B21EF55982606EBA99DB2F87214 /* Frameworks */,
-				CFBP_EB9DFCF394EE6299CB6702C5B67DAF4F /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				TD_EEC75729A7FFDEBAEE92AEDA65904976 /* PBXTargetDependency */,
-			);
-			name = OvertureTests_tvOS;
-			productName = OvertureTests_tvOS;
-			productReference = FR_BE9328BCAACE2D9489E911C397146797 /* OvertureTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		NT_B01ACAC5656934E5E3A34AF1BC07BFE1 /* OvertureTests_macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CL_0C0228A864C5B61039EBF1D1E2564883 /* Build configuration list for PBXNativeTarget "OvertureTests_macOS" */;
-			buildPhases = (
-				SBP_C62A8D702F229A12297A8231A1D289C3 /* Sources */,
-				FBP_9A9690732E39F554341BA38C81AC5DBD /* Frameworks */,
-				CFBP_E6697115E77B5CEAFDF40AD4F281CC2E /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				TD_BBC670BCBD05373B5FC26337CE2C383F /* PBXTargetDependency */,
-			);
-			name = OvertureTests_macOS;
-			productName = OvertureTests_macOS;
-			productReference = FR_18AE5FFA660D996665B03F2932B0BCB1 /* OvertureTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		NT_BDD2A196AF72DBE19A7C7D4CC1536658 /* Overture_watchOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CL_2285EF382DEAC32B45BEE6FEAAD489AD /* Build configuration list for PBXNativeTarget "Overture_watchOS" */;
-			buildPhases = (
-				SBP_18A863E2774C6BB07D944D1C51B715BB /* Sources */,
+				6E69405D0BE27C8A30A5496E6BCB9280 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -457,238 +403,346 @@
 			);
 			name = Overture_watchOS;
 			productName = Overture_watchOS;
-			productReference = FR_39D9F12A182E089A2B5F93163CD1EDF1 /* Overture.framework */;
+			productReference = 7D9B56D39F0C2B11CEE1EC0F96A57E17 /* Overture.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		NT_DFC257B304396EB2F8621A597832188B /* OvertureTests_iOS */ = {
+		A5595549A81068462256743E32D7E36D /* Overture_tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CL_8F750B9C9B3C4590CCF1D64C2E267BD6 /* Build configuration list for PBXNativeTarget "OvertureTests_iOS" */;
+			buildConfigurationList = CB767728D6D743FBB5C64476E378D172 /* Build configuration list for PBXNativeTarget "Overture_tvOS" */;
 			buildPhases = (
-				SBP_BB4F42078C803C34991DEDBD4AF68F3F /* Sources */,
-				FBP_1FBE797FD0E1BA26FE14DDA121F4BBF4 /* Frameworks */,
-				CFBP_A8D8850889CDA25BE1CACB1B4E77EC89 /* Embed Frameworks */,
+				71CB60E0EA542127D297E8A307F47C31 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				TD_268DC8844C3B78F8D205B5E94C754E68 /* PBXTargetDependency */,
 			);
-			name = OvertureTests_iOS;
-			productName = OvertureTests_iOS;
-			productReference = FR_8F24ED5DE4EF63147E7242559B0B9E5F /* OvertureTests.xctest */;
+			name = Overture_tvOS;
+			productName = Overture_tvOS;
+			productReference = 3F2AD3F9756AF72C38F41E38EB661C26 /* Overture.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BF96F05D873EB74DC8204D6037969ED1 /* OvertureTests_tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 171ACD075E6A431BEACF30FA042FE88E /* Build configuration list for PBXNativeTarget "OvertureTests_tvOS" */;
+			buildPhases = (
+				F4BD719358EE952432F3F7F4F033733C /* Sources */,
+				1F5CDC16937E94D36B3079BA1DBC0F7E /* Frameworks */,
+				03021432F783FCBA0A9F743BEB9D5257 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D10C3703E556AF32D4E681221AC63A58 /* PBXTargetDependency */,
+			);
+			name = OvertureTests_tvOS;
+			productName = OvertureTests_tvOS;
+			productReference = 4BA0ECE4B36D518F79B6139DB4FCC7C5 /* OvertureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C986EA57938522DE23E8CA570CCC6C80 /* Overture_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F912E56FCB034C42D490B5760A9DAC7 /* Build configuration list for PBXNativeTarget "Overture_iOS" */;
+			buildPhases = (
+				A1215453A582AA6871B79E466A7F5B4A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Overture_iOS;
+			productName = Overture_iOS;
+			productReference = B9790A29AE31A286882E1FCDEAE35F56 /* Overture.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F137F6702BF7EF8181D5D0610F2C409E /* OvertureTests_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB38119FB15C074AB33D550D12AE6725 /* Build configuration list for PBXNativeTarget "OvertureTests_macOS" */;
+			buildPhases = (
+				237DBAEB0C300257060090083C5DEFE1 /* Sources */,
+				FFF84B61D22790239E5AB51060392B07 /* Frameworks */,
+				FEC1F42078B07B9D3F7A79625478CFC4 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A5A63717E0E2E4526AFAEB1AB603C11 /* PBXTargetDependency */,
+			);
+			name = OvertureTests_macOS;
+			productName = OvertureTests_macOS;
+			productReference = EC0C7C80C73382E609C4F010D7743431 /* OvertureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F256AD3DF59DF20D3BDA368BF2F8E39A /* OvertureTests_watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0826501B91346ADADC132B17E5D01A8A /* Build configuration list for PBXNativeTarget "OvertureTests_watchOS" */;
+			buildPhases = (
+				5885560B35536D01FBBB800E30779AE7 /* Sources */,
+				F78D121EA755472CEE4494174A80FAC2 /* Frameworks */,
+				5624901174408EDE19339C06D898BAD7 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DE762A0542A58654137916C1E96D83E /* PBXTargetDependency */,
+			);
+			name = OvertureTests_watchOS;
+			productName = OvertureTests_watchOS;
+			productReference = F9774B9D6F57BC01EAC6189691B5F809 /* OvertureTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		P_62291E3156CC16BEA2310178AB28EDF9 /* Project object */ = {
+		BCA18CFE588C3661CD98276FEAFD2ABF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1000;
 			};
-			buildConfigurationList = CL_A91273136B4A8C2B0655340790C26570 /* Build configuration list for PBXProject "Overture" */;
-			compatibilityVersion = "Xcode 3.2";
+			buildConfigurationList = B6034B7F1C24F43BE4637C8B2CB15F8A /* Build configuration list for PBXProject "Overture" */;
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = G_7E20BC0E5C840F07103A1626F6463993;
+			mainGroup = 760FACDF4A1B19C347D166DA8177F407;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				NT_DFC257B304396EB2F8621A597832188B /* OvertureTests_iOS */,
-				NT_B01ACAC5656934E5E3A34AF1BC07BFE1 /* OvertureTests_macOS */,
-				NT_A7EF3E9598E4FB2188DAD25389126465 /* OvertureTests_tvOS */,
-				NT_597175CE766F23764FEFFAF48905C32F /* OvertureTests_watchOS */,
-				NT_8274405197546C7088976F7D3DDE8DF1 /* Overture_iOS */,
-				NT_10077D114ACEE363A2CEA6CF0B64E3F4 /* Overture_macOS */,
-				NT_5E226C14A867E37F073B5173927AAC2F /* Overture_tvOS */,
-				NT_BDD2A196AF72DBE19A7C7D4CC1536658 /* Overture_watchOS */,
+				32EB4906CEF837202537791A1D5496A8 /* OvertureTests_iOS */,
+				F137F6702BF7EF8181D5D0610F2C409E /* OvertureTests_macOS */,
+				BF96F05D873EB74DC8204D6037969ED1 /* OvertureTests_tvOS */,
+				F256AD3DF59DF20D3BDA368BF2F8E39A /* OvertureTests_watchOS */,
+				C986EA57938522DE23E8CA570CCC6C80 /* Overture_iOS */,
+				1A9D4BE7E3ABBAE4B1CBB723464B111C /* Overture_macOS */,
+				A5595549A81068462256743E32D7E36D /* Overture_tvOS */,
+				8B0FD87BBE58097B4A4B4BB493ACE221 /* Overture_watchOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		SBP_18A863E2774C6BB07D944D1C51B715BB /* Sources */ = {
+		161790E24C6D9DE7F33776E7FECF7163 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF_97E6624C8964DC16CA053706AD44593C /* Chain.swift in Sources */,
-				BF_D75B5B389BB584D48DD3B74707AD1117 /* Compose.swift in Sources */,
-				BF_2D763D9662AF81F11CAE2237BB6B8C50 /* Concat.swift in Sources */,
-				BF_2BA7E2C18CD01F7432B63F3F8962C1FF /* Curry.swift in Sources */,
-				BF_4173D4D3681C22A9FCB7DA4274133666 /* Flip.swift in Sources */,
-				BF_1BCCEF798F0DE525994943DDBBF085D8 /* KeyPath.swift in Sources */,
-				BF_055B46070C29E2D0C065A0C17C52477B /* Optional.swift in Sources */,
-				BF_38A07E7B05BE5F0CDBDE5C4D15432817 /* Pipe.swift in Sources */,
-				BF_0B70976A5F16222266741EA9F8B0F894 /* Sequence.swift in Sources */,
-				BF_712EB1F808E2309DE1C48979810096C2 /* Setters.swift in Sources */,
-				BF_49B72348CD0414A409FDBF67E7F89245 /* Uncurry.swift in Sources */,
-				BF_3090B5F45A7D6547D0AC745A5A2E5018 /* With.swift in Sources */,
-				BF_9EB5E87F8E690B0CCE2B43CA29FF79D5 /* ZipOptional.swift in Sources */,
-				BF_1192CFC46FEB7D9A936A6616183CCFDA /* ZipSequence.swift in Sources */,
-				BF_37EF932730C72613BE2E3C40AE1D47B5 /* Zurry.swift in Sources */,
+				7186BB57D5AAA941156C7BD31E9CDF90 /* Chain.swift in Sources */,
+				848829408C941E8AEB3E3263570B7207 /* Compose.swift in Sources */,
+				15C2F56220C4DB411F1FBE28685D2457 /* Concat.swift in Sources */,
+				3CD1B7128A88694504B5573963509BD9 /* Curry.swift in Sources */,
+				6AE1E6B8888FC6D95539785674E8ED7A /* Flip.swift in Sources */,
+				51E7B97CF3D70E8F380847AC25D10724 /* KeyPath.swift in Sources */,
+				0EE9065DA8A609076E05AC14DF5F2A64 /* Optional.swift in Sources */,
+				7937075297A0AD79943CCE04CDC89D31 /* Pipe.swift in Sources */,
+				46FA836E1EEE7A4941952D6C03B548FD /* Sequence.swift in Sources */,
+				6B5BF089FF419D999B09DADA4B90F019 /* Setters.swift in Sources */,
+				5BF99D80162BCF75F326D2A7110AB78D /* Uncurry.swift in Sources */,
+				6EBD0C9EBF49E00B67221787356154C7 /* With.swift in Sources */,
+				3C2AA341B47C680902A4D9EA33662E08 /* ZipOptional.swift in Sources */,
+				BCB9EFEF8252091B69DF312F282F0921 /* ZipSequence.swift in Sources */,
+				1A788B5CB236F31F79E1A6B168D32880 /* Zurry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		SBP_1BFD95156265F3DF310EEA71DA73CBDD /* Sources */ = {
+		237DBAEB0C300257060090083C5DEFE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF_3E59E985F00D59C950F152A2A90D2627 /* ChainTests.swift in Sources */,
-				BF_EE01FEA596BA63D529AD6B7BFF9A9833 /* ComposeTests.swift in Sources */,
-				BF_22059BB05E3C1CA4F2F2499C2457588B /* ConcatTests.swift in Sources */,
-				BF_5FDC0CC9A849E042DB8BCE695E390AAE /* CurryTests.swift in Sources */,
-				BF_98EB1693A69DDB14C0032BB43370B41E /* FlipTests.swift in Sources */,
-				BF_921521576FF0DCBAC04FF81E0C35634C /* PipeTests.swift in Sources */,
-				BF_EDCAC53E731A364D955148CBF7C01189 /* UncurryTests.swift in Sources */,
-				BF_9AF5B81DB328688E059101D4272F781B /* WithTests.swift in Sources */,
-				BF_596F0027010738DAB00C8B67979DD273 /* ZipTests.swift in Sources */,
+				A1F22F4D635757EAB34C129F4B6C37C8 /* ChainTests.swift in Sources */,
+				9248ADC5C747D6616B1CCD74BFB3353C /* ComposeTests.swift in Sources */,
+				9A17BBDFB4E9C2BD1D24311A4789D419 /* ConcatTests.swift in Sources */,
+				995258C292C2DC6D97A5F0A9827798B8 /* CurryTests.swift in Sources */,
+				FC4483CC8D46316C011ADC707E0E6384 /* FlipTests.swift in Sources */,
+				DE65651117E08D149D4B84C1016F699D /* KeyPathTests.swift in Sources */,
+				8B8412AF2AA936B2C42A18B66E078E36 /* PipeTests.swift in Sources */,
+				8AEF80A1B5F8C6FC5A4A649F878F2A50 /* SettersTests.swift in Sources */,
+				B04814104E012D3CF1F71811EF586642 /* UncurryTests.swift in Sources */,
+				BE5381DA16126AF79384FAADC234920F /* WithTests.swift in Sources */,
+				9E60CD9E9F2B29E484D6340440EAAF05 /* ZipTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		SBP_4E689FADA7F56E6B33A3A0D5E6EDF73B /* Sources */ = {
+		5885560B35536D01FBBB800E30779AE7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF_665CCCEEB3949B1183C0A2961253961B /* ChainTests.swift in Sources */,
-				BF_1B68DFDBAEFDB22A0BAB577B0FC87ABC /* ComposeTests.swift in Sources */,
-				BF_1C7D0EDE9443716C8798872ABBEA5F61 /* ConcatTests.swift in Sources */,
-				BF_09059C1CDD5211C33FA67403B41DDC66 /* CurryTests.swift in Sources */,
-				BF_B70D252B076276576A68BF8B57AB99C4 /* FlipTests.swift in Sources */,
-				BF_E283A25C25BAF326E3C9DB445B4405A2 /* PipeTests.swift in Sources */,
-				BF_176FFE655CEE7C7137793DF5DCFC9AA8 /* UncurryTests.swift in Sources */,
-				BF_70D8D1E4BF94B7819E2A89435C250B55 /* WithTests.swift in Sources */,
-				BF_F7D23547E8B67F5D980833039F2D5041 /* ZipTests.swift in Sources */,
+				BCB21860FD45F0379E24CD1C376A3080 /* ChainTests.swift in Sources */,
+				2584827102FD30AD7A9600A42AAA7584 /* ComposeTests.swift in Sources */,
+				F38087EC794AD490083F04EDB57ECB82 /* ConcatTests.swift in Sources */,
+				001F3396B104BF2702DBF781D489F7C5 /* CurryTests.swift in Sources */,
+				B3BB450E97D31A793A0B90F290783B62 /* FlipTests.swift in Sources */,
+				E3170BFF2003160511D1D9F79F5F558D /* KeyPathTests.swift in Sources */,
+				61474BADF6B660F819DC22624EB75269 /* PipeTests.swift in Sources */,
+				146BB17BA51BEE1761DBB2C738F5D23D /* SettersTests.swift in Sources */,
+				A2FFC2930E0AC00C21BC3F099BF9C4CB /* UncurryTests.swift in Sources */,
+				A6C3BA3AAD20AE9A70D39349E576CD6D /* WithTests.swift in Sources */,
+				81626D608656ABD84555DB58289D014F /* ZipTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		SBP_8076F252DD4250D65BA3B2B7D3268A6D /* Sources */ = {
+		5A3D827895BB09759BC3700FC10884EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF_C185BBF408E02D23CFB8707C4243BA1F /* Chain.swift in Sources */,
-				BF_06CD9D59D5DDD8EBA8A134A4EEF30773 /* Compose.swift in Sources */,
-				BF_B2FFA3F34E6949896DF737B0FADACACD /* Concat.swift in Sources */,
-				BF_904BA29B44C375543D6D15542535EA44 /* Curry.swift in Sources */,
-				BF_036CCC31AEB43A8840E80AB59C80C03B /* Flip.swift in Sources */,
-				BF_CF2E37EAC29CF4A0360A91273E7E3483 /* KeyPath.swift in Sources */,
-				BF_230F9B6FE8E082DB44BD5B319B5EC8A6 /* Optional.swift in Sources */,
-				BF_4A3A246F730408C3BA0F754CF9C81B2B /* Pipe.swift in Sources */,
-				BF_137C6CF8F03E2BB84F2E61ACD847A718 /* Sequence.swift in Sources */,
-				BF_25DABD9A43C0A18D70D6948D4E19B3B8 /* Setters.swift in Sources */,
-				BF_56663C22555FC1A9AD4A061E73D42A02 /* Uncurry.swift in Sources */,
-				BF_6E24BEDF11530A5444CFE72F6527CB52 /* With.swift in Sources */,
-				BF_B295462DBECE783BDCE057D2B8E7EEB0 /* ZipOptional.swift in Sources */,
-				BF_F477D6258C3EE370A7887DEEC9E7660B /* ZipSequence.swift in Sources */,
-				BF_46E820317D1771B4F19B7F00A63DB1F7 /* Zurry.swift in Sources */,
+				A179A3754879D45FB9291A9A5596F94E /* ChainTests.swift in Sources */,
+				E7A289EA534B5BA50BC41750773F4822 /* ComposeTests.swift in Sources */,
+				943AB10B901246B33C39A077FED467C0 /* ConcatTests.swift in Sources */,
+				EFDB5DCEEF10D4033113ABAB0AA4C1A6 /* CurryTests.swift in Sources */,
+				C174BC5CD5FE0934EAC278AA7D91381D /* FlipTests.swift in Sources */,
+				335252B84189FF6A8B7D2FEF62FA7F1D /* KeyPathTests.swift in Sources */,
+				C9ABC9D58AEC50D3A680FA8EF1F12612 /* PipeTests.swift in Sources */,
+				8A6E4075BAD88AD418037EC23B28B6D3 /* SettersTests.swift in Sources */,
+				99E025EB29ECA238E6EAB0FBD40651DB /* UncurryTests.swift in Sources */,
+				D5C5DA244F9649501879F6F6E38E5801 /* WithTests.swift in Sources */,
+				0BB1EBC78C02944ED43101B4CF3A2738 /* ZipTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		SBP_A5E917F826F8629650ECE4E37A7662BB /* Sources */ = {
+		6E69405D0BE27C8A30A5496E6BCB9280 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF_B72E327228D972D3BF27D8C4360AE52E /* Chain.swift in Sources */,
-				BF_E7D851F98C1DD5DAC4B662FB8EDA20A2 /* Compose.swift in Sources */,
-				BF_C9E0218E7E989AFE30ED25E3A271E216 /* Concat.swift in Sources */,
-				BF_7DC0A661822140B069850CA3FFB1A5AA /* Curry.swift in Sources */,
-				BF_27190B2C2FE63C3EC797E0D43DE54251 /* Flip.swift in Sources */,
-				BF_8B33C441D0B4437578A050002FB9B7B8 /* KeyPath.swift in Sources */,
-				BF_4B7C8A07213DF729684C042E081CE534 /* Optional.swift in Sources */,
-				BF_9B9A139FA3FA07ED07A1F39C9EA12AB7 /* Pipe.swift in Sources */,
-				BF_F504DA97111C9BD1A262367D4DE29AA0 /* Sequence.swift in Sources */,
-				BF_23E08DC7883D3F45E61CA14DBD5E5C65 /* Setters.swift in Sources */,
-				BF_346F1FDD5E98442ECCF036FF7AE750FC /* Uncurry.swift in Sources */,
-				BF_B528B3562EC96F89D3636E0288F8CED9 /* With.swift in Sources */,
-				BF_3EF00D831004B23BE518A6AB4A653D2C /* ZipOptional.swift in Sources */,
-				BF_29B1493905E3862F8C7B1F509CFFA65C /* ZipSequence.swift in Sources */,
-				BF_C9C6E7A1F446E22F300B28E43DCCAD12 /* Zurry.swift in Sources */,
+				A2A3AA5A0E05B28B84151A09DF15BC30 /* Chain.swift in Sources */,
+				107C891600865FF96DBE393412D3ABD5 /* Compose.swift in Sources */,
+				CB9FE386677EAF092DC85D8759301ED6 /* Concat.swift in Sources */,
+				69EB1EDEB5D2B358781FF922F98E50BF /* Curry.swift in Sources */,
+				7C72901F10AFF5566E9EDEC43B0233D7 /* Flip.swift in Sources */,
+				A73C862C52F80B61126A0F87EB368513 /* KeyPath.swift in Sources */,
+				0409352AD8BB514115A8C60938C82745 /* Optional.swift in Sources */,
+				E1BFBFBC763764A4715EE17FC80FD4ED /* Pipe.swift in Sources */,
+				832034B8A787CD5DDFE1811A2D477CD4 /* Sequence.swift in Sources */,
+				11B22B559AAB82DBC744C0E83DA69D68 /* Setters.swift in Sources */,
+				9290FC9E5A0990D7F39CF5CA20174A8E /* Uncurry.swift in Sources */,
+				E8220B8663F077A460AE81A02984A1F6 /* With.swift in Sources */,
+				B1E8A23199BBB6C6DF44CA9641E3B5F4 /* ZipOptional.swift in Sources */,
+				CF32FAF31549ACB2D5DEB4EDCDBEBDC6 /* ZipSequence.swift in Sources */,
+				CED29B4A00D122AFA98FA1EA6ADA4352 /* Zurry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		SBP_BB4F42078C803C34991DEDBD4AF68F3F /* Sources */ = {
+		71CB60E0EA542127D297E8A307F47C31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF_A6F96D9755A044B1C7DD63AE6F8C0725 /* ChainTests.swift in Sources */,
-				BF_DD1ED9CDC558BF512F9E67D17EFB4BB7 /* ComposeTests.swift in Sources */,
-				BF_F63217E0DE229F34241D7D228AD06469 /* ConcatTests.swift in Sources */,
-				BF_1749A44E96CC52A197B062D79F1F0A81 /* CurryTests.swift in Sources */,
-				BF_50D1CF126B54BB1D3B7B190A9CC91D6C /* FlipTests.swift in Sources */,
-				BF_56AE4D14225B7F3605C29B636146904A /* PipeTests.swift in Sources */,
-				BF_C8BDB157B9EFF4D6A4CDC2A407A5CE42 /* UncurryTests.swift in Sources */,
-				BF_C0CD29FD542F266D6084F875D426D7FE /* WithTests.swift in Sources */,
-				BF_82BFB7E0BC285F47C29D03A8F9D7404A /* ZipTests.swift in Sources */,
+				36BFD18F77E3BD1734F58B582E47B332 /* Chain.swift in Sources */,
+				43A11F7A1B4326AF4004893A57850040 /* Compose.swift in Sources */,
+				4C4DBA5B2C8F447CE75306F52B82BEF0 /* Concat.swift in Sources */,
+				5B983326EAFB3ACD23EDB75D759B6136 /* Curry.swift in Sources */,
+				47FFECD33F68567D2A1B506A8D9A1191 /* Flip.swift in Sources */,
+				A2EE8565D1D7133AC0CAFF50CB4C5C78 /* KeyPath.swift in Sources */,
+				39A2FF6C060831A2B7DB6B0B680F2D5C /* Optional.swift in Sources */,
+				4B5FA71536D98827F8434A1FD8440AF2 /* Pipe.swift in Sources */,
+				E3396CA2B0860877D985D8A5D67CCC53 /* Sequence.swift in Sources */,
+				BD9CEE1F438C12D2722FB7F55EFD8ED6 /* Setters.swift in Sources */,
+				470119044B7454EA3BCCB5E4B5C82998 /* Uncurry.swift in Sources */,
+				B1E664B7696FC45E8BE01A450125F082 /* With.swift in Sources */,
+				C14135EEAEEF88DD61564EB27E0EF73B /* ZipOptional.swift in Sources */,
+				FF4A6C139CA4C5582D4FC44D9814BB81 /* ZipSequence.swift in Sources */,
+				416EE14184CE55BCE0DAF64AD364F383 /* Zurry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		SBP_C62A8D702F229A12297A8231A1D289C3 /* Sources */ = {
+		A1215453A582AA6871B79E466A7F5B4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF_359571871BBAF81A15C26FAC40D3217A /* ChainTests.swift in Sources */,
-				BF_D0DFDEC929DE90496D72C0D8EC2A6E7F /* ComposeTests.swift in Sources */,
-				BF_0988EAB8446B2A83EE467DBC06FA5F49 /* ConcatTests.swift in Sources */,
-				BF_2D1981391FA63A0E37F655FA14CE92D2 /* CurryTests.swift in Sources */,
-				BF_D4112F27DFD08D8049E69B81D0A72A87 /* FlipTests.swift in Sources */,
-				BF_842B1BD199570421173717803C42F21D /* PipeTests.swift in Sources */,
-				BF_8A3088E80AA00A443FDBC84B0D5B560D /* UncurryTests.swift in Sources */,
-				BF_DB3369BBC5526504E35DB31AAB3BDA4F /* WithTests.swift in Sources */,
-				BF_ED286662266F635BE27959D1F6A6C525 /* ZipTests.swift in Sources */,
+				410160D08F01372B322767EEFAD782D8 /* Chain.swift in Sources */,
+				1287B9450D4CDE3D1A32A5A01DCBA78B /* Compose.swift in Sources */,
+				2573EEFEFDFE02C3D03299F835328A6C /* Concat.swift in Sources */,
+				436F0B0ECB9F450C8C0A4BB9CC2B8FE9 /* Curry.swift in Sources */,
+				7BC4CE020BAFB8A31C115F4297888268 /* Flip.swift in Sources */,
+				080313085695A426F12510BB357A2C65 /* KeyPath.swift in Sources */,
+				BC2173C747D7DE695B351EFE60074789 /* Optional.swift in Sources */,
+				2BF95A77043702E566D1D0596EDEFB95 /* Pipe.swift in Sources */,
+				A14893BF87AAED7A00A0E77B86CE05E5 /* Sequence.swift in Sources */,
+				DD57E0B404D83AAB9825F66B39C056B9 /* Setters.swift in Sources */,
+				92F07591B14D93DD393625AC92148CB8 /* Uncurry.swift in Sources */,
+				7361B923155BA57151619BEF50008C8C /* With.swift in Sources */,
+				3235441DEEC5CE0DD0796F8D2383B22C /* ZipOptional.swift in Sources */,
+				B18C19D5CD8829AA12F39CEF694AD8F4 /* ZipSequence.swift in Sources */,
+				6A49C5899BD6161B859EC918C1B3DB9C /* Zurry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		SBP_CF3E323D388A6F050659629DBBDE6909 /* Sources */ = {
+		F4BD719358EE952432F3F7F4F033733C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF_34525EA6AF600AF6FBCA3FF0C7E78C2E /* Chain.swift in Sources */,
-				BF_E17891411ABF13425EAEB0880365ECBF /* Compose.swift in Sources */,
-				BF_F33DBFB4B987C0047D090B142DE749E3 /* Concat.swift in Sources */,
-				BF_59A4B2E49BBC5165FBA540F0380AE2D0 /* Curry.swift in Sources */,
-				BF_3CCDE4190708D683E1BCA6D54292F075 /* Flip.swift in Sources */,
-				BF_99E891DF12DEC901ADD06EDF85DAEE01 /* KeyPath.swift in Sources */,
-				BF_9FCED78B5D656A757171F622A020C8B1 /* Optional.swift in Sources */,
-				BF_70435B60151C2D168584381AADE1A932 /* Pipe.swift in Sources */,
-				BF_AD269A8A40532DCB2C05F17F6F6D8298 /* Sequence.swift in Sources */,
-				BF_ED3F92BE2587005B3D3651D4EB001EE1 /* Setters.swift in Sources */,
-				BF_7055E9E532A64B9B25455BB1EA256ADA /* Uncurry.swift in Sources */,
-				BF_BA406CAED1E2580826AE3DD93C9782FF /* With.swift in Sources */,
-				BF_2DDE838E5D4285E52805305ED6340971 /* ZipOptional.swift in Sources */,
-				BF_35F492820F691EF4FF4A4819052C120C /* ZipSequence.swift in Sources */,
-				BF_CC439A6FA9BCF39A40245D6322BC0357 /* Zurry.swift in Sources */,
+				4E3805061EE63C0E06903677329DBE90 /* ChainTests.swift in Sources */,
+				DEF99F3F904897AEC809AA30EDCFFBCE /* ComposeTests.swift in Sources */,
+				0642C01F381B66CBB4669D902723BF5F /* ConcatTests.swift in Sources */,
+				B41D01CDC2C32AAC7840EC4B352D5B3C /* CurryTests.swift in Sources */,
+				56FAECD100E201D6C577196F79FA5F1D /* FlipTests.swift in Sources */,
+				61FBAB40E124E2B55B54A7DB6B6753FD /* KeyPathTests.swift in Sources */,
+				63EBE085108B0BFB19163A86BE066CAA /* PipeTests.swift in Sources */,
+				3DA5A0D52BCEA1D98E60E1B79F7657B7 /* SettersTests.swift in Sources */,
+				C6776ECB98BA22E2777FBCF7C3C7AB88 /* UncurryTests.swift in Sources */,
+				55CE50EF27C9943D253DF7C2CE197A54 /* WithTests.swift in Sources */,
+				EFE7882FF7F88E2DA8D5E81A6D7C47AE /* ZipTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		TD_268DC8844C3B78F8D205B5E94C754E68 /* PBXTargetDependency */ = {
+		2A5A63717E0E2E4526AFAEB1AB603C11 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = NT_8274405197546C7088976F7D3DDE8DF1 /* Overture_iOS */;
-			targetProxy = CIP_128782D8CB237AE821E2E63609F3FB2F /* PBXContainerItemProxy */;
+			target = 1A9D4BE7E3ABBAE4B1CBB723464B111C /* Overture_macOS */;
+			targetProxy = 16E695C987BCF60F9CC4824ADF7C8960 /* PBXContainerItemProxy */;
 		};
-		TD_4A4A9360B8812BEB5DFB8004B2A0F59D /* PBXTargetDependency */ = {
+		5EF9E39DF534FE33D8F1D98AC3D3C389 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = NT_BDD2A196AF72DBE19A7C7D4CC1536658 /* Overture_watchOS */;
-			targetProxy = CIP_62CB52BFC59C0EB722C96FD98D085D55 /* PBXContainerItemProxy */;
+			target = C986EA57938522DE23E8CA570CCC6C80 /* Overture_iOS */;
+			targetProxy = 8E0E558526CE6BE49EDC10CB7DA3FEAB /* PBXContainerItemProxy */;
 		};
-		TD_BBC670BCBD05373B5FC26337CE2C383F /* PBXTargetDependency */ = {
+		8DE762A0542A58654137916C1E96D83E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = NT_10077D114ACEE363A2CEA6CF0B64E3F4 /* Overture_macOS */;
-			targetProxy = CIP_E30A9057759711CF0D7C08E6005F2C05 /* PBXContainerItemProxy */;
+			target = 8B0FD87BBE58097B4A4B4BB493ACE221 /* Overture_watchOS */;
+			targetProxy = ADDD87334EF1836FA6BC16FAAD93CAF4 /* PBXContainerItemProxy */;
 		};
-		TD_EEC75729A7FFDEBAEE92AEDA65904976 /* PBXTargetDependency */ = {
+		D10C3703E556AF32D4E681221AC63A58 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = NT_5E226C14A867E37F073B5173927AAC2F /* Overture_tvOS */;
-			targetProxy = CIP_EB9D7367BF23C566EE2187C63C4709AB /* PBXContainerItemProxy */;
+			target = A5595549A81068462256743E32D7E36D /* Overture_tvOS */;
+			targetProxy = 6E05921A049C412B743A4A42E2ED5DFB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		BC_22075C9152A9DFDCE86ECE53B0E36F61 /* Debug */ = {
+		03292967148AFF7F1B88D73A712B7BB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.OvertureTests-tvOS";
+				PRODUCT_NAME = OvertureTests;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		048832E29A84EEC465CC6D5D2A302817 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Overture-iOS";
+				PRODUCT_NAME = Overture;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		0B75361333C2CA996EFF607879487A8A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -699,9 +753,65 @@
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 			};
+			name = Release;
+		};
+		0FEB66088DB81EC9F505A094E765AF2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Overture-tvOS";
+				PRODUCT_NAME = Overture;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		15C9CBAAEDC34EDCF28EC6D328C5C5C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Overture-tvOS";
+				PRODUCT_NAME = Overture;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
 			name = Debug;
 		};
-		BC_2CABDE184AC9986F5269201A8C6A203D /* Debug */ = {
+		1D880E6EC106303AA3484DCB3086A1FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.OvertureTests-tvOS";
+				PRODUCT_NAME = OvertureTests;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		261B0C46E735DDE496CB13651A0FA9DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -723,64 +833,61 @@
 			};
 			name = Debug;
 		};
-		BC_315CA652144D474922237F965AB5DB3C /* Release */ = {
+		3963AD8B560B2D06D13967D1436BBCCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Overture-watchOS";
-				PRODUCT_NAME = Overture;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				VERSIONING_SYSTEM = "apple-generic";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
-		BC_42DF2B231ECC28FDC4C9421128F5572F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.OvertureTests-macOS";
-				PRODUCT_NAME = OvertureTests;
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		BC_43DF38F44152CF63A0091BF8F906583F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.OvertureTests-iOS";
-				PRODUCT_NAME = OvertureTests;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		BC_5A23DBFC92DA1846D22A4D9FB08D13BC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.OvertureTests-tvOS";
-				PRODUCT_NAME = OvertureTests;
-				SDKROOT = appletvos;
-				TARGETED_DEVICE_FAMILY = 3;
-			};
-			name = Release;
-		};
-		BC_7A0DEB9D1A0BCE70AED2789FA727D95C /* Debug */ = {
+		50D6D05CAE99B59CD58B609DE8D29EA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -842,7 +949,7 @@
 			};
 			name = Debug;
 		};
-		BC_7E920B099D88B4F4C83917BB441CDB46 /* Release */ = {
+		5637C74491CF65E32AA774041757F617 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -854,7 +961,29 @@
 			};
 			name = Release;
 		};
-		BC_963191EF7773FAF0579236B9E36A7E69 /* Debug */ = {
+		65E80FEF4E6E3D38D15B44B049046B0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Overture-iOS";
+				PRODUCT_NAME = Overture;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		91119690EC192B80F6E82A0BE11E6C50 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -866,19 +995,19 @@
 			};
 			name = Debug;
 		};
-		BC_9E0EA2068C03FEE9BA2DD84F670DA0A9 /* Debug */ = {
+		AF93532D6D75E770499CC3DAE01A0FAF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.OvertureTests-tvOS";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.OvertureTests-macOS";
 				PRODUCT_NAME = OvertureTests;
-				SDKROOT = appletvos;
-				TARGETED_DEVICE_FAMILY = 3;
+				SDKROOT = macosx;
 			};
-			name = Debug;
+			name = Release;
 		};
-		BC_B19D89331BA82CFC5C151F9450FEE197 /* Release */ = {
+		B25120F679C07B0B06436D552318010C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -900,83 +1029,20 @@
 			};
 			name = Release;
 		};
-		BC_B9A32C20F46D792FC02A3936012D0D88 /* Release */ = {
+		B2E5B01B5AF07E0E0BE16344CC2BA405 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Overture-iOS";
-				PRODUCT_NAME = Overture;
-				SDKROOT = iphoneos;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.OvertureTests-watchOS";
+				PRODUCT_NAME = OvertureTests;
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
+				TARGETED_DEVICE_FAMILY = 4;
 			};
-			name = Release;
+			name = Debug;
 		};
-		BC_CB2E59FFCAB6553AAF144896D40785F8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		BC_D3563621059DE7C3802259B090277819 /* Debug */ = {
+		B496ED7EDD817E95B49B7B7E2D5ADF96 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -997,7 +1063,7 @@
 			};
 			name = Debug;
 		};
-		BC_D57D19C6AEBC39ED7705AE33BE949BF9 /* Debug */ = {
+		BE07BA3211DE82ECB1A0EA362FF1C199 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -1009,158 +1075,112 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Overture-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Overture-watchOS";
 				PRODUCT_NAME = Overture;
-				SDKROOT = appletvos;
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
+				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
-			name = Debug;
+			name = Release;
 		};
-		BC_D92DE85EAB8EE6E9070DABF95CD9D154 /* Release */ = {
+		DB79CDB0C13BF049EA21166A6DAFFC72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.OvertureTests-watchOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.OvertureTests-iOS";
 				PRODUCT_NAME = OvertureTests;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-			};
-			name = Release;
-		};
-		BC_F32A4BDE3D7961651DA70F2D4BADC352 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Overture-tvOS";
-				PRODUCT_NAME = Overture;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Release;
-		};
-		BC_F6EB5B73F9E580BC3F3E9CC61E6FECE3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Overture-iOS";
-				PRODUCT_NAME = Overture;
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CL_0C0228A864C5B61039EBF1D1E2564883 /* Build configuration list for PBXNativeTarget "OvertureTests_macOS" */ = {
+		0826501B91346ADADC132B17E5D01A8A /* Build configuration list for PBXNativeTarget "OvertureTests_watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC_963191EF7773FAF0579236B9E36A7E69 /* Debug */,
-				BC_42DF2B231ECC28FDC4C9421128F5572F /* Release */,
+				B2E5B01B5AF07E0E0BE16344CC2BA405 /* Debug */,
+				0B75361333C2CA996EFF607879487A8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "";
 		};
-		CL_2285EF382DEAC32B45BEE6FEAAD489AD /* Build configuration list for PBXNativeTarget "Overture_watchOS" */ = {
+		0CDD93C9618F0FB41BFE8E5A72C9D5DD /* Build configuration list for PBXNativeTarget "Overture_macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC_D3563621059DE7C3802259B090277819 /* Debug */,
-				BC_315CA652144D474922237F965AB5DB3C /* Release */,
+				261B0C46E735DDE496CB13651A0FA9DA /* Debug */,
+				B25120F679C07B0B06436D552318010C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "";
 		};
-		CL_50708CEE61F9E989C67EFF24892C0B69 /* Build configuration list for PBXNativeTarget "Overture_macOS" */ = {
+		171ACD075E6A431BEACF30FA042FE88E /* Build configuration list for PBXNativeTarget "OvertureTests_tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC_2CABDE184AC9986F5269201A8C6A203D /* Debug */,
-				BC_B19D89331BA82CFC5C151F9450FEE197 /* Release */,
+				03292967148AFF7F1B88D73A712B7BB2 /* Debug */,
+				1D880E6EC106303AA3484DCB3086A1FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "";
 		};
-		CL_5AF1EA735F7B87EE01567A16A5CD29ED /* Build configuration list for PBXNativeTarget "OvertureTests_watchOS" */ = {
+		6F912E56FCB034C42D490B5760A9DAC7 /* Build configuration list for PBXNativeTarget "Overture_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC_22075C9152A9DFDCE86ECE53B0E36F61 /* Debug */,
-				BC_D92DE85EAB8EE6E9070DABF95CD9D154 /* Release */,
+				65E80FEF4E6E3D38D15B44B049046B0A /* Debug */,
+				048832E29A84EEC465CC6D5D2A302817 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "";
 		};
-		CL_8F750B9C9B3C4590CCF1D64C2E267BD6 /* Build configuration list for PBXNativeTarget "OvertureTests_iOS" */ = {
+		80546AE3835D64741E5D7002F26ED766 /* Build configuration list for PBXNativeTarget "OvertureTests_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC_43DF38F44152CF63A0091BF8F906583F /* Debug */,
-				BC_7E920B099D88B4F4C83917BB441CDB46 /* Release */,
+				DB79CDB0C13BF049EA21166A6DAFFC72 /* Debug */,
+				5637C74491CF65E32AA774041757F617 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "";
 		};
-		CL_A91273136B4A8C2B0655340790C26570 /* Build configuration list for PBXProject "Overture" */ = {
+		B6034B7F1C24F43BE4637C8B2CB15F8A /* Build configuration list for PBXProject "Overture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC_7A0DEB9D1A0BCE70AED2789FA727D95C /* Debug */,
-				BC_CB2E59FFCAB6553AAF144896D40785F8 /* Release */,
+				50D6D05CAE99B59CD58B609DE8D29EA2 /* Debug */,
+				3963AD8B560B2D06D13967D1436BBCCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		CL_BFA6DE45E0A9FAE143B3B768B544CBAE /* Build configuration list for PBXNativeTarget "Overture_iOS" */ = {
+		CB767728D6D743FBB5C64476E378D172 /* Build configuration list for PBXNativeTarget "Overture_tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC_F6EB5B73F9E580BC3F3E9CC61E6FECE3 /* Debug */,
-				BC_B9A32C20F46D792FC02A3936012D0D88 /* Release */,
+				15C9CBAAEDC34EDCF28EC6D328C5C5C4 /* Debug */,
+				0FEB66088DB81EC9F505A094E765AF2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "";
 		};
-		CL_C071CFEEEF2FAABED0507FD49E15B4FC /* Build configuration list for PBXNativeTarget "Overture_tvOS" */ = {
+		CCB3D84E8FD548CB3885803FD29E4034 /* Build configuration list for PBXNativeTarget "Overture_watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC_D57D19C6AEBC39ED7705AE33BE949BF9 /* Debug */,
-				BC_F32A4BDE3D7961651DA70F2D4BADC352 /* Release */,
+				B496ED7EDD817E95B49B7B7E2D5ADF96 /* Debug */,
+				BE07BA3211DE82ECB1A0EA362FF1C199 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "";
 		};
-		CL_F7F5E12226EDDDA171D22414EF925B3D /* Build configuration list for PBXNativeTarget "OvertureTests_tvOS" */ = {
+		FB38119FB15C074AB33D550D12AE6725 /* Build configuration list for PBXNativeTarget "OvertureTests_macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC_9E0EA2068C03FEE9BA2DD84F670DA0A9 /* Debug */,
-				BC_5A23DBFC92DA1846D22A4D9FB08D13BC /* Release */,
+				91119690EC192B80F6E82A0BE11E6C50 /* Debug */,
+				AF93532D6D75E770499CC3DAE01A0FAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "";
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = P_62291E3156CC16BEA2310178AB28EDF9 /* Project object */;
+	rootObject = BCA18CFE588C3661CD98276FEAFD2ABF /* Project object */;
 }

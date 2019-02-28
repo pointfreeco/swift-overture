@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "NT_BDD2A196AF72DBE19A7C7D4CC1536658"
+               BlueprintIdentifier = "8B0FD87BBE58097B4A4B4BB493ACE221"
                BuildableName = "Overture.framework"
                BlueprintName = "Overture_watchOS"
                ReferencedContainer = "container:Overture.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "NT_597175CE766F23764FEFFAF48905C32F"
+               BlueprintIdentifier = "F256AD3DF59DF20D3BDA368BF2F8E39A"
                BuildableName = "OvertureTests.xctest"
                BlueprintName = "OvertureTests_watchOS"
                ReferencedContainer = "container:Overture.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "NT_BDD2A196AF72DBE19A7C7D4CC1536658"
+            BlueprintIdentifier = "8B0FD87BBE58097B4A4B4BB493ACE221"
             BuildableName = "Overture.framework"
             BlueprintName = "Overture_watchOS"
             ReferencedContainer = "container:Overture.xcodeproj">
@@ -66,7 +66,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "NT_BDD2A196AF72DBE19A7C7D4CC1536658"
+            BlueprintIdentifier = "8B0FD87BBE58097B4A4B4BB493ACE221"
             BuildableName = "Overture.framework"
             BlueprintName = "Overture_watchOS"
             ReferencedContainer = "container:Overture.xcodeproj">
@@ -87,7 +87,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "NT_BDD2A196AF72DBE19A7C7D4CC1536658"
+            BlueprintIdentifier = "8B0FD87BBE58097B4A4B4BB493ACE221"
             BuildableName = "Overture.framework"
             BlueprintName = "Overture_watchOS"
             ReferencedContainer = "container:Overture.xcodeproj">
