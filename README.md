@@ -1,14 +1,36 @@
 # 🎼 Overture
 
-macOS [![CircleCI](https://circleci.com/gh/pointfreeco/swift-overture.svg?style=svg)](https://circleci.com/gh/pointfreeco/swift-overture) Linux [![Build Status](https://travis-ci.org/pointfreeco/swift-overture.svg?branch=master)](https://travis-ci.org/pointfreeco/swift-overture)
+[![Swift 4.2](https://img.shields.io/badge/swift-4.2-ED523F.svg?style=flat)](https://swift.org/download/)
+[![iOS/macOS CI](https://img.shields.io/circleci/project/github/pointfreeco/swift-overture/master.svg?label=ios/macos)](https://circleci.com/gh/pointfreeco/swift-overture)
+[![Linux CI](https://img.shields.io/travis/pointfreeco/swift-overture/master.svg?label=linux)](https://travis-ci.org/pointfreeco/swift-overture)
+[![@pointfreeco](https://img.shields.io/badge/contact-@pointfreeco-5AA9E7.svg?style=flat)](https://twitter.com/pointfreeco)
 
 A library for function composition.
 
-## Introduction
+## Table of Contents
 
-In Swift, functions are values, which gives us the power to explore function composition in a lot of interesting ways.
+  - [Motivation](#motivation)
+  - [Examples](#examples)
+      - [`pipe`](#pipe)
+      - [`with`](#with)
+      - [`concat`](#concat)
+      - [`curry`, `flip`, and `zurry`](#curry-flip-and-zurry)
+      - [`get`](#get)
+      - [`prop`](#prop)
+      - [`over` and `set`](#over-and-set)
+      - [`mprop`, `mver`, and `mut`](#mprop-mver-and-mut)
+      - [`zip`](#zip-and-zipwith)
+  - [FAQ](#faq)
+  - [Installation](#installation)
+  - [🎶 Prelude](#-prelude)
+  - [Interested in learning more?](#interested-in-learning-more)
+  - [License](#license)
 
-We're used to working with higher-order methods like `map` on arrays:
+## Motivation
+
+We work with functions all the time, but function composition is hiding in plain sight!
+
+For instance, we work with functions when we use higher-order methods, like `map` on arrays:
 
 ``` swift
 [1, 2, 3].map { $0 + 1 }
@@ -43,23 +65,21 @@ With these functions defined, we can pass them directly to `map`!
 // [4, 9, 16]
 ```
 
-This refactor reads much better, but it's less performant: we're mapping over the array twice! How can we get the best of both worlds? Function composition to the rescue!
+This refactor reads much better, but it's less performant: we're mapping over the array twice and creating an intermediate copy along the way! While we could use `lazy` to fuse these calls together, let's take a more general approach: function composition!
 
 ``` swift
 [1, 2, 3].map(pipe(incr, square))
 // [4, 9, 16]
 ```
 
-The `pipe` function glues functions together! We can even change the type along the way.
+The `pipe` function glues other functions together! It can take more than two argumenta and even change the type along the way!
 
 ``` swift
 [1, 2, 3].map(pipe(incr, square, String.init))
 // ["4", "9", "16"]
 ```
 
-We took a function that comes with Swift and tacked it onto the end of our pipeline!
-
-Function composition produces brand new functions that we can extract and reuse.
+Function composition lets us build new functions from smaller pieces, giving us the ability to extract and reuse logic in other contexts.
 
 ``` swift
 let computeAndStringify = pipe(incr, square, String.init)
@@ -71,13 +91,13 @@ computeAndStringify(42)
 // "1849"
 ```
 
-The function is the smallest building block of code. Function composition gives us the ability to fit these blocks together and build entire apps out of small, reusable, understandable units. Overture is a toolset for function composition in Swift.
+The function is the smallest building block of code. Function composition gives us the ability to fit these blocks together and build entire apps out of small, reusable, understandable units.
 
 ## Examples
 
 ### `pipe`
 
-The most basic building block in Overture. It takes existing functions and smooshes them together.
+The most basic building block in Overture. It takes existing functions and smooshes them together. That is, given a function `(A) -> B` and a function `(B) -> C`, `pipe` will return a brand new `(A) -> C` function.
 
 ``` swift
 let computeAndStringify = pipe(incr, square, String.init)
@@ -91,14 +111,7 @@ computeAndStringify(42)
 
 ### `with`
 
-The `with` function is useful for applying functions to values. It restores the left-to-right readability we're used to from the method world.
-
-``` swift
-with(42, pipe(incr, square, String.init))
-// "1849"
-```
-
-It plays nicely with the `inout` and mutable object worlds, wrapping imperative configuration in an expression.
+The `with` function is useful for applying functions to values. It plays nicely with the `inout` and mutable object worlds, wrapping imperative configuration in an expression.
 
 ``` swift
 class MyViewController: UIViewController {
@@ -107,6 +120,13 @@ class MyViewController: UIViewController {
     $0.textColor = .red
   }
 }
+```
+
+And it restores the left-to-right readability we're used to from the method world.
+
+``` swift
+with(42, pipe(incr, square, String.init))
+// "1849"
 ```
 
 ### `concat`
@@ -120,7 +140,7 @@ The `concat` function composes with single types. This includes composition of t
 With `concat`, we can build powerful configuration functions from small pieces.
 
 ``` swift
-let roundedStyle: (UIView) -> Void {
+let roundedStyle: (UIView) -> Void = {
   $0.clipsToBounds = true
   $0.layer.cornerRadius = 6
 }
@@ -145,7 +165,7 @@ let button = with(UIButton(type: .system), filledButtonStyle)
 
 ### `curry`, `flip`, and `zurry`
 
-These functions make up the Swiss army knife of composition. They give us the power to take existing functions and methods that don't compose (_e.g_, those that take zero or multiple arguments) and restore composition.
+These functions make up the [Swiss army knife](https://www.pointfree.co/episodes/ep5-higher-order-functions) of composition. They give us the power to take existing functions and methods that don't compose (_e.g_, those that take zero or multiple arguments) and restore composition.
 
 For example, let's transform a string initializer that takes multiple arguments into something that can compose with `pipe`.
 
@@ -157,18 +177,18 @@ String.init(data:encoding:)
 We use `curry` to transform multi-argument functions into functions that take a single input and return new functions to gather more inputs along the way.
 
 ``` swift
-curry(String.init(data:encoding:)
+curry(String.init(data:encoding:))
 // (Data) -> (String.Encoding) -> String?
 ```
 
-And we use `flip` to fix the order of arguments. Multi-argument functions and methods take data first and configuration second, but we can generally apply configuration before we have data.
+And we use `flip` to flip the order of arguments. Multi-argument functions and methods typically take data first and configuration second, but we can generally apply configuration before we have data, and `flip` allows us to do just that.
 
 ``` swift
-flip(curry(String.init(data:encoding:)
+flip(curry(String.init(data:encoding:)))
 // (String.Encoding) -> (Data) -> String?
 ```
 
-Now we can build reusable, composable pieces and put them to work in our pipelines.
+Now we have a highly-reusable, composable building block that we can use to build pipelines.
 
 ``` swift
 let stringWithEncoding = flip(curry(String.init(data:encoding:)))
@@ -178,7 +198,7 @@ let utf8String = stringWithEncoding(.utf8)
 // (Data) -> String?
 ```
 
-We can also take existing methods and extract functions from their already-curried, static versions.
+Swift also exposes methods as static, unbound functions. These functions are already in curried form. All we need to do is `flip` them to make them more useful!
 
 ``` swift
 String.capitalized
@@ -211,7 +231,7 @@ let uppercased = zurry(flip(String.uppercased))
 
 ### `get`
 
-The `get` function produces getter functions from key paths.
+The `get` function produces [getter functions](https://www.pointfree.co/episodes/ep8-getters-and-key-paths) from key paths.
 
 ``` swift
 get(\String.count)
@@ -231,7 +251,7 @@ pipe(incr, square, String.init, get(\.count))
 
 ### `prop`
 
-The `prop` function produces setter functions from key paths.
+The `prop` function produces [setter functions](https://www.pointfree.co/episodes/ep7-setters-and-key-paths) from key paths.
 
 ``` swift
 let setUserName = prop(\User.name)
@@ -252,6 +272,137 @@ with(User(name: "blob", age: 1), concat(
 // User(name: "Blob", age: 2)
 ```
 
+### `over` and `set`
+
+The `over` and `set` functions produce `(Root) -> Root` transform functions that work on a `Value` in a structure given a key path (or [setter function](https://www.pointfree.co/episodes/ep7-setters-and-key-paths)).
+
+The `over` function takes a `(Value) -> Value` transform function to modify an existing value.
+
+``` swift
+let celebrateBirthday = over(\User.age, incr)
+// (User) -> User
+```
+
+The `set` function replaces an existing value with a brand new one.
+
+```swift
+with(user, set(\.name, "Blob"))
+```
+
+### `mprop`, `mver`, and `mut`
+
+The `mprop`, `mver` and `mut` functions are _mutable_ variants of `prop`, `over` and `set`.
+
+```swift
+let guaranteeHeaders = mver(\URLRequest.allHTTPHeaderFields) { $0 = $0 ?? [:] }
+
+let setHeader = { name, value in
+  concat(
+    guaranteeHeaders,
+    { $0.allHTTPHeaderFields?[name] = value }
+  )
+}
+
+let request = with(URLRequest(url: url), concat(
+  mut(\.httpMethod, "POST"),
+  setHeader("Authorization", "Token " + token),
+  setHeader("Content-Type", "application/json; charset=utf-8")
+))
+```
+
+### `zip` and `zip(with:)`
+
+This is a function that Swift ships with! Unfortunately, it's limited to pairs of sequences. Overture defines `zip` to work with up to ten sequences at once, which makes combining several sets of related data a snap.
+
+```swift
+let ids = [1, 2, 3]
+let emails = ["blob@pointfree.co", "blob.jr@pointfree.co", "blob.sr@pointfree.co"]
+let names = ["Blob", "Blob Junior", "Blob Senior"]
+
+zip(ids, emails, names)
+// [
+//   (1, "blob@pointfree.co", "Blob"),
+//   (2, "blob.jr@pointfree.co", "Blob Junior"),
+//   (3, "blob.sr@pointfree.co", "Blob Senior")
+// ]
+```
+
+It's common to immediately `map` on zipped values.
+
+``` swift
+struct User {
+  let id: Int
+  let email: String
+  let name: String
+}
+
+zip(ids, emails, names).map(User.init)
+// [
+//   User(id: 1, email: "blob@pointfree.co", name: "Blob"),
+//   User(id: 2, email: "blob.jr@pointfree.co", name: "Blob Junior"),
+//   User(id: 3, email: "blob.sr@pointfree.co", name: "Blob Senior")
+// ]
+```
+
+Because of this, Overture provides a `zip(with:)` helper, which takes a tranform function up front and is curried, so it can be composed with other functions using `pipe`.
+
+``` swift
+zip(with: User.init)(ids, emails, names)
+```
+
+Overture also extends the notion of `zip` to work with optionals! It's an expressive way of combining multiple optionals together.
+
+``` swift
+let optionalId: Int? = 1
+let optionalEmail: String? = "blob@pointfree.co"
+let optionalName: String? = "Blob"
+
+zip(optionalId, optionalEmail, optionalName)
+// Optional<(Int, String, String)>.some((1, "blob@pointfree.co", "Blob"))
+```
+
+And `zip(with:)` lets us transform these tuples into other values.
+
+``` swift
+zip(with: User.init)(optionalId, optionalEmail, optionalName)
+// Optional<User>.some(User(id: 1, email: "blob@pointfree.co", name: "Blob"))
+```
+
+Using `zip` can be an expressive alternative to `let`-unwrapping!
+
+``` swift
+let optionalUser = zip(with: User.init)(optionalId, optionalEmail, optionalName)
+
+// vs.
+
+let optionalUser: User?
+if let id = optionalId, let email = optionalEmail, let name = optionalName {
+  optionalUser = User(id: id, email: email, name: name)
+} else {
+  optionalUser = nil
+}
+```
+
+## FAQ
+
+  - **Should I be worried about polluting the global namespace with free functions?**
+
+    Nope! Swift has several layers of scope to help you here.
+
+      - You can limit exposing highly-specific functions beyond a single file by using `fileprivate` and `private` scope.
+      - You can define functions as `static` members inside types.
+      - You can qualify functions with the module's name (_e.g._, `Overture.pipe(f, g)`). You can even autocomplete free functions from the module's name, so discoverability doesn't have to suffer!
+
+  - **Are free functions that common in Swift?**
+
+    It may not seem like it, but free functions are everywhere in Swift, making Overture extremely useful! A few examples:
+
+      - Initializers, like `String.init`.
+      - Unbound methods, like `String.uppercased`.
+      - Enum cases with associated values, like `Optional.some`.
+      - Ad hoc closures we pass to `map`, `filter`, and other higher-order methods.
+      - Top-level Standard Library functions like `max`, `min`, and `zip`.
+
 ## Installation
 
 ### Carthage
@@ -259,7 +410,7 @@ with(User(name: "blob", age: 1), concat(
 If you use [Carthage](https://github.com/Carthage/Carthage), you can add the following dependency to your `Cartfile`:
 
 ``` ruby
-github "pointfreeco/swift-overture" "master"
+github "pointfreeco/swift-overture" ~> 0.3
 ```
 
 ### CocoaPods
@@ -267,7 +418,7 @@ github "pointfreeco/swift-overture" "master"
 If your project uses [CocoaPods](https://cocoapods.org), just add the following to your `Podfile`:
 
 ``` ruby
-pod 'Overture', :git => 'https://github.com/pointfreeco/swift-overture.git'
+pod 'Overture', '~> 0.3'
 ```
 
 ### SwiftPM
@@ -276,9 +427,7 @@ If you want to use Overture in a project that uses [SwiftPM](https://swift.org/p
 
 ``` swift
 dependencies: [
-  .package(
-    url: "https://github.com/pointfreeco/swift-overture.git",
-    .branch("master")),
+  .package(url: "https://github.com/pointfreeco/swift-overture.git", from: "0.3.1")
 ]
 ```
 
@@ -286,7 +435,7 @@ dependencies: [
 
 Submodule, clone, or download Overture, and drag `Overture.xcodeproj` into your project.
 
-## Prelude
+## 🎶 Prelude
 
 This library was created as an alternative to [swift-prelude](https://www.github.com/pointfreeco/swift-prelude), which provides these tools (and more) using infix operators. For example, `pipe` is none other than the arrow composition operator `>>>`, which means the following are equivalent:
 
@@ -299,7 +448,13 @@ We know that many code bases are not going to be comfortable introducing operato
 
 ## Interested in learning more?
 
-These concepts (and more) are explored thoroughly in [Point-Free](https://www.pointfree.co).
+These concepts (and more) are explored thoroughly in [Point-Free](https://www.pointfree.co), a video series exploring functional programming and Swift hosted by [Brandon Williams](https://github.com/mbrandonw) and [Stephen Celis](https://github.com/stephencelis).
+
+The ideas in this episode were first explored in [Episode #11](https://www.pointfree.co/episodes/ep11-composition-without-operators):
+
+<a href="https://www.pointfree.co/episodes/ep11-composition-without-operators">
+  <img alt="video poster image" src="https://d1hf1soyumxcgv.cloudfront.net/0011-composition-without-operators/0011-poster.jpg" width="480">
+</a>
 
 ## License
 

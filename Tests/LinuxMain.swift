@@ -1,4 +1,4 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.13.1 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import XCTest
@@ -56,6 +56,11 @@ extension CurryTests {
     ("testThrowing", testThrowing)
   ]
 }
+extension FlipTests {
+  static var allTests: [(String, (FlipTests) -> () throws -> Void)] = [
+    ("testFlip", testFlip)
+  ]
+}
 extension PipeTests {
   static var allTests: [(String, (PipeTests) -> () throws -> Void)] = [
     ("testPipe2", testPipe2),
@@ -70,12 +75,33 @@ extension PipeTests {
     ("testThrowingPipe6", testThrowingPipe6)
   ]
 }
+extension UncurryTests {
+  static var allTests: [(String, (UncurryTests) -> () throws -> Void)] = [
+    ("testUncurry", testUncurry),
+    ("testThrowing", testThrowing)
+  ]
+}
 extension WithTests {
   static var allTests: [(String, (WithTests) -> () throws -> Void)] = [
     ("testWith", testWith),
     ("testInPlaceWith", testInPlaceWith),
     ("testValueCopyableWith", testValueCopyableWith),
     ("testReferenceMutableWith", testReferenceMutableWith)
+  ]
+}
+extension ZipTests {
+  static var allTests: [(String, (ZipTests) -> () throws -> Void)] = [
+    ("testZipOptional", testZipOptional),
+    ("testZipSequence", testZipSequence),
+    ("testZip2WithSequence", testZip2WithSequence),
+    ("testZip3WithSequence", testZip3WithSequence),
+    ("testZip4WithSequence", testZip4WithSequence),
+    ("testZip5WithSequence", testZip5WithSequence),
+    ("testZip6WithSequence", testZip6WithSequence),
+    ("testZip7WithSequence", testZip7WithSequence),
+    ("testZip8WithSequence", testZip8WithSequence),
+    ("testZip9WithSequence", testZip9WithSequence),
+    ("testZip10WithSequence", testZip10WithSequence)
   ]
 }
 
@@ -85,7 +111,10 @@ XCTMain([
   testCase(ComposeTests.allTests),
   testCase(ConcatTests.allTests),
   testCase(CurryTests.allTests),
+  testCase(FlipTests.allTests),
   testCase(PipeTests.allTests),
+  testCase(UncurryTests.allTests),
   testCase(WithTests.allTests),
+  testCase(ZipTests.allTests),
 ])
 // swiftlint:enable trailing_comma

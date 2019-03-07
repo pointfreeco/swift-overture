@@ -1,0 +1,30 @@
+name: Overture
+options:
+  bundleIdPrefix: co.pointfree
+  deploymentTarget:
+    iOS: 8.0
+    macOS: 10.9
+    tvOS: 9.0
+    watchOS: 2.0
+  indentWidth: 2
+  tabWidth: 2
+  usesTabs: false
+targets:
+  Overture:
+    info:
+      path: Info.plist
+    platform: [macOS, iOS, tvOS, watchOS]
+    scheme:
+      testTargets: [OvertureTests_$platform]
+    settings:
+      APPLICATION_EXTENSION_API_ONLY: true
+    sources: [Sources]
+    type: framework
+  OvertureTests:
+    dependencies: [{target: Overture_$platform}]
+    platform: [macOS, iOS, tvOS, watchOS]
+    sources:
+      - path: Tests
+        excludes:
+          - LinuxMain.swift
+    type: bundle.unit-test
