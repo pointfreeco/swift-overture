@@ -6,8 +6,7 @@
 public func uncurry<A, B, C>(_ function: @escaping
   (A)
   -> (B)
-  -> C
-  )
+  -> C)
   -> (A, B)
   -> C {
     return { (a: A, b: B) -> C in
@@ -22,8 +21,7 @@ public func uncurry<A, B, C>(_ function: @escaping
 public func uncurry<A, B, C>(_ function: @escaping
   (A)
   -> (B) throws
-  -> C
-  )
+  -> C)
   -> (A, B) throws
   -> C {
     return { (a: A, b: B) throws -> C in
@@ -35,8 +33,7 @@ public func uncurry<A, B, C, D>(_ function: @escaping
   (A)
   -> (B)
   -> (C)
-  -> D
-  )
+  -> D)
   -> (A, B, C)
   -> D {
     return { (a: A, b: B, c: C) -> D in
@@ -48,8 +45,7 @@ public func uncurry<A, B, C, D>(_ function: @escaping
   (A)
   -> (B)
   -> (C) throws
-  -> D
-  )
+  -> D)
   -> (A, B, C) throws
   -> D {
     return { (a: A, b: B, c: C) throws -> D in
@@ -62,8 +58,7 @@ public func uncurry<A, B, C, D, E>(_ function: @escaping
   -> (B)
   -> (C)
   -> (D)
-  -> E
-  )
+  -> E)
   -> (A, B, C, D)
   -> E {
     return { (a: A, b: B, c: C, d: D) -> E in
@@ -76,8 +71,7 @@ public func uncurry<A, B, C, D, E>(_ function: @escaping
   -> (B)
   -> (C)
   -> (D) throws
-  -> E
-  )
+  -> E)
   -> (A, B, C, D) throws
   -> E {
     return { (a: A, b: B, c: C, d: D) throws -> E in
@@ -90,9 +84,7 @@ public func uncurry<A, B, C, D, E, F>(_ function: @escaping
   -> (B)
   -> (C)
   -> (D)
-  -> (E)
-  -> F
-  )
+  -> (E) -> F)
   -> (A, B, C, D, E)
   -> F {
     return { (a: A, b: B, c: C, d: D, e: E) -> F in
@@ -106,8 +98,7 @@ public func uncurry<A, B, C, D, E, F>(_ function: @escaping
   -> (C)
   -> (D)
   -> (E) throws
-  -> F
-  )
+  ->  F)
   -> (A, B, C, D, E) throws
   -> F {
     return { (a: A, b: B, c: C, d: D, e: E) throws -> F in
@@ -122,8 +113,7 @@ public func uncurry<A, B, C, D, E, F, G>(_ function: @escaping
   -> (D)
   -> (E)
   -> (F)
-  -> G
-  )
+  ->  G)
   -> (A, B, C, D, E, F)
   -> G {
     return { (a: A, b: B, c: C, d: D, e: E, f: F) -> G in
@@ -138,7 +128,7 @@ public func uncurry<A, B, C, D, E, F, G>(_ function: @escaping
   -> (D)
   -> (E)
   -> (F) throws
-  -> G)
+  ->  G)
   -> (A, B, C, D, E, F) throws
   -> G {
     return { (a: A, b: B, c: C, d: D, e: E, f: F) throws -> G in
@@ -154,8 +144,7 @@ public func uncurry<A, B, C, D, E, F, G, H>(_ function: @escaping
   -> (E)
   -> (F)
   -> (G)
-  -> H
-  )
+  -> H)
   -> (A, B, C, D, E, F, G)
   -> H {
     return { (a: A, b: B, c: C, d: D, e: E, f: F, g: G) -> H in
@@ -171,8 +160,7 @@ public func uncurry<A, B, C, D, E, F, G, H>(_ function: @escaping
   -> (E)
   -> (F)
   -> (G) throws
-  -> H
-  )
+  -> H)
   -> (A, B, C, D, E, F, G) throws
   -> H {
     return { (a: A, b: B, c: C, d: D, e: E, f: F, g: G) throws -> H in
@@ -189,8 +177,7 @@ public func uncurry<A, B, C, D, E, F, G, H, I>(_ function: @escaping
   -> (F)
   -> (G)
   -> (H)
-  -> I
-  )
+  -> I)
   -> (A, B, C, D, E, F, G, H)
   -> I {
     return { (a: A, b: B, c: C, d: D, e: E, f: F, g: G, h: H) -> I in
@@ -207,8 +194,7 @@ public func uncurry<A, B, C, D, E, F, G, H, I>(_ function: @escaping
   -> (F)
   -> (G)
   -> (H) throws
-  -> I
-  )
+  -> I)
   -> (A, B, C, D, E, F, G, H) throws
   -> I {
     return { (a: A, b: B, c: C, d: D, e: E, f: F, g: G, h: H) throws -> I in
@@ -226,8 +212,7 @@ public func uncurry<A, B, C, D, E, F, G, H, I, J>(_ function: @escaping
   -> (G)
   -> (H)
   -> (I)
-  -> J
-  )
+  -> J)
   -> (A, B, C, D, E, F, G, H, I)
   -> J {
     return { (a: A, b: B, c: C, d: D, e: E, f: F, g: G, h: H, i: I) -> J in
@@ -245,8 +230,7 @@ public func uncurry<A, B, C, D, E, F, G, H, I, J>(_ function: @escaping
   -> (G)
   -> (H)
   -> (I) throws
-  -> J
-  )
+  -> J)
   -> (A, B, C, D, E, F, G, H, I) throws
   -> J {
     return { (a: A, b: B, c: C, d: D, e: E, f: F, g: G, h: H, i: I) throws -> J in
@@ -265,8 +249,7 @@ public func uncurry<A, B, C, D, E, F, G, H, I, J, K>(_ function: @escaping
   -> (H)
   -> (I)
   -> (J)
-  -> K
-  )
+  -> K)
   -> (A, B, C, D, E, F, G, H, I, J)
   -> K {
     return { (a: A, b: B, c: C, d: D, e: E, f: F, g: G, h: H, i: I, j: J) -> K in
@@ -285,8 +268,7 @@ public func uncurry<A, B, C, D, E, F, G, H, I, J, K>(_ function: @escaping
   -> (H)
   -> (I)
   -> (J) throws
-  -> K
-  )
+  -> K)
   -> (A, B, C, D, E, F, G, H, I, J) throws
   -> K {
     return { (a: A, b: B, c: C, d: D, e: E, f: F, g: G, h: H, i: I, j: J) throws -> K in
@@ -306,8 +288,7 @@ public func uncurry<A, B, C, D, E, F, G, H, I, J, K, L>(_ function: @escaping
   -> (I)
   -> (J)
   -> (K)
-  -> L
-  )
+  -> L)
   -> (A, B, C, D, E, F, G, H, I, J, K)
   -> L {
     return { (a: A, b: B, c: C, d: D, e: E, f: F, g: G, h: H, i: I, j: J, k: K) -> L in
@@ -327,8 +308,7 @@ public func uncurry<A, B, C, D, E, F, G, H, I, J, K, L>(_ function: @escaping
   -> (I)
   -> (J)
   -> (K) throws
-  -> L
-  )
+  -> L)
   -> (A, B, C, D, E, F, G, H, I, J, K) throws
   -> L {
     return { (a: A, b: B, c: C, d: D, e: E, f: F, g: G, h: H, i: I, j: J, k: K) throws -> L in
@@ -349,8 +329,7 @@ public func uncurry<A, B, C, D, E, F, G, H, I, J, K, L, M>(_ function: @escaping
   -> (J)
   -> (K)
   -> (L)
-  -> M
-  )
+  -> M)
   -> (A, B, C, D, E, F, G, H, I, J, K, L)
   -> M {
     return { (a: A, b: B, c: C, d: D, e: E, f: F, g: G, h: H, i: I, j: J, k: K, l: L) -> M in
@@ -371,8 +350,7 @@ public func uncurry<A, B, C, D, E, F, G, H, I, J, K, L, M>(_ function: @escaping
   -> (J)
   -> (K)
   -> (L) throws
-  -> M
-  )
+  -> M)
   -> (A, B, C, D, E, F, G, H, I, J, K, L) throws
   -> M {
     return { (a: A, b: B, c: C, d: D, e: E, f: F, g: G, h: H, i: I, j: J, k: K, l: L) throws -> M in
