@@ -117,8 +117,8 @@ public func mprop<Root, Value>(
 ///   - keyPath: A reference-writable key path.
 ///   - update: An update function for a given value.
 /// - Returns: A reference-mutable setter function.
-public func mver<Root, Value>(
-  reference keyPath: ReferenceWritableKeyPath<Root, Value>,
+public func mverObject<Root, Value>(
+  _ keyPath: ReferenceWritableKeyPath<Root, Value>,
   _ update: @escaping (Value) -> Void
   )
   -> (Root) -> Void

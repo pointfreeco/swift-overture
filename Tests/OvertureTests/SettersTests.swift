@@ -30,7 +30,7 @@ final class SettersTests: XCTestCase {
 
   func testAnyObjectInoutMver() {
     let f = mver(mprop(\NSMutableParagraphStyle.alignment)) { $0 = .center }
-    let style = update(reference: NSMutableParagraphStyle(), f)
+    let style = updateObject(NSMutableParagraphStyle(), f)
     XCTAssertEqual(.center, style.alignment)
   }
 
@@ -47,7 +47,7 @@ final class SettersTests: XCTestCase {
     }
 
     let f = mver(mprop(\Foo.bar)) { $0.baz() }
-    let foo = update(reference: Foo(bar: Bar()), f)
+    let foo = updateObject(Foo(bar: Bar()), f)
     XCTAssertTrue(foo.bar.bazzed)
   }
 
@@ -59,7 +59,7 @@ final class SettersTests: XCTestCase {
 
   func testAnyObjectMut() {
     let f = mut(mprop(\NSMutableParagraphStyle.alignment), .center)
-    let style = update(NSMutableParagraphStyle(), f)
+    let style = updateObject(NSMutableParagraphStyle(), f)
     XCTAssertEqual(.center, style.alignment)
   }
 }

@@ -54,13 +54,13 @@ final class KeyPathTests: XCTestCase {
     }
 
     let f = mprop(\Foo.bar)({ $0.baz() })
-    let foo = update(reference: Foo(bar: Bar()), f)
+    let foo = updateObject(Foo(bar: Bar()), f)
     XCTAssertTrue(foo.bar.bazzed)
   }
 
   func testAnyObjectInoutMprop() {
     let f = mprop(\NSMutableParagraphStyle.lineHeightMultiple)({ $0 += 1 })
-    let style = update(reference: NSMutableParagraphStyle(), f)
+    let style = updateObject(NSMutableParagraphStyle(), f)
     XCTAssertEqual(1, style.lineHeightMultiple)
   }
 
@@ -76,20 +76,20 @@ final class KeyPathTests: XCTestCase {
       }
     }
 
-    let f = mver(reference: \Foo.bar) { $0.baz() }
-    let foo = update(reference: Foo(bar: Bar()), f)
+    let f = mverObject(\Foo.bar) { $0.baz() }
+    let foo = updateObject(Foo(bar: Bar()), f)
     XCTAssertTrue(foo.bar.bazzed)
   }
 
   func testAnyObjectInoutMver() {
     let f = mver(\NSMutableParagraphStyle.lineHeightMultiple) { $0 += 1 }
-    let style = update(reference: NSMutableParagraphStyle(), f)
+    let style = updateObject(NSMutableParagraphStyle(), f)
     XCTAssertEqual(1, style.lineHeightMultiple)
   }
 
   func testAnyObjectMut() {
     let f = mut(\NSMutableParagraphStyle.lineHeightMultiple, 1)
-    let style = update(reference: NSMutableParagraphStyle(), f)
+    let style = updateObject(NSMutableParagraphStyle(), f)
     XCTAssertEqual(1, style.lineHeightMultiple)
   }
 }

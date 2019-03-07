@@ -46,26 +46,26 @@ final class WithTests: XCTestCase {
 
     XCTAssertEqual(
       .currency,
-      update(reference: NumberFormatter(), currencyStyle).numberStyle
+      updateObject(NumberFormatter(), currencyStyle).numberStyle
     )
 
     XCTAssertEqual(
       .currency,
-      try update(reference: NumberFormatter(), nonThrowing(currencyStyle)).numberStyle
+      try updateObject(NumberFormatter(), nonThrowing(currencyStyle)).numberStyle
     )
 
     XCTAssertThrowsError(
-      try update(reference: NumberFormatter(), throwing(currencyStyle)).numberStyle
+      try updateObject(NumberFormatter(), throwing(currencyStyle)).numberStyle
     )
   }
 
   func testAmbiguity() {
-    let attributedString1 = update(NSMutableAttributedString()) {
+    _ = update(NSMutableAttributedString()) {
       $0.beginEditing()
       $0.endEditing()
     }
 
-    let attributedString2 = update(reference: NSMutableAttributedString()) {
+    _ = updateObject(NSMutableAttributedString()) {
       $0.beginEditing()
       $0.endEditing()
     }
