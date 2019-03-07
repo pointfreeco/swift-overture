@@ -8,7 +8,7 @@ final class WithTests: XCTestCase {
     }
 
     XCTAssertEqual(2, with(1, incr))
-    XCTAssertEqual(2, try? with(1, nonThrowing(incr)))
+    XCTAssertEqual(2, try with(1, nonThrowing(incr)))
     XCTAssertThrowsError(try with(1, throwing(incr)))
   }
 
@@ -18,15 +18,15 @@ final class WithTests: XCTestCase {
     }
 
     var x = 1
-    with(&x, incr)
+    update(&x, incr)
     XCTAssertEqual(2, x)
 
     x = 1
-    try with(&x, nonThrowing(incr))
+    try update(&x, nonThrowing(incr))
     XCTAssertEqual(2, x)
 
     x = 1
-    XCTAssertThrowsError(try with(&x, throwing(incr)))
+    XCTAssertThrowsError(try update(&x, throwing(incr)))
   }
 
   func testValueCopyableWith() {
@@ -34,9 +34,9 @@ final class WithTests: XCTestCase {
       x += 1
     }
 
-    XCTAssertEqual(2, with(1, incr))
-    XCTAssertEqual(2, try? with(1, nonThrowing(incr)))
-    XCTAssertThrowsError(try with(1, throwing(incr)))
+    XCTAssertEqual(2, update(1, incr))
+    XCTAssertEqual(2, try? update(1, nonThrowing(incr)))
+    XCTAssertThrowsError(try update(1, throwing(incr)))
   }
 
   func testReferenceMutableWith() throws {
@@ -46,17 +46,26 @@ final class WithTests: XCTestCase {
 
     XCTAssertEqual(
       .currency,
-      with(NumberFormatter(), currencyStyle).numberStyle
+      updateObject(NumberFormatter(), currencyStyle).numberStyle
     )
 
     XCTAssertEqual(
       .currency,
-      try with(NumberFormatter(), nonThrowing(currencyStyle)).numberStyle
+      try updateObject(NumberFormatter(), nonThrowing(currencyStyle)).numberStyle
     )
 
     XCTAssertThrowsError(
-      try with(NumberFormatter(), throwing(currencyStyle)).numberStyle
+      try updateObject(NumberFormatter(), throwing(currencyStyle)).numberStyle
     )
+  }
+
+  func testAmbiguity() {
+    _ = update(Bar()) {
+      $0.baz()
+    }
+    _ = updateObject(Bar()) {
+      $0.baz()
+    }
   }
 }
 

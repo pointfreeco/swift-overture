@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "NT_5E226C14A867E37F073B5173927AAC2F"
+               BlueprintIdentifier = "A5595549A81068462256743E32D7E36D"
                BuildableName = "Overture.framework"
                BlueprintName = "Overture_tvOS"
                ReferencedContainer = "container:Overture.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "NT_A7EF3E9598E4FB2188DAD25389126465"
+               BlueprintIdentifier = "BF96F05D873EB74DC8204D6037969ED1"
                BuildableName = "OvertureTests.xctest"
                BlueprintName = "OvertureTests_tvOS"
                ReferencedContainer = "container:Overture.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "NT_5E226C14A867E37F073B5173927AAC2F"
+            BlueprintIdentifier = "A5595549A81068462256743E32D7E36D"
             BuildableName = "Overture.framework"
             BlueprintName = "Overture_tvOS"
             ReferencedContainer = "container:Overture.xcodeproj">
@@ -66,7 +66,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "NT_5E226C14A867E37F073B5173927AAC2F"
+            BlueprintIdentifier = "A5595549A81068462256743E32D7E36D"
             BuildableName = "Overture.framework"
             BlueprintName = "Overture_tvOS"
             ReferencedContainer = "container:Overture.xcodeproj">
@@ -87,7 +87,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "NT_5E226C14A867E37F073B5173927AAC2F"
+            BlueprintIdentifier = "A5595549A81068462256743E32D7E36D"
             BuildableName = "Overture.framework"
             BlueprintName = "Overture_tvOS"
             ReferencedContainer = "container:Overture.xcodeproj">

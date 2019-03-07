@@ -52,11 +52,28 @@ public func mver<S, A>(
 ///   - setter: A reference-mutable setter function.
 ///   - f: A mutable value transform function.
 /// - Returns: A reference-mutable root transform function.
-public func mver<S: AnyObject, A>(
+public func mver<S, A>(
   _ setter: (@escaping (inout A) -> Void) -> (S) -> Void,
   _ f: @escaping (inout A) -> Void
   )
-  -> (S) -> Void {
+  -> (S) -> Void
+  where S: AnyObject {
+
+    return setter(f)
+}
+
+/// Applies a reference-mutable value transformation to a reference-mutable setter function.
+///
+/// - Parameters:
+///   - setter: A reference-mutable setter function.
+///   - f: A mutable value transform function.
+/// - Returns: A reference-mutable root transform function.
+public func mver<S, A>(
+  _ setter: (@escaping (A) -> Void) -> (S) -> Void,
+  _ f: @escaping (A) -> Void
+  )
+  -> (S) -> Void
+  where S: AnyObject, A: AnyObject {
 
     return setter(f)
 }
@@ -82,11 +99,12 @@ public func mut<S, A>(
 ///   - setter: An mutable setter function.
 ///   - value: A new value.
 /// - Returns: A reference-mutable root transform function.
-public func mut<S: AnyObject, A>(
+public func mut<S, A>(
   _ setter: (@escaping (inout A) -> Void) -> (S) -> Void,
   _ value: A
   )
-  -> (S) -> Void {
+  -> (S) -> Void
+  where S: AnyObject {
 
     return mver(setter) { $0 = value }
 }
