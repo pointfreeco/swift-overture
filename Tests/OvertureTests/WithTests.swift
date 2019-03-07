@@ -60,14 +60,11 @@ final class WithTests: XCTestCase {
   }
 
   func testAmbiguity() {
-    _ = update(NSMutableAttributedString()) {
-      $0.beginEditing()
-      $0.endEditing()
+    _ = update(Bar()) {
+      $0.baz()
     }
-
-    _ = updateObject(NSMutableAttributedString()) {
-      $0.beginEditing()
-      $0.endEditing()
+    _ = updateObject(Bar()) {
+      $0.baz()
     }
   }
 }

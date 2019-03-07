@@ -7,9 +7,9 @@ final class SettersTests: XCTestCase {
     let rect = with(CGRect.zero, f)
     XCTAssertEqual(1, rect.width)
 
-    let g = over(prop(\NSMutableParagraphStyle.alignment)) { _ in .center }
-    let style = with(NSMutableParagraphStyle(), g)
-    XCTAssertEqual(.center, style.alignment)
+    let g = over(prop(\Bar.bazzed)) { !$0 }
+    let bar = with(Bar(), g)
+    XCTAssertEqual(true, bar.bazzed)
   }
 
   func testSet() {
@@ -17,9 +17,9 @@ final class SettersTests: XCTestCase {
     let rect = with(CGRect.zero, f)
     XCTAssertEqual(1, rect.width)
 
-    let g = set(prop(\NSMutableParagraphStyle.alignment), .center)
-    let style = with(NSMutableParagraphStyle(), g)
-    XCTAssertEqual(.center, style.alignment)
+    let g = set(prop(\Bar.bazzed), true)
+    let bar = with(Bar(), g)
+    XCTAssertEqual(true, bar.bazzed)
   }
 
   func testInoutMver() {
@@ -29,9 +29,9 @@ final class SettersTests: XCTestCase {
   }
 
   func testAnyObjectInoutMver() {
-    let f = mver(mprop(\NSMutableParagraphStyle.alignment)) { $0 = .center }
-    let style = updateObject(NSMutableParagraphStyle(), f)
-    XCTAssertEqual(.center, style.alignment)
+    let g = mver(mprop(\Bar.bazzed)) { $0.toggle() }
+    let bar = updateObject(Bar(), g)
+    XCTAssertEqual(true, bar.bazzed)
   }
 
   func testAnyObjectAnyObjectMver() {
@@ -58,8 +58,8 @@ final class SettersTests: XCTestCase {
   }
 
   func testAnyObjectMut() {
-    let f = mut(mprop(\NSMutableParagraphStyle.alignment), .center)
-    let style = updateObject(NSMutableParagraphStyle(), f)
-    XCTAssertEqual(.center, style.alignment)
+    let g = mut(mprop(\Bar.bazzed), true)
+    let bar = updateObject(Bar(), g)
+    XCTAssertEqual(true, bar.bazzed)
   }
 }

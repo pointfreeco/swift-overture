@@ -59,37 +59,37 @@ final class KeyPathTests: XCTestCase {
   }
 
   func testAnyObjectInoutMprop() {
-    let f = mprop(\NSMutableParagraphStyle.lineHeightMultiple)({ $0 += 1 })
-    let style = updateObject(NSMutableParagraphStyle(), f)
-    XCTAssertEqual(1, style.lineHeightMultiple)
+    let f = (mprop(\Bar.bazzed)) { $0.toggle() }
+    let bar = updateObject(Bar(), f)
+    XCTAssertEqual(true, bar.bazzed)
   }
 
   func testAnyObjectAnyObjectMver() {
-    class Bar {
-      var bazzed = false
-      func baz() { self.bazzed = true }
-    }
-    class Foo {
-      var bar: Bar
-      init(bar: Bar) {
-        self.bar = bar
-      }
-    }
-
     let f = mverObject(\Foo.bar) { $0.baz() }
     let foo = updateObject(Foo(bar: Bar()), f)
     XCTAssertTrue(foo.bar.bazzed)
   }
 
   func testAnyObjectInoutMver() {
-    let f = mver(\NSMutableParagraphStyle.lineHeightMultiple) { $0 += 1 }
-    let style = updateObject(NSMutableParagraphStyle(), f)
-    XCTAssertEqual(1, style.lineHeightMultiple)
+    let f = mver(\Bar.bazzed) { $0.toggle() }
+    let bar = updateObject(Bar(), f)
+    XCTAssertEqual(true, bar.bazzed)
   }
 
   func testAnyObjectMut() {
-    let f = mut(\NSMutableParagraphStyle.lineHeightMultiple, 1)
-    let style = updateObject(NSMutableParagraphStyle(), f)
-    XCTAssertEqual(1, style.lineHeightMultiple)
+    let f = mut(\Bar.bazzed, true)
+    let bar = updateObject(Bar(), f)
+    XCTAssertEqual(true, bar.bazzed)
+  }
+}
+
+class Bar {
+  var bazzed = false
+  func baz() { self.bazzed = true }
+}
+class Foo {
+  var bar: Bar
+  init(bar: Bar) {
+    self.bar = bar
   }
 }
