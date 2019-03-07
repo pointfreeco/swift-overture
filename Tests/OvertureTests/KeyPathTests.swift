@@ -59,7 +59,7 @@ final class KeyPathTests: XCTestCase {
   }
 
   func testAnyObjectInoutMprop() {
-    let f = (mprop(\Bar.bazzed)) { $0.toggle() }
+    let f = (mprop(\Bar.bazzed)) { $0 = !$0 }
     let bar = updateObject(Bar(), f)
     XCTAssertEqual(true, bar.bazzed)
   }
@@ -71,7 +71,7 @@ final class KeyPathTests: XCTestCase {
   }
 
   func testAnyObjectInoutMver() {
-    let f = mver(\Bar.bazzed) { $0.toggle() }
+    let f = mver(\Bar.bazzed) { $0 = !$0 }
     let bar = updateObject(Bar(), f)
     XCTAssertEqual(true, bar.bazzed)
   }

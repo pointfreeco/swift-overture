@@ -29,7 +29,7 @@ final class SettersTests: XCTestCase {
   }
 
   func testAnyObjectInoutMver() {
-    let g = mver(mprop(\Bar.bazzed)) { $0.toggle() }
+    let g = mver(mprop(\Bar.bazzed)) { $0 = !$0 }
     let bar = updateObject(Bar(), g)
     XCTAssertEqual(true, bar.bazzed)
   }
