@@ -3,6 +3,7 @@
 ///
 /// - Parameter function: A function of two arguments.
 /// - Returns: A curried function.
+@inlinable
 public func curry<A, B, C>(_ function: @escaping (A, B) -> C)
   -> (A)
   -> (B)
@@ -18,6 +19,7 @@ public func curry<A, B, C>(_ function: @escaping (A, B) -> C)
 ///
 /// - Parameter function: A throwing function of two arguments.
 /// - Returns: A curried, final-throwing function.
+@inlinable
 public func curry<A, B, C>(_ function: @escaping (A, B) throws -> C)
   -> (A)
   -> (B) throws
@@ -29,6 +31,7 @@ public func curry<A, B, C>(_ function: @escaping (A, B) throws -> C)
     }
 }
 
+@inlinable
 public func curry<A, B, C, D>(_ function: @escaping (A, B, C) -> D)
   -> (A)
   -> (B)
@@ -43,6 +46,7 @@ public func curry<A, B, C, D>(_ function: @escaping (A, B, C) -> D)
     }
 }
 
+@inlinable
 public func curry<A, B, C, D>(_ function: @escaping (A, B, C) throws -> D)
   -> (A)
   -> (B)
@@ -57,6 +61,7 @@ public func curry<A, B, C, D>(_ function: @escaping (A, B, C) throws -> D)
     }
 }
 
+@inlinable
 public func curry<A, B, C, D, E>(_ function: @escaping (A, B, C, D) -> E)
   -> (A)
   -> (B)
@@ -74,6 +79,7 @@ public func curry<A, B, C, D, E>(_ function: @escaping (A, B, C, D) -> E)
     }
 }
 
+@inlinable
 public func curry<A, B, C, D, E>(_ function: @escaping (A, B, C, D) throws -> E)
   -> (A)
   -> (B)
@@ -91,6 +97,7 @@ public func curry<A, B, C, D, E>(_ function: @escaping (A, B, C, D) throws -> E)
     }
 }
 
+@inlinable
 public func curry<A, B, C, D, E, F>(_ function: @escaping (A, B, C, D, E) -> F)
   -> (A)
   -> (B)
@@ -111,6 +118,7 @@ public func curry<A, B, C, D, E, F>(_ function: @escaping (A, B, C, D, E) -> F)
     }
 }
 
+@inlinable
 public func curry<A, B, C, D, E, F>(_ function: @escaping (A, B, C, D, E) throws -> F)
   -> (A)
   -> (B)
@@ -131,6 +139,7 @@ public func curry<A, B, C, D, E, F>(_ function: @escaping (A, B, C, D, E) throws
     }
 }
 
+@inlinable
 public func curry<A, B, C, D, E, F, G>(_ function: @escaping (A, B, C, D, E, F) -> G)
   -> (A)
   -> (B)
@@ -154,6 +163,7 @@ public func curry<A, B, C, D, E, F, G>(_ function: @escaping (A, B, C, D, E, F) 
     }
 }
 
+@inlinable
 public func curry<A, B, C, D, E, F, G>(_ function: @escaping (A, B, C, D, E, F) throws -> G)
   -> (A)
   -> (B)
@@ -177,6 +187,7 @@ public func curry<A, B, C, D, E, F, G>(_ function: @escaping (A, B, C, D, E, F) 
     }
 }
 
+@inlinable
 public func curry<A, B, C, D, E, F, G, H>(_ function: @escaping (A, B, C, D, E, F, G) -> H)
   -> (A)
   -> (B)
@@ -203,6 +214,7 @@ public func curry<A, B, C, D, E, F, G, H>(_ function: @escaping (A, B, C, D, E, 
     }
 }
 
+@inlinable
 public func curry<A, B, C, D, E, F, G, H>(_ function: @escaping (A, B, C, D, E, F, G) throws -> H)
   -> (A)
   -> (B)
@@ -229,6 +241,7 @@ public func curry<A, B, C, D, E, F, G, H>(_ function: @escaping (A, B, C, D, E, 
     }
 }
 
+@inlinable
 public func curry<A, B, C, D, E, F, G, H, I>(_ function: @escaping (A, B, C, D, E, F, G, H) -> I)
   -> (A)
   -> (B)
@@ -258,6 +271,7 @@ public func curry<A, B, C, D, E, F, G, H, I>(_ function: @escaping (A, B, C, D, 
     }
 }
 
+@inlinable
 public func curry<A, B, C, D, E, F, G, H, I>(_ function: @escaping (A, B, C, D, E, F, G, H) throws -> I)
   -> (A)
   -> (B)
@@ -287,6 +301,7 @@ public func curry<A, B, C, D, E, F, G, H, I>(_ function: @escaping (A, B, C, D, 
     }
 }
 
+@inlinable
 public func curry<A, B, C, D, E, F, G, H, I, J>(_ function: @escaping (A, B, C, D, E, F, G, H, I) -> J)
   -> (A)
   -> (B)
@@ -319,6 +334,7 @@ public func curry<A, B, C, D, E, F, G, H, I, J>(_ function: @escaping (A, B, C, 
     }
 }
 
+@inlinable
 public func curry<A, B, C, D, E, F, G, H, I, J>(_ function: @escaping (A, B, C, D, E, F, G, H, I) throws -> J)
   -> (A)
   -> (B)
@@ -351,6 +367,7 @@ public func curry<A, B, C, D, E, F, G, H, I, J>(_ function: @escaping (A, B, C, 
     }
 }
 
+@inlinable
 public func curry<A, B, C, D, E, F, G, H, I, J, K>(_ function: @escaping (A, B, C, D, E, F, G, H, I, J) -> K)
   -> (A)
   -> (B)
@@ -386,6 +403,7 @@ public func curry<A, B, C, D, E, F, G, H, I, J, K>(_ function: @escaping (A, B, 
     }
 }
 
+@inlinable
 public func curry<A, B, C, D, E, F, G, H, I, J, K>(_ function: @escaping (A, B, C, D, E, F, G, H, I, J) throws -> K)
   -> (A)
   -> (B)
@@ -421,6 +439,7 @@ public func curry<A, B, C, D, E, F, G, H, I, J, K>(_ function: @escaping (A, B, 
     }
 }
 
+@inlinable
 public func curry<A, B, C, D, E, F, G, H, I, J, K, L>(
   _ function: @escaping (A, B, C, D, E, F, G, H, I, J, K) -> L)
   -> (A)
@@ -460,6 +479,7 @@ public func curry<A, B, C, D, E, F, G, H, I, J, K, L>(
     }
 }
 
+@inlinable
 public func curry<A, B, C, D, E, F, G, H, I, J, K, L>(
   _ function: @escaping (A, B, C, D, E, F, G, H, I, J, K) throws -> L)
   -> (A)
@@ -499,6 +519,7 @@ public func curry<A, B, C, D, E, F, G, H, I, J, K, L>(
     }
 }
 
+@inlinable
 public func curry<A, B, C, D, E, F, G, H, I, J, K, L, M>(
   _ function: @escaping (A, B, C, D, E, F, G, H, I, J, K, L) -> M)
   -> (A)
@@ -541,6 +562,7 @@ public func curry<A, B, C, D, E, F, G, H, I, J, K, L, M>(
     }
 }
 
+@inlinable
 public func curry<A, B, C, D, E, F, G, H, I, J, K, L, M>(
   _ function: @escaping (A, B, C, D, E, F, G, H, I, J, K, L) throws -> M)
   -> (A)

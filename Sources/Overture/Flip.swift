@@ -3,6 +3,7 @@
 ///
 /// - Parameter f: A zero-argument, curried function.
 /// - Returns: A curried function with the zero-argument surfaced.
+@inlinable
 public func flip<A, B>(_ function: @escaping (A) -> () -> B)
   -> () -> (A) -> B {
 
@@ -17,6 +18,7 @@ public func flip<A, B>(_ function: @escaping (A) -> () -> B)
 ///
 /// - Parameter function: A curried function.
 /// - Returns: A curried function with its first two arguments flipped.
+@inlinable
 public func flip<A, B, C>(_ function: @escaping (A) -> (B) -> C)
   -> (B) -> (A) -> C {
 
@@ -31,6 +33,7 @@ public func flip<A, B, C>(_ function: @escaping (A) -> (B) -> C)
 ///
 /// - Parameter function: A two-argument, curried function.
 /// - Returns: A curried function with its first two arguments flipped.
+@inlinable
 public func flip<A, B, C, D>(_ function: @escaping (A) -> (B, C) -> D)
   -> (B, C) -> (A) -> D {
 
@@ -45,6 +48,7 @@ public func flip<A, B, C, D>(_ function: @escaping (A) -> (B, C) -> D)
 ///
 /// - Parameter function: A three-argument, curried function.
 /// - Returns: A curried function with its first two arguments flipped.
+@inlinable
 public func flip<A, B, C, D, E>(_ function: @escaping (A) -> (B, C, D) -> E)
   -> (B, C, D) -> (A) -> E {
 
@@ -59,6 +63,7 @@ public func flip<A, B, C, D, E>(_ function: @escaping (A) -> (B, C, D) -> E)
 ///
 /// - Parameter function: A four-argument, curried function.
 /// - Returns: A curried function with its first two arguments flipped.
+@inlinable
 public func flip<A, B, C, D, E, F>(_ function: @escaping (A) -> (B, C, D, E) -> F)
   -> (B, C, D, E) -> (A) -> F {
 
@@ -73,6 +78,7 @@ public func flip<A, B, C, D, E, F>(_ function: @escaping (A) -> (B, C, D, E) -> 
 ///
 /// - Parameter function: A five-argument, curried function.
 /// - Returns: A curried function with its first two arguments flipped.
+@inlinable
 public func flip<A, B, C, D, E, F, G>(_ function: @escaping (A) -> (B, C, D, E, F) -> G)
   -> (B, C, D, E, F) -> (A) -> G {
 
@@ -87,6 +93,7 @@ public func flip<A, B, C, D, E, F, G>(_ function: @escaping (A) -> (B, C, D, E, 
 ///
 /// - Parameter function: A throwing, zero-argument, curried function.
 /// - Returns: A throwing, curried function with the zero-argument surfaced.
+@inlinable
 public func flip<A, B>(_ function: @escaping (A) -> () throws -> B)
   -> () -> (A) throws -> B {
 
@@ -101,6 +108,7 @@ public func flip<A, B>(_ function: @escaping (A) -> () throws -> B)
 ///
 /// - Parameter function: A throwing, curried function.
 /// - Returns: A throwing, curried function with its first two arguments flipped.
+@inlinable
 public func flip<A, B, C>(_ function: @escaping (A) -> (B) throws -> C)
   -> (B) -> (A) throws -> C {
 
@@ -115,6 +123,7 @@ public func flip<A, B, C>(_ function: @escaping (A) -> (B) throws -> C)
 ///
 /// - Parameter function: A throwing, two-argument, curried function.
 /// - Returns: A curried function with its first two arguments flipped.
+@inlinable
 public func flip<A, B, C, D>(_ function: @escaping (A) -> (B, C) throws -> D)
   -> (B, C) -> (A) throws -> D {
 
@@ -129,6 +138,7 @@ public func flip<A, B, C, D>(_ function: @escaping (A) -> (B, C) throws -> D)
 ///
 /// - Parameter function: A throwing, three-argument, curried function.
 /// - Returns: A curried function with its first two arguments flipped.
+@inlinable
 public func flip<A, B, C, D, E>(_ function: @escaping (A) -> (B, C, D) throws -> E)
   -> (B, C, D) -> (A) throws -> E {
 
@@ -143,6 +153,7 @@ public func flip<A, B, C, D, E>(_ function: @escaping (A) -> (B, C, D) throws ->
 ///
 /// - Parameter function: A throwing, four-argument, curried function.
 /// - Returns: A curried function with its first two arguments flipped.
+@inlinable
 public func flip<A, B, C, D, E, F>(_ function: @escaping (A) -> (B, C, D, E) throws -> F)
   -> (B, C, D, E) -> (A) throws -> F {
 
@@ -157,6 +168,7 @@ public func flip<A, B, C, D, E, F>(_ function: @escaping (A) -> (B, C, D, E) thr
 ///
 /// - Parameter function: A throwing, five-argument, curried function.
 /// - Returns: A curried function with its first two arguments flipped.
+@inlinable
 public func flip<A, B, C, D, E, F, G>(_ function: @escaping (A) -> (B, C, D, E, F) throws -> G)
   -> (B, C, D, E, F) -> (A) throws -> G {
 

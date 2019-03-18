@@ -5,6 +5,7 @@
 ///   - setter: An immutable setter function.
 ///   - f: A value transform function.
 /// - Returns: A root transform function.
+@inlinable
 public func over<S, T, A, B>(
   _ setter: (@escaping (A) -> B) -> (S) -> T,
   _ f: @escaping (A) -> B
@@ -20,6 +21,7 @@ public func over<S, T, A, B>(
 ///   - setter: An immutable setter function.
 ///   - value: A new value.
 /// - Returns: A root transform function.
+@inlinable
 public func set<S, T, A, B>(
   _ setter: (@escaping (A) -> B) -> (S) -> T,
   _ value: B
@@ -37,6 +39,7 @@ public func set<S, T, A, B>(
 ///   - setter: A mutable setter function.
 ///   - f: A mutable value transform function.
 /// - Returns: A mutable root transform function.
+@inlinable
 public func mver<S, A>(
   _ setter: (@escaping (inout A) -> Void) -> (inout S) -> Void,
   _ f: @escaping (inout A) -> Void
@@ -52,6 +55,7 @@ public func mver<S, A>(
 ///   - setter: A reference-mutable setter function.
 ///   - f: A mutable value transform function.
 /// - Returns: A reference-mutable root transform function.
+@inlinable
 public func mver<S, A>(
   _ setter: (@escaping (inout A) -> Void) -> (S) -> Void,
   _ f: @escaping (inout A) -> Void
@@ -68,6 +72,7 @@ public func mver<S, A>(
 ///   - setter: A reference-mutable setter function.
 ///   - f: A mutable value transform function.
 /// - Returns: A reference-mutable root transform function.
+@inlinable
 public func mver<S, A>(
   _ setter: (@escaping (A) -> Void) -> (S) -> Void,
   _ f: @escaping (A) -> Void
@@ -84,6 +89,7 @@ public func mver<S, A>(
 ///   - setter: An mutable setter function.
 ///   - value: A new value.
 /// - Returns: A mutable root transform function.
+@inlinable
 public func mut<S, A>(
   _ setter: (@escaping (inout A) -> Void) -> (inout S) -> Void,
   _ value: A
@@ -99,6 +105,7 @@ public func mut<S, A>(
 ///   - setter: An mutable setter function.
 ///   - value: A new value.
 /// - Returns: A reference-mutable root transform function.
+@inlinable
 public func mut<S, A>(
   _ setter: (@escaping (inout A) -> Void) -> (S) -> Void,
   _ value: A

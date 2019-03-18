@@ -8,6 +8,7 @@
 ///   - b: An argument in `B`.
 /// - Returns: A new function that takes a value in `A` and returns a value in `C`.
 /// - Note: This function is commonly seen in operator form as `>>>`.
+@inlinable
 public func pipe<A, B, C>(
   _ f: @escaping (_ a: A) -> B,
   _ g: @escaping (_ b: B) -> C
@@ -19,6 +20,7 @@ public func pipe<A, B, C>(
     }
 }
 
+@inlinable
 public func pipe<A, B, C, D>(
   _ f: @escaping (A) -> B,
   _ g: @escaping (B) -> C,
@@ -31,6 +33,7 @@ public func pipe<A, B, C, D>(
     }
 }
 
+@inlinable
 public func pipe<A, B, C, D, E>(
   _ f: @escaping (A) -> B,
   _ g: @escaping (B) -> C,
@@ -44,6 +47,7 @@ public func pipe<A, B, C, D, E>(
     }
 }
 
+@inlinable
 public func pipe<A, B, C, D, E, F>(
   _ f: @escaping (A) -> B,
   _ g: @escaping (B) -> C,
@@ -58,6 +62,7 @@ public func pipe<A, B, C, D, E, F>(
     }
 }
 
+@inlinable
 public func pipe<A, B, C, D, E, F, G>(
   _ f: @escaping (A) -> B,
   _ g: @escaping (B) -> C,
@@ -82,6 +87,7 @@ public func pipe<A, B, C, D, E, F, G>(
 ///   - b: An argument in `B`.
 /// - Returns: A new function that takes a value in `A` and returns a value in `C`.
 /// - Note: This function is commonly seen in operator form as `>>>`.
+@inlinable
 public func pipe<A, B, C>(
   _ f: @escaping (_ a: A) throws -> B,
   _ g: @escaping (_ b: B) throws -> C
@@ -93,6 +99,7 @@ public func pipe<A, B, C>(
     }
 }
 
+@inlinable
 public func pipe<A, B, C, D>(
   _ f: @escaping (A) throws -> B,
   _ g: @escaping (B) throws -> C,
@@ -105,6 +112,7 @@ public func pipe<A, B, C, D>(
     }
 }
 
+@inlinable
 public func pipe<A, B, C, D, E>(
   _ f: @escaping (A) throws -> B,
   _ g: @escaping (B) throws -> C,
@@ -118,6 +126,7 @@ public func pipe<A, B, C, D, E>(
     }
 }
 
+@inlinable
 public func pipe<A, B, C, D, E, F>(
   _ f: @escaping (A) throws -> B,
   _ g: @escaping (B) throws -> C,
@@ -132,6 +141,7 @@ public func pipe<A, B, C, D, E, F>(
     }
 }
 
+@inlinable
 public func pipe<A, B, C, D, E, F, G>(
   _ f: @escaping (A) throws -> B,
   _ g: @escaping (B) throws -> C,

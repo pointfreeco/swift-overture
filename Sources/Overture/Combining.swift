@@ -1,3 +1,4 @@
+@inlinable
 public func combining<Root, Value, NewValue>(
   _ getter: @escaping (Root) -> Value,
   _ combine: @escaping (Value, Value) -> NewValue
@@ -7,6 +8,7 @@ public func combining<Root, Value, NewValue>(
     return { value, root in combine(value, getter(root)) }
 }
 
+@inlinable
 public func combining<Root, Value>(
   _ getter: @escaping (Root) -> Value,
   _ combine: @escaping (inout Value, Value) -> Void
@@ -16,6 +18,7 @@ public func combining<Root, Value>(
     return { value, root in combine(&value, getter(root)) }
 }
 
+@inlinable
 public func their<Root, Value, NewValue>(
   _ getter: @escaping (Root) -> Value,
   _ combining: @escaping (Value, Value) -> NewValue
@@ -24,6 +27,7 @@ public func their<Root, Value, NewValue>(
     return { combining(getter($0), getter($1)) }
 }
 
+@inlinable
 public func their<Root, Value: Comparable>(
   _ getter: @escaping (Root) -> Value
   )

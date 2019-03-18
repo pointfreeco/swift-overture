@@ -3,6 +3,7 @@
 ///
 /// - Parameter transform: A transform function.
 /// - Returns: An optional with its wrapped value transformed.
+@inlinable
 public func map<A, B>(
   _ transform: @escaping (A) -> B
   )
@@ -15,6 +16,7 @@ public func map<A, B>(
 ///
 /// - Parameter transform: A transform function.
 /// - Returns: An optional with its wrapped value transformed.
+@inlinable
 public func map<A, B>(
   _ transform: @escaping (A) throws -> B
   )
@@ -30,6 +32,7 @@ public func map<A, B>(
 ///   - a: An optional value.
 ///   - b: Another optional value.
 /// - Returns: An optional pair of values.
+@inlinable
 public func zip<A, B>(_ a: A?, _ b: B?) -> (A, B)? {
   guard let a = a, let b = b else { return nil }
   return (a, b)
@@ -39,6 +42,7 @@ public func zip<A, B>(_ a: A?, _ b: B?) -> (A, B)? {
 ///
 /// - Parameter transform: A transform function.
 /// - Returns: A transformed optional value.
+@inlinable
 public func zip<A, B, C>(with transform: @escaping (A, B) -> C) -> (A?, B?) -> C? {
   return { zip($0, $1).map(transform) }
 }

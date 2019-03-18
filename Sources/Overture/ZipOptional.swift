@@ -1,3 +1,4 @@
+@inlinable
 public func zip<A, B, C>(
   _ a: A?,
   _ b: B?,
@@ -7,6 +8,7 @@ public func zip<A, B, C>(
     return zip(zip(a, b), c).map { ($0.0, $0.1, $1) }
 }
 
+@inlinable
 public func zip<A, B, C, D>(
   with transform: @escaping (A, B, C) -> D
   )
@@ -14,6 +16,7 @@ public func zip<A, B, C, D>(
     return { zip($0, $1, $2).map(transform) }
 }
 
+@inlinable
 public func zip<A, B, C, D>(
   _ a: A?,
   _ b: B?,
@@ -24,6 +27,7 @@ public func zip<A, B, C, D>(
     return zip(zip(a, b), c, d).map { ($0.0, $0.1, $1, $2) }
 }
 
+@inlinable
 public func zip<A, B, C, D, E>(
   with transform: @escaping (A, B, C, D) -> E
   )
@@ -31,6 +35,7 @@ public func zip<A, B, C, D, E>(
     return { zip($0, $1, $2, $3).map(transform) }
 }
 
+@inlinable
 public func zip<A, B, C, D, E>(
   _ a: A?,
   _ b: B?,
@@ -42,6 +47,7 @@ public func zip<A, B, C, D, E>(
     return zip(zip(a, b), c, d, e).map { ($0.0, $0.1, $1, $2, $3) }
 }
 
+@inlinable
 public func zip<A, B, C, D, E, F>(
   with transform: @escaping (A, B, C, D, E) -> F
   )
@@ -49,6 +55,7 @@ public func zip<A, B, C, D, E, F>(
     return { zip($0, $1, $2, $3, $4).map(transform) }
 }
 
+@inlinable
 public func zip<A, B, C, D, E, F>(
   _ a: A?,
   _ b: B?,
@@ -61,6 +68,7 @@ public func zip<A, B, C, D, E, F>(
     return zip(zip(a, b), c, d, e, f).map { ($0.0, $0.1, $1, $2, $3, $4) }
 }
 
+@inlinable
 public func zip<A, B, C, D, E, F, G>(
   with transform: @escaping (A, B, C, D, E, F) -> G
   )
@@ -68,6 +76,7 @@ public func zip<A, B, C, D, E, F, G>(
     return { zip($0, $1, $2, $3, $4, $5).map(transform) }
 }
 
+@inlinable
 public func zip<A, B, C, D, E, F, G>(
   _ a: A?,
   _ b: B?,
@@ -81,6 +90,7 @@ public func zip<A, B, C, D, E, F, G>(
     return zip(zip(a, b), c, d, e, f, g).map { ($0.0, $0.1, $1, $2, $3, $4, $5) }
 }
 
+@inlinable
 public func zip<A, B, C, D, E, F, G, H>(
   with transform: @escaping (A, B, C, D, E, F, G) -> H
   )
@@ -88,6 +98,7 @@ public func zip<A, B, C, D, E, F, G, H>(
     return { zip($0, $1, $2, $3, $4, $5, $6).map(transform) }
 }
 
+@inlinable
 public func zip<A, B, C, D, E, F, G, H>(
   _ a: A?,
   _ b: B?,
@@ -102,6 +113,7 @@ public func zip<A, B, C, D, E, F, G, H>(
     return zip(zip(a, b), c, d, e, f, g, h).map { ($0.0, $0.1, $1, $2, $3, $4, $5, $6) }
 }
 
+@inlinable
 public func zip<A, B, C, D, E, F, G, H, I>(
   with transform: @escaping (A, B, C, D, E, F, G, H) -> I
   )
@@ -109,6 +121,7 @@ public func zip<A, B, C, D, E, F, G, H, I>(
     return { zip($0, $1, $2, $3, $4, $5, $6, $7).map(transform) }
 }
 
+@inlinable
 public func zip<A, B, C, D, E, F, G, H, I>(
   _ a: A?,
   _ b: B?,
@@ -124,6 +137,7 @@ public func zip<A, B, C, D, E, F, G, H, I>(
     return zip(zip(a, b), c, d, e, f, g, h, i).map { ($0.0, $0.1, $1, $2, $3, $4, $5, $6, $7) }
 }
 
+@inlinable
 public func zip<A, B, C, D, E, F, G, H, I, J>(
   with transform: @escaping (A, B, C, D, E, F, G, H, I) -> J
   )
@@ -131,6 +145,7 @@ public func zip<A, B, C, D, E, F, G, H, I, J>(
     return { zip($0, $1, $2, $3, $4, $5, $6, $7, $8).map(transform) }
 }
 
+@inlinable
 public func zip<A, B, C, D, E, F, G, H, I, J>(
   _ a: A?,
   _ b: B?,
@@ -147,6 +162,7 @@ public func zip<A, B, C, D, E, F, G, H, I, J>(
     return zip(zip(a, b), c, d, e, f, g, h, i, j).map { ($0.0, $0.1, $1, $2, $3, $4, $5, $6, $7, $8) }
 }
 
+@inlinable
 public func zip<A, B, C, D, E, F, G, H, I, J, K>(
   with transform: @escaping (A, B, C, D, E, F, G, H, I, J) -> K
   )

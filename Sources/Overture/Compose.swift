@@ -8,6 +8,7 @@
 ///   - a: An argument in `A`.
 /// - Returns: A new function that takes a value in `A` and returns a value in `C`.
 /// - Note: This function is commonly seen in operator form as `<<<`.
+@inlinable
 public func compose<A, B, C>(
   _ f: @escaping (B) -> C,
   _ g: @escaping (A) -> B
@@ -19,6 +20,7 @@ public func compose<A, B, C>(
     }
 }
 
+@inlinable
 public func compose<A, B, C, D>(
   _ f: @escaping (C) -> D,
   _ g: @escaping (B) -> C,
@@ -31,6 +33,7 @@ public func compose<A, B, C, D>(
     }
 }
 
+@inlinable
 public func compose<A, B, C, D, E>(
   _ f: @escaping (D) -> E,
   _ g: @escaping (C) -> D,
@@ -44,6 +47,7 @@ public func compose<A, B, C, D, E>(
     }
 }
 
+@inlinable
 public func compose<A, B, C, D, E, F>(
   _ f: @escaping (E) -> F,
   _ g: @escaping (D) -> E,
@@ -58,6 +62,7 @@ public func compose<A, B, C, D, E, F>(
     }
 }
 
+@inlinable
 public func compose<A, B, C, D, E, F, G>(
   _ f: @escaping (F) -> G,
   _ g: @escaping (E) -> F,
@@ -82,6 +87,7 @@ public func compose<A, B, C, D, E, F, G>(
 ///   - a: An argument in `A`.
 /// - Returns: A new function that takes a value in `A` and returns a value in `C`.
 /// - Note: This function is commonly seen in operator form as `<<<`.
+@inlinable
 public func compose<A, B, C>(
   _ f: @escaping (B) throws -> C,
   _ g: @escaping (A) throws -> B
@@ -93,6 +99,7 @@ public func compose<A, B, C>(
     }
 }
 
+@inlinable
 public func compose<A, B, C, D>(
   _ f: @escaping (C) throws -> D,
   _ g: @escaping (B) throws -> C,
@@ -105,6 +112,7 @@ public func compose<A, B, C, D>(
     }
 }
 
+@inlinable
 public func compose<A, B, C, D, E>(
   _ f: @escaping (D) throws -> E,
   _ g: @escaping (C) throws -> D,
@@ -118,6 +126,7 @@ public func compose<A, B, C, D, E>(
     }
 }
 
+@inlinable
 public func compose<A, B, C, D, E, F>(
   _ f: @escaping (E) throws -> F,
   _ g: @escaping (D) throws -> E,
@@ -132,6 +141,7 @@ public func compose<A, B, C, D, E, F>(
     }
 }
 
+@inlinable
 public func compose<A, B, C, D, E, F, G>(
   _ f: @escaping (F) throws -> G,
   _ g: @escaping (E) throws -> F,

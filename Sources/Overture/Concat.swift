@@ -5,6 +5,7 @@
 ///   - fs: Zero or more functions to apply in order.
 /// - Returns: A new function that applies every function given as input in order.
 /// - Note: This function is commonly seen in operator form as `<>`.
+@inlinable
 public func concat<A>(
   _ fs: [(A) -> A]
   )
@@ -23,6 +24,7 @@ public func concat<A>(
 ///   - a: The argument to the final function.
 /// - Returns: A new function that applies every function given as input in order.
 /// - Note: This function is commonly seen in operator form as `<>`.
+@inlinable
 public func concat<A>(
   _ fs: ((A) -> A)...,
   and fz: @escaping (_ a: A) -> A = { $0 }
@@ -38,6 +40,7 @@ public func concat<A>(
 ///   - fs: Zero or more functions to apply in order.
 /// - Returns: A new function that applies every function given as input in order.
 /// - Note: This function is commonly seen in operator form as `<>`.
+@inlinable
 public func concat<A>(
   _ fs: [(A) throws -> A]
   )
@@ -56,6 +59,7 @@ public func concat<A>(
 ///   - a: The argument to the final function.
 /// - Returns: A new function that applies every function given as input in order.
 /// - Note: This function is commonly seen in operator form as `<>`.
+@inlinable
 public func concat<A>(
   _ fs: ((A) throws -> A)...,
   and fz: @escaping (_ a: A) throws -> A = { $0 }
@@ -71,6 +75,7 @@ public func concat<A>(
 ///   - fs: Zero or more functions to apply in order.
 /// - Returns: A new function that applies every function given as input in order.
 /// - Note: This function is commonly seen in operator form as `<>`.
+@inlinable
 public func concat<A>(
   _ fs: [(inout A) -> Void]
   )
@@ -89,6 +94,7 @@ public func concat<A>(
 ///   - a: The argument to the final function.
 /// - Returns: A new function that applies every function given as input in order.
 /// - Note: This function is commonly seen in operator form as `<>`.
+@inlinable
 public func concat<A>(
   _ fs: ((inout A) -> Void)...,
   and fz: @escaping (_ a: inout A) -> Void = { _ in }
@@ -104,6 +110,7 @@ public func concat<A>(
 ///   - fs: Zero or more functions to apply in order.
 /// - Returns: A new function that applies every function given as input in order.
 /// - Note: This function is commonly seen in operator form as `<>`.
+@inlinable
 public func concat<A>(
   _ fs: [(inout A) throws -> Void]
   )
@@ -122,6 +129,7 @@ public func concat<A>(
 ///   - a: The argument to the final function.
 /// - Returns: A new function that applies every function given as input in order.
 /// - Note: This function is commonly seen in operator form as `<>`.
+@inlinable
 public func concat<A>(
   _ fs: ((inout A) throws -> Void)...,
   and fz: @escaping (_ a: inout A) throws -> Void = { _ in }
@@ -137,6 +145,7 @@ public func concat<A>(
 ///   - fs: Zero or more functions to apply in order.
 /// - Returns: A new function that applies every function given as input in order.
 /// - Note: This function is commonly seen in operator form as `<>`.
+@inlinable
 public func concat<A: AnyObject>(
   _ fs: [(A) -> Void]
   )
@@ -153,6 +162,7 @@ public func concat<A: AnyObject>(
 ///   - fs: Zero or more functions to apply in order.
 /// - Returns: A new function that applies every function given as input in order.
 /// - Note: This function is commonly seen in operator form as `<>`.
+@inlinable
 public func concat<A: AnyObject>(
   _ fs: ((A) -> Void)...,
   and fz: @escaping (_ a: A) -> Void = { _ in }
@@ -168,6 +178,7 @@ public func concat<A: AnyObject>(
 ///   - fs: Zero or more functions to apply in order.
 /// - Returns: A new function that applies every function given as input in order.
 /// - Note: This function is commonly seen in operator form as `<>`.
+@inlinable
 public func concat<A: AnyObject>(
   _ fs: [(A) throws -> Void]
   )
@@ -184,6 +195,7 @@ public func concat<A: AnyObject>(
 ///   - fs: Zero or more functions to apply in order.
 /// - Returns: A new function that applies every function given as input in order.
 /// - Note: This function is commonly seen in operator form as `<>`.
+@inlinable
 public func concat<A: AnyObject>(
   _ fs: ((A) throws -> Void)...,
   and fz: @escaping (_ a: A) throws -> Void = { _ in }

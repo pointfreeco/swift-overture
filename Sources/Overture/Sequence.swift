@@ -3,6 +3,7 @@
 ///
 /// - Parameter transform: A transform function.
 /// - Returns: An array with each sequence element transformed.
+@inlinable
 public func map<S: Sequence, A>(
   _ transform: @escaping (S.Element) -> A
   )
@@ -15,6 +16,7 @@ public func map<S: Sequence, A>(
 ///
 /// - Parameter transform: A transform function.
 /// - Returns: An array with each sequence element transformed.
+@inlinable
 public func map<S: Sequence, A>(
   _ transform: @escaping (S.Element) throws -> A
   )
@@ -26,6 +28,7 @@ public func map<S: Sequence, A>(
 /// In-place collection mutation.
 ///
 /// - Parameter transform: A transform function.
+@inlinable
 public func mutEach<C: MutableCollection>(
   _ transform: @escaping (inout C.Element) -> Void
   )

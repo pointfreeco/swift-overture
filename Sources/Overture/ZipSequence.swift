@@ -1,3 +1,4 @@
+@inlinable
 public func zip<A, B, C>(
   _ a: A,
   _ b: B,
@@ -7,6 +8,7 @@ public func zip<A, B, C>(
     return Zip3Sequence(a, b, c)
 }
 
+@inlinable
 public func zip<A, B, C, D>(
   _ a: A,
   _ b: B,
@@ -17,6 +19,7 @@ public func zip<A, B, C, D>(
     return Zip4Sequence(a, b, c, d)
 }
 
+@inlinable
 public func zip<A, B, C, D, E>(
   _ a: A,
   _ b: B,
@@ -28,6 +31,7 @@ public func zip<A, B, C, D, E>(
     return Zip5Sequence(a, b, c, d, e)
 }
 
+@inlinable
 public func zip<A, B, C, D, E, F>(
   _ a: A,
   _ b: B,
@@ -40,6 +44,7 @@ public func zip<A, B, C, D, E, F>(
     return Zip6Sequence(a, b, c, d, e, f)
 }
 
+@inlinable
 public func zip<A, B, C, D, E, F, G>(
   _ a: A,
   _ b: B,
@@ -53,6 +58,7 @@ public func zip<A, B, C, D, E, F, G>(
     return Zip7Sequence(a, b, c, d, e, f, g)
 }
 
+@inlinable
 public func zip<A, B, C, D, E, F, G, H>(
   _ a: A,
   _ b: B,
@@ -67,6 +73,7 @@ public func zip<A, B, C, D, E, F, G, H>(
     return Zip8Sequence(a, b, c, d, e, f, g, h)
 }
 
+@inlinable
 public func zip<A, B, C, D, E, F, G, H, I>(
   _ a: A,
   _ b: B,
@@ -82,6 +89,7 @@ public func zip<A, B, C, D, E, F, G, H, I>(
     return Zip9Sequence(a, b, c, d, e, f, g, h, i)
 }
 
+@inlinable
 public func zip<A, B, C, D, E, F, G, H, I, J>(
   _ a: A,
   _ b: B,
@@ -103,10 +111,11 @@ public struct Zip3Sequence<
   B: Sequence,
   C: Sequence
 >: Sequence {
-  internal let _a: A
-  internal let _b: B
-  internal let _c: C
+  @usableFromInline internal let _a: A
+  @usableFromInline internal let _b: B
+  @usableFromInline internal let _c: C
 
+  @inlinable
   public init(_ a: A, _ b: B, _ c: C) {
     _a = a
     _b = b
@@ -114,11 +123,12 @@ public struct Zip3Sequence<
   }
 
   public struct Iterator: IteratorProtocol {
-    internal var _baseStreamA: A.Iterator
-    internal var _baseStreamB: B.Iterator
-    internal var _baseStreamC: C.Iterator
-    internal var _reachedEnd: Bool = false
+    @usableFromInline internal var _baseStreamA: A.Iterator
+    @usableFromInline internal var _baseStreamB: B.Iterator
+    @usableFromInline internal var _baseStreamC: C.Iterator
+    @usableFromInline internal var _reachedEnd: Bool = false
 
+    @usableFromInline
     internal init(
       _ iteratorA: A.Iterator,
       _ iteratorB: B.Iterator,
@@ -135,6 +145,7 @@ public struct Zip3Sequence<
       C.Element
     )
 
+    @inlinable
     public mutating func next() -> Element? {
       if _reachedEnd {
         return nil
@@ -153,6 +164,7 @@ public struct Zip3Sequence<
     }
   }
 
+  @inlinable
   public func makeIterator() -> Iterator {
     return Iterator(
       _a.makeIterator(),
@@ -162,6 +174,7 @@ public struct Zip3Sequence<
   }
 }
 
+@inlinable
 public func zip<
   A: Sequence,
   B: Sequence,
@@ -173,6 +186,7 @@ public func zip<
     return { zip($0, $1).map(f) }
 }
 
+@inlinable
 public func zip<
   A: Sequence,
   B: Sequence,
@@ -185,6 +199,7 @@ public func zip<
     return { zip($0, $1, $2).map(f) }
 }
 
+@inlinable
 public func zip<
   A: Sequence,
   B: Sequence,
@@ -198,6 +213,7 @@ public func zip<
     return { zip($0, $1, $2, $3).map(f) }
 }
 
+@inlinable
 public func zip<
   A: Sequence,
   B: Sequence,
@@ -212,6 +228,7 @@ public func zip<
     return { zip($0, $1, $2, $3, $4).map(f) }
 }
 
+@inlinable
 public func zip<
   A: Sequence,
   B: Sequence,
@@ -227,6 +244,7 @@ public func zip<
     return { zip($0, $1, $2, $3, $4, $5).map(f) }
 }
 
+@inlinable
 public func zip<
   A: Sequence,
   B: Sequence,
@@ -243,6 +261,7 @@ public func zip<
     return { zip($0, $1, $2, $3, $4, $5, $6).map(f) }
 }
 
+@inlinable
 public func zip<
   A: Sequence,
   B: Sequence,
@@ -260,6 +279,7 @@ public func zip<
     return { zip($0, $1, $2, $3, $4, $5, $6, $7).map(f) }
 }
 
+@inlinable
 public func zip<
   A: Sequence,
   B: Sequence,
@@ -278,6 +298,7 @@ public func zip<
     return { zip($0, $1, $2, $3, $4, $5, $6, $7, $8).map(f) }
 }
 
+@inlinable
 public func zip<
   A: Sequence,
   B: Sequence,
@@ -303,11 +324,12 @@ public struct Zip4Sequence<
   C: Sequence,
   D: Sequence
 >: Sequence {
-  internal let _a: A
-  internal let _b: B
-  internal let _c: C
-  internal let _d: D
+  @usableFromInline internal let _a: A
+  @usableFromInline internal let _b: B
+  @usableFromInline internal let _c: C
+  @usableFromInline internal let _d: D
 
+  @inlinable
   public init(_ a: A, _ b: B, _ c: C, _ d: D) {
     _a = a
     _b = b
@@ -316,12 +338,13 @@ public struct Zip4Sequence<
   }
 
   public struct Iterator: IteratorProtocol {
-    internal var _baseStreamA: A.Iterator
-    internal var _baseStreamB: B.Iterator
-    internal var _baseStreamC: C.Iterator
-    internal var _baseStreamD: D.Iterator
-    internal var _reachedEnd: Bool = false
+    @usableFromInline internal var _baseStreamA: A.Iterator
+    @usableFromInline internal var _baseStreamB: B.Iterator
+    @usableFromInline internal var _baseStreamC: C.Iterator
+    @usableFromInline internal var _baseStreamD: D.Iterator
+    @usableFromInline internal var _reachedEnd: Bool = false
 
+    @usableFromInline
     internal init(
       _ iteratorA: A.Iterator,
       _ iteratorB: B.Iterator,
@@ -341,6 +364,7 @@ public struct Zip4Sequence<
       D.Element
     )
 
+    @inlinable
     public mutating func next() -> Element? {
       if _reachedEnd {
         return nil
@@ -360,6 +384,7 @@ public struct Zip4Sequence<
     }
   }
 
+  @inlinable
   public func makeIterator() -> Iterator {
     return Iterator(
       _a.makeIterator(),
@@ -377,12 +402,13 @@ public struct Zip5Sequence<
   D: Sequence,
   E: Sequence
 >: Sequence {
-  internal let _a: A
-  internal let _b: B
-  internal let _c: C
-  internal let _d: D
-  internal let _e: E
+  @usableFromInline internal let _a: A
+  @usableFromInline internal let _b: B
+  @usableFromInline internal let _c: C
+  @usableFromInline internal let _d: D
+  @usableFromInline internal let _e: E
 
+  @inlinable
   public init(_ a: A, _ b: B, _ c: C, _ d: D, _ e: E) {
     _a = a
     _b = b
@@ -392,13 +418,14 @@ public struct Zip5Sequence<
   }
 
   public struct Iterator: IteratorProtocol {
-    internal var _baseStreamA: A.Iterator
-    internal var _baseStreamB: B.Iterator
-    internal var _baseStreamC: C.Iterator
-    internal var _baseStreamD: D.Iterator
-    internal var _baseStreamE: E.Iterator
-    internal var _reachedEnd: Bool = false
+    @usableFromInline internal var _baseStreamA: A.Iterator
+    @usableFromInline internal var _baseStreamB: B.Iterator
+    @usableFromInline internal var _baseStreamC: C.Iterator
+    @usableFromInline internal var _baseStreamD: D.Iterator
+    @usableFromInline internal var _baseStreamE: E.Iterator
+    @usableFromInline internal var _reachedEnd: Bool = false
 
+    @usableFromInline
     internal init(
       _ iteratorA: A.Iterator,
       _ iteratorB: B.Iterator,
@@ -421,6 +448,7 @@ public struct Zip5Sequence<
       E.Element
     )
 
+    @inlinable
     public mutating func next() -> Element? {
       if _reachedEnd {
         return nil
@@ -441,6 +469,7 @@ public struct Zip5Sequence<
     }
   }
 
+  @inlinable
   public func makeIterator() -> Iterator {
     return Iterator(
       _a.makeIterator(),
@@ -460,13 +489,14 @@ public struct Zip6Sequence<
   E: Sequence,
   F: Sequence
 >: Sequence {
-  internal let _a: A
-  internal let _b: B
-  internal let _c: C
-  internal let _d: D
-  internal let _e: E
-  internal let _f: F
+  @usableFromInline internal let _a: A
+  @usableFromInline internal let _b: B
+  @usableFromInline internal let _c: C
+  @usableFromInline internal let _d: D
+  @usableFromInline internal let _e: E
+  @usableFromInline internal let _f: F
 
+  @inlinable
   public init(_ a: A, _ b: B, _ c: C, _ d: D, _ e: E, _ f: F) {
     _a = a
     _b = b
@@ -477,14 +507,15 @@ public struct Zip6Sequence<
   }
 
   public struct Iterator: IteratorProtocol {
-    internal var _baseStreamA: A.Iterator
-    internal var _baseStreamB: B.Iterator
-    internal var _baseStreamC: C.Iterator
-    internal var _baseStreamD: D.Iterator
-    internal var _baseStreamE: E.Iterator
-    internal var _baseStreamF: F.Iterator
-    internal var _reachedEnd: Bool = false
+    @usableFromInline internal var _baseStreamA: A.Iterator
+    @usableFromInline internal var _baseStreamB: B.Iterator
+    @usableFromInline internal var _baseStreamC: C.Iterator
+    @usableFromInline internal var _baseStreamD: D.Iterator
+    @usableFromInline internal var _baseStreamE: E.Iterator
+    @usableFromInline internal var _baseStreamF: F.Iterator
+    @usableFromInline internal var _reachedEnd: Bool = false
 
+    @usableFromInline
     internal init(
       _ iteratorA: A.Iterator,
       _ iteratorB: B.Iterator,
@@ -510,6 +541,7 @@ public struct Zip6Sequence<
       F.Element
     )
 
+    @inlinable
     public mutating func next() -> Element? {
       if _reachedEnd {
         return nil
@@ -531,6 +563,7 @@ public struct Zip6Sequence<
     }
   }
 
+  @inlinable
   public func makeIterator() -> Iterator {
     return Iterator(
       _a.makeIterator(),
@@ -552,14 +585,15 @@ public struct Zip7Sequence<
   F: Sequence,
   G: Sequence
 >: Sequence {
-  internal let _a: A
-  internal let _b: B
-  internal let _c: C
-  internal let _d: D
-  internal let _e: E
-  internal let _f: F
-  internal let _g: G
+  @usableFromInline internal let _a: A
+  @usableFromInline internal let _b: B
+  @usableFromInline internal let _c: C
+  @usableFromInline internal let _d: D
+  @usableFromInline internal let _e: E
+  @usableFromInline internal let _f: F
+  @usableFromInline internal let _g: G
 
+  @inlinable
   public init(_ a: A, _ b: B, _ c: C, _ d: D, _ e: E, _ f: F, _ g: G) {
     _a = a
     _b = b
@@ -571,15 +605,16 @@ public struct Zip7Sequence<
   }
 
   public struct Iterator: IteratorProtocol {
-    internal var _baseStreamA: A.Iterator
-    internal var _baseStreamB: B.Iterator
-    internal var _baseStreamC: C.Iterator
-    internal var _baseStreamD: D.Iterator
-    internal var _baseStreamE: E.Iterator
-    internal var _baseStreamF: F.Iterator
-    internal var _baseStreamG: G.Iterator
-    internal var _reachedEnd: Bool = false
+    @usableFromInline internal var _baseStreamA: A.Iterator
+    @usableFromInline internal var _baseStreamB: B.Iterator
+    @usableFromInline internal var _baseStreamC: C.Iterator
+    @usableFromInline internal var _baseStreamD: D.Iterator
+    @usableFromInline internal var _baseStreamE: E.Iterator
+    @usableFromInline internal var _baseStreamF: F.Iterator
+    @usableFromInline internal var _baseStreamG: G.Iterator
+    @usableFromInline internal var _reachedEnd: Bool = false
 
+    @usableFromInline
     internal init(
       _ iteratorA: A.Iterator,
       _ iteratorB: B.Iterator,
@@ -608,6 +643,7 @@ public struct Zip7Sequence<
       G.Element
     )
 
+    @inlinable
     public mutating func next() -> Element? {
       if _reachedEnd {
         return nil
@@ -630,6 +666,7 @@ public struct Zip7Sequence<
     }
   }
 
+  @inlinable
   public func makeIterator() -> Iterator {
     return Iterator(
       _a.makeIterator(),
@@ -653,15 +690,16 @@ public struct Zip8Sequence<
   G: Sequence,
   H: Sequence
 >: Sequence {
-  internal let _a: A
-  internal let _b: B
-  internal let _c: C
-  internal let _d: D
-  internal let _e: E
-  internal let _f: F
-  internal let _g: G
-  internal let _h: H
+  @usableFromInline internal let _a: A
+  @usableFromInline internal let _b: B
+  @usableFromInline internal let _c: C
+  @usableFromInline internal let _d: D
+  @usableFromInline internal let _e: E
+  @usableFromInline internal let _f: F
+  @usableFromInline internal let _g: G
+  @usableFromInline internal let _h: H
 
+  @inlinable
   public init(_ a: A, _ b: B, _ c: C, _ d: D, _ e: E, _ f: F, _ g: G, _ h: H) {
     _a = a
     _b = b
@@ -674,16 +712,17 @@ public struct Zip8Sequence<
   }
 
   public struct Iterator: IteratorProtocol {
-    internal var _baseStreamA: A.Iterator
-    internal var _baseStreamB: B.Iterator
-    internal var _baseStreamC: C.Iterator
-    internal var _baseStreamD: D.Iterator
-    internal var _baseStreamE: E.Iterator
-    internal var _baseStreamF: F.Iterator
-    internal var _baseStreamG: G.Iterator
-    internal var _baseStreamH: H.Iterator
-    internal var _reachedEnd: Bool = false
+    @usableFromInline internal var _baseStreamA: A.Iterator
+    @usableFromInline internal var _baseStreamB: B.Iterator
+    @usableFromInline internal var _baseStreamC: C.Iterator
+    @usableFromInline internal var _baseStreamD: D.Iterator
+    @usableFromInline internal var _baseStreamE: E.Iterator
+    @usableFromInline internal var _baseStreamF: F.Iterator
+    @usableFromInline internal var _baseStreamG: G.Iterator
+    @usableFromInline internal var _baseStreamH: H.Iterator
+    @usableFromInline internal var _reachedEnd: Bool = false
 
+    @usableFromInline
     internal init(
       _ iteratorA: A.Iterator,
       _ iteratorB: B.Iterator,
@@ -715,6 +754,7 @@ public struct Zip8Sequence<
       H.Element
     )
 
+    @inlinable
     public mutating func next() -> Element? {
       if _reachedEnd {
         return nil
@@ -738,6 +778,7 @@ public struct Zip8Sequence<
     }
   }
 
+  @inlinable
   public func makeIterator() -> Iterator {
     return Iterator(
       _a.makeIterator(),
@@ -763,16 +804,17 @@ public struct Zip9Sequence<
   H: Sequence,
   I: Sequence
 >: Sequence {
-  internal let _a: A
-  internal let _b: B
-  internal let _c: C
-  internal let _d: D
-  internal let _e: E
-  internal let _f: F
-  internal let _g: G
-  internal let _h: H
-  internal let _i: I
+  @usableFromInline internal let _a: A
+  @usableFromInline internal let _b: B
+  @usableFromInline internal let _c: C
+  @usableFromInline internal let _d: D
+  @usableFromInline internal let _e: E
+  @usableFromInline internal let _f: F
+  @usableFromInline internal let _g: G
+  @usableFromInline internal let _h: H
+  @usableFromInline internal let _i: I
 
+  @inlinable
   public init(_ a: A, _ b: B, _ c: C, _ d: D, _ e: E, _ f: F, _ g: G, _ h: H, _ i: I) {
     _a = a
     _b = b
@@ -786,17 +828,18 @@ public struct Zip9Sequence<
   }
 
   public struct Iterator: IteratorProtocol {
-    internal var _baseStreamA: A.Iterator
-    internal var _baseStreamB: B.Iterator
-    internal var _baseStreamC: C.Iterator
-    internal var _baseStreamD: D.Iterator
-    internal var _baseStreamE: E.Iterator
-    internal var _baseStreamF: F.Iterator
-    internal var _baseStreamG: G.Iterator
-    internal var _baseStreamH: H.Iterator
-    internal var _baseStreamI: I.Iterator
-    internal var _reachedEnd: Bool = false
+    @usableFromInline internal var _baseStreamA: A.Iterator
+    @usableFromInline internal var _baseStreamB: B.Iterator
+    @usableFromInline internal var _baseStreamC: C.Iterator
+    @usableFromInline internal var _baseStreamD: D.Iterator
+    @usableFromInline internal var _baseStreamE: E.Iterator
+    @usableFromInline internal var _baseStreamF: F.Iterator
+    @usableFromInline internal var _baseStreamG: G.Iterator
+    @usableFromInline internal var _baseStreamH: H.Iterator
+    @usableFromInline internal var _baseStreamI: I.Iterator
+    @usableFromInline internal var _reachedEnd: Bool = false
 
+    @usableFromInline
     internal init(
       _ iteratorA: A.Iterator,
       _ iteratorB: B.Iterator,
@@ -831,6 +874,7 @@ public struct Zip9Sequence<
       I.Element
     )
 
+    @inlinable
     public mutating func next() -> Element? {
       if _reachedEnd {
         return nil
@@ -855,6 +899,7 @@ public struct Zip9Sequence<
     }
   }
 
+  @inlinable
   public func makeIterator() -> Iterator {
     return Iterator(
       _a.makeIterator(),
@@ -882,17 +927,18 @@ public struct Zip10Sequence<
   I: Sequence,
   J: Sequence
 >: Sequence {
-  internal let _a: A
-  internal let _b: B
-  internal let _c: C
-  internal let _d: D
-  internal let _e: E
-  internal let _f: F
-  internal let _g: G
-  internal let _h: H
-  internal let _i: I
-  internal let _j: J
+  @usableFromInline internal let _a: A
+  @usableFromInline internal let _b: B
+  @usableFromInline internal let _c: C
+  @usableFromInline internal let _d: D
+  @usableFromInline internal let _e: E
+  @usableFromInline internal let _f: F
+  @usableFromInline internal let _g: G
+  @usableFromInline internal let _h: H
+  @usableFromInline internal let _i: I
+  @usableFromInline internal let _j: J
 
+  @inlinable
   public init(_ a: A, _ b: B, _ c: C, _ d: D, _ e: E, _ f: F, _ g: G, _ h: H, _ i: I, _ j: J) {
     _a = a
     _b = b
@@ -907,18 +953,19 @@ public struct Zip10Sequence<
   }
 
   public struct Iterator: IteratorProtocol {
-    internal var _baseStreamA: A.Iterator
-    internal var _baseStreamB: B.Iterator
-    internal var _baseStreamC: C.Iterator
-    internal var _baseStreamD: D.Iterator
-    internal var _baseStreamE: E.Iterator
-    internal var _baseStreamF: F.Iterator
-    internal var _baseStreamG: G.Iterator
-    internal var _baseStreamH: H.Iterator
-    internal var _baseStreamI: I.Iterator
-    internal var _baseStreamJ: J.Iterator
-    internal var _reachedEnd: Bool = false
+    @usableFromInline internal var _baseStreamA: A.Iterator
+    @usableFromInline internal var _baseStreamB: B.Iterator
+    @usableFromInline internal var _baseStreamC: C.Iterator
+    @usableFromInline internal var _baseStreamD: D.Iterator
+    @usableFromInline internal var _baseStreamE: E.Iterator
+    @usableFromInline internal var _baseStreamF: F.Iterator
+    @usableFromInline internal var _baseStreamG: G.Iterator
+    @usableFromInline internal var _baseStreamH: H.Iterator
+    @usableFromInline internal var _baseStreamI: I.Iterator
+    @usableFromInline internal var _baseStreamJ: J.Iterator
+    @usableFromInline internal var _reachedEnd: Bool = false
 
+    @usableFromInline
     internal init(
       _ iteratorA: A.Iterator,
       _ iteratorB: B.Iterator,
@@ -956,6 +1003,7 @@ public struct Zip10Sequence<
       J.Element
     )
 
+    @inlinable
     public mutating func next() -> Element? {
       if _reachedEnd {
         return nil
@@ -981,6 +1029,7 @@ public struct Zip10Sequence<
     }
   }
 
+  @inlinable
   public func makeIterator() -> Iterator {
     return Iterator(
       _a.makeIterator(),

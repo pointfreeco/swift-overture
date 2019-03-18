@@ -11,6 +11,7 @@
 ///   - a: An argument in `B`.
 /// - Returns: A new function that takes a value in `A` and returns an optional value in `C`.
 /// - Note: This function is commonly seen in operator form as `>=>`.
+@inlinable
 public func chain<A, B, C>(
   _ f: @escaping (A) -> B?,
   _ g: @escaping (B) -> C?
@@ -22,6 +23,7 @@ public func chain<A, B, C>(
     }
 }
 
+@inlinable
 public func chain<A, B, C, D>(
   _ f: @escaping (A) -> B?,
   _ g: @escaping (B) -> C?,
@@ -36,6 +38,7 @@ public func chain<A, B, C, D>(
     }
 }
 
+@inlinable
 public func chain<A, B, C, D, E>(
   _ f: @escaping (A) -> B?,
   _ g: @escaping (B) -> C?,
@@ -52,6 +55,7 @@ public func chain<A, B, C, D, E>(
     }
 }
 
+@inlinable
 public func chain<A, B, C, D, E, F>(
   _ f: @escaping (A) -> B?,
   _ g: @escaping (B) -> C?,
@@ -70,6 +74,7 @@ public func chain<A, B, C, D, E, F>(
     }
 }
 
+@inlinable
 public func chain<A, B, C, D, E, F, G>(
   _ f: @escaping (A) -> B?,
   _ g: @escaping (B) -> C?,
@@ -90,6 +95,7 @@ public func chain<A, B, C, D, E, F, G>(
     }
 }
 
+@inlinable
 public func chain<A, B, C>(
   _ f: @escaping (A) throws -> B?,
   _ g: @escaping (B) throws -> C?
@@ -101,6 +107,7 @@ public func chain<A, B, C>(
     }
 }
 
+@inlinable
 public func chain<A, B, C, D>(
   _ f: @escaping (A) throws -> B?,
   _ g: @escaping (B) throws -> C?,
@@ -115,6 +122,7 @@ public func chain<A, B, C, D>(
     }
 }
 
+@inlinable
 public func chain<A, B, C, D, E>(
   _ f: @escaping (A) throws -> B?,
   _ g: @escaping (B) throws -> C?,
@@ -131,6 +139,7 @@ public func chain<A, B, C, D, E>(
     }
 }
 
+@inlinable
 public func chain<A, B, C, D, E, F>(
   _ f: @escaping (A) throws -> B?,
   _ g: @escaping (B) throws -> C?,
@@ -149,6 +158,7 @@ public func chain<A, B, C, D, E, F>(
     }
 }
 
+@inlinable
 public func chain<A, B, C, D, E, F, G>(
   _ f: @escaping (A) throws -> B?,
   _ g: @escaping (B) throws -> C?,
@@ -175,6 +185,7 @@ public func chain<A, B, C, D, E, F, G>(
 ///   - f: A function that takes a value in `A` and returns an array of `B`s.
 ///   - g: A function that takes a value in `B` and returns an array of `C`s.
 /// - Returns: A new function that takes a value in `A` and returns an array of `C`s.
+@inlinable
 public func chain<A, B, C>(
   _ f: @escaping (A) -> [B],
   _ g: @escaping (B) -> [C]
@@ -186,6 +197,7 @@ public func chain<A, B, C>(
     }
 }
 
+@inlinable
 public func chain<A, B, C, D>(
   _ f: @escaping (A) -> [B],
   _ g: @escaping (B) -> [C],
@@ -200,6 +212,7 @@ public func chain<A, B, C, D>(
     }
 }
 
+@inlinable
 public func chain<A, B, C, D, E>(
   _ f: @escaping (A) -> [B],
   _ g: @escaping (B) -> [C],
@@ -216,6 +229,7 @@ public func chain<A, B, C, D, E>(
     }
 }
 
+@inlinable
 public func chain<A, B, C, D, E, F>(
   _ f: @escaping (A) -> [B],
   _ g: @escaping (B) -> [C],
@@ -234,6 +248,7 @@ public func chain<A, B, C, D, E, F>(
     }
 }
 
+@inlinable
 public func chain<A, B, C, D, E, F, G>(
   _ f: @escaping (A) -> [B],
   _ g: @escaping (B) -> [C],
@@ -254,6 +269,7 @@ public func chain<A, B, C, D, E, F, G>(
     }
 }
 
+@inlinable
 public func chain<A, B, C>(
   _ f: @escaping (A) throws -> [B],
   _ g: @escaping (B) throws -> [C]
@@ -265,6 +281,7 @@ public func chain<A, B, C>(
     }
 }
 
+@inlinable
 public func chain<A, B, C, D>(
   _ f: @escaping (A) throws -> [B],
   _ g: @escaping (B) throws -> [C],
@@ -279,6 +296,7 @@ public func chain<A, B, C, D>(
     }
 }
 
+@inlinable
 public func chain<A, B, C, D, E>(
   _ f: @escaping (A) throws -> [B],
   _ g: @escaping (B) throws -> [C],
@@ -295,6 +313,7 @@ public func chain<A, B, C, D, E>(
     }
 }
 
+@inlinable
 public func chain<A, B, C, D, E, F>(
   _ f: @escaping (A) throws -> [B],
   _ g: @escaping (B) throws -> [C],
@@ -313,6 +332,7 @@ public func chain<A, B, C, D, E, F>(
     }
 }
 
+@inlinable
 public func chain<A, B, C, D, E, F, G>(
   _ f: @escaping (A) throws -> [B],
   _ g: @escaping (B) throws -> [C],

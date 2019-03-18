@@ -6,6 +6,7 @@
 ///
 /// - Parameter keyPath: A key path.
 /// - Returns: A getter function.
+@inlinable
 public func get<Root, Value>(_ keyPath: KeyPath<Root, Value>) -> (Root) -> Value {
   return { root in root[keyPath: keyPath] }
 }
@@ -14,6 +15,7 @@ public func get<Root, Value>(_ keyPath: KeyPath<Root, Value>) -> (Root) -> Value
 ///
 /// - Parameter keyPath: A key path.
 /// - Returns: A setter function.
+@inlinable
 public func prop<Root, Value>(
   _ keyPath: WritableKeyPath<Root, Value>
   )
@@ -35,6 +37,7 @@ public func prop<Root, Value>(
 ///   - keyPath: A key path.
 ///   - update: An update function.
 /// - Returns: A setter function.
+@inlinable
 public func over<Root, Value>(
   _ keyPath: WritableKeyPath<Root, Value>,
   _ update: @escaping (Value) -> Value
@@ -50,6 +53,7 @@ public func over<Root, Value>(
 ///   - keyPath: A key path.
 ///   - value: A new value.
 /// - Returns: A setter function.
+@inlinable
 public func set<Root, Value>(
   _ keyPath: WritableKeyPath<Root, Value>,
   _ value: Value
@@ -65,6 +69,7 @@ public func set<Root, Value>(
 ///
 /// - Parameter keyPath: A writable key path.
 /// - Returns: A mutable setter function.
+@inlinable
 public func mprop<Root, Value>(
   _ keyPath: WritableKeyPath<Root, Value>
   )
@@ -84,6 +89,7 @@ public func mprop<Root, Value>(
 ///   - keyPath: A writable key path.
 ///   - update: An update function for a given value.
 /// - Returns: A value-mutable setter function.
+@inlinable
 public func mver<Root, Value>(
   _ keyPath: WritableKeyPath<Root, Value>,
   _ update: @escaping (inout Value) -> Void
@@ -97,6 +103,7 @@ public func mver<Root, Value>(
 ///
 /// - Parameter keyPath: A reference-writable key path.
 /// - Returns: A reference-mutable setter function.
+@inlinable
 public func mprop<Root, Value>(
   _ keyPath: ReferenceWritableKeyPath<Root, Value>
   )
@@ -117,6 +124,7 @@ public func mprop<Root, Value>(
 ///   - keyPath: A reference-writable key path.
 ///   - update: An update function for a given value.
 /// - Returns: A reference-mutable setter function.
+@inlinable
 public func mverObject<Root, Value>(
   _ keyPath: ReferenceWritableKeyPath<Root, Value>,
   _ update: @escaping (Value) -> Void
@@ -131,6 +139,7 @@ public func mverObject<Root, Value>(
 ///
 /// - Parameter keyPath: A key path.
 /// - Returns: A setter function.
+@inlinable
 public func mprop<Root, Value>(
   _ keyPath: ReferenceWritableKeyPath<Root, Value>
   )
@@ -150,6 +159,7 @@ public func mprop<Root, Value>(
 ///   - keyPath: A reference-writable key path.
 ///   - update: An update function for a given value.
 /// - Returns: A reference-mutable setter function.
+@inlinable
 public func mver<Root, Value>(
   _ keyPath: ReferenceWritableKeyPath<Root, Value>,
   _ update: @escaping (inout Value) -> Void
@@ -165,6 +175,7 @@ public func mver<Root, Value>(
 ///   - keyPath: A writable key path.
 ///   - value: A new value.
 /// - Returns: A value-mutable setter function.
+@inlinable
 public func mut<Root, Value>(
   _ keyPath: WritableKeyPath<Root, Value>,
   _ value: Value
@@ -180,6 +191,7 @@ public func mut<Root, Value>(
 ///   - keyPath: A reference-writable key path.
 ///   - value: A new value.
 /// - Returns: A reference-mutable setter function.
+@inlinable
 public func mut<Root, Value>(
   _ keyPath: ReferenceWritableKeyPath<Root, Value>,
   _ value: Value

@@ -3,6 +3,7 @@
 ///
 /// - Parameter function: A function with one argument, that returns another function with one argument.
 /// - Returns: An uncurried function.
+@inlinable
 public func uncurry<A, B, C>(_ function: @escaping
   (A)
   -> (B)
@@ -18,6 +19,7 @@ public func uncurry<A, B, C>(_ function: @escaping
 ///
 /// - Parameter function: A throwing function with one argument, that returns another function with one argument.
 /// - Returns: An uncurried, final-throwing function.
+@inlinable
 public func uncurry<A, B, C>(_ function: @escaping
   (A)
   -> (B) throws
@@ -29,6 +31,7 @@ public func uncurry<A, B, C>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D>(_ function: @escaping
   (A)
   -> (B)
@@ -41,6 +44,7 @@ public func uncurry<A, B, C, D>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D>(_ function: @escaping
   (A)
   -> (B)
@@ -53,6 +57,7 @@ public func uncurry<A, B, C, D>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D, E>(_ function: @escaping
   (A)
   -> (B)
@@ -66,6 +71,7 @@ public func uncurry<A, B, C, D, E>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D, E>(_ function: @escaping
   (A)
   -> (B)
@@ -79,6 +85,7 @@ public func uncurry<A, B, C, D, E>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D, E, F>(_ function: @escaping
   (A)
   -> (B)
@@ -92,6 +99,7 @@ public func uncurry<A, B, C, D, E, F>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D, E, F>(_ function: @escaping
   (A)
   -> (B)
@@ -106,6 +114,7 @@ public func uncurry<A, B, C, D, E, F>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D, E, F, G>(_ function: @escaping
   (A)
   -> (B)
@@ -121,6 +130,7 @@ public func uncurry<A, B, C, D, E, F, G>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D, E, F, G>(_ function: @escaping
   (A)
   -> (B)
@@ -136,6 +146,7 @@ public func uncurry<A, B, C, D, E, F, G>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D, E, F, G, H>(_ function: @escaping
   (A)
   -> (B)
@@ -152,6 +163,7 @@ public func uncurry<A, B, C, D, E, F, G, H>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D, E, F, G, H>(_ function: @escaping
   (A)
   -> (B)
@@ -168,6 +180,7 @@ public func uncurry<A, B, C, D, E, F, G, H>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D, E, F, G, H, I>(_ function: @escaping
   (A)
   -> (B)
@@ -185,6 +198,7 @@ public func uncurry<A, B, C, D, E, F, G, H, I>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D, E, F, G, H, I>(_ function: @escaping
   (A)
   -> (B)
@@ -202,6 +216,7 @@ public func uncurry<A, B, C, D, E, F, G, H, I>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D, E, F, G, H, I, J>(_ function: @escaping
   (A)
   -> (B)
@@ -220,6 +235,7 @@ public func uncurry<A, B, C, D, E, F, G, H, I, J>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D, E, F, G, H, I, J>(_ function: @escaping
   (A)
   -> (B)
@@ -238,6 +254,7 @@ public func uncurry<A, B, C, D, E, F, G, H, I, J>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D, E, F, G, H, I, J, K>(_ function: @escaping
   (A)
   -> (B)
@@ -257,6 +274,7 @@ public func uncurry<A, B, C, D, E, F, G, H, I, J, K>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D, E, F, G, H, I, J, K>(_ function: @escaping
   (A)
   -> (B)
@@ -276,6 +294,7 @@ public func uncurry<A, B, C, D, E, F, G, H, I, J, K>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D, E, F, G, H, I, J, K, L>(_ function: @escaping
   (A)
   -> (B)
@@ -296,6 +315,7 @@ public func uncurry<A, B, C, D, E, F, G, H, I, J, K, L>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D, E, F, G, H, I, J, K, L>(_ function: @escaping
   (A)
   -> (B)
@@ -316,6 +336,7 @@ public func uncurry<A, B, C, D, E, F, G, H, I, J, K, L>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D, E, F, G, H, I, J, K, L, M>(_ function: @escaping
   (A)
   -> (B)
@@ -337,6 +358,7 @@ public func uncurry<A, B, C, D, E, F, G, H, I, J, K, L, M>(_ function: @escaping
     }
 }
 
+@inlinable
 public func uncurry<A, B, C, D, E, F, G, H, I, J, K, L, M>(_ function: @escaping
   (A)
   -> (B)
