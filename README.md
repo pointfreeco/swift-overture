@@ -410,7 +410,7 @@ if let id = optionalId, let email = optionalEmail, let name = optionalName {
 If you use [Carthage](https://github.com/Carthage/Carthage), you can add the following dependency to your `Cartfile`:
 
 ``` ruby
-github "pointfreeco/swift-overture" ~> 0.3
+github "pointfreeco/swift-overture" ~> 0.5
 ```
 
 ### CocoaPods
@@ -418,7 +418,7 @@ github "pointfreeco/swift-overture" ~> 0.3
 If your project uses [CocoaPods](https://cocoapods.org), just add the following to your `Podfile`:
 
 ``` ruby
-pod 'Overture', '~> 0.3'
+pod 'Overture', '~> 0.5'
 ```
 
 ### SwiftPM
@@ -427,7 +427,7 @@ If you want to use Overture in a project that uses [SwiftPM](https://swift.org/p
 
 ``` swift
 dependencies: [
-  .package(url: "https://github.com/pointfreeco/swift-overture.git", from: "0.3.1")
+  .package(url: "https://github.com/pointfreeco/swift-overture.git", from: "0.5.0")
 ]
 ```
 
