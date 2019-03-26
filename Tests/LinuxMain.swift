@@ -61,6 +61,22 @@ extension FlipTests {
     ("testFlip", testFlip)
   ]
 }
+extension KeyPathTests {
+  static var allTests: [(String, (KeyPathTests) -> () throws -> Void)] = [
+    ("testGet", testGet),
+    ("testProp", testProp),
+    ("testOver", testOver),
+    ("testSet", testSet),
+    ("testInoutMprop", testInoutMprop),
+    ("testInoutMver", testInoutMver),
+    ("testInoutMut", testInoutMut),
+    ("testAnyObjectAnyObjectMprop", testAnyObjectAnyObjectMprop),
+    ("testAnyObjectInoutMprop", testAnyObjectInoutMprop),
+    ("testAnyObjectAnyObjectMver", testAnyObjectAnyObjectMver),
+    ("testAnyObjectInoutMver", testAnyObjectInoutMver),
+    ("testAnyObjectMut", testAnyObjectMut)
+  ]
+}
 extension PipeTests {
   static var allTests: [(String, (PipeTests) -> () throws -> Void)] = [
     ("testPipe2", testPipe2),
@@ -75,6 +91,17 @@ extension PipeTests {
     ("testThrowingPipe6", testThrowingPipe6)
   ]
 }
+extension SettersTests {
+  static var allTests: [(String, (SettersTests) -> () throws -> Void)] = [
+    ("testOver", testOver),
+    ("testSet", testSet),
+    ("testInoutMver", testInoutMver),
+    ("testAnyObjectInoutMver", testAnyObjectInoutMver),
+    ("testAnyObjectAnyObjectMver", testAnyObjectAnyObjectMver),
+    ("testInoutMut", testInoutMut),
+    ("testAnyObjectMut", testAnyObjectMut)
+  ]
+}
 extension UncurryTests {
   static var allTests: [(String, (UncurryTests) -> () throws -> Void)] = [
     ("testUncurry", testUncurry),
@@ -86,7 +113,8 @@ extension WithTests {
     ("testWith", testWith),
     ("testInPlaceWith", testInPlaceWith),
     ("testValueCopyableWith", testValueCopyableWith),
-    ("testReferenceMutableWith", testReferenceMutableWith)
+    ("testReferenceMutableWith", testReferenceMutableWith),
+    ("testAmbiguity", testAmbiguity)
   ]
 }
 extension ZipTests {
@@ -112,7 +140,9 @@ XCTMain([
   testCase(ConcatTests.allTests),
   testCase(CurryTests.allTests),
   testCase(FlipTests.allTests),
+  testCase(KeyPathTests.allTests),
   testCase(PipeTests.allTests),
+  testCase(SettersTests.allTests),
   testCase(UncurryTests.allTests),
   testCase(WithTests.allTests),
   testCase(ZipTests.allTests),
