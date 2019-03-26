@@ -15,13 +15,13 @@ targets:
       path: Info.plist
     platform: [macOS, iOS, tvOS, watchOS]
     scheme:
-      testTargets: [OvertureTests_$platform]
+      testTargets: ['OvertureTests_${platform}']
     settings:
       APPLICATION_EXTENSION_API_ONLY: true
     sources: [Sources]
     type: framework
   OvertureTests:
-    dependencies: [{target: Overture_$platform}]
+    dependencies: [{target: 'Overture_${platform}'}]
     platform: [macOS, iOS, tvOS, watchOS]
     sources:
       - path: Tests
