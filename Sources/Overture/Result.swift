@@ -1,24 +1,27 @@
-/// Transforms a pair of results into an result of a pair.
+/// Transforms a pair of results into a result of a pair.
 ///
 /// - Parameters:
-///   - a: A result value.
-///   - b: Another result value.
-/// - Returns: A result of a pair of values.
+///   - result1: A result.
+///   - result2: Another result.
+/// - Returns: A result of a pair.
 public func zip<A, B, Error: Swift.Error>(
-  _ a: Result<A, Error>,
-  _ b: Result<B, Error>
+  _ result1: Result<A, Error>,
+  _ result2: Result<B, Error>
   ) -> Result<(A, B), Error> {
-  return a.flatMap { a in b.map { b in (a, b) } }
+  return result1.flatMap { a in result2.map { b in (a, b) } }
 }
 
-/// Transforms a pair of results into a new result value.
+/// Transforms a pair of results into a new result.
 ///
-/// - Parameter transform: A transform function.
-/// - Returns: A transformed result value.
+/// - Parameters:
+///   - result1: A result.
+///   - result2: Another result.
+///   - transform: A transform function.
+/// - Returns: A transformed result.
 public func zip<A, B, Z, Error: Swift.Error>(
-  with f: @escaping (A, B) -> Z,
-  _ a: Result<A, Error>,
-  _ b: Result<B, Error>
+  with transform: @escaping (A, B) -> Z,
+  _ result1: Result<A, Error>,
+  _ result2: Result<B, Error>
   ) -> Result<Z, Error> {
-  return zip(a, b).map(f)
+  return zip(result1, result2).map(transform)
 }

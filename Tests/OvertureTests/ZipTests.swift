@@ -30,6 +30,35 @@ final class ZipTests: XCTestCase {
     XCTAssertEqual(10, j)
   }
 
+  func testZipResult() {
+    let result = zip(
+      Result<Int, Error>.success(1),
+      Result<Int, Error>.success(2),
+      Result<Int, Error>.success(3),
+      Result<Int, Error>.success(4),
+      Result<Int, Error>.success(5),
+      Result<Int, Error>.success(6),
+      Result<Int, Error>.success(7),
+      Result<Int, Error>.success(8),
+      Result<Int, Error>.success(9),
+      Result<Int, Error>.success(10)
+    )
+    guard
+      let (a, b, c, d, e, f, g, h, i, j) = try? result.get()
+      else { return XCTFail() }
+
+    XCTAssertEqual(1, a)
+    XCTAssertEqual(2, b)
+    XCTAssertEqual(3, c)
+    XCTAssertEqual(4, d)
+    XCTAssertEqual(5, e)
+    XCTAssertEqual(6, f)
+    XCTAssertEqual(7, g)
+    XCTAssertEqual(8, h)
+    XCTAssertEqual(9, i)
+    XCTAssertEqual(10, j)
+  }
+
   func testZipSequence() {
     let zipped = zip(
       [1, 2],
@@ -81,7 +110,8 @@ final class ZipTests: XCTestCase {
         self.b = b
       }
     }
-    let zipped = zip(with: ZipInit.init)(
+    let zipped = zip(
+      with: ZipInit.init,
       [1, 2],
       [3, 4]
     )
@@ -110,7 +140,8 @@ final class ZipTests: XCTestCase {
         self.c = c
       }
     }
-    let zipped = zip(with: ZipInit.init)(
+    let zipped = zip(
+      with: ZipInit.init,
       [1, 2],
       [3, 4],
       [5, 6]
@@ -145,7 +176,8 @@ final class ZipTests: XCTestCase {
         self.d = d
       }
     }
-    let zipped = zip(with: ZipInit.init)(
+    let zipped = zip(
+      with: ZipInit.init,
       [1, 2],
       [3, 4],
       [5, 6],
@@ -186,7 +218,8 @@ final class ZipTests: XCTestCase {
         self.e = e
       }
     }
-    let zipped = zip(with: ZipInit.init)(
+    let zipped = zip(
+      with: ZipInit.init,
       [1, 2],
       [3, 4],
       [5, 6],
@@ -233,7 +266,8 @@ final class ZipTests: XCTestCase {
         self.f = f
       }
     }
-    let zipped = zip(with: ZipInit.init)(
+    let zipped = zip(
+      with: ZipInit.init,
       [1, 2],
       [3, 4],
       [5, 6],
@@ -286,7 +320,8 @@ final class ZipTests: XCTestCase {
         self.g = g
       }
     }
-    let zipped = zip(with: ZipInit.init)(
+    let zipped = zip(
+      with: ZipInit.init,
       [1, 2],
       [3, 4],
       [5, 6],
@@ -345,7 +380,8 @@ final class ZipTests: XCTestCase {
         self.h = h
       }
     }
-    let zipped = zip(with: ZipInit.init)(
+    let zipped = zip(
+      with: ZipInit.init,
       [1, 2],
       [3, 4],
       [5, 6],
@@ -410,7 +446,8 @@ final class ZipTests: XCTestCase {
         self.i = i
       }
     }
-    let zipped = zip(with: ZipInit.init)(
+    let zipped = zip(
+      with: ZipInit.init,
       [1, 2],
       [3, 4],
       [5, 6],
@@ -481,7 +518,8 @@ final class ZipTests: XCTestCase {
         self.j = j
       }
     }
-    let zipped = zip(with: ZipInit.init)(
+    let zipped = zip(
+      with: ZipInit.init,
       [1, 2],
       [3, 4],
       [5, 6],

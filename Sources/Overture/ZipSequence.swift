@@ -2,9 +2,18 @@ public func zip<A, B, C>(
   _ a: A,
   _ b: B,
   _ c: C
-  )
-  -> Zip3Sequence<A, B, C> {
-    return Zip3Sequence(a, b, c)
+  ) -> Zip3Sequence<A, B, C> {
+  return Zip3Sequence(a, b, c)
+}
+
+public func zip<A, B, C, Z>(
+  with transform: (A.Element, B.Element, C.Element) -> Z,
+  _ a: A,
+  _ b: B,
+  _ c: C
+  ) -> [Z]
+  where A: Sequence, B: Sequence, C: Sequence {
+    return zip(a, b, c).map(transform)
 }
 
 public func zip<A, B, C, D>(
@@ -12,9 +21,19 @@ public func zip<A, B, C, D>(
   _ b: B,
   _ c: C,
   _ d: D
-  )
-  -> Zip4Sequence<A, B, C, D> {
-    return Zip4Sequence(a, b, c, d)
+  ) -> Zip4Sequence<A, B, C, D> {
+  return Zip4Sequence(a, b, c, d)
+}
+
+public func zip<A, B, C, D, Z>(
+  with transform: (A.Element, B.Element, C.Element, D.Element) -> Z,
+  _ a: A,
+  _ b: B,
+  _ c: C,
+  _ d: D
+  ) -> [Z]
+  where A: Sequence, B: Sequence, C: Sequence, D: Sequence {
+    return zip(a, b, c, d).map(transform)
 }
 
 public func zip<A, B, C, D, E>(
@@ -23,9 +42,20 @@ public func zip<A, B, C, D, E>(
   _ c: C,
   _ d: D,
   _ e: E
-  )
-  -> Zip5Sequence<A, B, C, D, E> {
-    return Zip5Sequence(a, b, c, d, e)
+  ) -> Zip5Sequence<A, B, C, D, E> {
+  return Zip5Sequence(a, b, c, d, e)
+}
+
+public func zip<A, B, C, D, E, Z>(
+  with transform: (A.Element, B.Element, C.Element, D.Element, E.Element) -> Z,
+  _ a: A,
+  _ b: B,
+  _ c: C,
+  _ d: D,
+  _ e: E
+  ) -> [Z]
+  where A: Sequence, B: Sequence, C: Sequence, D: Sequence, E: Sequence {
+    return zip(a, b, c, d, e).map(transform)
 }
 
 public func zip<A, B, C, D, E, F>(
@@ -35,9 +65,21 @@ public func zip<A, B, C, D, E, F>(
   _ d: D,
   _ e: E,
   _ f: F
-  )
-  -> Zip6Sequence<A, B, C, D, E, F> {
-    return Zip6Sequence(a, b, c, d, e, f)
+  ) -> Zip6Sequence<A, B, C, D, E, F> {
+  return Zip6Sequence(a, b, c, d, e, f)
+}
+
+public func zip<A, B, C, D, E, F, Z>(
+  with transform: (A.Element, B.Element, C.Element, D.Element, E.Element, F.Element) -> Z,
+  _ a: A,
+  _ b: B,
+  _ c: C,
+  _ d: D,
+  _ e: E,
+  _ f: F
+  ) -> [Z]
+  where A: Sequence, B: Sequence, C: Sequence, D: Sequence, E: Sequence, F: Sequence {
+    return zip(a, b, c, d, e, f).map(transform)
 }
 
 public func zip<A, B, C, D, E, F, G>(
@@ -48,9 +90,22 @@ public func zip<A, B, C, D, E, F, G>(
   _ e: E,
   _ f: F,
   _ g: G
-  )
-  -> Zip7Sequence<A, B, C, D, E, F, G> {
-    return Zip7Sequence(a, b, c, d, e, f, g)
+  ) -> Zip7Sequence<A, B, C, D, E, F, G> {
+  return Zip7Sequence(a, b, c, d, e, f, g)
+}
+
+public func zip<A, B, C, D, E, F, G, Z>(
+  with transform: (A.Element, B.Element, C.Element, D.Element, E.Element, F.Element, G.Element) -> Z,
+  _ a: A,
+  _ b: B,
+  _ c: C,
+  _ d: D,
+  _ e: E,
+  _ f: F,
+  _ g: G
+  ) -> [Z]
+  where A: Sequence, B: Sequence, C: Sequence, D: Sequence, E: Sequence, F: Sequence, G: Sequence {
+    return zip(a, b, c, d, e, f, g).map(transform)
 }
 
 public func zip<A, B, C, D, E, F, G, H>(
@@ -62,9 +117,23 @@ public func zip<A, B, C, D, E, F, G, H>(
   _ f: F,
   _ g: G,
   _ h: H
-  )
-  -> Zip8Sequence<A, B, C, D, E, F, G, H> {
-    return Zip8Sequence(a, b, c, d, e, f, g, h)
+  ) -> Zip8Sequence<A, B, C, D, E, F, G, H> {
+  return Zip8Sequence(a, b, c, d, e, f, g, h)
+}
+
+public func zip<A, B, C, D, E, F, G, H, Z>(
+  with transform: (A.Element, B.Element, C.Element, D.Element, E.Element, F.Element, G.Element, H.Element) -> Z,
+  _ a: A,
+  _ b: B,
+  _ c: C,
+  _ d: D,
+  _ e: E,
+  _ f: F,
+  _ g: G,
+  _ h: H
+  ) -> [Z]
+  where A: Sequence, B: Sequence, C: Sequence, D: Sequence, E: Sequence, F: Sequence, G: Sequence, H: Sequence {
+    return zip(a, b, c, d, e, f, g, h).map(transform)
 }
 
 public func zip<A, B, C, D, E, F, G, H, I>(
@@ -77,9 +146,24 @@ public func zip<A, B, C, D, E, F, G, H, I>(
   _ g: G,
   _ h: H,
   _ i: I
-  )
-  -> Zip9Sequence<A, B, C, D, E, F, G, H, I> {
-    return Zip9Sequence(a, b, c, d, e, f, g, h, i)
+  ) -> Zip9Sequence<A, B, C, D, E, F, G, H, I> {
+  return Zip9Sequence(a, b, c, d, e, f, g, h, i)
+}
+
+public func zip<A, B, C, D, E, F, G, H, I, Z>(
+  with transform: (A.Element, B.Element, C.Element, D.Element, E.Element, F.Element, G.Element, H.Element, I.Element) -> Z,
+  _ a: A,
+  _ b: B,
+  _ c: C,
+  _ d: D,
+  _ e: E,
+  _ f: F,
+  _ g: G,
+  _ h: H,
+  _ i: I
+  ) -> [Z]
+  where A: Sequence, B: Sequence, C: Sequence, D: Sequence, E: Sequence, F: Sequence, G: Sequence, H: Sequence, I: Sequence {
+    return zip(a, b, c, d, e, f, g, h, i).map(transform)
 }
 
 public func zip<A, B, C, D, E, F, G, H, I, J>(
@@ -93,9 +177,25 @@ public func zip<A, B, C, D, E, F, G, H, I, J>(
   _ h: H,
   _ i: I,
   _ j: J
-  )
-  -> Zip10Sequence<A, B, C, D, E, F, G, H, I, J> {
-    return Zip10Sequence(a, b, c, d, e, f, g, h, i, j)
+  ) -> Zip10Sequence<A, B, C, D, E, F, G, H, I, J> {
+  return Zip10Sequence(a, b, c, d, e, f, g, h, i, j)
+}
+
+public func zip<A, B, C, D, E, F, G, H, I, J, Z>(
+  with transform: (A.Element, B.Element, C.Element, D.Element, E.Element, F.Element, G.Element, H.Element, I.Element, J.Element) -> Z,
+  _ a: A,
+  _ b: B,
+  _ c: C,
+  _ d: D,
+  _ e: E,
+  _ f: F,
+  _ g: G,
+  _ h: H,
+  _ i: I,
+  _ j: J
+  ) -> [Z]
+  where A: Sequence, B: Sequence, C: Sequence, D: Sequence, E: Sequence, F: Sequence, G: Sequence, H: Sequence, I: Sequence, J: Sequence {
+    return zip(a, b, c, d, e, f, g, h, i, j).map(transform)
 }
 
 public struct Zip3Sequence<
@@ -160,141 +260,6 @@ public struct Zip3Sequence<
       _c.makeIterator()
     )
   }
-}
-
-public func zip<
-  A: Sequence,
-  B: Sequence,
-  C
-  >(
-  with f: @escaping (A.Element, B.Element) -> C
-  )
-  -> (A, B) -> [C] {
-    return { zip($0, $1).map(f) }
-}
-
-public func zip<
-  A: Sequence,
-  B: Sequence,
-  C: Sequence,
-  D
-  >(
-  with f: @escaping (A.Element, B.Element, C.Element) -> D
-  )
-  -> (A, B, C) -> [D] {
-    return { zip($0, $1, $2).map(f) }
-}
-
-public func zip<
-  A: Sequence,
-  B: Sequence,
-  C: Sequence,
-  D: Sequence,
-  E
-  >(
-  with f: @escaping (A.Element, B.Element, C.Element, D.Element) -> E
-  )
-  -> (A, B, C, D) -> [E] {
-    return { zip($0, $1, $2, $3).map(f) }
-}
-
-public func zip<
-  A: Sequence,
-  B: Sequence,
-  C: Sequence,
-  D: Sequence,
-  E: Sequence,
-  F
-  >(
-  with f: @escaping (A.Element, B.Element, C.Element, D.Element, E.Element) -> F
-  )
-  -> (A, B, C, D, E) -> [F] {
-    return { zip($0, $1, $2, $3, $4).map(f) }
-}
-
-public func zip<
-  A: Sequence,
-  B: Sequence,
-  C: Sequence,
-  D: Sequence,
-  E: Sequence,
-  F: Sequence,
-  G
-  >(
-  with f: @escaping (A.Element, B.Element, C.Element, D.Element, E.Element, F.Element) -> G
-  )
-  -> (A, B, C, D, E, F) -> [G] {
-    return { zip($0, $1, $2, $3, $4, $5).map(f) }
-}
-
-public func zip<
-  A: Sequence,
-  B: Sequence,
-  C: Sequence,
-  D: Sequence,
-  E: Sequence,
-  F: Sequence,
-  G: Sequence,
-  H
-  >(
-  with f: @escaping (A.Element, B.Element, C.Element, D.Element, E.Element, F.Element, G.Element) -> H
-  )
-  -> (A, B, C, D, E, F, G) -> [H] {
-    return { zip($0, $1, $2, $3, $4, $5, $6).map(f) }
-}
-
-public func zip<
-  A: Sequence,
-  B: Sequence,
-  C: Sequence,
-  D: Sequence,
-  E: Sequence,
-  F: Sequence,
-  G: Sequence,
-  H: Sequence,
-  I
-  >(
-  with f: @escaping (A.Element, B.Element, C.Element, D.Element, E.Element, F.Element, G.Element, H.Element) -> I
-  )
-  -> (A, B, C, D, E, F, G, H) -> [I] {
-    return { zip($0, $1, $2, $3, $4, $5, $6, $7).map(f) }
-}
-
-public func zip<
-  A: Sequence,
-  B: Sequence,
-  C: Sequence,
-  D: Sequence,
-  E: Sequence,
-  F: Sequence,
-  G: Sequence,
-  H: Sequence,
-  I: Sequence,
-  J
-  >(
-  with f: @escaping (A.Element, B.Element, C.Element, D.Element, E.Element, F.Element, G.Element, H.Element, I.Element) -> J
-  )
-  -> (A, B, C, D, E, F, G, H, I) -> [J] {
-    return { zip($0, $1, $2, $3, $4, $5, $6, $7, $8).map(f) }
-}
-
-public func zip<
-  A: Sequence,
-  B: Sequence,
-  C: Sequence,
-  D: Sequence,
-  E: Sequence,
-  F: Sequence,
-  G: Sequence,
-  H: Sequence,
-  I: Sequence,
-  J: Sequence,
-  K
-  >(
-  with f: @escaping (A.Element, B.Element, C.Element, D.Element, E.Element, F.Element, G.Element, H.Element, I.Element, J.Element) -> K
-  )
-  -> (A, B, C, D, E, F, G, H, I, J) -> [K] {
-    return { zip($0, $1, $2, $3, $4, $5, $6, $7, $8, $9).map(f) }
 }
 
 public struct Zip4Sequence<
