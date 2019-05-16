@@ -37,3 +37,19 @@ public func mutEach<C: MutableCollection>(
       }
     }
 }
+
+/// Transforms a pair of sequences into a sequence of pairs.
+///
+/// - Parameters:
+///   - transform: A transform function.
+///   - sequence1: A sequence.
+///   - sequence2: Another sequence.
+/// - Returns: A transformed sequence.
+public func zip<A, B, Z>(
+  with transform: (A.Element, B.Element) -> Z,
+  _ sequence1: A,
+  _ sequence2: B
+  ) -> [Z]
+  where A: Sequence, B: Sequence {
+    return zip(sequence1, sequence2).map(transform)
+}

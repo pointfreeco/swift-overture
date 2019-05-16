@@ -27,18 +27,25 @@ public func map<A, B>(
 /// Transforms a pair of optionals into an optional pair.
 ///
 /// - Parameters:
-///   - a: An optional value.
-///   - b: Another optional value.
+///   - optional1: An optional value.
+///   - optional2: Another optional value.
 /// - Returns: An optional pair of values.
-public func zip<A, B>(_ a: A?, _ b: B?) -> (A, B)? {
-  guard let a = a, let b = b else { return nil }
+public func zip<A, B>(_ optional1: A?, _ optional2: B?) -> (A, B)? {
+  guard let a = optional1, let b = optional2 else { return nil }
   return (a, b)
 }
 
 /// Transforms a pair of optionals into a new optional value.
 ///
-/// - Parameter transform: A transform function.
+/// - Parameters:
+///   - transform: A transform function.
+///   - optional1: An optional value.
+///   - optional2: Another optional value.
 /// - Returns: A transformed optional value.
-public func zip<A, B, C>(with transform: @escaping (A, B) -> C) -> (A?, B?) -> C? {
-  return { zip($0, $1).map(transform) }
+public func zip<A, B, Z>(
+  with transform: (A, B) -> Z,
+  _ optional1: A?,
+  _ optional2: B?
+  ) -> Z? {
+  return zip(optional1, optional2).map(transform)
 }
