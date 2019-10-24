@@ -72,7 +72,7 @@ This refactor reads much better, but it's less performant: we're mapping over th
 // [4, 9, 16]
 ```
 
-The `pipe` function glues other functions together! It can take more than two argumenta and even change the type along the way!
+The `pipe` function glues other functions together! It can take more than two arguments and even change the type along the way!
 
 ``` swift
 [1, 2, 3].map(pipe(incr, square, String.init))
