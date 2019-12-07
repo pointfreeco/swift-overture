@@ -56,6 +56,20 @@ extension CurryTests {
     ("testThrowing", testThrowing)
   ]
 }
+extension FlatPipeTests {
+  static var allTests: [(String, (FlatPipeTests) -> () throws -> Void)] = [
+    ("testFlatPipe2", testFlatPipe2),
+    ("testThrowingFlatPipe2", testThrowingFlatPipe2),
+    ("testFlatPipe3", testFlatPipe3),
+    ("testThrowingFlatPipe3", testThrowingFlatPipe3),
+    ("testFlatPipe4", testFlatPipe4),
+    ("testThrowingFlatPipe4", testThrowingFlatPipe4),
+    ("testFlatPipe5", testFlatPipe5),
+    ("testThrowingFlatPipe5", testThrowingFlatPipe5),
+    ("testFlatPipe6", testFlatPipe6),
+    ("testThrowingFlatPipe6", testThrowingFlatPipe6)
+  ]
+}
 extension FlipTests {
   static var allTests: [(String, (FlipTests) -> () throws -> Void)] = [
     ("testFlip", testFlip)
