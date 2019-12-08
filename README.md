@@ -20,6 +20,7 @@ A library for function composition.
       - [`over` and `set`](#over-and-set)
       - [`mprop`, `mver`, and `mut`](#mprop-mver-and-mut)
       - [`zip`](#zip-and-zipwith)
+      - [`flatPipe`](#flatPipe)
   - [FAQ](#faq)
   - [Installation](#installation)
   - [🎶 Prelude](#-prelude)
@@ -381,6 +382,18 @@ if let id = optionalId, let email = optionalEmail, let name = optionalName {
 } else {
   optionalUser = nil
 }
+```
+
+### `flatPipe`
+
+Similar to `pipe` but returns `Optional`.
+
+``` swift
+let sqrtResult = flatPipe(Int.init, Double.init, sqrt)("4")
+// 2
+
+let sqrtResults = ["1", "a", "b", "4"].compactMap(flatPipe(Int.init, Double.init, sqrt))
+// [1, 2]
 ```
 
 ## FAQ
