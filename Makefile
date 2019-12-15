@@ -4,17 +4,12 @@ imports = \
 xcodeproj:
 	PF_DEVELOP=1 swift run xcodegen
 
-linux-main:
-	sourcery \
-		--sources ./Tests/ \
-		--templates ./.sourcery-templates/ \
-		--output ./Tests/ \
-		--args testimports='$(imports)' \
-		&& mv ./Tests/LinuxMain.generated.swift ./Tests/LinuxMain.swift
-
-test-linux: linux-main
+test-linux: 
 	docker build --tag overture-testing . \
 		&& docker run --rm overture-testing
+
+linux-main:
+	swift test --generate-linuxmain
 
 test-macos:
 	set -o pipefail && \
@@ -30,7 +25,7 @@ test-ios:
 		-destination platform="iOS Simulator,name=iPhone XR,OS=12.2" \
 		| xcpretty
 
-test-swift:
-	swift test
+test-swift: linux-main
+	swift test -v
 
 test-all: test-linux test-macos test-ios
