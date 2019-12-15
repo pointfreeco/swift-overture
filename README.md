@@ -1,8 +1,7 @@
 # 🎼 Overture
 
 [![Swift 5](https://img.shields.io/badge/swift-5-ED523F.svg?style=flat)](https://swift.org/download/)
-[![iOS/macOS CI](https://img.shields.io/circleci/project/github/pointfreeco/swift-overture/master.svg?label=ios/macos)](https://circleci.com/gh/pointfreeco/swift-overture)
-[![Linux CI](https://img.shields.io/travis/pointfreeco/swift-overture/master.svg?label=linux)](https://travis-ci.org/pointfreeco/swift-overture)
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fpointfreeco%2Fswift-overture%2Fbadge&style=flat-square)](https://actions-badge.atrox.dev/pointfreeco/swift-overture/goto)
 [![@pointfreeco](https://img.shields.io/badge/contact-@pointfreeco-5AA9E7.svg?style=flat)](https://twitter.com/pointfreeco)
 
 A library for function composition.
