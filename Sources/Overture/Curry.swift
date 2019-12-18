@@ -3,582 +3,142 @@
 ///
 /// - Parameter function: A function of two arguments.
 /// - Returns: A curried function.
-public func curry<A, B, C>(_ function: @escaping (A, B) -> C)
-  -> (A)
-  -> (B)
-  -> C {
-    return { (a: A) -> (B) -> C in
-      { (b: B) -> C in
-        function(a, b)
-      }
-    }
+public func curry <A1, A2, R> (_ function: @escaping (A1, A2) -> R) -> (A1) -> (A2) -> R {
+   return { (a1: A1) -> (A2) -> R in { (a2: A2) -> R in function(a1, a2) } }
 }
 
 /// Curries a throwing function of two arguments.
 ///
 /// - Parameter function: A throwing function of two arguments.
 /// - Returns: A curried, final-throwing function.
-public func curry<A, B, C>(_ function: @escaping (A, B) throws -> C)
-  -> (A)
-  -> (B) throws
-  -> C {
-    return { (a: A) -> (B) throws -> C in
-      { (b: B) throws -> C in
-        try function(a, b)
-      }
-    }
+public func curry <A1, A2, R> (_ function: @escaping (A1, A2) throws -> R) -> (A1) -> (A2) throws -> R {
+   return { (a1: A1) -> (A2) throws -> R in { (a2: A2) throws -> R in try function(a1, a2) } }
 }
 
-public func curry<A, B, C, D>(_ function: @escaping (A, B, C) -> D)
-  -> (A)
-  -> (B)
-  -> (C)
-  -> D {
-    return { (a: A) -> (B) -> (C) -> D in
-      { (b: B) -> (C) -> D in
-        { (c: C) -> D in
-          function(a, b, c)
-        }
-      }
-    }
+public func curry <A1, A2, A3, R> (_ function: @escaping (A1, A2, A3) -> R) -> (A1) -> (A2) -> (A3) -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> R in { (a2: A2) -> (A3) -> R in { (a3: A3) -> R in function(a1, a2, a3) } } }
 }
 
-public func curry<A, B, C, D>(_ function: @escaping (A, B, C) throws -> D)
-  -> (A)
-  -> (B)
-  -> (C) throws
-  -> D {
-    return { (a: A) -> (B) -> (C) throws -> D in
-      { (b: B) -> (C) throws -> D in
-        { (c: C) throws -> D in
-          try function(a, b, c)
-        }
-      }
-    }
+public func curry <A1, A2, A3, R> (_ function: @escaping (A1, A2, A3) throws -> R) -> (A1) -> (A2) -> (A3) throws -> R {
+   return { (a1: A1) -> (A2) -> (A3) throws -> R in { (a2: A2) -> (A3) throws -> R in { (a3: A3) throws -> R in try function(a1, a2, a3) } } }
 }
 
-public func curry<A, B, C, D, E>(_ function: @escaping (A, B, C, D) -> E)
-  -> (A)
-  -> (B)
-  -> (C)
-  -> (D)
-  -> E {
-    return { (a: A) -> (B) -> (C) -> (D) -> E in
-      { (b: B) -> (C) -> (D) -> E in
-        { (c: C) -> (D) -> E in
-          { (d: D) -> E in
-            function(a, b, c, d)
-          }
-        }
-      }
-    }
+public func curry <A1, A2, A3, A4, R> (_ function: @escaping (A1, A2, A3, A4) -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> R in { (a2: A2) -> (A3) -> (A4) -> R in { (a3: A3) -> (A4) -> R in { (a4: A4) -> R in function(a1, a2, a3, a4) } } } }
 }
 
-public func curry<A, B, C, D, E>(_ function: @escaping (A, B, C, D) throws -> E)
-  -> (A)
-  -> (B)
-  -> (C)
-  -> (D) throws
-  -> E {
-    return { (a: A) -> (B) -> (C) -> (D) throws -> E in
-      { (b: B) -> (C) -> (D) throws -> E in
-        { (c: C) -> (D) throws -> E in
-          { (d: D) throws -> E in
-            try function(a, b, c, d)
-          }
-        }
-      }
-    }
+public func curry <A1, A2, A3, A4, R> (_ function: @escaping (A1, A2, A3, A4) throws -> R) -> (A1) -> (A2) -> (A3) -> (A4) throws -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) throws -> R in { (a2: A2) -> (A3) -> (A4) throws -> R in { (a3: A3) -> (A4) throws -> R in { (a4: A4) throws -> R in try function(a1, a2, a3, a4) } } } }
 }
 
-public func curry<A, B, C, D, E, F>(_ function: @escaping (A, B, C, D, E) -> F)
-  -> (A)
-  -> (B)
-  -> (C)
-  -> (D)
-  -> (E)
-  -> (F) {
-    return { (a: A) -> (B) -> (C) -> (D) -> (E) -> F in
-      { (b: B) -> (C) -> (D) -> (E) -> F in
-        { (c: C) -> (D) -> (E) -> F in
-          { (d: D) -> (E) -> F in
-            { (e: E) -> F in
-              function(a, b, c, d, e)
-            }
-          }
-        }
-      }
-    }
+public func curry <A1, A2, A3, A4, A5, R> (_ function: @escaping (A1, A2, A3, A4, A5) -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> R in { (a3: A3) -> (A4) -> (A5) -> R in { (a4: A4) -> (A5) -> R in { (a5: A5) -> R in function(a1, a2, a3, a4, a5) } } } } }
 }
 
-public func curry<A, B, C, D, E, F>(_ function: @escaping (A, B, C, D, E) throws -> F)
-  -> (A)
-  -> (B)
-  -> (C)
-  -> (D)
-  -> (E) throws
-  -> (F) {
-    return { (a: A) -> (B) -> (C) -> (D) -> (E) throws -> F in
-      { (b: B) -> (C) -> (D) -> (E) throws -> F in
-        { (c: C) -> (D) -> (E) throws -> F in
-          { (d: D) -> (E) throws -> F in
-            { (e: E) throws -> F in
-              try function(a, b, c, d, e)
-            }
-          }
-        }
-      }
-    }
+public func curry <A1, A2, A3, A4, A5, R> (_ function: @escaping (A1, A2, A3, A4, A5) throws -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) throws -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) throws -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) throws -> R in { (a3: A3) -> (A4) -> (A5) throws -> R in { (a4: A4) -> (A5) throws -> R in { (a5: A5) throws -> R in try function(a1, a2, a3, a4, a5) } } } } }
 }
 
-public func curry<A, B, C, D, E, F, G>(_ function: @escaping (A, B, C, D, E, F) -> G)
-  -> (A)
-  -> (B)
-  -> (C)
-  -> (D)
-  -> (E)
-  -> (F)
-  -> G {
-    return { (a: A) -> (B) -> (C) -> (D) -> (E) -> (F) -> G in
-      { (b: B) -> (C) -> (D) -> (E) -> (F) -> G in
-        { (c: C) -> (D) -> (E) -> (F) -> G in
-          { (d: D) -> (E) -> (F) -> G in
-            { (e: E) -> (F) -> G in
-              { (f: F) -> G in
-                function(a, b, c, d, e, f)
-              }
-            }
-          }
-        }
-      }
-    }
+public func curry <A1, A2, A3, A4, A5, A6, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6) -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> R in { (a4: A4) -> (A5) -> (A6) -> R in { (a5: A5) -> (A6) -> R in { (a6: A6) -> R in function(a1, a2, a3, a4, a5, a6) } } } } } }
 }
 
-public func curry<A, B, C, D, E, F, G>(_ function: @escaping (A, B, C, D, E, F) throws -> G)
-  -> (A)
-  -> (B)
-  -> (C)
-  -> (D)
-  -> (E)
-  -> (F) throws
-  -> G {
-    return { (a: A) -> (B) -> (C) -> (D) -> (E) -> (F) throws -> G in
-      { (b: B) -> (C) -> (D) -> (E) -> (F) throws -> G in
-        { (c: C) -> (D) -> (E) -> (F) throws -> G in
-          { (d: D) -> (E) -> (F) throws -> G in
-            { (e: E) -> (F) throws -> G in
-              { (f: F) throws -> G in
-                try function(a, b, c, d, e, f)
-              }
-            }
-          }
-        }
-      }
-    }
+public func curry <A1, A2, A3, A4, A5, A6, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6) throws -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) throws -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) throws -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) throws -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) throws -> R in { (a4: A4) -> (A5) -> (A6) throws -> R in { (a5: A5) -> (A6) throws -> R in { (a6: A6) throws -> R in try function(a1, a2, a3, a4, a5, a6) } } } } } }
 }
 
-public func curry<A, B, C, D, E, F, G, H>(_ function: @escaping (A, B, C, D, E, F, G) -> H)
-  -> (A)
-  -> (B)
-  -> (C)
-  -> (D)
-  -> (E)
-  -> (F)
-  -> (G)
-  -> H {
-    return { (a: A) -> (B) -> (C) -> (D) -> (E) -> (F) -> (G) -> H in
-      { (b: B) -> (C) -> (D) -> (E) -> (F) -> (G) -> H in
-        { (c: C) -> (D) -> (E) -> (F) -> (G) -> H in
-          { (d: D) -> (E) -> (F) -> (G) -> H in
-            { (e: E) -> (F) -> (G) -> H in
-              { (f: F) -> (G) -> H in
-                { (g: G) -> H in
-                  function(a, b, c, d, e, f, g)
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+public func curry <A1, A2, A3, A4, A5, A6, A7, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7) -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> R in { (a5: A5) -> (A6) -> (A7) -> R in { (a6: A6) -> (A7) -> R in { (a7: A7) -> R in function(a1, a2, a3, a4, a5, a6, a7) } } } } } } }
 }
 
-public func curry<A, B, C, D, E, F, G, H>(_ function: @escaping (A, B, C, D, E, F, G) throws -> H)
-  -> (A)
-  -> (B)
-  -> (C)
-  -> (D)
-  -> (E)
-  -> (F)
-  -> (G) throws
-  -> H {
-    return { (a: A) -> (B) -> (C) -> (D) -> (E) -> (F) -> (G) throws -> H in
-      { (b: B) -> (C) -> (D) -> (E) -> (F) -> (G) throws -> H in
-        { (c: C) -> (D) -> (E) -> (F) -> (G) throws -> H in
-          { (d: D) -> (E) -> (F) -> (G) throws -> H in
-            { (e: E) -> (F) -> (G) throws -> H in
-              { (f: F) -> (G) throws -> H in
-                { (g: G) throws -> H in
-                  try function(a, b, c, d, e, f, g)
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+public func curry <A1, A2, A3, A4, A5, A6, A7, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7) throws -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) throws -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) throws -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) throws -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) throws -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) throws -> R in { (a5: A5) -> (A6) -> (A7) throws -> R in { (a6: A6) -> (A7) throws -> R in { (a7: A7) throws -> R in try function(a1, a2, a3, a4, a5, a6, a7) } } } } } } }
 }
 
-public func curry<A, B, C, D, E, F, G, H, I>(_ function: @escaping (A, B, C, D, E, F, G, H) -> I)
-  -> (A)
-  -> (B)
-  -> (C)
-  -> (D)
-  -> (E)
-  -> (F)
-  -> (G)
-  -> (H)
-  -> I {
-    return { (a: A) -> (B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) -> I in
-      { (b: B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) -> I in
-        { (c: C) -> (D) -> (E) -> (F) -> (G) -> (H) -> I in
-          { (d: D) -> (E) -> (F) -> (G) -> (H) -> I in
-            { (e: E) -> (F) -> (G) -> (H) -> I in
-              { (f: F) -> (G) -> (H) -> I in
-                { (g: G) -> (H) -> I in
-                  { (h: H) -> I in
-                    function(a, b, c, d, e, f, g, h)
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8) -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> R in { (a6: A6) -> (A7) -> (A8) -> R in { (a7: A7) -> (A8) -> R in { (a8: A8) -> R in function(a1, a2, a3, a4, a5, a6, a7, a8) } } } } } } } }
 }
 
-public func curry<A, B, C, D, E, F, G, H, I>(_ function: @escaping (A, B, C, D, E, F, G, H) throws -> I)
-  -> (A)
-  -> (B)
-  -> (C)
-  -> (D)
-  -> (E)
-  -> (F)
-  -> (G)
-  -> (H) throws
-  -> I {
-    return { (a: A) -> (B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) throws -> I in
-      { (b: B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) throws -> I in
-        { (c: C) -> (D) -> (E) -> (F) -> (G) -> (H) throws -> I in
-          { (d: D) -> (E) -> (F) -> (G) -> (H) throws -> I in
-            { (e: E) -> (F) -> (G) -> (H) throws -> I in
-              { (f: F) -> (G) -> (H) throws -> I in
-                { (g: G) -> (H) throws -> I in
-                  { (h: H) throws -> I in
-                    try function(a, b, c, d, e, f, g, h)
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8) throws -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) throws -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) throws -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) throws -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) throws -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) throws -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) throws -> R in { (a6: A6) -> (A7) -> (A8) throws -> R in { (a7: A7) -> (A8) throws -> R in { (a8: A8) throws -> R in try function(a1, a2, a3, a4, a5, a6, a7, a8) } } } } } } } }
 }
 
-public func curry<A, B, C, D, E, F, G, H, I, J>(_ function: @escaping (A, B, C, D, E, F, G, H, I) -> J)
-  -> (A)
-  -> (B)
-  -> (C)
-  -> (D)
-  -> (E)
-  -> (F)
-  -> (G)
-  -> (H)
-  -> (I)
-  -> J {
-    return { (a: A) -> (B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> J in
-      { (b: B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> J in
-        { (c: C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> J in
-          { (d: D) -> (E) -> (F) -> (G) -> (H) -> (I) -> J in
-            { (e: E) -> (F) -> (G) -> (H) -> (I) -> J in
-              { (f: F) -> (G) -> (H) -> (I) -> J in
-                { (g: G) -> (H) -> (I) -> J in
-                  { (h: H) -> (I) -> J in
-                    { (i: I) -> J in
-                      function(a, b, c, d, e, f, g, h, i)
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9) -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) -> R in { (a7: A7) -> (A8) -> (A9) -> R in { (a8: A8) -> (A9) -> R in { (a9: A9) -> R in function(a1, a2, a3, a4, a5, a6, a7, a8, a9) } } } } } } } } }
 }
 
-public func curry<A, B, C, D, E, F, G, H, I, J>(_ function: @escaping (A, B, C, D, E, F, G, H, I) throws -> J)
-  -> (A)
-  -> (B)
-  -> (C)
-  -> (D)
-  -> (E)
-  -> (F)
-  -> (G)
-  -> (H)
-  -> (I) throws
-  -> J {
-    return { (a: A) -> (B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) throws -> J in
-      { (b: B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) throws -> J in
-        { (c: C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) throws -> J in
-          { (d: D) -> (E) -> (F) -> (G) -> (H) -> (I) throws -> J in
-            { (e: E) -> (F) -> (G) -> (H) -> (I) throws -> J in
-              { (f: F) -> (G) -> (H) -> (I) throws -> J in
-                { (g: G) -> (H) -> (I) throws -> J in
-                  { (h: H) -> (I) throws -> J in
-                    { (i: I) throws -> J in
-                      try function(a, b, c, d, e, f, g, h, i)
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9) throws -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) throws -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) throws -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) throws -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) throws -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) throws -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) throws -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) throws -> R in { (a7: A7) -> (A8) -> (A9) throws -> R in { (a8: A8) -> (A9) throws -> R in { (a9: A9) throws -> R in try function(a1, a2, a3, a4, a5, a6, a7, a8, a9) } } } } } } } } }
 }
 
-public func curry<A, B, C, D, E, F, G, H, I, J, K>(_ function: @escaping (A, B, C, D, E, F, G, H, I, J) -> K)
-  -> (A)
-  -> (B)
-  -> (C)
-  -> (D)
-  -> (E)
-  -> (F)
-  -> (G)
-  -> (H)
-  -> (I)
-  -> (J)
-  -> K {
-    return { (a: A) -> (B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> K in
-      { (b: B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> K in
-        { (c: C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> K in
-          { (d: D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> K in
-            { (e: E) -> (F) -> (G) -> (H) -> (I) -> (J) -> K in
-              { (f: F) -> (G) -> (H) -> (I) -> (J) -> K in
-                { (g: G) -> (H) -> (I) -> (J) -> K in
-                  { (h: H) -> (I) -> (J) -> K in
-                    { (i: I) -> (J) -> K in
-                      { (j: J) -> K in
-                        function(a, b, c, d, e, f, g, h, i, j)
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9, A10) -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) -> (A10) -> R in { (a7: A7) -> (A8) -> (A9) -> (A10) -> R in { (a8: A8) -> (A9) -> (A10) -> R in { (a9: A9) -> (A10) -> R in { (a10: A10) -> R in function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10) } } } } } } } } } }
 }
 
-public func curry<A, B, C, D, E, F, G, H, I, J, K>(_ function: @escaping (A, B, C, D, E, F, G, H, I, J) throws -> K)
-  -> (A)
-  -> (B)
-  -> (C)
-  -> (D)
-  -> (E)
-  -> (F)
-  -> (G)
-  -> (H)
-  -> (I)
-  -> (J) throws
-  -> K {
-    return { (a: A) -> (B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) throws -> K in
-      { (b: B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) throws -> K in
-        { (c: C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) throws -> K in
-          { (d: D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) throws -> K in
-            { (e: E) -> (F) -> (G) -> (H) -> (I) -> (J) throws -> K in
-              { (f: F) -> (G) -> (H) -> (I) -> (J) throws -> K in
-                { (g: G) -> (H) -> (I) -> (J) throws -> K in
-                  { (h: H) -> (I) -> (J) throws -> K in
-                    { (i: I) -> (J) throws -> K in
-                      { (j: J) throws -> K in
-                        try function(a, b, c, d, e, f, g, h, i, j)
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9, A10) throws -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) throws -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) throws -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) throws -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) throws -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) throws -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) throws -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) -> (A10) throws -> R in { (a7: A7) -> (A8) -> (A9) -> (A10) throws -> R in { (a8: A8) -> (A9) -> (A10) throws -> R in { (a9: A9) -> (A10) throws -> R in { (a10: A10) throws -> R in try function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10) } } } } } } } } } }
 }
 
-public func curry<A, B, C, D, E, F, G, H, I, J, K, L>(
-  _ function: @escaping (A, B, C, D, E, F, G, H, I, J, K) -> L)
-  -> (A)
-  -> (B)
-  -> (C)
-  -> (D)
-  -> (E)
-  -> (F)
-  -> (G)
-  -> (H)
-  -> (I)
-  -> (J)
-  -> (K)
-  -> L {
-    return { (a: A) -> (B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) -> L in
-      { (b: B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) -> L in
-        { (c: C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) -> L in
-          { (d: D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) -> L in
-            { (e: E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) -> L in
-              { (f: F) -> (G) -> (H) -> (I) -> (J) -> (K) -> L in
-                { (g: G) -> (H) -> (I) -> (J) -> (K) -> L in
-                  { (h: H) -> (I) -> (J) -> (K) -> L in
-                    { (i: I) -> (J) -> (K) -> L in
-                      { (j: J) -> (K) -> L in
-                        { (k: K) -> L in
-                          function(a, b, c, d, e, f, g, h, i, j, k)
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11) -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> R in { (a7: A7) -> (A8) -> (A9) -> (A10) -> (A11) -> R in { (a8: A8) -> (A9) -> (A10) -> (A11) -> R in { (a9: A9) -> (A10) -> (A11) -> R in { (a10: A10) -> (A11) -> R in { (a11: A11) -> R in function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11) } } } } } } } } } } }
 }
 
-public func curry<A, B, C, D, E, F, G, H, I, J, K, L>(
-  _ function: @escaping (A, B, C, D, E, F, G, H, I, J, K) throws -> L)
-  -> (A)
-  -> (B)
-  -> (C)
-  -> (D)
-  -> (E)
-  -> (F)
-  -> (G)
-  -> (H)
-  -> (I)
-  -> (J)
-  -> (K) throws
-  -> L {
-    return { (a: A) -> (B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) throws -> L in
-      { (b: B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) throws -> L in
-        { (c: C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) throws -> L in
-          { (d: D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) throws -> L in
-            { (e: E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) throws -> L in
-              { (f: F) -> (G) -> (H) -> (I) -> (J) -> (K) throws -> L in
-                { (g: G) -> (H) -> (I) -> (J) -> (K) throws -> L in
-                  { (h: H) -> (I) -> (J) -> (K) throws -> L in
-                    { (i: I) -> (J) -> (K) throws -> L in
-                      { (j: J) -> (K) throws -> L in
-                        { (k: K) throws -> L in
-                          try function(a, b, c, d, e, f, g, h, i, j, k)
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11) throws -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) throws -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) throws -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) throws -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) throws -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) throws -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) throws -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) throws -> R in { (a7: A7) -> (A8) -> (A9) -> (A10) -> (A11) throws -> R in { (a8: A8) -> (A9) -> (A10) -> (A11) throws -> R in { (a9: A9) -> (A10) -> (A11) throws -> R in { (a10: A10) -> (A11) throws -> R in { (a11: A11) throws -> R in try function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11) } } } } } } } } } } }
 }
 
-public func curry<A, B, C, D, E, F, G, H, I, J, K, L, M>(
-  _ function: @escaping (A, B, C, D, E, F, G, H, I, J, K, L) -> M)
-  -> (A)
-  -> (B)
-  -> (C)
-  -> (D)
-  -> (E)
-  -> (F)
-  -> (G)
-  -> (H)
-  -> (I)
-  -> (J)
-  -> (K)
-  -> (L)
-  -> M {
-    return { (a: A) -> (B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) -> (L) -> M in
-      { (b: B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) -> (L) -> M in
-        { (c: C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) -> (L) -> M in
-          { (d: D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) -> (L) -> M in
-            { (e: E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) -> (L) -> M in
-              { (f: F) -> (G) -> (H) -> (I) -> (J) -> (K) -> (L) -> M in
-                { (g: G) -> (H) -> (I) -> (J) -> (K) -> (L) -> M in
-                  { (h: H) -> (I) -> (J) -> (K) -> (L) -> M in
-                    { (i: I) -> (J) -> (K) -> (L) -> M in
-                      { (j: J) -> (K) -> (L) -> M in
-                        { (k: K) -> (L) -> M in
-                          { (l: L) -> M in
-                            function(a, b, c, d, e, f, g, h, i, j, k, l)
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12) -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> R in { (a7: A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> R in { (a8: A8) -> (A9) -> (A10) -> (A11) -> (A12) -> R in { (a9: A9) -> (A10) -> (A11) -> (A12) -> R in { (a10: A10) -> (A11) -> (A12) -> R in { (a11: A11) -> (A12) -> R in { (a12: A12) -> R in function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12) } } } } } } } } } } } }
 }
 
-public func curry<A, B, C, D, E, F, G, H, I, J, K, L, M>(
-  _ function: @escaping (A, B, C, D, E, F, G, H, I, J, K, L) throws -> M)
-  -> (A)
-  -> (B)
-  -> (C)
-  -> (D)
-  -> (E)
-  -> (F)
-  -> (G)
-  -> (H)
-  -> (I)
-  -> (J)
-  -> (K)
-  -> (L) throws
-  -> M {
-    return { (a: A) -> (B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) -> (L) throws -> M in
-      { (b: B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) -> (L) throws -> M in
-        { (c: C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) -> (L) throws -> M in
-          { (d: D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) -> (L) throws -> M in
-            { (e: E) -> (F) -> (G) -> (H) -> (I) -> (J) -> (K) -> (L) throws -> M in
-              { (f: F) -> (G) -> (H) -> (I) -> (J) -> (K) -> (L) throws -> M in
-                { (g: G) -> (H) -> (I) -> (J) -> (K) -> (L) throws -> M in
-                  { (h: H) -> (I) -> (J) -> (K) -> (L) throws -> M in
-                    { (i: I) -> (J) -> (K) -> (L) throws -> M in
-                      { (j: J) -> (K) -> (L) throws -> M in
-                        { (k: K) -> (L) throws -> M in
-                          { (l: L) throws -> M in
-                            try function(a, b, c, d, e, f, g, h, i, j, k, l)
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12) throws -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) throws -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) throws -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) throws -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) throws -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) throws -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) throws -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) throws -> R in { (a7: A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) throws -> R in { (a8: A8) -> (A9) -> (A10) -> (A11) -> (A12) throws -> R in { (a9: A9) -> (A10) -> (A11) -> (A12) throws -> R in { (a10: A10) -> (A11) -> (A12) throws -> R in { (a11: A11) -> (A12) throws -> R in { (a12: A12) throws -> R in try function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12) } } } } } } } } } } } }
+}
+
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13) -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> R in { (a7: A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> R in { (a8: A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> R in { (a9: A9) -> (A10) -> (A11) -> (A12) -> (A13) -> R in { (a10: A10) -> (A11) -> (A12) -> (A13) -> R in { (a11: A11) -> (A12) -> (A13) -> R in { (a12: A12) -> (A13) -> R in { (a13: A13) -> R in function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13) } } } } } } } } } } } } }
+}
+
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13) throws -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) throws -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) throws -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) throws -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) throws -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) throws -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) throws -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) throws -> R in { (a7: A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) throws -> R in { (a8: A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) throws -> R in { (a9: A9) -> (A10) -> (A11) -> (A12) -> (A13) throws -> R in { (a10: A10) -> (A11) -> (A12) -> (A13) throws -> R in { (a11: A11) -> (A12) -> (A13) throws -> R in { (a12: A12) -> (A13) throws -> R in { (a13: A13) throws -> R in try function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13) } } } } } } } } } } } } }
+}
+
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14) -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> R in { (a7: A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> R in { (a8: A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> R in { (a9: A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> R in { (a10: A10) -> (A11) -> (A12) -> (A13) -> (A14) -> R in { (a11: A11) -> (A12) -> (A13) -> (A14) -> R in { (a12: A12) -> (A13) -> (A14) -> R in { (a13: A13) -> (A14) -> R in { (a14: A14) -> R in function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14) } } } } } } } } } } } } } }
+}
+
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14) throws -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) throws -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) throws -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) throws -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) throws -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) throws -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) throws -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) throws -> R in { (a7: A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) throws -> R in { (a8: A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) throws -> R in { (a9: A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) throws -> R in { (a10: A10) -> (A11) -> (A12) -> (A13) -> (A14) throws -> R in { (a11: A11) -> (A12) -> (A13) -> (A14) throws -> R in { (a12: A12) -> (A13) -> (A14) throws -> R in { (a13: A13) -> (A14) throws -> R in { (a14: A14) throws -> R in try function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14) } } } } } } } } } } } } } }
+}
+
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15) -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> R in { (a7: A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> R in { (a8: A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> R in { (a9: A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> R in { (a10: A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> R in { (a11: A11) -> (A12) -> (A13) -> (A14) -> (A15) -> R in { (a12: A12) -> (A13) -> (A14) -> (A15) -> R in { (a13: A13) -> (A14) -> (A15) -> R in { (a14: A14) -> (A15) -> R in { (a15: A15) -> R in function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15) } } } } } } } } } } } } } } }
+}
+
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15) throws -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) throws -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) throws -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) throws -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) throws -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) throws -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) throws -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) throws -> R in { (a7: A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) throws -> R in { (a8: A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) throws -> R in { (a9: A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) throws -> R in { (a10: A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) throws -> R in { (a11: A11) -> (A12) -> (A13) -> (A14) -> (A15) throws -> R in { (a12: A12) -> (A13) -> (A14) -> (A15) throws -> R in { (a13: A13) -> (A14) -> (A15) throws -> R in { (a14: A14) -> (A15) throws -> R in { (a15: A15) throws -> R in try function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15) } } } } } } } } } } } } } } }
+}
+
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16) -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> R in { (a7: A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> R in { (a8: A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> R in { (a9: A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> R in { (a10: A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> R in { (a11: A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> R in { (a12: A12) -> (A13) -> (A14) -> (A15) -> (A16) -> R in { (a13: A13) -> (A14) -> (A15) -> (A16) -> R in { (a14: A14) -> (A15) -> (A16) -> R in { (a15: A15) -> (A16) -> R in { (a16: A16) -> R in function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16) } } } } } } } } } } } } } } } }
+}
+
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16) throws -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) throws -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) throws -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) throws -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) throws -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) throws -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) throws -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) throws -> R in { (a7: A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) throws -> R in { (a8: A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) throws -> R in { (a9: A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) throws -> R in { (a10: A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) throws -> R in { (a11: A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) throws -> R in { (a12: A12) -> (A13) -> (A14) -> (A15) -> (A16) throws -> R in { (a13: A13) -> (A14) -> (A15) -> (A16) throws -> R in { (a14: A14) -> (A15) -> (A16) throws -> R in { (a15: A15) -> (A16) throws -> R in { (a16: A16) throws -> R in try function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16) } } } } } } } } } } } } } } } }
+}
+
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16, A17, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16, A17) -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> R in { (a7: A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> R in { (a8: A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> R in { (a9: A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> R in { (a10: A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> R in { (a11: A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> R in { (a12: A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> R in { (a13: A13) -> (A14) -> (A15) -> (A16) -> (A17) -> R in { (a14: A14) -> (A15) -> (A16) -> (A17) -> R in { (a15: A15) -> (A16) -> (A17) -> R in { (a16: A16) -> (A17) -> R in { (a17: A17) -> R in function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17) } } } } } } } } } } } } } } } } }
+}
+
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16, A17, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16, A17) throws -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) throws -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) throws -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) throws -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) throws -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) throws -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) throws -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) throws -> R in { (a7: A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) throws -> R in { (a8: A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) throws -> R in { (a9: A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) throws -> R in { (a10: A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) throws -> R in { (a11: A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) throws -> R in { (a12: A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) throws -> R in { (a13: A13) -> (A14) -> (A15) -> (A16) -> (A17) throws -> R in { (a14: A14) -> (A15) -> (A16) -> (A17) throws -> R in { (a15: A15) -> (A16) -> (A17) throws -> R in { (a16: A16) -> (A17) throws -> R in { (a17: A17) throws -> R in try function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17) } } } } } } } } } } } } } } } } }
+}
+
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16, A17, A18, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16, A17, A18) -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) -> R in { (a7: A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) -> R in { (a8: A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) -> R in { (a9: A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) -> R in { (a10: A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) -> R in { (a11: A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) -> R in { (a12: A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) -> R in { (a13: A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) -> R in { (a14: A14) -> (A15) -> (A16) -> (A17) -> (A18) -> R in { (a15: A15) -> (A16) -> (A17) -> (A18) -> R in { (a16: A16) -> (A17) -> (A18) -> R in { (a17: A17) -> (A18) -> R in { (a18: A18) -> R in function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18) } } } } } } } } } } } } } } } } } }
+}
+
+public func curry <A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16, A17, A18, R> (_ function: @escaping (A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16, A17, A18) throws -> R) -> (A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) throws -> R {
+   return { (a1: A1) -> (A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) throws -> R in { (a2: A2) -> (A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) throws -> R in { (a3: A3) -> (A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) throws -> R in { (a4: A4) -> (A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) throws -> R in { (a5: A5) -> (A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) throws -> R in { (a6: A6) -> (A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) throws -> R in { (a7: A7) -> (A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) throws -> R in { (a8: A8) -> (A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) throws -> R in { (a9: A9) -> (A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) throws -> R in { (a10: A10) -> (A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) throws -> R in { (a11: A11) -> (A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) throws -> R in { (a12: A12) -> (A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) throws -> R in { (a13: A13) -> (A14) -> (A15) -> (A16) -> (A17) -> (A18) throws -> R in { (a14: A14) -> (A15) -> (A16) -> (A17) -> (A18) throws -> R in { (a15: A15) -> (A16) -> (A17) -> (A18) throws -> R in { (a16: A16) -> (A17) -> (A18) throws -> R in { (a17: A17) -> (A18) throws -> R in { (a18: A18) throws -> R in try function(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18) } } } } } } } } } } } } } } } } } }
 }
