@@ -23,7 +23,10 @@ test-ios:
 		-destination platform="iOS Simulator,name=iPhone 11 Pro Max,OS=13.2.2" \
 		| xcpretty
 
-test-swift: linux-main
-	swift test -v
+test-swift:
+	swift test \
+		--enable-pubgrub-resolver \
+		--enable-test-discovery \
+		--parallel
 
 test-all: test-linux test-macos test-ios test-swift
