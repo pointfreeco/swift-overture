@@ -11,7 +11,7 @@ A library for function composition.
   - [Motivation](#motivation)
   - [Examples](#examples)
       - [`pipe`](#pipe)
-      - [`with`](#with)
+      - [`with` and `update`](#with-and-update)
       - [`concat`](#concat)
       - [`curry`, `flip`, and `zurry`](#curry-flip-and-zurry)
       - [`get`](#get)
@@ -108,9 +108,9 @@ computeAndStringify(42)
 // ["4", "9", "16"]
 ```
 
-### `with`
+### `with` and `update`
 
-The `with` function is useful for applying functions to values. It plays nicely with the `inout` and mutable object worlds, wrapping imperative configuration in an expression.
+The `with` and `update` function is useful for applying functions to values. It plays nicely with the `inout` and mutable object worlds, wrapping imperative configuration in an expression.
 
 ``` swift
 class MyViewController: UIViewController {
@@ -126,6 +126,12 @@ And it restores the left-to-right readability we're used to from the method worl
 ``` swift
 with(42, pipe(incr, square, String.init))
 // "1849"
+```
+
+Using an `inout` parameter.
+
+``` swift
+update(&user, mut(\User.name, "Blob"))
 ```
 
 ### `concat`
@@ -302,7 +308,7 @@ let setHeader = { name, value in
   )
 }
 
-let request = with(URLRequest(url: url), concat(
+let request = update(URLRequest(url: url), concat(
   mut(\.httpMethod, "POST"),
   setHeader("Authorization", "Token " + token),
   setHeader("Content-Type", "application/json; charset=utf-8")
