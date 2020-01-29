@@ -308,11 +308,12 @@ let setHeader = { name, value in
   )
 }
 
-let request = update(URLRequest(url: url), concat(
+let request = update(
+  URLRequest(url: url),
   mut(\.httpMethod, "POST"),
   setHeader("Authorization", "Token " + token),
   setHeader("Content-Type", "application/json; charset=utf-8")
-))
+)
 ```
 
 ### `zip` and `zip(with:)`
