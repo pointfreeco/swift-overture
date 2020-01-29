@@ -110,7 +110,7 @@ computeAndStringify(42)
 
 ### `with` and `update`
 
-The `with` and `update` function is useful for applying functions to values. It plays nicely with the `inout` and mutable object worlds, wrapping imperative configuration in an expression.
+The `with` and `update` functions are useful for applying functions to values. They play nicely with the `inout` and mutable object worlds, wrapping otherwise imperative configuration statements in an expression.
 
 ``` swift
 class MyViewController: UIViewController {
@@ -131,7 +131,7 @@ with(42, pipe(incr, square, String.init))
 Using an `inout` parameter.
 
 ``` swift
-update(&user, mut(\User.name, "Blob"))
+update(&user, mut(\.name, "Blob"))
 ```
 
 ### `concat`
