@@ -454,7 +454,7 @@ We know that many code bases are not going to be comfortable introducing operato
 
 ## Interested in learning more?
 
-These concepts (and more) are explored thoroughly in [Point-Free](https://www.pointfree.co), a video series exploring functional programming and Swift hosted by [Brandon Williams](https://github.com/mbrandonw) and [Stephen Celis](https://github.com/stephencelis).
+These concepts (and more) are explored thoroughly in [Point-Free](https://www.pointfree.co), a video series exploring functional programming and Swift hosted by [Brandon Williams](https://twitter.com/mbrandonw) and [Stephen Celis](https://twitter.com/stephencelis).
 
 The ideas in this episode were first explored in [Episode #11](https://www.pointfree.co/episodes/ep11-composition-without-operators):
 
