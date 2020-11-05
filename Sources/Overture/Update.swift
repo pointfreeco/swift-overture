@@ -1,10 +1,10 @@
-
 /// Left-to-right, in-place function application.
 ///
 /// - Parameters:
 ///   - a: A mutable value.
 ///   - fs: In-out functions.
 /// - Note: This function is commonly seen in operator form as "pipe-forward", `|>`.
+@discardableResult
 public func update<A>(_ a: inout A, _ fs: ((inout A) -> Void)...) {
   fs.forEach { f in f(&a) }
 }
@@ -15,6 +15,7 @@ public func update<A>(_ a: inout A, _ fs: ((inout A) -> Void)...) {
 ///   - a: A mutable value.
 ///   - fs: In-out functions.
 /// - Note: This function is commonly seen in operator form as "pipe-forward", `|>`.
+@discardableResult
 public func update<A>(_ a: inout A, _ fs: ((inout A) throws -> Void)...) throws {
   try fs.forEach { f in try f(&a) }
 }
@@ -26,6 +27,7 @@ public func update<A>(_ a: inout A, _ fs: ((inout A) throws -> Void)...) throws 
 ///   - fs: In-out functions.
 /// - Returns: The result of `f` applied to `a`.
 /// - Note: This function is commonly seen in operator form as "pipe-forward", `|>`.
+@discardableResult
 public func update<A>(_ a: A, _ fs: ((inout A) -> Void)...) -> A {
   var a = a
   fs.forEach { f in f(&a) }
@@ -39,6 +41,7 @@ public func update<A>(_ a: A, _ fs: ((inout A) -> Void)...) -> A {
 ///   - fs: In-out functions.
 /// - Returns: The result of `f` applied to `a`.
 /// - Note: This function is commonly seen in operator form as "pipe-forward", `|>`.
+@discardableResult
 public func update<A>(_ a: A, _ fs: ((inout A) throws -> Void)...) throws -> A {
   var a = a
   try fs.forEach { f in try f(&a) }
