@@ -114,7 +114,7 @@ The `with` and `update` functions are useful for applying functions to values. T
 
 ``` swift
 class MyViewController: UIViewController {
-  let label = update(UILabel()) {
+  let label = updateObject(UILabel()) {
     $0.font = .systemFont(ofSize: 24)
     $0.textColor = .red
   }
