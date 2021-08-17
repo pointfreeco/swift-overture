@@ -1,5 +1,5 @@
-// swift-tools-version:5.0
-import Foundation
+// swift-tools-version:5.1
+
 import PackageDescription
 
 let package = Package(
@@ -7,22 +7,16 @@ let package = Package(
   products: [
     .library(
       name: "Overture",
-      targets: ["Overture"]),
+      targets: ["Overture"]
+    ),
   ],
   targets: [
     .target(
-      name: "Overture",
-      dependencies: []),
+      name: "Overture"
+    ),
     .testTarget(
       name: "OvertureTests",
-      dependencies: ["Overture"]),
+      dependencies: ["Overture"]
+    ),
   ]
 )
-
-if ProcessInfo.processInfo.environment.keys.contains("PF_DEVELOP") {
-  package.dependencies.append(
-    contentsOf: [
-      .package(url: "https://github.com/yonaskolb/XcodeGen.git", from: "2.3.0"),
-    ]
-  )
-}
