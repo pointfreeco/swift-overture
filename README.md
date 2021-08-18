@@ -411,39 +411,21 @@ if let id = optionalId, let email = optionalEmail, let name = optionalName {
 
 ## Installation
 
-### Carthage
+You can add Overture to an Xcode project by adding it as a package dependency.
 
-If you use [Carthage](https://github.com/Carthage/Carthage), you can add the following dependency to your `Cartfile`:
+> https://github.com/pointfreeco/swift-overture
 
-``` ruby
-github "pointfreeco/swift-overture" ~> 0.5
-```
-
-### CocoaPods
-
-If your project uses [CocoaPods](https://cocoapods.org), just add the following to your `Podfile`:
-
-``` ruby
-pod 'Overture', '~> 0.5'
-```
-
-### SwiftPM
-
-If you want to use Overture in a project that uses [SwiftPM](https://swift.org/package-manager/), it's as simple as adding a `dependencies` clause to your `Package.swift`:
+If you want to use Overture in a [SwiftPM](https://swift.org/package-manager/) project, it's as simple as adding it to a `dependencies` clause in your `Package.swift`:
 
 ``` swift
 dependencies: [
-  .package(url: "https://github.com/pointfreeco/swift-overture.git", from: "0.5.0")
+  .package(url: "https://github.com/pointfreeco/swift-overture", from: "0.5.0")
 ]
 ```
 
-### Xcode Sub-project
-
-Submodule, clone, or download Overture, and drag `Overture.xcodeproj` into your project.
-
 ## 🎶 Prelude
 
-This library was created as an alternative to [swift-prelude](https://www.github.com/pointfreeco/swift-prelude), which provides these tools (and more) using infix operators. For example, `pipe` is none other than the arrow composition operator `>>>`, which means the following are equivalent:
+This library was created as an alternative to [swift-prelude](https://www.github.com/pointfreeco/swift-prelude), which is an experimental functional programming library that uses infix operators. For example, `pipe` is none other than the arrow composition operator `>>>`, which means the following are equivalent:
 
 ```swift
 xs.map(incr >>> square)
